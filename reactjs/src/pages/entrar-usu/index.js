@@ -1,15 +1,13 @@
-import Barra from '../../assets/img/barra-login.png'
 import LogoFace from '../../assets/img/logo(facebook).png'
 import LogoGoogle from '../../assets/img/logo(google).png'
 
-import { Container, Parte1, Parte2 } from './style'
+import  LogoeBarra from '../../componentes/tituloEbarra-login'
+import { Container, Parte2 } from './style'
 
 export default function Login() {
     return(
         <Container>
-            <Parte1><span style={{color: "#FF005C",  fontweight: "none"}}>Movies</span> World</Parte1>
-
-            <div className="barra"><img src={Barra} alt="Barra" /></div>
+            <LogoeBarra />
 
             <Parte2>
                 <div className="inputs">

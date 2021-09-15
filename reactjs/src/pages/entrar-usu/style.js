@@ -8,19 +8,6 @@ const Container = styled.div`
     color: #fff;
     align-items: center;
     justify-content: center;
-
-    .barra {
-        margin: 0em 5em 0em 18em;
-    }
-`;
-
-const Parte1 = styled.div`
-    font-family: Montserrat;
-    font-size: 8em;
-    font-weight: bolder;
-    line-height: 1em;
-    width: 300px;
-    margin-left: -2em;
 `;
 
 const Parte2 = styled.div`
@@ -90,12 +77,26 @@ const Parte2 = styled.div`
         width: 10em;
         height: 3em;
         font-family: Montserrat;
+        cursor: pointer;
     }
 
     a:hover {
         text-decoration: underline;
         color: #FF005C;
+        cursor: pointer;
     }
 `;
 
-export { Container, Parte1, Parte2 }
+const Botoes = styled.button`
+    color: #fff;
+    background-color: transparent;
+    border: 3px solid #FF005C;
+    border-radius: 5px;
+    width: 10em;
+    height: 3em;
+    font-family: Montserrat;
+    cursor: pointer;
+`;
+
+
+export { Container, Parte2, Botoes }
