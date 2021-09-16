@@ -16,7 +16,6 @@ const Parte2 = styled.div`
     color: #fff;
     margin-right: -17.3em;
 
-
     .txt {
         font-size: 20px;
         font-family: Montserrat;
@@ -36,6 +35,17 @@ const Parte2 = styled.div`
     .bloco-inp {
         display: flex;
         flex-direction: row;
+        margin-bottom: 15px;
+        margin-left: 2em;
+    }
+
+    .inp {
+        margin-right: 20px;
+    }
+
+    .btn {
+        margin-right: 4em;
+        text-align: end;
     }
 
     .geral {

@@ -59,7 +59,7 @@ export default function() {
                         <div className="input"><input/></div>
                      </div>
                     </div>
-                    <div><Botoes>Cadastre-se</Botoes></div>
+                    <div className="btn"><Botoes>Cadastre-se</Botoes></div>
 
                 </div>
             </Parte2>
