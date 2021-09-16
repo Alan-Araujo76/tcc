@@ -64,64 +64,8 @@ const Parte2 = styled.div`
 `;
 
 
-const Bloco1 = styled.div`
-    background-color: #fff;
-    padding: 30px 50px;
-
-    .linha1 {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 10px;
-    }
-
-
-    .inp1 {
-        margin-right: 20px;
-        margin-left: 42px;
-    }
-
-    .inp2 {
-        margin-right: 25px;
-        margin-left: 21px;
-    }
-
-    .inp3 {
-        margin-right: 35px;
-        margin-left: 22px;
-    }
-
-    .inp1 input{
-        height: 28px;
-        margin-right: 10px;
-        margin-left: 5px;
-    }
-
-    .inp-d input {
-        width: 32.4em;
-    }
-
-    .linha-d {
-        display: flex;
-        flex-direction: row;
-        margin-right: 10px;
-        margin-left: 21px;
-    }
-
-    .text textarea {
-        height: 112px;
-        width: 32.5em;
-        margin: 0px 15px 0px 5px;
-        border-radius: 5px;
-        background: #FFFFFF; 
-        border: 1px solid #A8A8A8;
-        resize: none;
-    }
-
-    input { height: 28px; border-radius: 5px; background: #FFFFFF; border: 1px solid #A8A8A8;}
-`;
 
 
 
 
-
-export { Container, Parte2, Bloco1 }
+export { Container, Parte2 }

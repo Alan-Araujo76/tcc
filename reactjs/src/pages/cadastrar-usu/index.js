@@ -14,19 +14,26 @@ export default function() {
                     <div className="txt">Dados Pessoais:</div>
 
                     <div className="bloco-inp"> 
+                     <div className="inp">
                       <div className="txt-1">Nome: </div>  
                       <div className="input"><input/></div>
-                    
+                     </div>
+
+                     <div className="inp">
                       <div className="txt-1">Sobrenome: </div>  
                       <div className="input"><input/></div>
+                     </div>
                     </div>
 
                     <div className="bloco-inp"> 
+                     <div className="inp">
                       <div className="txt-1">Data de nascimento: </div>  
                       <div className="input"><input/></div>
-
+                     </div>
+                     <div className="inp">
                       <div className="txt-1">Genêro: </div>  
                       <div className="input"><input/></div>
+                     </div>
                     </div>
                 </div>
 
@@ -36,17 +43,24 @@ export default function() {
                     <div className="txt">Dados Login:</div>
 
                     <div className="bloco-inp"> 
+                     <div className="inp">
                         <div className="txt-d">Email: </div>  
                         <div className="input-d"><input/></div>
+                     </div>
                     </div>
 
-                    <div className="bloco-inp"> 
+                    <div className="bloco-inp">
+                     <div className="inp"> 
                         <div className="txt-1">Sobrenome: </div>  
                         <div className="input"><input/></div>
-
+                     </div>
+                     <div className="inp">
                         <div className="txt-1">Senha: </div>  
                         <div className="input"><input/></div>
+                     </div>
                     </div>
+                    <div><Botoes>Cadastre-se</Botoes></div>
+
                 </div>
             </Parte2>
         </Container>
