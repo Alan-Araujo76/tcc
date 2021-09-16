@@ -33,7 +33,7 @@ export default function() {
                 <div className="barra"><img src={LinhaSep} alt="" /></div>
 
                 <div className="bloco2">
-                    <div className="txt">Dados Pessoais:</div>
+                    <div className="txt">Dados Login:</div>
 
                     <div className="bloco-inp"> 
                         <div className="txt-d">Email: </div>  
