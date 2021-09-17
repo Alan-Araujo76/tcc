@@ -246,6 +246,12 @@ const Parte2 = styled.div`
     .inp-bt {
         display: flex;
         flex-direction: row;
+        align-items: center;
+    }
+
+    .bt-1 {
+        text-align: center;
+        margin-left: 130px;
     }
 
     .bt-1 button{
@@ -253,8 +259,8 @@ const Parte2 = styled.div`
         background-color: transparent;
         border: 3px solid #FFB800;
         border-radius: 15px;
-        width: 9em;
-        height: 2.8em;
+        width: 11em;
+        height: 3.4em;
         font-weight: bold;
         font-family: Montserrat;
         font-size: 10px;
@@ -265,6 +271,17 @@ const Parte2 = styled.div`
         height: 8em;
         width: 50em;   
         resize: none;
+        margin: 10px 50px;
+    }
+
+    .desc-b3 {
+        margin: 25px 0px;
+    }
+
+    .estrela img {
+        width: 150px;
+        height: 70px;
+        margin-left: 5em;
     }
 
 

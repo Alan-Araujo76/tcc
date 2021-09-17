@@ -8,7 +8,7 @@ import Play from '../../assets/img/play.png'
 import Mais from '../../assets/img/mais.png'
 import Estrela from '../../assets/img/estrelas.png'
 
-
+import Rodape from '../../componentes/rodapê';
 import Cabecalho from '../../componentes/cabecalho'
 
 import { Container, Parte1, Parte2 } from './styled'
@@ -156,10 +156,11 @@ export default function Perfil() {
                           <textarea />
                           <div className="estrela"><img src={Estrela} alt="" /></div>
                         </div>
-                        <div className="bt-1"><button>Editar</button></div>
+                        <div className="bt-1"><button>Enviar</button></div>
                     </div>
                 </div>
             </Parte2>
+            <Rodape />
         </Container>
     )
 }
