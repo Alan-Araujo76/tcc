@@ -58,8 +58,8 @@ export default function Rodape() {
                         <div className="titulo-d">Redes Sociais</div>
                         <div className="img-b1">
                             <div className="redes-s"><img src={Face} alt="" /></div>
-                            <div className="redes-s"><img src={Insta} alt="" /></div>
-                            <div className="redes-s"><img src={TT} alt="" /></div>
+                            <div className="redes-s1"><img src={Insta} alt="" /></div>
+                            <div className="redes-s2"><img src={TT} alt="" /></div>
                         </div>
 
                         <div className="subtitulos">

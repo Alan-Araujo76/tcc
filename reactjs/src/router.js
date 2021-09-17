@@ -11,6 +11,7 @@ import Inserir from './pages/inserir-filme'
 
 // Tela de Perfil
 import Perfil from './pages/tela-de-perfil';
+import EditarPerfil from './pages/editar-perfil';
 
 export default function Routes() {
     return (
@@ -20,6 +21,7 @@ export default function Routes() {
                 <Route path="/cadastro" exact={true} component={Cadastrar} />
                 <Route path="/esqueci-senha" exact={true} component={EsqSenha} />
                 <Route path="/perfil" exact={true} component={Perfil} />
+                <Route path="/editperfil" exact={true} component={EditarPerfil} />
                 <Route path="/jiue886d54s" exact={true} component={Inserir} />
             </Switch>
         </BrowserRouter>

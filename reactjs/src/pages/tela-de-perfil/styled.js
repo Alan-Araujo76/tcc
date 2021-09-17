@@ -24,7 +24,6 @@ const Parte1 = styled.div`
     .titulo {
         display: flex;
         flex-direction: row;
-        margin-top: 50px;
     }
 
     .txt-t {

@@ -4,7 +4,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: row;
     font-family: Montserrat;
-    margin: 16px 150px 0px 150px;
+    margin: 16px 150px 50px 150px;
     color: #fff;
     justify-content: space-between;
     align-items: center;
