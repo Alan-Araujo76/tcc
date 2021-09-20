@@ -5,7 +5,6 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     background-color: #000;
-    height: 300vh;
 
     .linha-sep {
         text-align: center;

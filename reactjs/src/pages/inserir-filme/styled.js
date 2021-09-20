@@ -53,8 +53,7 @@ const Cabecalho = styled.div`
     }
 
     button {
-        background-color: transparent;
-        text-aling: center;
+        background-color: #fff;
         cursor: pointer;
         border: 3px solid #FF005C;
         padding: 8px;
@@ -66,6 +65,7 @@ const Cabecalho = styled.div`
     .bt {
         margin-left: 8px;
     }
+
 `;
 
 
@@ -123,15 +123,19 @@ const Bloco1 = styled.div`
     }
 
     .inp-d input {
-        width: 35em;
+        width: 50.8em;
     }
 
     .inp-d1 input {
-        width: 35em;
+        width: 50.8em;
     }
 
     .inp-d  {
         margin-left: 6px;
+    }
+
+    .inp2 {
+        margin-left: 30px;
     }
 
     .linha-d {
@@ -159,6 +163,16 @@ const Bloco1 = styled.div`
         resize: none;
         font-family: Montserrat;
     }
+
+    .btn {
+        margin-top: 75px;
+        margin-left: 100px;
+    }
+
+    .inpuu {
+        margin-left: 11em;
+    }
+    
 
     input { height: 28px; border-radius: 5px; background: #fff; border: 1px solid #A8A8A8; font-family: Montserrat;}
 `;

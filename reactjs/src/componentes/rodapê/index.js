@@ -63,8 +63,8 @@ export default function Rodape() {
                         </div>
 
                         <div className="subtitulos">
-                            <div className="sub1">Termos de uso</div>
-                            <div className="sub1">Declaração de privacidade</div>
+                            <div className="titulo-p2d">Termos de uso</div>
+                            <div className="titulo-p2di">Declaração de privacidade</div>
                         </div>
                     </div>
                 </div>

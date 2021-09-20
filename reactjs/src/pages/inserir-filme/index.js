@@ -46,7 +46,7 @@ export default function CadastrarFilme() {
 
                     <div className="linha1">
                         <div className="inp3">Data de lançamento:   <input type="text" /></div>
-                        <div className="inp">Plataformas Disponíveis:   <input type="text" /></div>
+                        <div className="inpuu">Plataformas Dis. :   <input type="text" /></div>
                     </div>
 
                     <div className="linha1">

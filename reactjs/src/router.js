@@ -13,6 +13,9 @@ import Inserir from './pages/inserir-filme'
 import Perfil from './pages/tela-de-perfil';
 import EditarPerfil from './pages/editar-perfil';
 
+// Tela de categoria de filmes
+import FilmesGosto from './pages/filmes_gosto';
+
 export default function Routes() {
     return (
         <BrowserRouter>
@@ -22,6 +25,7 @@ export default function Routes() {
                 <Route path="/esqueci-senha" exact={true} component={EsqSenha} />
                 <Route path="/perfil" exact={true} component={Perfil} />
                 <Route path="/editperfil" exact={true} component={EditarPerfil} />
+                <Route path="/filmesporgosto" exact={true} component={FilmesGosto} />
                 <Route path="/jiue886d54s" exact={true} component={Inserir} />
             </Switch>
         </BrowserRouter>

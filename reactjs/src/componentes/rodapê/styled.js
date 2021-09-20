@@ -90,6 +90,16 @@ const Container = styled.div`
         margin-top: 12px;
     }
 
+    .titulo-p2d {
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 50px;   
+    }
+
+    .titulo-p2di {
+        font-size: 14px;
+        font-weight: bold; 
+    }
 
 `;
 
