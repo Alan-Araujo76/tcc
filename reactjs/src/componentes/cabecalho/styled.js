@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import Lupa from '../../assets/img/lupa.png';
+
 const Container = styled.div`
     display: flex;
     flex-direction: row;
@@ -44,11 +46,36 @@ const Container = styled.div`
         font-weight: bold;
     }
 
-    input {
+    .barra-pesq > *{
+        margin:.1em;
+    }
+
+    .barra-pesq {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         background-color: #D0D0D0;
         border-radius: 20px;
+        border: none;
         height: 2em;
         width: 13em;
+
+        padding: .2em;
+    }
+
+    .barra-pesq img {
+        width: 15px;
+        height: 15px;
+    }
+
+    
+
+    input {
+       width: 11em;
+       border:none;
+       background-color: #D0D0D0;
+       outline: none;
     }
 
     

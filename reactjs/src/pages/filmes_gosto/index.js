@@ -84,6 +84,7 @@ export default function FilmesGostos() {
                 <div className="botao"><button>1</button></div>
                 <div className="botao"><button>2</button></div>
                 <div className="botao"><button>3</button></div>
+                <div className="botao"><button>...</button></div>
             </div>
 
 
