@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import Lupa from '../../assets/img/lupa.png';
+
 const Container = styled.div`
     display: flex;
     flex-direction: row;
@@ -44,9 +46,17 @@ const Container = styled.div`
         font-weight: bold;
     }
 
+    .barra-pesq img {
+        position: absolute;
+        width: ;
+    }
+
+    
+
     input {
         background-color: #D0D0D0;
         border-radius: 20px;
+        border: none;
         height: 2em;
         width: 13em;
     }
