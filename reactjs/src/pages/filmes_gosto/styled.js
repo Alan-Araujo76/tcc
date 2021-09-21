@@ -12,7 +12,7 @@ const Container = styled.div`
     .titulo {
         font-size: 35px;
         font-weight: bolder;
-        margin-bottom: 2.5em;
+        margin-bottom: 2em;
         margin-left: 140px;
     }
 
@@ -22,7 +22,6 @@ const Container = styled.div`
         flex-direction: row;
         justify-content: center;
         margin-top: 4.5em;
-        margin-bottom: 15px;
     }
 
     button {
@@ -67,7 +66,7 @@ const Bloco1 = styled.div`
 const Bloco2 = styled.div`
     display: flex;
     flex-direction: row;
-    margin: 80px 140px 20px 200px;
+    margin: 60px 140px 00px 200px;
     justify-content: space-between;
     
 

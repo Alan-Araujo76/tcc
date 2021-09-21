@@ -46,20 +46,36 @@ const Container = styled.div`
         font-weight: bold;
     }
 
-    .barra-pesq img {
-        position: absolute;
-        width: 20px;
-        height: 20px;
+    .barra-pesq > *{
+        margin:.1em;
     }
 
-    
+    .barra-pesq {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    input {
         background-color: #D0D0D0;
         border-radius: 20px;
         border: none;
         height: 2em;
         width: 13em;
+
+        padding: .2em;
+    }
+
+    .barra-pesq img {
+        width: 15px;
+        height: 15px;
+    }
+
+    
+
+    input {
+       width: 11em;
+       border:none;
+       background-color: #D0D0D0;
+       outline: none;
     }
 
     
