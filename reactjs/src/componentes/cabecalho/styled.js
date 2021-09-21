@@ -48,7 +48,8 @@ const Container = styled.div`
 
     .barra-pesq img {
         position: absolute;
-        width: ;
+        width: 20px;
+        height: 20px;
     }
 
     
