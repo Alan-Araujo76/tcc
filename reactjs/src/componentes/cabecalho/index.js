@@ -19,9 +19,8 @@ export default function Cabecalho() {
                 <div className="tr"><a> Trocar conta </a></div>
                 <div className="sair"><a> Sair </a></div>
                 <div className="barra-pesq">
-                    <div className="inp">
                       <input type="text"/>
-                    </div>
+                      <img src={Lupa} alt="" />
                 </div>
             </div>
         </Container>

@@ -12,7 +12,7 @@ const Container = styled.div`
     .titulo {
         font-size: 35px;
         font-weight: bolder;
-        margin-bottom: 2em;
+        margin-bottom: 2.5em;
         margin-left: 140px;
     }
 
@@ -21,11 +21,22 @@ const Container = styled.div`
         display: flex; 
         flex-direction: row;
         justify-content: center;
-        margin-top: 5em;
+        margin-top: 4.5em;
+        margin-bottom: 15px;
     }
 
     button {
-        border: 3px solid #FF0
+        border: 3px solid #FFB800;
+        background-color: #424242;
+        color: #fff;
+        height: 43px;
+        width: 44px;
+        padding: 10px 15px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 0px 5px;
+        font-size: 14px;
+        font-family: Montserrat;
     }
 `;
 
@@ -37,12 +48,13 @@ const Bloco1 = styled.div`
     justify-content: space-between;
 
     .nome {
-        font-size: 20px;
+        font-size: 19px;
         width: 150px;
         text-align: center;
         margin-left: -10px;
-        margin-top: 5px;
+        margin-top: 8px;
         line-height: 22px;
+        font-weight: 500;
     }
 
     img {
@@ -55,22 +67,23 @@ const Bloco1 = styled.div`
 const Bloco2 = styled.div`
     display: flex;
     flex-direction: row;
-    margin: 70px 140px 0px 200px;
+    margin: 80px 140px 20px 200px;
     justify-content: space-between;
     
 
     .nome {
-        font-size: 20px;
+        font-size: 19px;
         width: 150px;
         text-align: center;
         margin-left: -10px;
-        margin-top: 5px;
+        margin-top: 8px;
         line-height: 22px;
+        font-weight: 500;
     }
 
     img {
-        width: 127px;
-        height: 180px;
+        width: 130px;
+        height: 190px;
     }
 
 
