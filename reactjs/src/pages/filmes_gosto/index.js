@@ -2,6 +2,7 @@ import Cabecalho from '../../componentes/cabecalho'
 import Rodape from '../../componentes/rodapê'
 import Capa from '../../assets/img/capa-filme.png'
 
+import ProxPag from '../../componentes/botao-prox-pag'
 
 import {Container, Bloco1, Bloco2} from './styled.js';
 
@@ -80,12 +81,7 @@ export default function FilmesGostos() {
                 </Bloco2>
             </div>
 
-            <div className="prox-pag">
-                <div className="botao"><button>1</button></div>
-                <div className="botao"><button>2</button></div>
-                <div className="botao"><button>3</button></div>
-                <div className="botao"><button>...</button></div>
-            </div>
+            <ProxPag />
 
 
             <Rodape/>
