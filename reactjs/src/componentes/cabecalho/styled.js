@@ -77,9 +77,6 @@ const Container = styled.div`
        background-color: #D0D0D0;
        outline: none;
     }
-
-    
-
 `;
 
 
