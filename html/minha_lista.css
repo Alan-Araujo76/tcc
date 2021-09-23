@@ -1,0 +1,72 @@
+.quadrado {
+display: flex;
+flex-direction: column;
+background-color: #000000;
+}
+
+.titulo {
+    color: white ;
+    padding: 80px 70px;
+}
+
+.listas {
+ display: flex;
+ flex-direction: column;
+ background-color: #C4C4C4;
+ width: 1576px;
+ height: 2330px;
+ align-self: center;
+
+}
+
+.botão button {
+    background-color: #FFB800;
+    border-radius: 100px;
+    width: 42px;
+    height: 42px;
+    border:#FFB800;
+}
+
+
+
+.fileira1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 245px;
+}
+
+.botao {
+    padding: 60px;
+}
+
+
+.lista {
+    display: flex;
+    flex-direction: row;
+    padding: 40px 20px 40px 20px;
+    
+}
+
+
+.fileira2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.fileira3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.fileira4 {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+
+}
+
+
