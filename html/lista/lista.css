@@ -1,0 +1,57 @@
+.container{ 
+    background-color: #000;
+}
+
+.titulo{
+    font: 16px;
+    color: #fff;
+    padding: 2em 4.5em;
+}
+
+.desc{
+    font: 16px;
+    color: #fff;
+    background-color: #C4C4C4;
+    padding: 50px;
+    margin: 0px 70px;
+}
+
+.desc-desc{}
+
+.box{
+    background-color: #C4C4C4;
+    margin: 3em;
+}
+
+.linha{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2em 4.5em;
+}
+
+.box-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botao-mais{
+    background-color: #FFB800;
+}
+
+.desc-botao{
+    font: 16px;
+    color: #fff;
+    padding-top: 15px;
+}
+
+.img-filme{}
+
+.nm-filme{
+    font: 16px;
+    color: #fff;
+    padding-top: 10px;
+}
+
+.botao{}

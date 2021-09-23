@@ -1,11 +1,11 @@
-
+import { Geral, Botao1 } from "./styled"
 
 export default function Botao() {
     return(
-        <div className="prox-pag">
-            <div className="botao"><button>1</button></div>
-            <div className="botao"><button>2</button></div>
-            <div className="botao"><button>3</button></div>
-            <div className="botao"><button>...</button></div>
-        </div>
+        <Geral>
+            <div className="botao"><Botao1>1</Botao1></div>
+            <div className="botao"><Botao1>2</Botao1></div>
+            <div className="botao"><Botao1>3</Botao1></div>
+            <div className="botao"><Botao1>...</Botao1></div>
+        </Geral>
 )}
