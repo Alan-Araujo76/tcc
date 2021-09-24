@@ -10,20 +10,41 @@ import { Container } from './styled';
 export default function FilmeLista() {
     return(
         <Container>
-            <Cabecalho/>
 
-            <div className="titulo">Melhores do ano:</div>
+            <b className="titulo">Melhores do ano:</b>
 
             <div className="parte1">
-                <div className="desc">Descrição:</div>
+                <div className="desc">DESCRIÇÃO:</div>
                 <div className="desc-desc">Recomendados por amigos do coração</div>
             </div>
 
             <div className="parte2">
                 <div className="linha">
                     <div className="bloco">
-                        <button className="botao"><img src={Mais} alt=""/></button>
-                        <div className="desc-botao">Adicionar filme</div>
+                        <div className="botao"><button><img src={Mais} alt=""/></button></div>
+                        <div className="desc-botao">ADICIONAR FILME</div>
+                    </div>
+                    <div className="bloco">
+                        <div className="img-filme"><img src={Filme} alt=""/></div>
+                        <div className="nm-filme">Velozes e Furiosos 9</div>
+                    </div>
+                    <div className="bloco">
+                        <div className="img-filme"><img src={Filme} alt=""/></div>
+                        <div className="nm-filme">Velozes e Furiosos 9</div>
+                    </div>
+                    <div className="bloco">
+                        <div className="img-filme"><img src={Filme} alt=""/></div>
+                        <div className="nm-filme">Velozes e Furiosos 9</div>
+                    </div>
+                    <div className="bloco">
+                        <div className="img-filme"><img src={Filme} alt=""/></div>
+                        <div className="nm-filme">Velozes e Furiosos 9</div>
+                    </div>
+                </div>
+                <div className="linha">
+                    <div className="bloco">
+                    <div className="img-filme"><img src={Filme} alt=""/></div>
+                        <div className="desc-botao">ADICIONAR FILME</div>
                     </div>
                     <div className="bloco">
                         <div className="img-filme"><img src={Filme} alt=""/></div>
@@ -45,7 +66,6 @@ export default function FilmeLista() {
                 <Prox/>
             </div>
             
-            <Rodape/>
         </Container>
     )
 }
