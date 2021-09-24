@@ -15,7 +15,7 @@ export default function FilmeLista() {
 
             <div className="parte1">
                 <div className="desc">DESCRIÇÃO:</div>
-                <div className="desc-desc">Recomendados por amigos do coração</div>
+                <div className="desc-desc">Os que eu mais gostei durante 2021</div>
             </div>
 
             <div className="parte2">
@@ -43,8 +43,8 @@ export default function FilmeLista() {
                 </div>
                 <div className="linha">
                     <div className="bloco">
-                    <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="desc-botao">ADICIONAR FILME</div>
+                        <div className="img-filme"><img src={Filme} alt=""/></div>
+                        <div className="nm-filme">Velozes e Furiosos 9</div>
                     </div>
                     <div className="bloco">
                         <div className="img-filme"><img src={Filme} alt=""/></div>

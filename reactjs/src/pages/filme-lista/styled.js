@@ -10,14 +10,14 @@ const Container = styled.div`
     color: #fff;
     font-size: 35px;
     font-family: Montserrat;
-    padding: 1em 2.5em;
+    padding: 1em 6.8em;
 }
 
 .parte1 {
     color: #fff;
     background-color: #3B3B3B;
     padding: 1em;
-    margin: 0em 5.3em;
+    margin: 0em 15em;
 }
 
 .desc {
@@ -27,23 +27,25 @@ const Container = styled.div`
     font-weight: bolder;
 }
 
-desc-desc {
+.desc-desc {
     color: #fff;
     font-size: 15px;
     font-family: Montserrat;
+    padding-top: 7px;
 }
 
 .parte2 {
     color: #fff;
     background-color: #3B3B3B;
-    margin: 3em 5.3em 8em;
+    margin: 3em 15em 8em;
+    padding-bottom: 4em;
 }
 
 .linha {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 3em 4em;
+    padding: 3em 4em 0em;
 }
 
 .bloco {
@@ -59,6 +61,7 @@ desc-desc {
     border: none;
     width: 6.5em;
     height: 6.5em;
+    cursor: pointer;
 }
 
 .desc-botao {
@@ -67,19 +70,20 @@ desc-desc {
     padding-top: 15px;
 }
 
+.img-filme {
+    cursor: pointer;
+}
 
 .nm-filme {
     font-size: 15px;
     font-family: Montserrat;
     color: #fff;
     padding-top: 10px;
+    cursor: pointer;
 }
-
-.Prox {
-    display: flex; 
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 4.5em;
+.nm-filme:hover {
+    color: #fff;
+    text-decoration: underline;
 }
 
 `;
