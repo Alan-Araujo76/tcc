@@ -101,6 +101,37 @@ const Container = styled.div`
         font-weight: bold; 
     }
 
+    .mobile {
+        display: none;
+    }
+
+
+
+
+    @media (max-width: 400px) {
+        display: flex;
+        flex-direction: column;
+    
+
+        .qlq-coisa { display: none; }
+
+        .mobile { display: flex; flex-direction: column;}
+        .parte1 { padding: 40px 20px; margin: 0px; display: flex; flex-direction: row; }
+        .tit { margin: 0px; font-size: 23px; line-height: 20px;}
+        .redes { display: flex; flex-direction: column; margin: -15px 35px 0px 50px; }
+        .titulo-d { margin: 0px; font-size: 10px; }
+        .titulo-p2d { margin: 0px; font-size: 8px; line-height: 15px;width: 150px; margin-top: 15px; }
+        .titulo-p2di { font-size: 8px; line-height: 15px;width: 150px; margin:-3px 0px; }
+        .redes-s { margin-top: -8px; } 
+        .redes-s img { width: 13px;  height: 13px; } 
+        .redes-s1 { margin: 0px 5px; }
+        .redes-s1 img { width: 28px;  height: 28px; }
+        .redes-s2 { margin-top: -5px; } 
+        .redes-s2 img { width: 18px;  height: 18px;  } 
+        .img-b1 { margin-top: -30px; }
+        .subtitulos { margin: 0px; width: 100px; }
+
+    }
 `;
 
 

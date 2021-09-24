@@ -8,7 +8,7 @@ export default function Cabecalho() {
     return(
         <Container>
             <div className="logo">
-                Movies<span style={{color: "#FF005C",  fontweight: "none"}}> World</span>
+                <span style={{fontweight: "none"}}>Movies</span><span style={{color: "#FF005C", fontweight: "bolder"}}> World</span>
             </div>
 
             <div className="parte2">
@@ -22,6 +22,25 @@ export default function Cabecalho() {
                       <input type="text"/>
                       <img src={Lupa} alt="" />
                 </div>
+            </div>
+
+
+
+
+
+
+            <div className="logo-celular">
+                <div className="princ"><span style={{fontweight: "none"}}>Movies</span><span style={{color: "#FF005C", fontweight: "bolder"}}> World</span></div>
+                <div className="barra-pesq">
+                    <input type="text"/>
+                    <img src={Lupa} alt="" />
+                </div>
+            </div>
+
+            <div className="parte-celular">
+                <div className="per"> Meu perfil </div>
+                <div className="troco"> Trocar conta </div>
+                <div className="sair"> Sair </div>
             </div>
         </Container>
     )
