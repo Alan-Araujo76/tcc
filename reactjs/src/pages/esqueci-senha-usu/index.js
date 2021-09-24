@@ -3,7 +3,7 @@ import  LogoeBarra from '../../componentes/tituloEbarra-login'
 import { Botoes } from '../entrar-usu/style'
 import { Container, Parte2 } from './style'
 
-export default function() {
+export default function Esqueci() {
     return(
         <Container>
             <LogoeBarra />

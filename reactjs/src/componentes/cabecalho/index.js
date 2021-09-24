@@ -1,5 +1,5 @@
-import FotoUsu from '../../assets/img/foto.png'
-import Lupa from '../../assets/img/lupa.png'
+import FotoUsu from '../../assets/img/foto.png';
+import Lupa from '../../assets/img/lupa.png';
 
 import { Container } from "./styled"
 
@@ -16,8 +16,8 @@ export default function Cabecalho() {
                     <div className="foto"><img src={FotoUsu} alt="" /></div>
                     <div className="nome-usu">gabrielmelo</div>
                 </div>
-                <div className="tr"><a> Trocar conta </a></div>
-                <div className="sair"><a> Sair </a></div>
+                <div className="tr"> Trocar conta </div>
+                <div className="sair"> Sair </div>
                 <div className="barra-pesq">
                       <input type="text"/>
                       <img src={Lupa} alt="" />
