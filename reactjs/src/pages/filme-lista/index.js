@@ -1,8 +1,6 @@
 import Mais from '../../assets/img/mais.png';
 import Filme from '../../assets/img/capa-filme.png';
 
-import Rodape from '../../componentes/rodapê';
-import Cabecalho from '../../componentes/cabecalho';
 import Prox from '../../componentes/botao-prox-pag';
 
 import { Container } from './styled';
