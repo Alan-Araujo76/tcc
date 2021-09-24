@@ -7,7 +7,7 @@ import Prox from '../../componentes/botao-prox-pag';
 
 import { Container } from './styled';
 
-export default function AssistirMaisTarde() {
+export default function FilmeLista() {
     return(
         <Container>
             <Cabecalho/>

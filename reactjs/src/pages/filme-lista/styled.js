@@ -4,6 +4,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     background-color: #000;
+    
     color: #fff;
 
 .titulo {
@@ -20,8 +21,6 @@ const Container = styled.div`
     margin: 0px 70px;
 }
 
-.desc {}
-.desc-desc {}
 
 .parte2 {
     background-color: #C4C4C4;
@@ -51,7 +50,6 @@ const Container = styled.div`
     padding-top: 15px;
 }
 
-.img-filme {}
 
 .nm-filme {
     font: 16px;

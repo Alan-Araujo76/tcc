@@ -19,7 +19,8 @@ import EditarPerfil from './pages/editar-perfil';
 import FilmesGosto from './pages/filmes_gosto';
 
 // Tela de Lista
-import AssistirMaisTarde from './pages/assistir-mais-tarde';
+import FilmeLista from './pages/filme-lista';
+import CriarLista from './pages/criar-lista';
 
 export default function Routes() {
     return (
@@ -32,8 +33,9 @@ export default function Routes() {
                 <Route path="/perfil" exact={true} component={Perfil} />
                 <Route path="/editperfil" exact={true} component={EditarPerfil} />
                 <Route path="/filmesporgosto" exact={true} component={FilmesGosto} />
+                <Route path="/listafil" exact={true} component={FilmeLista} />
+                <Route path="/criarlista" exact={true} component={CriarLista} />
                 <Route path="/jiue886d54s" exact={true} component={Inserir} />
-                <Route path="/assistirtarde" exact={true} component={AssistirMaisTarde} />
             </Switch>
         </BrowserRouter>
     )
