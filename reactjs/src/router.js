@@ -22,6 +22,8 @@ import FilmesGosto from './pages/filmes_gosto';
 import FilmeLista from './pages/filme-lista';
 import CriarLista from './pages/criar-lista';
 
+import Comentario from './pages/comentario';
+
 export default function Routes() {
     return (
         <BrowserRouter>
@@ -35,6 +37,7 @@ export default function Routes() {
                 <Route path="/filmesporgosto" exact={true} component={FilmesGosto} />
                 <Route path="/listafil" exact={true} component={FilmeLista} />
                 <Route path="/criarlista" exact={true} component={CriarLista} />
+                <Route path="/comentario" exact={true} component={Comentario} />
                 <Route path="/jiue886d54s" exact={true} component={Inserir} />
             </Switch>
         </BrowserRouter>
