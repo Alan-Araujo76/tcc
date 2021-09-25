@@ -44,7 +44,7 @@ export default function Cadastro() {
 
                     <div className="bloco-inp"> 
                      <div className="inp">
-                        <div className="txt-d">Email: </div>  
+                        <div className="txt-d">E-mail: </div>  
                         <div className="input-d"><input/></div>
                      </div>
                     </div>
