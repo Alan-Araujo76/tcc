@@ -117,6 +117,7 @@ export default function Perfil() {
                       </div>
                     </div>
 
+                    <div className="sss">
                       <div className="bloco-mobile">
                         <div className="divisao-mobile">
                           <div className="sub-bloco">
@@ -170,9 +171,11 @@ export default function Perfil() {
                         </div>
                       </div>
                       </div>
+                    </div>
 
-                    <div className="titulo-p1"> Assistir mais tarde</div>
+                    <div className="titulo-p1"> Assistir mais tarde</div> 
                     <div className="bloco-p1">
+                      <div className="titulo-p1"> Assistir mais tarde</div>
                       <div className="bloco-p2">
                           <div className="img-b2"><img src={Capa} alt="" /></div>
                           <div className="img-b2"><img src={Capa} alt="" /></div>
@@ -188,7 +191,8 @@ export default function Perfil() {
                           </div>
                       </div>
                     </div>
-
+                  
+                  <div className="sss">
                     <div className="bloco-mobile">
                       <div className="divisao-mobile">
                         <div className="img-b2"><img src={Capa} alt="" /></div>
@@ -210,6 +214,7 @@ export default function Perfil() {
                         </div>
                       </div>
                     </div>
+                  </div>
 
                     <div className="titulo-p1"> Minhas listas</div>
                     <div className="bloco-p2">
@@ -232,6 +237,7 @@ export default function Perfil() {
                       </div>
                     </div>
 
+                  <div className="sss">
                     <div className="bloco-mobile-d">
                       <div className="divisao-mobile">
                         <div className="ver-mais">
@@ -256,7 +262,8 @@ export default function Perfil() {
                         </div>
                       </div>
                     </div>
-
+                  </div>
+                  
                     <div className="titulo-p1"> Avaliação </div>
                     <div className="avaliacao-b3">
                         <div className="desc-b3"> Deixa aqui sua avaliação, critícas construtivas, elogios, entre outros. </div> 
