@@ -320,16 +320,28 @@ const Parte2 = styled.div`
         .bloco-p2 { display: none; }
         .sss { display: flex; flex-direction: column; align-items: center; }
         .p1 { align-items: center; }
-        .bloco-mobile { display: flex; flex-direction: column; width: 24em;  height: 30em; background-color: #3B3B3B; margin-bottom: 70px; padding: 25px 15px;  }
-        .bloco-mobile-d { display: flex; flex-direction: column; width: 24em;  height: 20em; background-color: #3B3B3B; margin-bottom: 70px;  }
-        .divisao-mobile { display: flex; flex-direction: row; justify-content: space-between;}
+        .bloco-mobile { display: flex; flex-direction: column; width: 24em;  height: 100%; background-color: #3B3B3B; margin-bottom: 70px; padding: 30px 25px; }
+        .bloco-mobile-d { display: flex; flex-direction: column; width: 24em;  height: 100%; background-color: #3B3B3B; margin-bottom: 70px; padding: 30px 25px; }
+        .divisao-mobile { display: flex; flex-direction: row; justify-content: space-between; text-align: center; }
+        .divisao-mobile-d { display: flex; flex-direction: row; justify-content: space-between; text-align: center; margin-top: 20px; }
         .titulo-p1 { margin-left: 1.5em; }
-
-
+        .img-b2 img { width: 70px; height: 110px; }
+        .lista-b1 { margin: 7px 0px; }
+        .divisao-mobile { margin: 10px 0px; }
         .desc-b3 { font-size: 12px; }
         .estrela img { width: 110px;  height: 60px; margin: 0px; }
         
 
+        @media (min-width: 600px) {
+            .titulo-p1 { margin-left: 3em; }
+        }
+
+        @media (min-width: 700px) {
+            .titulo-p1 { margin: 0em 0em 1em 5em; }
+            .desc-b3 { margin: 2em 0em 2em 10em; }
+            .inp-bt textarea {  width: 450px; margin: 0em 3em 1em 9em;}
+            .bt-1 { justify-content: flex-end; margin: 0em 14em 0em 0em; text-align: end; }
+        }
     }
 
 `;

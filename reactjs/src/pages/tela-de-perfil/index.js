@@ -250,7 +250,7 @@ export default function Perfil() {
                         </div>
                       </div>
 
-                      <div className="divisao-mobile">
+                      <div className="divisao-mobile-d">
                         <div className="lista-b1">
                           <div className="img-b2"><img src={Capa} alt="" /></div>
                           <div className="img-b2"><img src={Capa} alt="" /></div>
@@ -263,7 +263,7 @@ export default function Perfil() {
                       </div>
                     </div>
                   </div>
-                  
+
                     <div className="titulo-p1"> Avaliação </div>
                     <div className="avaliacao-b3">
                         <div className="desc-b3"> Deixa aqui sua avaliação, critícas construtivas, elogios, entre outros. </div> 
