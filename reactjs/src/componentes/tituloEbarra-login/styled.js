@@ -31,7 +31,8 @@ const Parte1 = styled.div`
         
         .txt {
             margin: 0px;
-            width: 500px;
+            width: 200px;
+            font-size: 4em;
         }
 
         .barra {
@@ -41,8 +42,12 @@ const Parte1 = styled.div`
         .barra1 {
             display: flex;
             flex-direction: column;
-            margin: 100px 0px;
-        }
+            margin: 50px 0px;
+        } .barra1 img {width: 350px;}
+
+    
+
+
     }
 `;
 
