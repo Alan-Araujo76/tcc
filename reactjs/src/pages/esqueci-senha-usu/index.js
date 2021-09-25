@@ -9,8 +9,10 @@ export default function Esqueci() {
             <LogoeBarra />
 
             <Parte2>
-                <div className="txt">
-                    Digite seu endereço de e-mail abaixo e enviaremos um link para que você possa redefinir sua senha.
+                <div className="texto">
+                    <div className="txt">
+                        Digite seu endereço de e-mail abaixo e enviaremos um link para que você possa redefinir sua senha.
+                    </div>
                 </div>
                 <div className="email-inp-bt">
                     <div className="txt1">Email:</div>
