@@ -320,9 +320,9 @@ const Parte2 = styled.div`
         .bloco-p2 { display: none; }
         .sss { display: flex; flex-direction: column; align-items: center; }
         .p1 { align-items: center; }
-        .bloco-mobile { display: flex; flex-direction: column; width: 24em;  height: 30em; background-color: #3B3B3B; margin-bottom: 70px; align-items: center; justify-content: space-between; padding: 25px 0px; }
-        .bloco-mobile-d { display: flex; flex-direction: column; width: 24em;  height: 20em; background-color: #3B3B3B; margin-bottom: 70px; align-items: center; justify-content: space-between; }
-        .divisao-mobile { display: flex; flex-direction: row; text-align: center; }
+        .bloco-mobile { display: flex; flex-direction: column; width: 24em;  height: 30em; background-color: #3B3B3B; margin-bottom: 70px; padding: 25px 15px;  }
+        .bloco-mobile-d { display: flex; flex-direction: column; width: 24em;  height: 20em; background-color: #3B3B3B; margin-bottom: 70px;  }
+        .divisao-mobile { display: flex; flex-direction: row; justify-content: space-between;}
         .titulo-p1 { margin-left: 1.5em; }
 
 
