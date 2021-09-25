@@ -103,6 +103,25 @@ const Parte2 = styled.div`
         flex-direction: column;
         margin: 0px;
         justify-content: center;
+
+        input {
+            width: 300px;
+        }
+
+        button { 
+            width: 80px;
+            font-size: 8px;
+            height: 30px;
+        }
+
+        .esq-senha {
+            font-size: 12px;
+        }
+
+        img {
+            width: 10px;
+            height: 10px;
+        }
     }
 `;
 
