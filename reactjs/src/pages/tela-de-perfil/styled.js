@@ -156,8 +156,8 @@ const Parte1 = styled.div`
         .txt-fil { font-size: 10px; text-align: center; margin-top: 10px; width: 65px; }
         .img-fil img { height: 65px; }
         .titulo-b { margin-bottom: 10px; }
-        .bloco-b { width: 25em;  height: 8em; }
-        .linha-sep1 img { width: 500px; }
+        .bloco-b { width: 22em;  height: 8em; }
+        .linha-sep1 img { width: 350px; }
 
     }
 
@@ -310,10 +310,11 @@ const Parte2 = styled.div`
         margin: 0px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
 
         .bloco-p1 { display: none; }
-        .bloco-mobile { display: flex; flex-direction: column; width: 30em;  height: 30em; background-color: #3B3B3B;  align-items: center; margin-bottom: 70px;  }
+        .bloco-p2 { display: none; }
+        .bloco-mobile { display: flex; flex-direction: column; width: 24em;  height: 30em; background-color: #3B3B3B; margin-bottom: 70px; align-items: center; justify-content: space-between; }
+        .bloco-mobile-d { display: flex; flex-direction: column; width: 24em;  height: 20em; background-color: #3B3B3B; margin-bottom: 70px; align-items: center; justify-content: space-between; }
         .divisao-mobile { display: flex; flex-direction: row; text-align: center; }
         
 

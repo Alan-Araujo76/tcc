@@ -172,19 +172,43 @@ export default function Perfil() {
                       </div>
 
                     <div className="titulo-p1"> Assistir mais tarde</div>
-                    <div className="bloco-p2">
+                    <div className="bloco-p1">
+                      <div className="bloco-p2">
+                          <div className="img-b2"><img src={Capa} alt="" /></div>
+                          <div className="img-b2"><img src={Capa} alt="" /></div>
+                          <div className="img-b2"><img src={Capa} alt="" /></div>
+                          <div className="img-b2"><img src={Capa} alt="" /></div>
+                          <div className="img-b2"><img src={Capa} alt="" /></div>
+                          <div className="img-b2"><img src={Capa} alt="" /></div>
+                          <div className="img-b2"><img src={Capa} alt="" /></div>
+                          <div className="img-b2"><img src={Capa} alt="" /></div>
+                          <div className="ver-mais">
+                            <div className="but-b2"><button><img src={Play} alt="" /></button></div>
+                            <div className="txt-b2">Ver mais</div>
+                          </div>
+                      </div>
+                    </div>
+
+                    <div className="bloco-mobile">
+                      <div className="divisao-mobile">
                         <div className="img-b2"><img src={Capa} alt="" /></div>
                         <div className="img-b2"><img src={Capa} alt="" /></div>
                         <div className="img-b2"><img src={Capa} alt="" /></div>
+                      </div>
+                      <div className="divisao-mobile">
                         <div className="img-b2"><img src={Capa} alt="" /></div>
                         <div className="img-b2"><img src={Capa} alt="" /></div>
                         <div className="img-b2"><img src={Capa} alt="" /></div>
+                      </div>
+                      <div className="divisao-mobile">
                         <div className="img-b2"><img src={Capa} alt="" /></div>
                         <div className="img-b2"><img src={Capa} alt="" /></div>
+
                         <div className="ver-mais">
                           <div className="but-b2"><button><img src={Play} alt="" /></button></div>
                           <div className="txt-b2">Ver mais</div>
                         </div>
+                      </div>
                     </div>
 
                     <div className="titulo-p1"> Minhas listas</div>
@@ -205,6 +229,31 @@ export default function Perfil() {
                       <div className="ver-mais">
                         <div className="but-b2"><button><img src={Play} alt="" /></button></div>
                         <div className="txt-b2">Ver mais</div>
+                      </div>
+                    </div>
+
+                    <div className="bloco-mobile-d">
+                      <div className="divisao-mobile">
+                        <div className="ver-mais">
+                          <BotaoMais />
+                        </div>
+                        <div className="lista-b1">
+                          <div className="img-b2"><img src={Capa} alt="" /></div>
+                          <div className="img-b2"><img src={Capa} alt="" /></div>
+                          <div className="img-b2"><img src={Capa} alt="" /></div>
+                        </div>
+                      </div>
+
+                      <div className="divisao-mobile">
+                        <div className="lista-b1">
+                          <div className="img-b2"><img src={Capa} alt="" /></div>
+                          <div className="img-b2"><img src={Capa} alt="" /></div>
+                          <div className="img-b2"><img src={Capa} alt="" /></div>
+                        </div>
+                        <div className="ver-mais">
+                          <div className="but-b2"><button><img src={Play} alt="" /></button></div>
+                          <div className="txt-b2">Ver mais</div>
+                        </div>
                       </div>
                     </div>
 
