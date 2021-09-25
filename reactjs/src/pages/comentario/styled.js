@@ -169,6 +169,8 @@ const PartePrin = styled.div`
     @media (max-width: 800px) {
         margin: 0px;
         align-items: center;
+        height: 1247px;
+        white: 799px;
 
         .titulo { font-size: 25px; font-weight: bolder; align-items: flex-start !important; }
         .bloco1 {  width: 320px; height: 130px; padding: 1em; }
