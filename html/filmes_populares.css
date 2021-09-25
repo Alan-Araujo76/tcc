@@ -27,7 +27,8 @@
     font-family: 'Montserrat' ;
     padding: 7px 0px;
     width: 100px;
-    font-weight: 500
+    font-weight: 500;
+    padding-left: 10px;
 }
 
 .fileira1 {
@@ -79,4 +80,7 @@
     border-radius: 5px;
     height: 25px;
     width: 26px;
+    font-family: 'Montserrat'  ;
+    font-weight: 600;
 }
+
