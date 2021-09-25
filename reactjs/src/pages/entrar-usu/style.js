@@ -8,6 +8,17 @@ const Container = styled.div`
     color: #fff;
     align-items: center;
     justify-content: center;
+
+    
+    @media (max-width: 800px) {
+        display: flex;
+        flex-direction: column;   
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 3.5em 0em;
+    }
 `;
 
 const Parte2 = styled.div`
@@ -84,6 +95,14 @@ const Parte2 = styled.div`
         text-decoration: underline;
         color: #FF005C;
         cursor: pointer;
+    }
+
+
+    @media (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        justify-content: center;
     }
 `;
 

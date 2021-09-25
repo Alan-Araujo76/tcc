@@ -2,13 +2,16 @@ import Mais from '../../assets/img/mais.png';
 import Filme from '../../assets/img/capa-filme.png';
 
 import Prox from '../../componentes/botao-prox-pag';
+import Cabecalho from '../../componentes/cabecalho';
+import Rodape from '../../componentes/rodapê';
 
 import { Container } from './styled';
 
 export default function FilmeLista() {
     return(
-        <Container>
-
+    <div style={{display: "flex", flexDirection: "column", backgroundColor: "#000"}}>
+        <Cabecalho />
+            <Container>
             <b className="titulo">Melhores do ano:</b>
 
             <div className="parte1">
@@ -63,7 +66,8 @@ export default function FilmeLista() {
                 </div>
                 <Prox/>
             </div>
-            
-        </Container>
+            </Container>          
+        <Rodape />
+        </div>
     )
 }

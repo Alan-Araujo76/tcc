@@ -5,11 +5,12 @@ import SepFilmes from '../../assets/img/sep-filmes.png';
 import FotoUsu from '../../assets/img/foto.png'
 import Capa from '../../assets/img/capa-filme.png'
 import Play from '../../assets/img/play.png'
-import Mais from '../../assets/img/mais.png'
+
 import Estrela from '../../assets/img/estrelas.png'
 
 import Rodape from '../../componentes/rodapê';
 import Cabecalho from '../../componentes/cabecalho'
+import BotaoMais from '../../componentes/botao-mais';
 
 import { Container, Parte1, Parte2 } from './styled'
 
@@ -130,8 +131,7 @@ export default function Perfil() {
                     <div className="titulo-p1"> Minhas listas</div>
                     <div className="bloco-p2">
                       <div className="ver-mais">
-                        <div className="but-b2"><button><img src={Mais} alt="" /></button></div>
-                        <div className="txt-b2">Ver mais</div>
+                        <BotaoMais />
                       </div>
                       <div className="lista-b1">
                         <div className="img-b2"><img src={Capa} alt="" /></div>
