@@ -15,7 +15,7 @@ export default function Esqueci() {
                     </div>
                 </div>
                 <div className="email-inp-bt">
-                    <div className="txt1">Email:</div>
+                    <div className="txt1">E-mail:</div>
                     <div className="input"><input /></div>
                 </div>
                 <div className="botao">

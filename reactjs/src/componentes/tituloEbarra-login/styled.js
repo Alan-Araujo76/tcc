@@ -32,8 +32,8 @@ const Parte1 = styled.div`
         
         .txt {
             margin: 0px;
-            width: 200px;
             font-size: 4em;
+            text-align: center;
         }
 
         .barra {

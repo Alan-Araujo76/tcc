@@ -57,10 +57,8 @@ const Parte2 = styled.div`
         align-items: center;
 
         .texto { align-items: center;  }
-        .txt { font-size: 22px; width: 340px; }
-        .email-inp-bt {
-        margin: 80px 0px 50px 0px;
-    }
+        .txt { font-size: 22px; width: 340px; text-align: justify; text-justify: inter-word;}
+        .email-inp-bt { margin: 80px 0px 50px 0px;}
         input { width: 315px; }
         .botao { margin: 0px; }
     }
