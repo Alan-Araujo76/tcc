@@ -16,7 +16,7 @@ const Container = styled.div`
         align-items: center;
         justify-content: center;
         align-items: center;
-        height: auto;
+        height: 100%;
         padding: 3.5em 0em;
     }
 `;
@@ -102,6 +102,7 @@ const Parte2 = styled.div`
         display: flex;
         flex-direction: column;
         margin: 0px;
+        
         justify-content: center;
 
         input {
