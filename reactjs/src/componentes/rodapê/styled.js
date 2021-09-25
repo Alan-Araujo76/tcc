@@ -133,8 +133,8 @@ const Container = styled.div`
         .subtitulos { margin: 0px; width: 100px; }
 
         .parte2 { display: flex; flex-direction: column; margin: 35px 0px 0px 20px; align-items: center; }
-        .titulo-p2 { font-size: 13px; font-weight: 300; margin-left: -15em; }
-        .subtitulo { font-size: 11px; margin: 0px; margin: 0px 0px 10px -15em;  }
+        .titulo-p2 { font-size: 13px; font-weight: 300;  margin-left: -12em}
+        .subtitulo { font-size: 11px; margin: 0px; margin: 0px 0px 10px -11em;  }
         .sub-subtitulo { font-size: 9px; font-weight: bolder; margin-bottom: 5px; }
         .b-p2 { margin-left: 10px }
         .email { font-size: 8px; }
@@ -143,6 +143,8 @@ const Container = styled.div`
 
         @media (min-width: 500px) {
             .parte1 {  width: 450px;}
+            .titulo-p2 { margin-left: -15em; }
+            .subtitulo { margin-left: -15em;  }
         }
     }
 

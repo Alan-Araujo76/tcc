@@ -1,6 +1,8 @@
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import Direcionamento from './pages/1-direcionamento';
+
 // Telas de Login
 import LoginPrin from './pages/entrar-usu';
 import Cadastrar from './pages/cadastrar-usu';
@@ -26,7 +28,7 @@ export default function Routes() {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/" exact={true} component={Comentario} />
+                <Route path="/" exact={true} component={Direcionamento} />
                 <Route path="/login" exact={true} component={LoginPrin} />
                 <Route path="/cadastro" exact={true} component={Cadastrar} />
                 <Route path="/esqueci-senha" exact={true} component={EsqSenha} />

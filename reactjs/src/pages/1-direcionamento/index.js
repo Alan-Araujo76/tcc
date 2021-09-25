@@ -1,30 +1,24 @@
 import { Container }from './styled';
 
-import Entrar from '../entrar-usu';
-import Cadastro from '../cadastrar-usu';
-import EsqueciSenha from '../esqueci-senha-usu';
-import Perfil from '../tela-de-perfil';
-import EditarPerfil from '../editar-perfil';
-import Comentario from '../comentario';
-import CriaLista from '../criar-lista';
-import FilmeLista from '../filme-lista';
-import FilmeGosto from '../filmes_gosto';
-import InserirFilme from '../inserir-filme';
+
+
+
+import { Link } from 'react-router-dom';
 
 export default function Direcionamento() {
     return(
         <Container>
             <h1>Direcionamento</h1>
-            <h2><a href={Entrar}>- Tela de Login</a></h2>
-            <h2><a href={Cadastro}>- Tela de Cadastrar</a></h2>
-            <h2><a href={EsqueciSenha}>- Tela de Esqueci Senha</a></h2>
-            <h2><a href={Perfil}>- Tela de Perfil</a></h2>
-            <h2><a href={EditarPerfil}>- Tela de Editar Perfil</a></h2>
-            <h2><a href={Comentario}>- Tela de Comentarios</a></h2>
-            <h2><a href={CriaLista}>- Tela de Criar uma Lista</a></h2>
-            <h2><a href={FilmeLista}>- Tela de Filme Lista</a></h2>
-            <h2><a href={FilmeGosto}>- Tela de Filmes por Gosto</a></h2>
-            <h2><a href={InserirFilme}>- Tela de Inserir Filme</a></h2>
+            <h2><Link to="/login">- Tela de Login</Link></h2>
+            <h2><Link to="/cadastro">- Tela de Cadastrar</Link></h2>
+            <h2><Link to="/esqueci-senha">- Tela de Esqueci Senha</Link></h2>
+            <h2><Link to="/perfil">- Tela de Perfil</Link></h2>
+            <h2><Link to="/editperfil">- Tela de Editar Perfil</Link></h2>
+            <h2><Link to="/comentario">- Tela de Comentarios</Link></h2>
+            <h2><Link to="/criarlista">- Tela de Criar uma Lista</Link></h2>
+            <h2><Link to="/listafil">- Tela de Filme Lista</Link></h2>
+            <h2><Link to="/filmesporgosto">- Tela de Filmes por Gosto</Link></h2>
+            <h2><Link to="/jiue886d54s">- Tela de Inserir Filme</Link></h2>
         </Container>
     )
 }
