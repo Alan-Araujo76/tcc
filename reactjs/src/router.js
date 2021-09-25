@@ -1,8 +1,6 @@
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Direcionamento from './pages/1-direcionamento';
-
 // Telas de Login
 import LoginPrin from './pages/entrar-usu';
 import Cadastrar from './pages/cadastrar-usu';
