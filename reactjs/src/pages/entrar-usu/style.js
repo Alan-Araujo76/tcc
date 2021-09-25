@@ -110,9 +110,9 @@ const Parte2 = styled.div`
         }
 
         button { 
-            width: 80px;
+            width: 90px;
             font-size: 8px;
-            height: 30px;
+            height: 35px;
         }
 
         .esq-senha {
