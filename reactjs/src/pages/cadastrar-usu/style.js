@@ -12,9 +12,9 @@ const Container = styled.div `
     
     @media (max-width: 800px) {
         display: flex;
-        flex-direction: column;   
-        text-align: center;
+        flex-direction: column;  
         padding: 3.5em 0em;
+        height: 100%;
     }
 `;
 
@@ -83,39 +83,20 @@ const Parte2 = styled.div`
         display: flex;
         flex-direction: column;
         margin: 0px;
+        align-items: center;
 
-        .bloco1 {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .bloco2 {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .bloco-inp {
-            display: flex;
-            flex-direction: column;
-            margin: 0px;
-        }
-
-        .barra img{
-            width: 350px;
-        }
-
-        .bloco2 {
-            margin-top: 25px;
-        }
-
-        .botao {
-            margin: 0px;
-        }
-
-        .input-d input{
-            width: 18em;
-        }
-
+        .bloco1 { display: flex; flex-direction: column; }
+        .bloco2 { display: flex; flex-direction: column; }
+        .bloco-inp { display: flex; flex-direction: column; margin: 0px; }
+        .barra img{ width: 350px; }
+        .bloco2 { margin-top: 25px; }
+        .botao { margin: 0px; }
+        .input-d input{  width: 18em; }
+        .barra { margin: 20px 0px; }
+        .inp { margin-top: 20px; }
+        input { width: 250px; }
+        .input-d input{ width: 250px; }
+        .btn { margin-top: 35px; }
     }
 
 `;
