@@ -28,6 +28,7 @@ const Parte1 = styled.div`
     @media (max-width: 800px) {
         display: flex;
         flex-direction: column;
+        text-align: center;
         
         .txt {
             margin: 0px;
