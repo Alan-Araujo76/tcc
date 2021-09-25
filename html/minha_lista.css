@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+
+
 .quadrado {
 display: flex;
 flex-direction: column;
@@ -6,13 +12,17 @@ background-color: #000000;
 
 .titulo {
     color: white ;
+    font-size: 50px;
     padding: 80px 70px;
+    font-family: 'Montserrat'  ;
+    font-weight: 700;
+    padding: 50px 0px 70px 230px;
 }
 
 .listas {
  display: flex;
  flex-direction: column;
- background-color: #C4C4C4;
+ background-color: rgba(196, 196, 196, 0.2);
  width: 1576px;
  align-self: center;
 
@@ -28,25 +38,46 @@ background-color: #000000;
 
 
 
+
+
 .fileira1 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-left: 245px;
+    margin-left: 475px;
+    padding: 40px 0px 0px 0px;
+    
+  
 }
 
 .botao {
     padding: 60px;
+    
 }
 
 
 .lista {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 40px 20px 40px 20px;
     
 }
 
+.capas {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.nome_lista {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: white;
+    align-self: center;
+    padding: 20px 0px;
+   
+}
 
 .fileira2 {
     display: flex;
@@ -68,4 +99,26 @@ justify-content: space-evenly;
 
 }
 
+
+.paginas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+}
+
+.pagina {
+    padding: 5px;
+}
+
+.pagina button {
+    background-color: rgba(196, 196, 196, 0.2);
+    color: white;
+    border:  2px solid #FFB800;  
+    border-radius: 5px;
+    height: 25px;
+    width: 26px;
+    font-family: 'Montserrat'  ;
+    font-weight: 600;
+}
 
