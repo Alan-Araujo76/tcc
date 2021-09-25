@@ -25,7 +25,7 @@ export default function Login() {
                         <div className="dif"><button>Entrar</button></div>
                         <button>Cadastrar</button>
                     </div>
-                    <div className="esq-senha"><a>Esqueci senha</a></div>
+                    <div className="esq-senha">Esqueci senha</div>
                 </div>
                 <div className="entrar-com">
                     <div className="txt">Ou entrar com:</div>

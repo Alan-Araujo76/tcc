@@ -4,7 +4,7 @@ import  LogoeBarra from '../../componentes/tituloEbarra-login'
 import { Botoes } from '../entrar-usu/style'
 import { Container, Parte2 } from './style'
 
-export default function() {
+export default function Cadastro() {
     return(
         <Container>
             <LogoeBarra />
@@ -44,7 +44,7 @@ export default function() {
 
                     <div className="bloco-inp"> 
                      <div className="inp">
-                        <div className="txt-d">Email: </div>  
+                        <div className="txt-d">E-mail: </div>  
                         <div className="input-d"><input/></div>
                      </div>
                     </div>

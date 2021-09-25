@@ -7,6 +7,14 @@ const Container = styled.div `
     justify-content: center;
     align-items: center;
     height: 100vh;
+
+    @media (max-width: 800px) {
+        display: flex;
+        flex-direction: column;   
+        align-items: center;
+        height: 100%;
+        padding: 3.5em 0em;
+    }
 `;
 
 const Parte2 = styled.div`
@@ -42,6 +50,20 @@ const Parte2 = styled.div`
         margin-left: 20.5em;
     }
 
+    @media (max-width: 800px) {
+        display: flex;
+        flex-direction: column;  
+        margin: 0em;
+        align-items: center;
+
+        .texto { align-items: center;  }
+        .txt { font-size: 22px; width: 340px; }
+        .email-inp-bt {
+        margin: 80px 0px 50px 0px;
+    }
+        input { width: 315px; }
+        .botao { margin: 0px; }
+    }
 `;
 
 

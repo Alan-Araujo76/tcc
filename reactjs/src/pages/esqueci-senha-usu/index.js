@@ -3,14 +3,16 @@ import  LogoeBarra from '../../componentes/tituloEbarra-login'
 import { Botoes } from '../entrar-usu/style'
 import { Container, Parte2 } from './style'
 
-export default function() {
+export default function Esqueci() {
     return(
         <Container>
             <LogoeBarra />
 
             <Parte2>
-                <div className="txt">
-                    Digite seu endereço de e-mail abaixo e enviaremos um link para que você possa redefinir sua senha.
+                <div className="texto">
+                    <div className="txt">
+                        Digite seu endereço de e-mail abaixo e enviaremos um link para que você possa redefinir sua senha.
+                    </div>
                 </div>
                 <div className="email-inp-bt">
                     <div className="txt1">Email:</div>

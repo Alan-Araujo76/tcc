@@ -11,7 +11,7 @@ export default function Rodape() {
     return(
         <Container>
             <div className="barra"> <img src={LinhaSep} alt="" /> </div>
-          <div className="qlq-coisa">
+            <div className="qlq-coisa">
             <div className="parte1">
                 Movies<span style={{color: "#FF005C",  fontweight: "none"}}> World</span>
             </div>
@@ -70,6 +70,60 @@ export default function Rodape() {
                 </div>
             </div>
           </div>
+
+          
+          <div className="mobile">
+            <div className="parte1">
+                <div className="1-p1">
+                    <div className="tit">Movies<span style={{color: "#FF005C",  fontweight: "none"}}> World</span></div>
+                </div>
+
+                <div className="redes">
+                    <div className="titulo-d">Redes Sociais</div>
+                    <div className="img-b1">
+                        <div className="redes-s"><img src={Face} alt="" /></div>
+                        <div className="redes-s1"><img src={Insta} alt="" /></div>
+                        <div className="redes-s2"><img src={TT} alt="" /></div>
+                    </div>
+                </div>
+
+                <div className="subtitulos">
+                    <div className="titulo-p2d">Termos de uso</div>
+                    <div className="titulo-p2di">Declaração de privacidade</div>
+                </div>
+            </div>
+
+
+
+            <div className="parte2">
+                <div className="titulo-p2">Duvidas? Entre em contato</div>
+                <div className="subtitulo">Formas de contato</div>
+
+                <div className="conteudo">
+                    <div className="sla">
+                        <div className="sub-subtitulo">Emails:</div>
+                        <div className="b-p2">
+                            <div className="email">eusoulindo@egato.com</div>
+                            <div className="email">eusoulindo@egato.com</div>
+                            <div className="email">eusoulindo@egato.com</div>
+                        </div>
+                    </div>
+
+                    <div className="sla">
+                        <div className="sub-subtitulo">Telefones:</div>
+                        <div className="b-p2">
+                            <div className="email">+55 (11) 00000-0000</div>
+                            <div className="email">+55 (11) 00000-0000</div>
+                            <div className="email">+55 (11) 00000-0000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+
+
+
         </Container>
     )
 }
