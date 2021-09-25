@@ -111,7 +111,7 @@ const Parte2 = styled.div`
 
         button { 
             width: 90px;
-            font-size: 8px;
+            font-size: 10px;
             height: 35px;
         }
 
