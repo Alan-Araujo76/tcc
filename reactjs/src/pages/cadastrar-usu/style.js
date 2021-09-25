@@ -82,6 +82,7 @@ const Parte2 = styled.div`
     @media (max-width: 800px) {
         display: flex;
         flex-direction: column;
+        margin: 0px;
 
         .bloco1 {
             display: flex;
@@ -96,6 +97,11 @@ const Parte2 = styled.div`
         .bloco-inp {
             display: flex;
             flex-direction: column;
+            margin: 0px;
+        }
+
+        .barra {
+            width: 350px;
         }
     }
 
