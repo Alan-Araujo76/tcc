@@ -82,6 +82,21 @@ const Parte2 = styled.div`
     @media (max-width: 800px) {
         display: flex;
         flex-direction: column;
+
+        .bloco1 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bloco2 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bloco-inp {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
 `;
