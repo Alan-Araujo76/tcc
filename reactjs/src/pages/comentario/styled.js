@@ -166,7 +166,7 @@ const PartePrin = styled.div`
     }
 
 
-    @media (max-width: 400px) {
+    @media (max-width: 800px) {
         margin: 0px;
         align-items: center;
 
