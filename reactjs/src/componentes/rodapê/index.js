@@ -92,6 +92,33 @@ export default function Rodape() {
                     </div>
                 </div>
             </div>
+
+
+
+            <div className="parte2">
+                <div className="titulo-p2">Duvidas? Entre em contato</div>
+                <div className="subtitulo">Formas de contato</div>
+
+                <div className="conteudo">
+                    <div className="sla">
+                        <div className="sub-subtitulo">Emails:</div>
+                        <div className="b-p2">
+                            <div className="email">eusoulindo@egato.com</div>
+                            <div className="email">eusoulindo@egato.com</div>
+                            <div className="email">eusoulindo@egato.com</div>
+                        </div>
+                    </div>
+
+                    <div className="sla">
+                        <div className="sub-subtitulo">Telefones:</div>
+                        <div className="b-p2">
+                            <div className="email">+55 (11) 00000-0000</div>
+                            <div className="email">+55 (11) 00000-0000</div>
+                            <div className="email">+55 (11) 00000-0000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
           </div>
 
 

@@ -115,8 +115,8 @@ const Container = styled.div`
 
         .qlq-coisa { display: none; }
 
-        .mobile { display: flex; flex-direction: column;}
-        .parte1 { padding: 40px 20px; margin: 0px; display: flex; flex-direction: row; }
+        .mobile { display: flex; flex-direction: column; padding: 40px 20px;}
+        .parte1 {  margin: 0px; display: flex; flex-direction: row; }
         .tit { margin: 0px; font-size: 23px; line-height: 20px;}
         .redes { display: flex; flex-direction: column; margin: -15px 35px 0px 50px; }
         .titulo-d { margin: 0px; font-size: 10px; }
@@ -131,6 +131,14 @@ const Container = styled.div`
         .img-b1 { margin-top: -30px; }
         .subtitulos { margin: 0px; width: 100px; }
 
+        .parte2 { display: flex; flex-direction: column; margin: 26px 0px 0px 20px; }
+        .titulo-p2 { font-size: 13px; font-weight: 300; }
+        .subtitulo { font-size: 11px; margin: 0px; margin: 0px 0px 10px 30px; }
+        .sub-subtitulo { font-size: 9px; font-weight: bolder; margin-bottom: 5px; }
+        .b-p2 { margin-left: 10px }
+        .email { font-size: 8px; }
+        .conteudo { display: flex; flex-direction: row;  }
+        .sla { display: flex; flex-direction: column; margin-left: 60px; }
     }
 `;
 

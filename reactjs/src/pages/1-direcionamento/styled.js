@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-background-color: blueviolet;
-color: #000;
+margin: 0px;
+background-color: #000;
+color: #fff;
 height: 100vh;
+padding: 0em 5em;
 `;
 
 
