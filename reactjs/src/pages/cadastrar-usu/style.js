@@ -8,6 +8,14 @@ const Container = styled.div `
     justify-content: center;
     align-items: center;
     height: 100vh;
+
+    
+    @media (max-width: 800px) {
+        display: flex;
+        flex-direction: column;   
+        text-align: center;
+        padding: 3.5em 0em;
+    }
 `;
 
 const Parte2 = styled.div`
@@ -69,6 +77,11 @@ const Parte2 = styled.div`
     input {
         width: 15em;
         height: 2.3em;
+    }
+
+    @media (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
     }
 
 `;
