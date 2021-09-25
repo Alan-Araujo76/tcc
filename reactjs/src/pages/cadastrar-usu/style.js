@@ -100,9 +100,22 @@ const Parte2 = styled.div`
             margin: 0px;
         }
 
-        .barra {
+        .barra img{
             width: 350px;
         }
+
+        .bloco2 {
+            margin-top: 25px;
+        }
+
+        .botao {
+            margin: 0px;
+        }
+
+        .input-d input{
+            width: 18em;
+        }
+
     }
 
 `;
