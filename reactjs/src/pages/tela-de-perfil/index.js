@@ -110,7 +110,66 @@ export default function Perfil() {
                         <div className="capa-p1"><img src={Capa} alt="" /></div>
                         <div className="txt-p1">Velozes e Furiosos</div>
                       </div>
+
+                      <div className="sub-bloco">
+                        <div className="capa-p1"><img src={Capa} alt="" /></div>
+                        <div className="txt-p1">Velozes e Furiosos</div>
+                      </div>
                     </div>
+
+                      <div className="bloco-mobile">
+                        <div className="divisao-mobile">
+                          <div className="sub-bloco">
+                            <div className="capa-p1"><img src={Capa} alt="" /></div>
+                            <div className="txt-p1">Velozes e Furiosos</div>
+                          </div>
+
+                          <div className="sub-bloco">
+                            <div className="capa-p1"><img src={Capa} alt="" /></div>
+                            <div className="txt-p1">Velozes e Furiosos</div>
+                          </div>
+
+                          <div className="sub-bloco">
+                            <div className="capa-p1"><img src={Capa} alt="" /></div>
+                            <div className="txt-p1">Velozes e Furiosos</div>
+                          </div>
+                        </div>
+
+                        <div className="divisao-mobile">
+                          <div className="sub-bloco">
+                            <div className="capa-p1"><img src={Capa} alt="" /></div>
+                            <div className="txt-p1">Velozes e Furiosos</div>
+                          </div>
+
+                          <div className="sub-bloco">
+                            <div className="capa-p1"><img src={Capa} alt="" /></div>
+                            <div className="txt-p1">Velozes e Furiosos</div>
+                          </div>
+
+                          <div className="sub-bloco">
+                            <div className="capa-p1"><img src={Capa} alt="" /></div>
+                            <div className="txt-p1">Velozes e Furiosos</div>
+                          </div>
+                      </div>
+
+
+                      <div className="divisao-mobile">
+                        <div className="sub-bloco">
+                          <div className="capa-p1"><img src={Capa} alt="" /></div>
+                          <div className="txt-p1">Velozes e Furiosos</div>
+                        </div>
+
+                        <div className="sub-bloco">
+                          <div className="capa-p1"><img src={Capa} alt="" /></div>
+                          <div className="txt-p1">Velozes e Furiosos</div>
+                        </div>
+
+                        <div className="sub-bloco">
+                          <div className="capa-p1"><img src={Capa} alt="" /></div>
+                          <div className="txt-p1">Velozes e Furiosos</div>
+                        </div>
+                      </div>
+                      </div>
 
                     <div className="titulo-p1"> Assistir mais tarde</div>
                     <div className="bloco-p2">

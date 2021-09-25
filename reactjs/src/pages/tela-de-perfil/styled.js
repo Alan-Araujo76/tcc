@@ -141,6 +141,26 @@ const Parte1 = styled.div`
         margin: 60px 0px;
     }
 
+
+
+    @media (max-width: 800px) {
+        margin: 0px;
+        padding: 0px 30px;
+
+        .titulo { display: none; }
+        .linha-sep { display: none; }
+        .foto-pessoa img { width: 50px; height: 50px; }
+        .txt-usu { font-size: 10px;  margin: 0px;}
+        .bt-1 button { font-size: 8px; width: 70px; height: 20px; margin: 0px; }
+        .infos { margin: 0px; }
+        .txt-fil { font-size: 10px; text-align: center; margin-top: 10px; width: 65px; }
+        .img-fil img { height: 65px; }
+        .titulo-b { margin-bottom: 10px; }
+        .bloco-b { width: 25em;  height: 8em; }
+        .linha-sep1 img { width: 500px; }
+
+    }
+
 `;
 
 
@@ -187,7 +207,7 @@ const Parte2 = styled.div`
     .bloco-p2 {
         display: flex;
         flex-direction: row;
-        width: 68em;
+        width: 1120px;
         height: 11em;
         background-color: #3B3B3B;
         justify-content: space-around;
@@ -282,7 +302,22 @@ const Parte2 = styled.div`
         margin-left: 5em;
     }
 
+    .bloco-mobile {
+        display: none;
+    }
 
+    @media (max-width: 800px) {
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .bloco-p1 { display: none; }
+        .bloco-mobile { display: flex; flex-direction: column; width: 30em;  height: 30em; background-color: #3B3B3B;  align-items: center; margin-bottom: 70px;  }
+        .divisao-mobile { display: flex; flex-direction: row; text-align: center; }
+        
+
+    }
 
 `;
 
