@@ -17,7 +17,7 @@ const Container = styled.div`
         justify-content: center;
         align-items: center;
         height: 100vh;
-        padding: 3.5em 0em;
+        padding: 1.5em 0em;
     }
 `;
 

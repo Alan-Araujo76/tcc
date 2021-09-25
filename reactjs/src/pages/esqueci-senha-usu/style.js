@@ -13,7 +13,7 @@ const Container = styled.div `
         flex-direction: column;   
         align-items: center;
         height: 100vh;
-        padding: 3.5em 0em;
+        padding: 1.5em 0em;
     }
 `;
 
