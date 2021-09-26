@@ -40,8 +40,8 @@ export default function Routes() {
                 <Route path="/editperfil" exact={true} component={EditarPerfil} />
                 <Route path="/filmesporgosto" exact={true} component={FilmesGosto} />
                 <Route path="/filmespopulares" exact={true} component={FilmesPopulares} />
+                <Route path="/listapop" exact={true} component={ListasPopulares} />
                 <Route path="/listafil" exact={true} component={FilmeLista} />
-                <Route path="/listaspopulares" exact={true} component={ListasPopulares} />
                 <Route path="/comentario" exact={true} component={Comentario} />
                 <Route path="/detfilmes" exact={true} component={DetalhesFilme} />
                 <Route path="/jiue886d54s" exact={true} component={Inserir} />

@@ -57,7 +57,17 @@ const Container = styled.div`
         width: 450px;
     }
 
-    input {
+    .inp input {
+        background-color: #3b3b3b;
+        border: transparent;
+        border-radius: 8px;
+        width: 190px;
+        height: 35px;
+        color: #fff;
+        font-family: Montserrat;
+    }
+
+    .inpd input {
         background-color: #3b3b3b;
         border: transparent;
         border-radius: 8px;

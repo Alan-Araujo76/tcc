@@ -274,7 +274,7 @@ export default function Perfil() {
                     </div>
                 </div>
             </Parte2>
-            <Rodape />
+          <Rodape />
         </Container>
     )
 }

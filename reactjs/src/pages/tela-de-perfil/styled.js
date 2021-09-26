@@ -8,15 +8,7 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
 
-    .linha-sep-p {
-        text-align: center;
-        width: 100%;
-    }
 
-    .linha-sep-p img {
-        text-align: center;
-        width: 100%;
-    }
 `;
 
 
@@ -139,6 +131,16 @@ const Parte1 = styled.div`
         width: 50em;
         height: 10em;
         background-color: #3B3B3B;
+    }
+
+    .linha-sep-p {
+        text-align: center;
+        width: 100%;
+    }
+
+    .linha-sep-p img {
+        text-align: center;
+        width: 100%;
     }
 
 

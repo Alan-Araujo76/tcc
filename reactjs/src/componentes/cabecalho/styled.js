@@ -8,6 +8,7 @@ const Container = styled.div`
     color: #fff;
     justify-content: space-between;
     align-items: center;
+    
 
     .logo {
         font-family: Montserrat;
