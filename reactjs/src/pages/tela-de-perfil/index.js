@@ -28,7 +28,7 @@ export default function Perfil() {
                     </div>
                 </div>
 
-                <div className="linha-sep"><img src={LinhaSep} alt="" /></div>
+                <div className="linha-sep-p"><img src={LinhaSep} alt="" /></div>
                 
             <div className="infos">
                 <div className="info-usu">

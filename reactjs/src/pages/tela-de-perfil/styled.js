@@ -8,12 +8,12 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
 
-    .linha-sep {
+    .linha-sep-p {
         text-align: center;
         width: 100%;
     }
 
-    .linha-sep img {
+    .linha-sep-p img {
         text-align: center;
         width: 100%;
     }
