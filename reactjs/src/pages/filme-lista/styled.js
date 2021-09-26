@@ -16,7 +16,7 @@ const Container = styled.div`
 .parte1 {
     color: #fff;
     background-color: #3B3B3B;
-    padding: 1em;
+    padding: 1.5em;
     margin: 0em 15em;
 }
 
@@ -62,6 +62,10 @@ const Container = styled.div`
     width: 6.5em;
     height: 6.5em;
     cursor: pointer;
+}
+.botao:hover {
+    transition: 0.8s;
+    opacity: 0.6;
 }
 
 .desc-botao {
