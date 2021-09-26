@@ -5,9 +5,17 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     background-color: #000;
+    justify-content: center;
+    align-items: center;
 
     .linha-sep {
         text-align: center;
+        width: 100%;
+    }
+
+    .linha-sep img {
+        text-align: center;
+        width: 100%;
     }
 `;
 
@@ -334,6 +342,9 @@ const Parte2 = styled.div`
     .sss {
         display: none;
     }
+
+
+
 
     @media (max-width: 800px) {
         margin: 0px;
