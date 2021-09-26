@@ -6,6 +6,6 @@ export default function Botao() {
             <div><Botao1>1</Botao1></div>
             <div><Botao1>2</Botao1></div>
             <div><Botao1>3</Botao1></div>
-            <div><Botao1>...</Botao1></div>
+            <div className="dif"><Botao1>...</Botao1></div>
         </Geral>
 )}

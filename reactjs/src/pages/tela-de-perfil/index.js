@@ -174,8 +174,7 @@ export default function Perfil() {
                     </div>
 
                     <div className="titulo-p1"> Assistir mais tarde</div> 
-                    <div className="bloco-p1">
-                      <div className="titulo-p1"> Assistir mais tarde</div>
+                    <div className="bloco-p1-d">
                       <div className="bloco-p2">
                           <div className="img-b2"><img src={Capa} alt="" /></div>
                           <div className="img-b2"><img src={Capa} alt="" /></div>
@@ -264,7 +263,7 @@ export default function Perfil() {
                     </div>
                   </div>
 
-                    <div className="titulo-p1"> Avaliação </div>
+                    <div className="titulo-p1-d"> Avaliação </div>
                     <div className="avaliacao-b3">
                         <div className="desc-b3"> Deixa aqui sua avaliação, critícas construtivas, elogios, entre outros. </div> 
                         <div className="inp-bt">

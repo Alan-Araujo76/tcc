@@ -196,6 +196,20 @@ const Parte2 = styled.div`
         margin-bottom: 70px;
     }
 
+    .bloco-p1-d {
+        display: flex;
+        flex-direction: row;
+        width: 70em;
+        height: 11em;
+        background-color: #3B3B3B;
+        justify-content: space-around;
+        align-items: center; 
+        text-align: center;
+        margin-bottom: 70px;
+        margin-top: 50px;
+    }
+
+
     .capa-p1 img {
         height: 110px;
         width: 70px;
@@ -218,13 +232,19 @@ const Parte2 = styled.div`
         justify-content: space-around;
         align-items: center; 
         text-align: center;
-        margin-bottom: 70px;
         padding: 0px 16px;
     }
 
     .pt1-b2 {
         display: flex;
         flex-direction: row;
+    }
+
+    .titulo-p1-d {
+        margin-top: 3em;
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 20px;
     }
 
     .img-b2 img {
@@ -308,6 +328,10 @@ const Parte2 = styled.div`
     }
 
     .bloco-mobile {
+        display: none;
+    }
+
+    .sss {
         display: none;
     }
 

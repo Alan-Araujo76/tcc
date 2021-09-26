@@ -16,12 +16,13 @@ import Perfil from './pages/tela-de-perfil';
 import EditarPerfil from './pages/editar-perfil';
 
 // Tela de categoria de filmes
-import FilmesPopulares from './pages/filmes_gosto';
+import FilmesPopulares from './pages/filmes-populares';
 import FilmesGosto from './pages/filmes_gosto';
 
 // Tela de Lista
 import FilmeLista from './pages/filme-lista';
 import CriarLista from './pages/criar-lista';
+import ListasPopulares from './pages/filme-lista';
 
 import Comentario from './pages/comentario';
 import DetalhesFilme from './pages/detalhes-filme';
@@ -38,8 +39,9 @@ export default function Routes() {
                 <Route path="/perfil" exact={true} component={Perfil} />
                 <Route path="/editperfil" exact={true} component={EditarPerfil} />
                 <Route path="/filmesporgosto" exact={true} component={FilmesGosto} />
+                <Route path="/filmespopulares" exact={true} component={FilmesPopulares} />
                 <Route path="/listafil" exact={true} component={FilmeLista} />
-                <Route path="/criarlista" exact={true} component={CriarLista} />
+                <Route path="/listaspopulares" exact={true} component={ListasPopulares} />
                 <Route path="/comentario" exact={true} component={Comentario} />
                 <Route path="/detfilmes" exact={true} component={DetalhesFilme} />
                 <Route path="/jiue886d54s" exact={true} component={Inserir} />
