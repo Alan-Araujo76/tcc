@@ -5,13 +5,6 @@ const Container = styled.div`
     flex-direction: column;
     background-color: #000;
     color: #fff;
-
-    .titulo {
-        font-size: 35px;
-        font-weight: bolder;
-        margin-bottom: 1em;
-        margin-left: 265px;
-    }
 `;
 
 
@@ -20,6 +13,14 @@ const PartePrin = styled.div`
     flex-direction: column;
     margin: 0px 140px;
     align-items: center;
+
+    .titulo {
+        font-size: 35px;
+        font-weight: bolder;
+        margin-bottom: 1em;
+        margin-left: 265px;
+    }
+
 
     .bloco1 {
         display: flex;

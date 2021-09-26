@@ -13,8 +13,9 @@ export default function Comentarios() {
         <Container>
             <Cabecalho/>
 
-            <div className="titulo">Comentários:</div>
+            
             <PartePrin>
+                <div className="titulo">Comentários:</div>
                 <div className="bloco1">
                     <div className="txt-c">Há muita coisa acontecendo para este tempo de execução e os setpieces são um pouco desanimadores em comparação com as entradas anteriores. Eles poderiam ter pelo menos, feito com que John Cena vencesse aquele grandalhão no final.</div>
                     <div className="excluir"><button>Excluir</button></div>
