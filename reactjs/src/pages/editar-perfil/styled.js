@@ -7,8 +7,15 @@ const Container = styled.div`
     background-color: #000;
     color: #fff;
 
+
     .barra-t {
         text-align: center;
+        width: 100%;
+    }
+
+    .barra-t img {
+        text-align: center;
+        width: 100%;
     }
 
     .titulo {
@@ -21,15 +28,17 @@ const Container = styled.div`
     }
 
 
-    .parte2 {
+    .parte2-p {
         display: flex;
-        flex-direction: row;      
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0em 8.3em;
     }
 
     .parte-inputs {
         display: flex;
         flex-direction: column;
-        margin: 3em 8.3em 0em 8.3em;
+        margin-top: 3em;
     }
 
     .bloco-inp {
@@ -126,7 +135,7 @@ const Container = styled.div`
     .parte-trocarf {
         display: flex;
         flex-direction: column;
-        margin: 3em 8.3em 0em 8.3em;
+        margin-top: 3em;
         text-align: center;
     }
 

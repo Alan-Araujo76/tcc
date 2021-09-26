@@ -17,7 +17,7 @@ export default function EditarPerfil() {
                 <div className="barra-t"><img src={LinhaSep} alt="" /></div>
             </div>
 
-            <div className="parte2">
+            <div className="parte2-p">
                 <div className="parte-inputs">
                     <div className="bloco-inp">
                         <div className="txt-bi">Username:</div>
