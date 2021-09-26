@@ -10,7 +10,7 @@ const Container = styled.div`
     color: #fff;
     font-size: 35px;
     font-family: Montserrat;
-    padding: 1em 6.8em;
+    padding: 0em 6.8em 1em;
 }
 
 .parte1 {

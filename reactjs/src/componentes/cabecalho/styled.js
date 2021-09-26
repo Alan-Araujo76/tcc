@@ -8,7 +8,6 @@ const Container = styled.div`
     color: #fff;
     justify-content: space-between;
     align-items: center;
-    background-color: #000;
 
     .logo {
         font-family: Montserrat;
@@ -69,7 +68,7 @@ const Container = styled.div`
 
     
 
-    input {
+    .barra-pesq input {
        width: 11em;
        border:none;
        background-color: #D0D0D0;

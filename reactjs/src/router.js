@@ -23,6 +23,8 @@ import FilmeLista from './pages/filme-lista';
 import CriarLista from './pages/criar-lista';
 
 import Comentario from './pages/comentario';
+import DetalhesFilme from './pages/detalhes-filme';
+
 
 export default function Routes() {
     return (
@@ -38,6 +40,7 @@ export default function Routes() {
                 <Route path="/listafil" exact={true} component={FilmeLista} />
                 <Route path="/criarlista" exact={true} component={CriarLista} />
                 <Route path="/comentario" exact={true} component={Comentario} />
+                <Route path="/detfilmes" exact={true} component={DetalhesFilme} />
                 <Route path="/jiue886d54s" exact={true} component={Inserir} />
             </Switch>
         </BrowserRouter>

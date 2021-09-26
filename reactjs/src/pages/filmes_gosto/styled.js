@@ -45,20 +45,21 @@ const Bloco1 = styled.div`
     flex-direction: row;
     margin: 0px 140px 0px 200px;
     justify-content: space-between;
+    text-align: center;
 
     .nome {
-        font-size: 19px;
-        width: 150px;
+        font-size: 17px;
+        width: 100px;
         text-align: center;
-        margin-left: -10px;
         margin-top: 8px;
         line-height: 22px;
         font-weight: 500;
+        margin-left: 10px;
     }
 
     img {
-        width: 127px;
-        height: 180px;
+        width: 115px;
+        height: 170px;
     }
     
 `;
@@ -71,18 +72,18 @@ const Bloco2 = styled.div`
     
 
     .nome {
-        font-size: 19px;
-        width: 150px;
+        margin-left: 10px;
+        font-size: 17px;
+        width: 100px;
         text-align: center;
-        margin-left: -10px;
         margin-top: 8px;
         line-height: 22px;
         font-weight: 500;
     }
 
     img {
-        width: 130px;
-        height: 190px;
+        width: 115px;
+        height: 170px;
     }
 
 

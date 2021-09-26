@@ -6,11 +6,15 @@ const Container = styled.div`
     flex-direction: column;
     background-color: #000;
     color: #fff;
-    justify-content: center;
+    align-items: center;
 
     .barra img {
-        width: 93.2em;
+        width: 100%;
         margin-top: 3em;
+    }
+
+    .barra {
+        width: 100%;
     }
 
     .qlq-coisa {
