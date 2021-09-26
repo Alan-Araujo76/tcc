@@ -21,7 +21,6 @@ import FilmesGosto from './pages/filmes_gosto';
 
 // Tela de Lista
 import FilmeLista from './pages/filme-lista';
-import CriarLista from './pages/criar-lista';
 import ListasPopulares from './pages/listas-populares';
 
 import Comentario from './pages/comentario';
