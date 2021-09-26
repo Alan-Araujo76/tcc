@@ -64,10 +64,32 @@ export default function FilmeLista() {
                         <div className="nm-filme">Velozes e Furiosos 9</div>
                     </div>
                 </div>
+                <div className="linha">
+                    <div className="bloco">
+                        <div className="img-filme"><img src={Filme} alt=""/></div>
+                        <div className="nm-filme">Velozes e Furiosos 9</div>
+                    </div>
+                    <div className="bloco">
+                        <div className="img-filme"><img src={Filme} alt=""/></div>
+                        <div className="nm-filme">Velozes e Furiosos 9</div>
+                    </div>
+                    <div className="bloco">
+                        <div className="img-filme"><img src={Filme} alt=""/></div>
+                        <div className="nm-filme">Velozes e Furiosos 9</div>
+                    </div>
+                    <div className="bloco">
+                        <div className="img-filme"><img src={Filme} alt=""/></div>
+                        <div className="nm-filme">Velozes e Furiosos 9</div>
+                    </div>
+                    <div className="bloco">
+                        <div className="img-filme"><img src={Filme} alt=""/></div>
+                        <div className="nm-filme">Velozes e Furiosos 9</div>
+                    </div>
+                </div>
                 <Prox/>
             </div>
             </Container>          
         <Rodape />
-        </div>
+    </div>
     )
 }
