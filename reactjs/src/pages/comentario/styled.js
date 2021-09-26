@@ -18,7 +18,6 @@ const PartePrin = styled.div`
         font-size: 35px;
         font-weight: bolder;
         margin-bottom: 1em;
-        margin-left: 265px;
     }
 
 
