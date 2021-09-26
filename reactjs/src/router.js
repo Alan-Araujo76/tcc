@@ -16,6 +16,7 @@ import Perfil from './pages/tela-de-perfil';
 import EditarPerfil from './pages/editar-perfil';
 
 // Tela de categoria de filmes
+import FilmesPopulares from './pages/filmes_gosto';
 import FilmesGosto from './pages/filmes_gosto';
 
 // Tela de Lista
