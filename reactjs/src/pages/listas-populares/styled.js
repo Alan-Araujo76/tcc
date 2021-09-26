@@ -42,19 +42,24 @@ const Container = styled.div`
         font-size: 14px;
         font-family: Montserrat;
     }
+
+    .filmes {
+        background-color: #3b3b3b;
+        margin: 0px 140px;
+        padding: 50px;
+    }
 `;
 
 
 const Bloco1 = styled.div`
     display: flex;
     flex-direction: row;
-    margin: 0px 140px 0px 200px;
     justify-content: space-between;
     text-align: center;
 
     .nome {
         font-size: 17px;
-        width: 100px;
+        width: 300px;
         text-align: center;
         margin-top: 8px;
         line-height: 22px;
@@ -66,20 +71,33 @@ const Bloco1 = styled.div`
         width: 115px;
         height: 170px;
     }
+
+
+    .filme {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-fil {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+
     
 `;
 
 const Bloco2 = styled.div`
     display: flex;
     flex-direction: row;
-    margin: 60px 140px 00px 200px;
     justify-content: space-between;
     
 
     .nome {
         margin-left: 10px;
         font-size: 17px;
-        width: 100px;
+        width: 300px;
         text-align: center;
         margin-top: 8px;
         line-height: 22px;
@@ -89,6 +107,16 @@ const Bloco2 = styled.div`
     img {
         width: 115px;
         height: 170px;
+    }
+
+    .filmes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-fil {
+        display: flex;
+        flex-direction: row;
     }
 
 

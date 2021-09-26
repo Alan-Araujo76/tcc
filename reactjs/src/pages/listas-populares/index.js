@@ -135,9 +135,9 @@ export default function FilmesGostos() {
                         <div className="nome">Velozes e Furiosos 9</div>
                     </div>
                 </Bloco2>
-            </div>
 
-            <ProxPag />
+                <ProxPag />
+            </div>
 
 
             <Rodape/>
