@@ -46,33 +46,30 @@ export default function FilmesGostos() {
                 <Bloco2>
 
                 <div className="filme">
-                        <div className="img"><img src={Capa} alt="" /></div>
+                        <div className="img-fil">
+                            <div className="img"><img src={Capa} alt="" /></div>
+                            <div className="img"><img src={Capa} alt="" /></div>
+                            <div className="img"><img src={Capa} alt="" /></div>
+                        </div>
                         <div className="nome">Velozes e Furiosos 9</div>
                     </div>
 
                     <div className="filme">
-                        <div className="img"><img src={Capa} alt="" /></div>
+                        <div className="img-fil">
+                            <div className="img"><img src={Capa} alt="" /></div>
+                            <div className="img"><img src={Capa} alt="" /></div>
+                            <div className="img"><img src={Capa} alt="" /></div>
+                        </div>
                         <div className="nome">Velozes e Furiosos 9</div>
                     </div>
 
                     <div className="filme">
-                        <div className="img"><img src={Capa} alt="" /></div>
+                        <div className="img-fil">
+                            <div className="img"><img src={Capa} alt="" /></div>
+                            <div className="img"><img src={Capa} alt="" /></div>
+                            <div className="img"><img src={Capa} alt="" /></div>
+                        </div>
                         <div className="nome">Velozes e Furiosos 9</div>
-                    </div>
-
-                    <div className="filme">
-                        <div className="img"><img src={Capa} alt="" /></div>
-                        <div className="nome">Velozes e Furiosos 9</div>
-                    </div>
-
-                    <div className="filme">
-                        <div className="img"><img src={Capa} alt="" /></div>
-                        <div className="nome">Velozes e Furiosos 9</div>
-                    </div>
-
-                    <div className="filme">
-                        <div className="img"><img src={Capa} alt="" /></div>
-                        <div className="nome">Velozes e Furiosos 9 </div>
                     </div>
                 </Bloco2>
 
@@ -80,33 +77,30 @@ export default function FilmesGostos() {
                 <Bloco2>
 
                 <div className="filme">
-                        <div className="img"><img src={Capa} alt="" /></div>
+                        <div className="img-fil">
+                            <div className="img"><img src={Capa} alt="" /></div>
+                            <div className="img"><img src={Capa} alt="" /></div>
+                            <div className="img"><img src={Capa} alt="" /></div>
+                        </div>
                         <div className="nome">Velozes e Furiosos 9</div>
                     </div>
 
                     <div className="filme">
-                        <div className="img"><img src={Capa} alt="" /></div>
+                        <div className="img-fil">
+                            <div className="img"><img src={Capa} alt="" /></div>
+                            <div className="img"><img src={Capa} alt="" /></div>
+                            <div className="img"><img src={Capa} alt="" /></div>
+                        </div>
                         <div className="nome">Velozes e Furiosos 9</div>
                     </div>
 
                     <div className="filme">
-                        <div className="img"><img src={Capa} alt="" /></div>
+                        <div className="img-fil">
+                            <div className="img"><img src={Capa} alt="" /></div>
+                            <div className="img"><img src={Capa} alt="" /></div>
+                            <div className="img"><img src={Capa} alt="" /></div>
+                        </div>
                         <div className="nome">Velozes e Furiosos 9</div>
-                    </div>
-
-                    <div className="filme">
-                        <div className="img"><img src={Capa} alt="" /></div>
-                        <div className="nome">Velozes e Furiosos 9</div>
-                    </div>
-
-                    <div className="filme">
-                        <div className="img"><img src={Capa} alt="" /></div>
-                        <div className="nome">Velozes e Furiosos 9</div>
-                    </div>
-
-                    <div className="filme">
-                        <div className="img"><img src={Capa} alt="" /></div>
-                        <div className="nome">Velozes e Furiosos 9 </div>
                     </div>
                 </Bloco2>
 
@@ -115,33 +109,30 @@ export default function FilmesGostos() {
                 <Bloco2>
 
                 <div className="filme">
-                        <div className="img"><img src={Capa} alt="" /></div>
+                        <div className="img-fil">
+                            <div className="img"><img src={Capa} alt="" /></div>
+                            <div className="img"><img src={Capa} alt="" /></div>
+                            <div className="img"><img src={Capa} alt="" /></div>
+                        </div>
                         <div className="nome">Velozes e Furiosos 9</div>
                     </div>
 
                     <div className="filme">
-                        <div className="img"><img src={Capa} alt="" /></div>
+                        <div className="img-fil">
+                            <div className="img"><img src={Capa} alt="" /></div>
+                            <div className="img"><img src={Capa} alt="" /></div>
+                            <div className="img"><img src={Capa} alt="" /></div>
+                        </div>
                         <div className="nome">Velozes e Furiosos 9</div>
                     </div>
 
                     <div className="filme">
-                        <div className="img"><img src={Capa} alt="" /></div>
+                        <div className="img-fil">
+                            <div className="img"><img src={Capa} alt="" /></div>
+                            <div className="img"><img src={Capa} alt="" /></div>
+                            <div className="img"><img src={Capa} alt="" /></div>
+                        </div>
                         <div className="nome">Velozes e Furiosos 9</div>
-                    </div>
-
-                    <div className="filme">
-                        <div className="img"><img src={Capa} alt="" /></div>
-                        <div className="nome">Velozes e Furiosos 9</div>
-                    </div>
-
-                    <div className="filme">
-                        <div className="img"><img src={Capa} alt="" /></div>
-                        <div className="nome">Velozes e Furiosos 9</div>
-                    </div>
-
-                    <div className="filme">
-                        <div className="img"><img src={Capa} alt="" /></div>
-                        <div className="nome">Velozes e Furiosos 9 </div>
                     </div>
                 </Bloco2>
             </div>

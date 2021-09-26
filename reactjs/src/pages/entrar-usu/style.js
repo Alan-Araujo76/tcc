@@ -8,6 +8,7 @@ const Container = styled.div`
     color: #fff;
     align-items: center;
     justify-content: center;
+    justify-content: space-between;
 
     
     @media (max-width: 800px) {
