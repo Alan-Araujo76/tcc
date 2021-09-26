@@ -9,7 +9,6 @@ import LinhaSep from '../../assets/img/linha-det-fil.png';
 import Coracao from '../../assets/img/coracao.png';
 import Relogio from '../../assets/img/relogio.png';
 import LinhaBox from '../../assets/img/linha-box.png';
-import Olho from '../../assets/img/olho-bloco.png';
 
 import Cabecalho from '../../componentes/cabecalho';
 import Rodape from '../../componentes/rodapê';

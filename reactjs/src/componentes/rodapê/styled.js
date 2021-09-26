@@ -40,8 +40,7 @@ const Container = styled.div`
 
     .titulo-g {
         font-size: 20px;
-        margin-bottom: 15px;
-        margin-left: -50px;
+        margin-bottom: 30px;
     }
 
     .parte-p1 {
@@ -68,7 +67,7 @@ const Container = styled.div`
     .titulo-d {
         font-size: 14px;
         font-weight: bold;
-        margin: 42px 0px 10px 0px;
+        margin: 57px 0px 10px 0px;
     }
 
 
