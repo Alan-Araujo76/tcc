@@ -8,13 +8,19 @@ export default function Direcionamento() {
             <h2><Link to="/login">- Tela de Login</Link></h2>
             <h2><Link to="/cadastro">- Tela de Cadastrar</Link></h2>
             <h2><Link to="/esqueci-senha">- Tela de Esqueci Senha</Link></h2>
+
+            <h2><Link to="/detfilmes">- Tela de Info. de um filme</Link></h2>
+
             <h2><Link to="/perfil">- Tela de Perfil</Link></h2>
             <h2><Link to="/editperfil">- Tela de Editar Perfil</Link></h2>
             <h2><Link to="/comentario">- Tela de Comentarios</Link></h2>
-            <h2><Link to="/criarlista">- Tela de Criar uma Lista</Link></h2>
+
+            <h2><Link to="/listasg">- Tela de Lista do usuario(Geral)</Link></h2>
             <h2><Link to="/listafil">- Tela de Filme Lista</Link></h2>
+            <h2><Link to="/listapop">- Tela de Listas Populares</Link></h2>
+
             <h2><Link to="/filmesporgosto">- Tela de Filmes por Gosto</Link></h2>
-            <h2><Link to="/jiue886d54s">- Tela de Inserir Filme</Link></h2>
+            <h2><Link to="/filmespopulares">- Tela de Filmes Populares</Link></h2>
         </Container>
     )
 }

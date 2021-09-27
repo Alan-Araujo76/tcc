@@ -8,11 +8,6 @@ const Container = styled.div`
     color: #fff;
     height: 100%;
 
-    .dif {
-        display: none;
-    }
-
-
 
     .titulo {
         font-size: 35px;
@@ -77,7 +72,7 @@ const Bloco1 = styled.div`
         margin-left: 5px;
     }
 
-    img {
+    .img-fil img {
         width: 100px;
         height: 155px;
     }
@@ -93,13 +88,37 @@ const Bloco1 = styled.div`
         flex-direction: row;
     }
 
+    .filme-b {
+        margin: 2em 6.4em 0em;
+    }
+
+    .botao button {
+        background-color: #FFB800;
+        border-radius: 8em;
+        border: none;
+        width: 6.5em;
+        height: 6.5em;
+        cursor: pointer;
+    }
+    .botao:hover {
+        transition: 0.8s;
+        opacity: 0.6;
+    }
+
+    .desc-botao {
+        font: 16px;
+        color: #fff;
+        padding-top: 15px;
+        font-weight: bold;
+    }
+
     @media (min-width: 1600px) {
-        img { width: 115px; height: 170px; } 
+        .img-fil img { width: 115px; height: 170px; } 
     }
 
 
     @media (min-width: 2000px) {
-        img { width: 135px; height: 195px; }
+        .img-fil img { width: 135px; height: 195px; }
         .nome { font-size: 20px; margin-left: 55px; }
     }
     

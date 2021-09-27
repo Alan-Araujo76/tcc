@@ -20,6 +20,7 @@ import FilmesPopulares from './pages/filmes-populares';
 import FilmesGosto from './pages/filmes_gosto';
 
 // Tela de Lista
+import ListasG from './pages/listas-geral';
 import FilmeLista from './pages/filme-lista';
 import ListasPopulares from './pages/listas-populares';
 
@@ -41,6 +42,7 @@ export default function Routes() {
                 <Route path="/filmespopulares" exact={true} component={FilmesPopulares} />
                 <Route path="/listapop" exact={true} component={ListasPopulares} />
                 <Route path="/listafil" exact={true} component={FilmeLista} />
+                <Route path="/listasg" exact={true} component={ListasG} />
                 <Route path="/comentario" exact={true} component={Comentario} />
                 <Route path="/detfilmes" exact={true} component={DetalhesFilme} />
                 <Route path="/jiue886d54s" exact={true} component={Inserir} />

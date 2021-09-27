@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 
 const Container = styled.div`
-    .txt-b2 {
+    .kkkk {
         margin-top: 8px;
     }
 
-    .but-b2 button {
+    .llll button {
         background-color: #FFB800;
         border:transparent;
         border-radius: 15px;
@@ -15,7 +15,7 @@ const Container = styled.div`
         padding: 10px 8px;
     }
 
-    .but-b2 img {
+    .llll img {
         margin-left:4px;
         height: 50px;
         width: 50px;   
