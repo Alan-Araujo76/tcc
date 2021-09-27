@@ -12,9 +12,10 @@ const Container = styled.div`
 
     .logo {
         font-family: Montserrat;
-        font-size: 1em;
+        font-size: 1.1em;
         line-height: 1em;
         width: 100px;
+        font-weight: bolder;
     }
     
     .parte2 {
@@ -53,7 +54,7 @@ const Container = styled.div`
         justify-content: center;
         align-items: center;
 
-        background-color: #D0D0D0;
+        background-color: #3b3b3b;
         border-radius: 20px;
         border: none;
         height: 2em;
@@ -72,8 +73,9 @@ const Container = styled.div`
     .barra-pesq input {
        width: 11em;
        border:none;
-       background-color: #D0D0D0;
+       background-color: #3b3b3b;
        outline: none;
+       color: #fff;
     }
 
     .parte-celular {

@@ -1,6 +1,7 @@
 import Cabecalho from '../../componentes/cabecalho'
 import Rodape from '../../componentes/rodapê'
 import Capa from '../../assets/img/capa-filme.png'
+import Remover from '../../assets/img/delete.png';
 
 import ProxPag from '../../componentes/botao-prox-pag'
 
@@ -11,7 +12,7 @@ export default function FilmesGostos() {
         <Container>
             <Cabecalho/>
 
-            <div className="titulo">Filmes por gosto:</div>
+            <div className="titulo">Filmes por gosto</div>
 
             <div className="filmes">
                 <Bloco1>

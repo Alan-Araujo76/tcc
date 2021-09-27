@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 
+import Remover from '../../assets/img/delete.png';
+import CapaMaior from '../../assets/img/capa-maior.jpeg';
+
 const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -58,10 +61,17 @@ const Bloco1 = styled.div`
         margin-left: 10px;
     }
 
-    img {
+    .img img {
         width: 115px;
         height: 170px;
+        position: relative;
     }
+
+    .img-h {
+        display: none;
+    }
+
+
     
 `;
 
@@ -86,6 +96,7 @@ const Bloco2 = styled.div`
         width: 115px;
         height: 170px;
     }
+
 
 
     
