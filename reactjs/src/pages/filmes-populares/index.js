@@ -11,7 +11,7 @@ export default function FilmesGostos() {
         <Container>
             <Cabecalho/>
 
-            <div className="titulo">Filmes populares:</div>
+            <div className="titulo">Filmes populares</div>
 
             <div className="filmes">
                 <Bloco1>
