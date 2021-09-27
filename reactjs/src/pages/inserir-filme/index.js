@@ -44,7 +44,7 @@ export default function CadastrarFilme() {
                         <div className="inp2">Diretor:   <input type="text" /></div>
                     </div>
 
-                    <div className="linha1">
+                    <div className="linha-1">
                         <div className="inp3">Data de lançamento:   <input type="text" /></div>
                         <div className="inpuu">Plataformas Dis. :   <input type="text" /></div>
                     </div>
@@ -61,8 +61,10 @@ export default function CadastrarFilme() {
                         <div className="text">  <textarea type="text" ></textarea></div>
                     </div>
                     <div className="linha-d1">
+                      <div className="sep">
                         <div className="texto">Sinopse:</div>
                         <div className="text">  <textarea type="text" ></textarea></div>
+                      </div>
                         <div className="btn"><Botoes>Cadastrar</Botoes></div>
                     </div>
                 </div>
@@ -78,11 +80,12 @@ export default function CadastrarFilme() {
             <table className ="table-user">
               <thead>
                 <tr>
-                  <th className="diferente"> ID </th>
                   <th> Nome </th>
-                  <th> Chamada </th>
+                  <th> Genêro </th>
                   <th> Turma </th>
-                  <th> Curso </th>
+                  <th> Diretor </th>
+                  <th> Lançameto </th>
+                  <th> Plataformas </th>
                   <th className="coluna-acao"> </th>
                   <th className="coluna-acao"> </th>
                 </tr>
@@ -91,6 +94,29 @@ export default function CadastrarFilme() {
               <tbody>
                   <tr>
                     <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td className="coluna-acao"> <button> <img src={Lapis} alt="" /> </button> </td>
+                    <td className="coluna-acao"> <button> <img src={Lixeira} alt="" /> </button> </td>
+                  </tr> 
+              </tbody> 
+
+              <thead>
+                <tr>
+                  <th> Capa Maior </th>
+                  <th> Capa Maior </th>
+                  <th> Descrição  </th>
+                  <th> Sinopse  </th>
+                  <th className="coluna-acao"> </th>
+                  <th className="coluna-acao"> </th>
+                </tr>
+              </thead>
+                    
+              <tbody>
+                  <tr>
                     <td>  </td>
                     <td>  </td>
                     <td>  </td>

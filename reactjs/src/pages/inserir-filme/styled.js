@@ -17,7 +17,7 @@ const Cabecalho = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 189vh;
+    width: 100%;
     align-items: center;
     background-color: #000; 
     padding: 15px 110px 15px 60px;
@@ -53,10 +53,10 @@ const Cabecalho = styled.div`
     }
 
     button {
-        background-color: #fff;
+        background-color: #000;
         cursor: pointer;
         border: 3px solid #FF005C;
-        padding: 8px;
+        padding: 6px;
         width: 42px;
         height: 42px;
         border-radius: 40px;
@@ -92,6 +92,8 @@ const Parteprincipal = styled.div`
         margin-left: 15px;
         color: #fff;
     }
+
+    
 `;
 
 const Bloco1 = styled.div`
@@ -102,7 +104,9 @@ const Bloco1 = styled.div`
     .linha1 {
         display: flex;
         flex-direction: row;
-        margin-bottom: 10px;
+        margin-bottom: 18px;
+        width: 900px;
+        justify-content: space-between;
     }
 
 
@@ -123,11 +127,13 @@ const Bloco1 = styled.div`
     }
 
     .inp-d input {
-        width: 50.8em;
+        height: 32px;
+        width: 53.5em;
     }
 
     .inp-d1 input {
-        width: 50.8em;
+        height: 32px;
+        width: 53.5em;
     }
 
     .inp-d  {
@@ -148,9 +154,15 @@ const Bloco1 = styled.div`
     .linha-d1 {
         display: flex;
         flex-direction: row;
-        margin-right: 10px;
         margin-left: 114px;
-        margin-top: 8px;
+        margin-top: 15px;
+        width: 800px;
+        justify-content: space-between;
+    }
+
+    .sep {
+        display: flex;
+        flex-direction: row;
     }
 
     .text textarea {
@@ -165,13 +177,20 @@ const Bloco1 = styled.div`
     }
 
     .btn {
-        margin-top: 75px;
-        margin-left: 100px;
+        margin-top: 72px;
     }
 
-    .inpuu {
-        margin-left: 11em;
+    .inpuu input {
+        width: 360px;
     }
+
+    .linha-1 {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 18px;
+        width: 900px;
+    }
+
     
 
     input { height: 28px; border-radius: 5px; background: #fff; border: 1px solid #A8A8A8; font-family: Montserrat;}
