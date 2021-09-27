@@ -64,6 +64,8 @@ const Parte2 = styled.div`
         font-family: Montserrat;
         margin-bottom: 20px;
     }
+
+  
    
 
     .botoes-1 {
@@ -110,7 +112,7 @@ const Parte2 = styled.div`
         }
 
         button { 
-            width: 90px;
+            width: 100px;
             font-size: 10px;
             height: 35px;
         }

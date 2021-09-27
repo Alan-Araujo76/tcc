@@ -30,7 +30,7 @@ export default function Login() {
                 <div className="entrar-com">
                     <div className="txt">Ou entrar com:</div>
                     <div className="botoes-1">
-                        <div className="bt-1"><button className="bt-1"><img src={LogoFace} alt="" />Facebook</button></div>
+                        <div className="bt-1"><button><img src={LogoFace} alt="" />Facebook</button></div>
                         <div className="bt-2"><button><img src={LogoGoogle} alt="" />Google</button></div>
                     </div>
                 </div>
