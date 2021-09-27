@@ -44,7 +44,7 @@ const Container = styled.div`
 const Bloco1 = styled.div`
     display: flex;
     flex-direction: row;
-    margin: 0px 140px 0px 200px;
+    margin: 0px 140px 0px 140px;
     justify-content: space-between;
     text-align: center;
 
@@ -68,7 +68,7 @@ const Bloco1 = styled.div`
 const Bloco2 = styled.div`
     display: flex;
     flex-direction: row;
-    margin: 60px 140px 00px 200px;
+    margin: 60px 140px 00px 140px;
     justify-content: space-between;
     
 

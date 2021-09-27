@@ -182,7 +182,7 @@ export default function DetalhesFilme() {
                     <div className="bloco">
                         <div className="parte1-p2">
                             <div className="p1-g">
-                                <div className="img-p2"></div>
+                                <div className="img-p2"><img src="" alt=""/></div>
                                 <div className="txt-p2">ASSISTIDO</div>
                             </div>
 

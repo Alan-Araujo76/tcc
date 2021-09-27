@@ -18,6 +18,8 @@ import EditarPerfil from './pages/editar-perfil';
 // Tela de categoria de filmes
 import FilmesPopulares from './pages/filmes-populares';
 import FilmesGosto from './pages/filmes_gosto';
+import AssistirMaisTarde from './pages/filmes-assistir-depois';
+import JaAssistidos from './pages/filmes-já-assist';
 
 // Tela de Lista
 import ListasG from './pages/listas-geral';
@@ -45,7 +47,9 @@ export default function Routes() {
                 <Route path="/listasg" exact={true} component={ListasG} />
                 <Route path="/comentario" exact={true} component={Comentario} />
                 <Route path="/detfilmes" exact={true} component={DetalhesFilme} />
-                <Route path="/jiue886d54s" exact={true} component={Inserir} />
+                <Route path="/assistimtarde" exact={true} component={AssistirMaisTarde} />
+                <Route path="/jassistidos" exact={true} component={JaAssistidos} />
+                <Route path="/jiue886kjhlhefiorechd54s" exact={true} component={Inserir} />
             </Switch>
         </BrowserRouter>
     )
