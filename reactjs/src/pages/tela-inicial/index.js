@@ -13,10 +13,9 @@ export default function TelaInicial(){
     return(
         
         <Container>
-            <div className="conteiner-ti">
             <Cabecalho/>
+            <div className="conteiner-ti">
             <img src={capaMaior} width="1300em" height="600em"/>
-        
             <div className="titulo-ti">Acompanhe tudo sobre filmes</div>
             <div className="subTitulo-ti">A rede social para amantes de cinema</div>
             <div className="conteudo-box-ti">

@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
         body {
         margin: 0px;
