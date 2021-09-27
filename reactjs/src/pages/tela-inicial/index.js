@@ -41,6 +41,7 @@ export default function TelaInicial(){
                     <div className="boxPT2-ti">
                         <div className="filme-ti">
                             <img src={capaFilme}/>
+
                         </div>
                         <div className="filme-ti">
                             <img src={capaFilme}/>
@@ -52,7 +53,7 @@ export default function TelaInicial(){
                             <img src={capaFilme}/>
                         </div>
                         <div className="botao-ti">
-                            <button className="botao2-ti"><img src={play}/></button>
+                            <button className="botao2-ti"><img src={play} alt=""/></button>
                             <div>
                                 ver mais
                             </div>
