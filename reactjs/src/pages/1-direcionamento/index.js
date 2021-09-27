@@ -21,6 +21,7 @@ export default function Direcionamento() {
                 <div className="cat">
                     <h3>Telas sobre filmes:</h3>
                     <h4><Link to="/detfilmes">- Tela de Info. de um filme</Link></h4>
+                    <h4><Link to="/telainicial">- Tela Inicial</Link></h4>
                 </div>
 
                 <div className="cat">
