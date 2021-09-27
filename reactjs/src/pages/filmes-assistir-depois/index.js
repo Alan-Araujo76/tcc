@@ -9,7 +9,7 @@ export default function FilmesGostos() {
         <Container>
             <Cabecalho/>
 
-            <div className="titulo">Assistir mais tarde:</div>
+            <div className="titulo">Assistir mais tarde</div>
 
             <div className="filmes">
                 <Bloco1>
