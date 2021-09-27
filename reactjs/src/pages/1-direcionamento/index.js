@@ -22,6 +22,8 @@ export default function Direcionamento() {
             <h2><Link to="/listapop">- Tela de Listas Populares</Link></h2>
 
             <h2><Link to="/filmesporgosto">- Tela de Filmes por Gosto</Link></h2>
+            <h2><Link to="/jassistidos">- Tela de Filmes já assistidos</Link></h2>
+            <h2><Link to="/assistimtarde">- Tela de assistir mais tarde</Link></h2>
             <h2><Link to="/filmespopulares">- Tela de Filmes Populares</Link></h2>
         </Container>
     )

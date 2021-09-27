@@ -29,8 +29,6 @@ import ListasPopulares from './pages/listas-populares';
 import Comentario from './pages/comentario';
 import DetalhesFilme from './pages/detalhes-filme';
 
-//Tela Inicial
-import TelaInicial from './pages/tela-inicial';
 
 export default function Routes() {
     return (
@@ -52,7 +50,6 @@ export default function Routes() {
                 <Route path="/assistimtarde" exact={true} component={AssistirMaisTarde} />
                 <Route path="/jassistidos" exact={true} component={JaAssistidos} />
                 <Route path="/jiue886kjhlhefiorechd54s" exact={true} component={Inserir} />
-                <Route path="/telainicial" exact={true} component={TelaInicial} />
             </Switch>
         </BrowserRouter>
     )
