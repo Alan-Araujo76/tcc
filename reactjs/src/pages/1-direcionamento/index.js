@@ -5,10 +5,12 @@ export default function Direcionamento() {
     return(
         <Container>
             <h1>Direcionamento</h1>
+
             <h2><Link to="/login">- Tela de Login</Link></h2>
             <h2><Link to="/cadastro">- Tela de Cadastrar</Link></h2>
             <h2><Link to="/esqueci-senha">- Tela de Esqueci Senha</Link></h2>
 
+            <h2><Link to="/telainicial">- Tela Inicial</Link></h2>
             <h2><Link to="/detfilmes">- Tela de Info. de um filme</Link></h2>
 
             <h2><Link to="/perfil">- Tela de Perfil</Link></h2>
