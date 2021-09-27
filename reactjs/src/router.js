@@ -30,7 +30,7 @@ import Comentario from './pages/comentario';
 import DetalhesFilme from './pages/detalhes-filme';
 
 //Tela Inicial
-import TelaInicial from './pages/tela-inicial';
+import TelaInicial from './pages/tela inicial';
 
 export default function Routes() {
     return (

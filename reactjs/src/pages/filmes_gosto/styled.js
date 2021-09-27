@@ -40,6 +40,8 @@ const Container = styled.div`
         margin: 0px 5px;
         font-size: 14px;
         font-family: Montserrat;
+
+        
     }
 `;
 
