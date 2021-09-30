@@ -18,6 +18,10 @@ const Container = styled.div`
             background-color: black;
             align-items: center;
         }
+        .conteiner-ti > img{
+            width: 76em;
+            height: 36em;
+        }
         .titulo-ti{
             margin-top: 1em;
             color: #ffff;
@@ -154,6 +158,11 @@ const Container = styled.div`
             margin-bottom: 5em;
             color: #ffff;
         }
-
+        @media(max-width: 800px){
+            .conteiner-ti > img{
+                width: 95%;
+                height: 95%;
+            }
+        }
 `
 export { Container }
