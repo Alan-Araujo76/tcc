@@ -51,6 +51,8 @@ const Container = styled.div`
             font-size: 150%;
         }
     }
+
+   
 `;
 
 
@@ -78,6 +80,10 @@ const Bloco1 = styled.div`
     @media (max-width: 800px) {
         margin: 0% 10%;
         .filme-d { display: none; }
+    }
+
+    @media (max-width: 450px) {
+        margin: 0px; 
     }
     
     
@@ -112,6 +118,11 @@ const Bloco2 = styled.div`
     @media (max-width: 800px) {
         margin: 0% 10%;
         .filme-d { display: none; }
+    }
+
+
+    @media (max-width: 450px) {
+        margin: 0px; 
     }
     
 `;

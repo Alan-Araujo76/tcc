@@ -91,7 +91,6 @@ const Container = styled.div`
     @media (max-width: 800px) {
         display: flex;
         flex-direction: column;
-        background-color: #000;
         justify-content: space-between;
         margin: 30px 0px 0px 0px;
 
