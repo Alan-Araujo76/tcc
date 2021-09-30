@@ -42,6 +42,10 @@ const Container = styled.div`
         font-size: 14px;
         font-family: Montserrat;
     }
+
+    @media (max-width: 800px) {
+        text-align: center;
+    }
 `;
 
 
@@ -65,6 +69,11 @@ const Bloco1 = styled.div`
     img {
         width: 115px;
         height: 170px;
+    }
+
+
+    @media (max-width: 800px) {
+        
     }
     
 `;
