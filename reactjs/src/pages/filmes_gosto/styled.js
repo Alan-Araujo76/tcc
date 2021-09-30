@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-
-import Remover from '../../assets/img/delete.png';
-import CapaMaior from '../../assets/img/capa-maior.jpeg';
-
 const Container = styled.div`
     display: flex;
     flex-direction: column;

@@ -1,7 +1,6 @@
 import Cabecalho from '../../componentes/cabecalho'
 import Rodape from '../../componentes/rodapê'
 import Capa from '../../assets/img/capa-filme.png'
-import Remover from '../../assets/img/delete.png';
 
 import ProxPag from '../../componentes/botao-prox-pag'
 

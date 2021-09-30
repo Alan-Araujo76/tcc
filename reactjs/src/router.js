@@ -25,6 +25,7 @@ import JaAssistidos from './pages/filmes-já-assist';
 import ListasG from './pages/listas-geral';
 import FilmeLista from './pages/filme-lista';
 import ListasPopulares from './pages/listas-populares';
+import CriarLista from './pages/criar-lista';
 
 import Comentario from './pages/comentario';
 import DetalhesFilme from './pages/detalhes-filme';
@@ -51,6 +52,7 @@ export default function Routes() {
                 <Route path="/detfilmes" exact={true} component={DetalhesFilme} />
                 <Route path="/assistimtarde" exact={true} component={AssistirMaisTarde} />
                 <Route path="/jassistidos" exact={true} component={JaAssistidos} />
+                <Route path="/criarlist" exact={true} component={CriarLista} />
                 <Route path="/jiue886kjhlhefiorechd54s" exact={true} component={Inserir} />
                 <Route path="/telainicial" exact={true} component={TelaInicial} />
             </Switch>
