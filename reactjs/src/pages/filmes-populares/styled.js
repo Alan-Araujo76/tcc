@@ -83,7 +83,7 @@ const Bloco1 = styled.div`
     }
 
     @media (max-width: 450px) {
-        margin: 0px; 
+        margin: 0% 5%; 
     }
     
     
@@ -122,7 +122,7 @@ const Bloco2 = styled.div`
 
 
     @media (max-width: 450px) {
-        margin: 0px; 
+        margin: 0% 5%; 
     }
     
 `;
