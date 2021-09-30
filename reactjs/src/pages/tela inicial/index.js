@@ -23,34 +23,34 @@ export default function TelaInicial(){
                 <div className="box-filmes-ti">
                     <div className="boxPT1-ti">
                         <div className="filme-ti">
-                            <img src={capaFilme} />
+                            <img src={capaFilme} alt="" />
                         </div>
                         <div className="filme-ti">
-                            <img src={capaFilme} />
+                            <img src={capaFilme} alt="" />
                         </div>
                         <div className="filme-ti">
-                            <img src={capaFilme} /> 
+                            <img src={capaFilme} alt="" /> 
                         </div>
                         <div className="filme-ti">
-                            <img src={capaFilme}/>
+                            <img src={capaFilme} alt="" />
                         </div>
                         <div className="filme-ti">
-                            <img src={capaFilme}/>
+                            <img src={capaFilme} alt="" />
                         </div>
                     </div>
                     <div className="boxPT2-ti">
                         <div className="filme-ti">
-                            <img src={capaFilme}/>
+                            <img src={capaFilme} alt="" />
 
                         </div>
                         <div className="filme-ti">
-                            <img src={capaFilme}/>
+                            <img src={capaFilme} alt="" />
                         </div>
                         <div className="filme-ti">
-                            <img src={capaFilme}/>
+                            <img src={capaFilme} alt="" />
                         </div>
                         <div className="filme1-ti">
-                            <img src={capaFilme}/>
+                            <img src={capaFilme} alt="" />
                         </div>
                         <div className="botao-ti">
                             <button className="botao2-ti"><img src={play} alt=""/></button>
@@ -69,7 +69,7 @@ export default function TelaInicial(){
                     <hr/>
                     <div className="box-comentario">
                         
-                        <img src={perfilFoto} width="35" height="53"/>
+                        <img src={perfilFoto} width="35" height="53" alt="" />
                         <div>
                             <div className="nome-cl-ti">  
                                 Gabriel Melo 
@@ -82,13 +82,13 @@ export default function TelaInicial(){
                                     Sobre: 
                                 </div>
                                 <div className="coracao-ti">
-                                    <img src={coracao} width="43" height="33"/>
+                                    <img src={coracao} width="43" height="33" alt="" />
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="box-comentario">
-                        <img src={perfilFoto} width="35" height="53"/>
+                        <img src={perfilFoto} width="35" height="53" alt="" />
                         <div>
                             <div className="nome-cl-ti">  
                                 Gabriel Melo 
@@ -101,13 +101,13 @@ export default function TelaInicial(){
                                     Sobre: 
                                 </div>
                                 <div className="coracao-ti">
-                                    <img src={coracao} width="43" height="33"/>
+                                    <img src={coracao} width="43" height="33" alt="" />
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="box-comentario">
-                        <img src={perfilFoto} width="35" height="53"/>
+                        <img src={perfilFoto} width="35" height="53" alt="" />
                         <div>
                             <div className="nome-cl-ti">  
                                 Gabriel Melo 
@@ -120,7 +120,7 @@ export default function TelaInicial(){
                                     Sobre: 
                                 </div>
                                 <div className="coracao-ti">
-                                    <img src={coracao} width="43" height="33"/>
+                                    <img src={coracao} width="43" height="33" alt="" />
                                 </div>
                             </div>
                         </div>
@@ -134,39 +134,39 @@ export default function TelaInicial(){
                     <div className="listas-box-ti">
                         <div className="box-lista-ti">
                             <div className="lista-filmes-ti">
-                                <img src={capaFilme}/>
-                                <img src={capaFilme}/>
-                                <img src={capaFilme}/>
-                                <img src={capaFilme}/>
+                                <img src={capaFilme} alt="" />
+                                <img src={capaFilme} alt="" />
+                                <img src={capaFilme} alt="" />
+                                <img src={capaFilme} alt="" />
                             </div>
                             <div className="nome-lista-ti">
-                                <img src={perfil}/>
+                                <img src={perfil} alt="" />
                                 <div>filmes legais</div> 
                             </div>
                             <hr/>
                         </div>
                         <div className="box-lista-ti">
                             <div className="lista-filmes-ti">
-                                <img src={capaFilme}/>
-                                <img src={capaFilme}/>
-                                <img src={capaFilme}/>
-                                <img src={capaFilme}/>
+                                <img src={capaFilme} alt="" />
+                                <img src={capaFilme} alt="" />
+                                <img src={capaFilme} alt="" />
+                                <img src={capaFilme} alt="" />
                             </div>
                             <div className="nome-lista-ti">
-                                <img src={perfil}/>
+                                <img src={perfil} alt="" />
                                 <div>filmes legais</div> 
                             </div>
                             <hr/>
                         </div>
                         <div className="box-lista-ti">
                             <div className="lista-filmes-ti">
-                                <img src={capaFilme}/>
-                                <img src={capaFilme}/>
-                                <img src={capaFilme}/>
-                                <img src={capaFilme}/>
+                                <img src={capaFilme} alt="" />
+                                <img src={capaFilme} alt="" />
+                                <img src={capaFilme} alt="" />
+                                <img src={capaFilme} alt="" />
                             </div>
                             <div className="nome-lista-ti">
-                                <img src={perfil}/>
+                                <img src={perfil} alt="" />
                                 <div>filmes legais</div> 
                             </div>
                         </div>
