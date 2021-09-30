@@ -118,47 +118,10 @@ const Container = styled.div`
             margin-right: 11em;
             width: 500px;
         }
-
-        .box-comentario{
-            display: flex;
-            flex-direction: row;
-            padding: 1em 8.5em 1em 10.8em;
-            align-self: left;
-        }
-        .box-comentario img{
-            margin-right: 1em;
-        }
-
         .titulo-cl-ti{
             color: #ffff;
             font: 20px Montserrat;
             margin: 0em 8.5em 1em;
-            font-weight: 900;
-        }
-
-        .nome-cl-ti{
-            color: #ffff;
-            font: 20px Montserrat;
-            margin-bottom: 1em;
-            font-weight: 900;
-        }
-        
-        .comentarioTXT-ti{
-            color: #ffff;
-            font: 15px Montserrat;
-            margin-bottom: 2em;
-            font-weight: 600;
-        }
-        .sobre-coracao-ti{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .sobre-ti{
-            color: #ffff;
-            font: 15px Montserrat;
-            margin-bottom: 2em;
             font-weight: 900;
         }
         .listas-ti{
@@ -176,27 +139,6 @@ const Container = styled.div`
             margin-top: .5em;
             margin-bottom: 1em;
         }
-        .box-lista-ti{
-            margin-bottom: 2em;
-        }
-        .lista-filmes-ti{
-            display: flex;
-            flex-direction: row;
-        }
-        .nome-lista-ti{
-            display: flex;
-            flex-direction: row;
-        }
-        .nome-lista-ti div{
-            color: #ffff;
-            font: 15px Montserrat;
-            margin: 1em .5em .5em .5em;
-            font-weight: 600;
-        }
-        .nome-lista-ti img{
-            margin-top: .5em;
-            width: 2em;
-        }
         .listas-box-ti button{
             background-color: rgba(196, 196, 196, 0.2);
             color: white;
@@ -206,9 +148,11 @@ const Container = styled.div`
             font-weight: 600;
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             padding: .5em;
+            margin-top: 1em;
         }
         .conteudo-cl-ti{
             margin-bottom: 5em;
         }
+
 `
 export { Container }
