@@ -45,7 +45,14 @@ const Container = styled.div`
 
     @media (max-width: 800px) {
         text-align: center;
+
+        .titulo {
+            margin: 70px 0px 50px 0px;
+            font-size: 150%;
+        }
     }
+
+   
 `;
 
 
@@ -58,12 +65,11 @@ const Bloco1 = styled.div`
 
     .nome {
         font-size: 17px;
-        width: 100px;
-        text-align: center;
+        width: 115px;
         margin-top: 8px;
         line-height: 22px;
         font-weight: 500;
-        margin-left: 10px;
+        margin-bottom: 20px;
     }
 
     img {
@@ -71,10 +77,15 @@ const Bloco1 = styled.div`
         height: 170px;
     }
 
-
     @media (max-width: 800px) {
-        
+        margin: 0% 10%;
+        .filme-d { display: none; }
     }
+
+    @media (max-width: 450px) {
+        margin: 0px; 
+    }
+    
     
 `;
 
@@ -83,16 +94,20 @@ const Bloco2 = styled.div`
     flex-direction: row;
     margin: 60px 140px 00px 140px;
     justify-content: space-between;
+
+    .filme { 
+        width: 115px;
+        text-align: center;
+    }
     
 
     .nome {
-        margin-left: 10px;
         font-size: 17px;
-        width: 100px;
-        text-align: center;
+        width: 115px;
         margin-top: 8px;
         line-height: 22px;
         font-weight: 500;
+        margin-bottom: 25%;
     }
 
     img {
@@ -100,7 +115,15 @@ const Bloco2 = styled.div`
         height: 170px;
     }
 
+    @media (max-width: 800px) {
+        margin: 0% 10%;
+        .filme-d { display: none; }
+    }
 
+
+    @media (max-width: 450px) {
+        margin: 0px; 
+    }
     
 `;
 
