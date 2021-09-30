@@ -82,8 +82,12 @@ const Bloco1 = styled.div`
         .filme-d { display: none; }
     }
 
+
     @media (max-width: 450px) {
         margin: 0% 5%; 
+        .titulo { font-weight: bold; }
+        .nome { font-size: 12px;  width: 85px; line-height: 15px; }
+        .img img {  width: 85px; height: 140px; }
     }
     
     
@@ -123,6 +127,9 @@ const Bloco2 = styled.div`
 
     @media (max-width: 450px) {
         margin: 0% 5%; 
+        .titulo { font-weight: bold; }
+        .nome { font-size: 12px;  width: 85px; line-height: 15px; }
+        .img img {  width: 85px; height: 140px; }
     }
     
 `;
