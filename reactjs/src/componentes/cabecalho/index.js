@@ -30,11 +30,8 @@ export default function Cabecalho() {
 
 
             <div className="logo-celular">
-                <div className="princ"><span style={{fontweight: "none"}}>Movies</span><span style={{color: "#FF005C", fontweight: "bolder"}}> World</span></div>
-                <div className="barra-pesq">
-                    <input type="text"/>
-                    <img src={Lupa} alt="" />
-                </div>
+                    <div className="tt"><span style={{fontweight: "none"}}>Movies</span><span style={{color: "#FF005C", fontweight: "bolder"}}> World</span></div>
+                    <div className="barra-pesq"><input type="text"/><img src={Lupa} alt="" /></div>
             </div>
 
             <div className="parte-celular">

@@ -92,14 +92,14 @@ const Container = styled.div`
         display: flex;
         flex-direction: column;
         background-color: #000;
-        margin-top: 30px;
         justify-content: space-between;
+        margin: 30px 0px 0px 0px;
 
         .logo { display: none; }
         .parte2 { display: none; }
-        .logo-celular { display: flex; flex-direction: row; justify-content: space-between; }
+        .logo-celular { display: flex; flex-direction: row; justify-content: space-between; width: 100%; }
         .barra-pesq { margin-left: 75px; margin-top: 8px;}
-        .princ { width: 10px; }
+        .tt { width: 10px; }
         .parte-celular { display: flex; flex-direction: row; text-align: center; margin-top: 30px; justify-content: space-between; }
         .usuario { display: none; }
         .troco { font-size: 0.8em; font-weight: bold;width: 100px; margin: 0px 60px;}
