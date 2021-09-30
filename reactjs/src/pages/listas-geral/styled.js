@@ -53,6 +53,29 @@ const Container = styled.div`
         .filmes { padding: 80px; }
         .titulo { font-size: 45px; }
     }
+
+
+    @media (max-width: 800px) {
+        .titulo {
+            text-align: center;
+            margin: 0px 0px 20px 0px;
+        }
+
+        .filmes {
+          width: auto;   
+          max-width: 700px;
+  
+        }
+        
+        .filme {
+           width: 100vh;
+           margin-right: 10px;
+        }
+
+        .botao {
+        }
+    }
+
 `;
 
 
@@ -121,6 +144,10 @@ const Bloco1 = styled.div`
         .img-fil img { width: 135px; height: 195px; }
         .nome { font-size: 20px; margin-left: 55px; }
     }
+
+    @media (max-width: 800px) {
+        
+    }
     
 `;
 
@@ -166,7 +193,18 @@ const Bloco2 = styled.div`
     }
 
 
-
+    @media (max-width: 800px) {
+        .filmes {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0px;
+            margin: 0px;
+            width: 100%;
+            
+        }
+    }
     
 `;
 
