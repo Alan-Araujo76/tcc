@@ -152,6 +152,7 @@ const Container = styled.div`
         }
         .conteudo-cl-ti{
             margin-bottom: 5em;
+            color: #ffff;
         }
 
 `
