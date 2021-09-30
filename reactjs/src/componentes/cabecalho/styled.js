@@ -97,7 +97,7 @@ const Container = styled.div`
 
         .logo { display: none; }
         .parte2 { display: none; }
-        .logo-celular { display: flex; flex-direction: row; justify-content: space-between; width: 100%; }
+        .logo-celular { margin: 0px 100px; display: flex; flex-direction: row; justify-content: space-between; width: 100%; }
         .barra-pesq { margin-left: 75px; margin-top: 8px;}
         .tt { width: 10px; }
         .parte-celular { display: flex; flex-direction: row; text-align: center; margin-top: 30px; justify-content: space-between; }
