@@ -45,6 +45,10 @@ const Container = styled.div`
 
     @media (max-width: 800px) {
         text-align: center;
+
+        .titulo {
+            margin: 70px 0px 50px 0px;
+        }
     }
 `;
 
@@ -73,7 +77,7 @@ const Bloco1 = styled.div`
 
 
     @media (max-width: 800px) {
-        
+        .filme-d { display: none; }
     }
     
 `;
@@ -100,7 +104,9 @@ const Bloco2 = styled.div`
         height: 170px;
     }
 
-
+    @media (max-width: 800px) {
+        .filme-d { display: none; }
+    }
     
 `;
 
