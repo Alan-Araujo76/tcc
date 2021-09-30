@@ -53,6 +53,9 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    width: 93px;
+    height: 200px;
 }
 
 .botao button {
@@ -88,6 +91,24 @@ const Container = styled.div`
 .nm-filme:hover {
     color: #fff;
     text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+
+    .titulo {}
+    .parte1 {}
+    .desc {}
+    .desc-desc {}
+    .parte2 {}
+    .linha {}
+    .bloco {}
+    .botao {}
+    .desc-botao {}
+    .img-filme {}
+    .nm-filme {}
 }
 
 `;
