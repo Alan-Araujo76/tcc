@@ -205,7 +205,7 @@ const Container = styled.div`
             .filme1-ti img{
                 align-self: center;
                 margin: 1.5em 6em 1.5em 3em;
-                width: 38%;
+                width: 10%;
             }
             
 
