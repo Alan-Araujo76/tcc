@@ -42,6 +42,15 @@ const Container = styled.div`
         font-size: 14px;
         font-family: Montserrat;
     }
+
+    @media (max-width: 800px) {
+        text-align: center;
+
+        .titulo {
+            margin: 70px 0px 50px 0px;
+            font-size: 150%;
+        }
+    }
 `;
 
 
@@ -66,6 +75,20 @@ const Bloco1 = styled.div`
         width: 115px;
         height: 170px;
     }
+
+    @media (max-width: 800px) {
+        margin: 0% 10%;
+        .filme-d { display: none; }
+    }
+
+
+    @media (max-width: 450px) {
+        margin: 0% 5%; 
+        .titulo { font-weight: bold; }
+        .nome { font-size: 12px;  width: 85px; line-height: 15px; }
+        img {  width: 85px; height: 140px; }
+    }
+    
     
 `;
 
@@ -92,6 +115,20 @@ const Bloco2 = styled.div`
     }
 
 
+    @media (max-width: 800px) {
+        margin: 10% 10% 0%;
+        .filme-d { display: none; }
+    }
+
+
+    @media (max-width: 450px) {
+        margin: 10% 5% 0%; 
+        .titulo { font-weight: bold; }
+        .nome { font-size: 12px;  width: 85px;  line-height: 15px; }
+        img {  width: 85px; height: 140px; }
+    }
+
+    
     
 `;
 

@@ -2,12 +2,13 @@ import { Container } from './styled';
 import capaMaior from '../../assets/img/capa-maior.jpeg';
 import capaFilme from '../../assets/img/capa-filme.png';
 import play from '../../assets/img/play.png';
-import perfilFoto from '../../assets/img/mdm.jpg';
-import coracao from '../../assets/img/coracao.png';
-import perfil from '../../assets/img/foto.png';
+
+
 import Cabecalho from '../../componentes/cabecalho';
 import Rodape from '../../componentes/rodapê';
 
+import ComentariosTi from './comentario-box-ti/index';
+import ListaTi from './listas-box-ti/index';
 
 export default function TelaInicial(){
     return(
@@ -15,165 +16,77 @@ export default function TelaInicial(){
         <Container>
             <Cabecalho/>
             <div className="conteiner-ti">
-            <img src={capaMaior} width="1300em" height="600em" alt="" />
-            <div className="titulo-ti">Acompanhe tudo sobre filmes</div>
-            <div className="subTitulo-ti">A rede social para amantes de cinema</div>
-            <div className="conteudo-box-ti">
-                <div className="titulo-box-ti">Filmes populares:</div>
-                <div className="box-filmes-ti">
-                    <div className="boxPT1-ti">
-                        <div className="filme-ti">
-                            <img src={capaFilme} alt="" />
+                <img src={capaMaior} alt="" />
+                <div className="titulo-ti">Acompanhe tudo sobre filmes</div>
+                <div className="subTitulo-ti">A rede social para amantes de cinema</div>
+                <div className="conteudo-box-ti">
+                    <div className="titulo-box-ti">Filmes populares:</div>
+                    <div className="box-filmes-ti">
+                        <div className="boxPT1-ti">
+                            <div className="filme-ti">
+                                <img src={capaFilme} alt="" />
+                            </div>
+                            <div className="filme-ti">
+                                <img src={capaFilme} alt="" />
+                            </div>
+                            <div className="filme-ti">
+                                <img src={capaFilme} alt="" /> 
+                            </div>
+                            <div className="filme-ti">
+                                <img src={capaFilme} alt="" />
+                            </div>
+                            <div className="filme-ti">
+                                <img src={capaFilme} alt="" />
+                            </div>
                         </div>
-                        <div className="filme-ti">
-                            <img src={capaFilme} alt="" />
-                        </div>
-                        <div className="filme-ti">
-                            <img src={capaFilme} alt="" /> 
-                        </div>
-                        <div className="filme-ti">
-                            <img src={capaFilme} alt="" />
-                        </div>
-                        <div className="filme-ti">
-                            <img src={capaFilme} alt="" />
-                        </div>
-                    </div>
-                    <div className="boxPT2-ti">
-                        <div className="filme-ti">
-                            <img src={capaFilme} alt="" />
+                        <div className="boxPT2-ti">
+                            <div className="filme-ti">
+                                <img src={capaFilme} alt="" />
 
-                        </div>
-                        <div className="filme-ti">
-                            <img src={capaFilme} alt="" />
-                        </div>
-                        <div className="filme-ti">
-                            <img src={capaFilme} alt="" />
-                        </div>
-                        <div className="filme1-ti">
-                            <img src={capaFilme} alt="" />
-                        </div>
-                        <div className="botao-ti">
-                            <button className="botao2-ti"><img src={play} alt=""/></button>
-                            <div>
-                                ver mais
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="conteudo-cl-ti">
-                <div className="comentarios-ti">
-                    <div className="titulo-cl-ti">
-                        CRÍTICAS POPULARES ESTA SEMANA
-                    </div>
-                    <hr/>
-                    <div className="box-comentario">
-                        
-                        <img src={perfilFoto} width="35" height="53" alt="" />
-                        <div>
-                            <div className="nome-cl-ti">  
-                                Gabriel Melo 
+                            <div className="filme-ti">
+                                <img src={capaFilme} alt="" />
                             </div>
-                            <div className="comentarioTXT-ti">
-                                Há muita coisa acontecendo para este tempo de execução e os setpieces são um pouco desanimadores em comparação com as entradas anteriores. Eles poderiam ter pelo menos, feito com que John Cena vencesse aquele grandalhão no final.
+                            <div className="filme-ti">
+                                <img src={capaFilme} alt="" />
                             </div>
-                            <div className="sobre-coracao-ti">
-                                <div className="sobre-ti">
-                                    Sobre: 
-                                </div>
-                                <div className="coracao-ti">
-                                    <img src={coracao} width="43" height="33" alt="" />
-                                </div>
+                            <div className="filme1-ti">
+                                <img src={capaFilme} alt="" />
                             </div>
-                        </div>
-                    </div>
-                    <div className="box-comentario">
-                        <img src={perfilFoto} width="35" height="53" alt="" />
-                        <div>
-                            <div className="nome-cl-ti">  
-                                Gabriel Melo 
-                            </div>
-                            <div className="comentarioTXT-ti">
-                                Há muita coisa acontecendo para este tempo de execução e os setpieces são um pouco desanimadores em comparação com as entradas anteriores. Eles poderiam ter pelo menos, feito com que John Cena vencesse aquele grandalhão no final.
-                            </div>
-                            <div className="sobre-coracao-ti">
-                                <div className="sobre-ti">
-                                    Sobre: 
-                                </div>
-                                <div className="coracao-ti">
-                                    <img src={coracao} width="43" height="33" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="box-comentario">
-                        <img src={perfilFoto} width="35" height="53" alt="" />
-                        <div>
-                            <div className="nome-cl-ti">  
-                                Gabriel Melo 
-                            </div>
-                            <div className="comentarioTXT-ti">
-                                Há muita coisa acontecendo para este tempo de execução e os setpieces são um pouco desanimadores em comparação com as entradas anteriores. Eles poderiam ter pelo menos, feito com que John Cena vencesse aquele grandalhão no final.
-                            </div>
-                            <div className="sobre-coracao-ti">
-                                <div className="sobre-ti">
-                                    Sobre: 
-                                </div>
-                                <div className="coracao-ti">
-                                    <img src={coracao} width="43" height="33" alt="" />
+                            <div className="botao-ti">
+                                <button className="botao2-ti"><img src={play} alt=""/></button>
+                                <div>
+                                    ver mais
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="listas-ti">
-                    <div className="titulo-l-ti">
-                        LISTAS POPULARES
+                <div className="conteudo-cl-ti">
+                    <div className="comentarios-ti">
+                        <div className="titulo-cl-ti">
+                            CRÍTICAS POPULARES ESTA SEMANA
+                        </div>
+                        <hr/>
+                        <ComentariosTi/>
+                        <ComentariosTi/>
+                        <ComentariosTi/>
                     </div>
-                    <hr/>
-                    <div className="listas-box-ti">
-                        <div className="box-lista-ti">
-                            <div className="lista-filmes-ti">
-                                <img src={capaFilme} alt="" />
-                                <img src={capaFilme} alt="" />
-                                <img src={capaFilme} alt="" />
-                                <img src={capaFilme} alt="" />
-                            </div>
-                            <div className="nome-lista-ti">
-                                <img src={perfil} alt="" />
-                                <div>filmes legais</div> 
-                            </div>
+                    <div className="listas-ti">
+                        <div className="titulo-l-ti">
+                            LISTAS POPULARES
+                        </div>
+                        <hr/>
+                        <div className="listas-box-ti">
+                            <ListaTi/>
                             <hr/>
-                        </div>
-                        <div className="box-lista-ti">
-                            <div className="lista-filmes-ti">
-                                <img src={capaFilme} alt="" />
-                                <img src={capaFilme} alt="" />
-                                <img src={capaFilme} alt="" />
-                                <img src={capaFilme} alt="" />
-                            </div>
-                            <div className="nome-lista-ti">
-                                <img src={perfil} alt="" />
-                                <div>filmes legais</div> 
-                            </div>
+                            <ListaTi/>
                             <hr/>
+                            <ListaTi/>
+                            <button><div>ver todas as listas</div></button>
                         </div>
-                        <div className="box-lista-ti">
-                            <div className="lista-filmes-ti">
-                                <img src={capaFilme} alt="" />
-                                <img src={capaFilme} alt="" />
-                                <img src={capaFilme} alt="" />
-                                <img src={capaFilme} alt="" />
-                            </div>
-                            <div className="nome-lista-ti">
-                                <img src={perfil} alt="" />
-                                <div>filmes legais</div> 
-                            </div>
-                        </div>
-                        <button><div>ver todas as listas</div></button>
                     </div>
                 </div>
-            </div>
             </div>
             <Rodape/>
         </Container>

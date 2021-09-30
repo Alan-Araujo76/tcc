@@ -31,17 +31,17 @@ export default function FilmesGostos() {
                         <div className="nome">Velozes e Furiosos 9</div>
                     </div>
 
-                    <div className="filme">
+                    <div className="filme-d">
                         <div className="img"><img src={Capa} alt="" /></div>
                         <div className="nome">Velozes e Furiosos 9</div>
                     </div>
 
-                    <div className="filme">
+                    <div className="filme-d">
                         <div className="img"><img src={Capa} alt="" /></div>
                         <div className="nome">Velozes e Furiosos 9</div>
                     </div>
 
-                    <div className="filme">
+                    <div className="filme-d">
                         <div className="img"><img src={Capa} alt="" /></div>
                         <div className="nome">Velozes e Furiosos 9</div>
                     </div>
@@ -64,17 +64,17 @@ export default function FilmesGostos() {
                         <div className="nome">Velozes e Furiosos 9</div>
                     </div>
 
-                    <div className="filme">
+                    <div className="filme-d">
                         <div className="img"><img src={Capa} alt="" /></div>
                         <div className="nome">Velozes e Furiosos 9</div>
                     </div>
 
-                    <div className="filme">
+                    <div className="filme-d">
                         <div className="img"><img src={Capa} alt="" /></div>
                         <div className="nome">Velozes e Furiosos 9</div>
                     </div>
 
-                    <div className="filme">
+                    <div className="filme-d">
                         <div className="img"><img src={Capa} alt="" /></div>
                         <div className="nome">Velozes e Furiosos 9 </div>
                     </div>
