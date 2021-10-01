@@ -45,36 +45,21 @@ const Container = styled.div`
     }
 
 
-    @media (min-width: 1600px) {
-        .filmes { padding: 60px; }
-    }
-
-    @media (min-width: 2000px) {
-        .filmes { padding: 80px; }
-        .titulo { font-size: 45px; }
-    }
-
+   
 
     @media (max-width: 800px) {
+        text-align: center;
+
         .titulo {
-            text-align: center;
-            margin: 0px 0px 20px 0px;
+            margin: 70px 0px 50px 0px;
+            font-size: 150%;
         }
 
         .filmes {
-          width: auto;   
-          max-width: 700px;
-  
-        }
-        
-        .filme {
-           width: 100vh;
-           margin-right: 10px;
-        }
-
-        .botao {
+            margin: 0% 5%;
         }
     }
+
 
 `;
 

@@ -79,6 +79,11 @@ const Parte2 = styled.div`
         height: 2.3em;
     }
 
+    placeholder {
+        color: #2d2d2d;
+        font-family: Montserrat;
+    }
+
     @media (max-width: 800px) {
         display: flex;
         flex-direction: column;

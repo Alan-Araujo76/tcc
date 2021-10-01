@@ -29,7 +29,7 @@ export default function DetalhesFilme() {
                     <div>2021</div>
                     <div>Direct by</div>
                     <div>Justin Lin</div>
-                </div>
+            </div>
         </div> 
         </div>
             

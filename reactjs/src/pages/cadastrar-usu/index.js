@@ -16,23 +16,23 @@ export default function Cadastro() {
                     <div className="bloco-inp"> 
                      <div className="inp">
                       <div className="txt-1">Nome: </div>  
-                      <div className="input"><input/></div>
+                      <div className="input"><input placeholder="Digite seu nome"/></div>
                      </div>
 
                      <div className="inp">
                       <div className="txt-1">Sobrenome: </div>  
-                      <div className="input"><input/></div>
+                      <div className="input"><input placeholder="Digite seu sobrenome"/></div>
                      </div>
                     </div>
 
                     <div className="bloco-inp"> 
                      <div className="inp">
                       <div className="txt-1">Data de nascimento: </div>  
-                      <div className="input"><input/></div>
+                      <div className="input"><input  placeholder="Digite sua data de nascimento"/></div>
                      </div>
                      <div className="inp">
                       <div className="txt-1">Genêro: </div>  
-                      <div className="input"><input/></div>
+                      <div className="input"><input placeholder="Digite seu genêro"/></div>
                      </div>
                     </div>
                 </div>
@@ -45,18 +45,18 @@ export default function Cadastro() {
                     <div className="bloco-inp"> 
                      <div className="inp">
                         <div className="txt-d">E-mail: </div>  
-                        <div className="input-d"><input/></div>
+                        <div className="input-d"><input  placeholder="Digite seu e-mail"/></div>
                      </div>
                     </div>
 
                     <div className="bloco-inp">
                      <div className="inp"> 
-                        <div className="txt-1">Sobrenome: </div>  
-                        <div className="input"><input/></div>
+                        <div className="txt-1">Senha: </div>  
+                        <div className="input"><input  placeholder="Digite sua senha"/></div>
                      </div>
                      <div className="inp">
-                        <div className="txt-1">Senha: </div>  
-                        <div className="input"><input/></div>
+                        <div className="txt-1">Confirme sua senha: </div>  
+                        <div className="input"><input  placeholder="Digite sua senha novamente"/></div>
                      </div>
                     </div>
                     <div className="btn"><Botoes>Cadastre-se</Botoes></div>

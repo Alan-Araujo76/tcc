@@ -217,16 +217,18 @@ const Bloco2 = styled.div`
     
     thead {
         background-color: #FF2875;
-        width: 100px;
+        width: 100%;
     }
 
     table {
         font-family: Montserrat;
         margin-bottom: 1em;
         border-collapse: collapse;
+        width: 100%;
     }
 
     tbody {
+        width: 100%;
         background-color: #F5F5F5;
     }
 

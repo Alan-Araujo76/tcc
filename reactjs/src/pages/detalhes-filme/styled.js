@@ -8,11 +8,13 @@ const Container = styled.div`
     background-color: rgb(0, 0, 0);
     color:white;
     font-family: Montserrat;
+    position: static;
 
     .back {
         background-image: url(${CapaMaior});
         background-size: 100% 95%;
         background-repeat: no-repeat;
+        background-position: static static;
     }
 
     .filme{
@@ -20,15 +22,13 @@ const Container = styled.div`
         height: 600px;  
         color: white;
 
-        margin-left: -25em;
+        margin-left: 25%;
         position: relative;
 
         display: flex;
         flex-direction: column;
 
         justify-content: flex-end;
-        align-items: center;
-        text-align: center;
     }
 
     .plataformas {
@@ -47,6 +47,7 @@ const Container = styled.div`
         display: flex;
         flex-direction: column;
         font-size: 30px; 
+        margin-left: 3.5%;
     }
 
     .diretor{
@@ -59,7 +60,6 @@ const Container = styled.div`
 
 
     .imagen_do_filme img{
-
         display: flex;
         flex-direction: row !important;
         height: 450px;
