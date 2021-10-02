@@ -10,7 +10,7 @@ import BotaoL from '../../componentes/styled/botoes-rosa'
 import { Container, Cabecalho, Parteprincipal, Bloco1, Bloco2 } from './styled';
 
 
-import { useState } from 'react';
+// import { useState } from 'react';
 
 
 

@@ -4,7 +4,6 @@ import CapaMenor from '../../assets/img/capa-menor.jpeg';
 import ExpVin from '../../assets/img/vin-exp1.jpeg';
 import ExpPaul from '../../assets/img/paul-exp1.jpeg';
 import ExpMiche from '../../assets/img/miche-exp1.jpeg';
-import UsuSemFoto from '../../assets/img/usu-semfoto.png';
 import LinhaSep from '../../assets/img/linha-det-fil.png';
 import Coracao from '../../assets/img/coracao.png';
 import Relogio from '../../assets/img/relogio.png';
@@ -12,6 +11,7 @@ import LinhaBox from '../../assets/img/linha-box.png';
 
 import Cabecalho from '../../componentes/comum/cabecalho';
 import Rodape from '../../componentes/comum/rodapê';
+import Com from '../../componentes/comum/comentario';
 
 import { Container } from './styled';
 
@@ -108,73 +108,11 @@ export default function DetalhesFilme() {
 
 
                     <div className="bloco-p2">
-                        <div className="comentario-geral">
-                            <div className="usuario">
-                                <div className="ft-perfil"><img src={UsuSemFoto} alt="" /></div>
-                                <div className="nome">Júlio Cabeçudo</div>
-                            </div>
-
-                            <div className="comentario-txt">Há muita coisa acontecendo para este tempo de execução e os setpieces são um pouco desanimadores em comparação com as entradas anteriores. Eles poderiam ter pelo menos, feito com que John Cena vencesse aquele grandalhão no final.</div>
-
-                            <div className="pt3-b2">
-                                <div className="tudo">
-                                    <div className="sobre">
-                                        <div className="tit-s">Sobre: </div>
-                                        <div className="filme-c"> Filme</div>
-                                    </div>
-                                    <div className="dif">
-                                        <div className="data">09.08.2010</div>
-                                        <div className="like"> <button><img src={Coracao} alt="" /></button> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="comentario-geral">
-                            <div className="usuario">
-                                <div className="ft-perfil"><img src={UsuSemFoto} alt="" /></div>
-                                <div className="nome">Júlio Cabeçudo</div>
-                            </div>
-
-                            <div className="comentario-txt">Há muita coisa acontecendo para este tempo de execução e os setpieces são um pouco desanimadores em comparação com as entradas anteriores. Eles poderiam ter pelo menos, feito com que John Cena vencesse aquele grandalhão no final.</div>
-
-                            <div className="pt3-b2">
-                                <div className="tudo">
-                                    <div className="sobre">
-                                        <div className="tit-s">Sobre: </div>
-                                        <div className="filme-c"> Filme</div>
-                                    </div>
-                                    <div className="dif">
-                                        <div className="data">09.08.2010</div>
-                                        <div className="like"> <button><img src={Coracao} alt="" /></button> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div className="comentario-geral">
-                            <div className="usuario">
-                                <div className="ft-perfil"><img src={UsuSemFoto} alt="" /></div>
-                                <div className="nome">Júlio Cabeçudo</div>
-                            </div>
-
-                            <div className="comentario-txt">Há muita coisa acontecendo para este tempo de execução e os setpieces são um pouco desanimadores em comparação com as entradas anteriores. Eles poderiam ter pelo menos, feito com que John Cena vencesse aquele grandalhão no final.</div>
-
-                            <div className="pt3-b2">
-                                <div className="tudo">
-                                    <div className="sobre">
-                                        <div className="tit-s">Sobre: </div>
-                                        <div className="filme-c"> Filme</div>
-                                    </div>
-                                    <div className="dif">
-                                        <div className="data">09.08.2010</div>
-                                        <div className="like"> <button><img src={Coracao} alt="" /></button> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <Com />
+                        <Com />
+                        <Com />
                     </div>
+                    <div className="verm-c"><button>Ver mais comentarios</button></div>
                 </div>
 
 

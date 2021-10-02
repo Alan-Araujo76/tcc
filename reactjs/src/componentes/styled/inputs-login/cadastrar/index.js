@@ -1,7 +1,7 @@
 
 import { Container } from "./styled"
 
-export default function(props) {
+export default function Inp(props) {
     return(
         <Container> 
             <div className="inp">

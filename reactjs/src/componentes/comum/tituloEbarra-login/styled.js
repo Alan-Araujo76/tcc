@@ -15,10 +15,19 @@ const Parte1 = styled.div`
         line-height: 1em;
         margin-left: -2em;
         width: 300px;
+        position: relative;
+        animation-name: example;
+        animation-duration: 4s;
     }
 
     .barra {
-        margin: 0em 50% 0em 18em;
+        margin: 0em 8em 0em 20em;
+    }
+
+
+    [data-animacao] {
+        animation: 0.3s;
+        animation-direction: reverse;
     }
 
     .barra1 {

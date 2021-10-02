@@ -126,7 +126,8 @@ const PartePrin = styled.div`
     .linha {
         align-items: center;
         text-align: center;
-        margin: 0px 50px 8px 0px;
+        justify-content: center;
+        margin: 0px 0px 8px 45px;
     }
 
     .linha img {

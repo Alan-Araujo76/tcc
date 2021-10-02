@@ -244,6 +244,25 @@ const Container = styled.div`
         margin-top: 20px;
     }
 
+    .verm-c {
+        text-align: end;
+        margin-top: 30px;
+    }
+
+    .verm-c button {
+        color: #fff;
+        background-color: transparent;
+        border: 3px solid #FFB800;
+        border-radius: 15px;
+        width: auto;
+        height: 3.4em;
+        font-weight: bold;
+        padding: 2px 15px;
+        font-family: Montserrat;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
     .dif {
         display: flex;
         flex-direction: row;

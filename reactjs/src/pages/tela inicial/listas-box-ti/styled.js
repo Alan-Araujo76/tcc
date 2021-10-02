@@ -22,6 +22,32 @@ const Lista = styled.div`
         margin-top: .5em;
         width: 2em;
     }
+
+    .g {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .s {
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: end;
+    }
+
+    .s img {
+        width: 1.5em;
+        height: 1.8em;
+        margin-top: 10px;
+    }
+
+    .s button {
+        background-color: transparent;
+        border: none;
+        padding: 0px;
+        margin: 0px;
+    }
 `
+
 
 export {Lista}

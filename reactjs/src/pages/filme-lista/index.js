@@ -2,7 +2,6 @@ import Mais from '../../assets/img/mais.png';
 import Filme from '../../assets/img/capa-filme.png';
 import Prox from '../../componentes/comum/botao-prox-pag';
 import Cabecalho from '../../componentes/comum/cabecalho';
-import Box1 from '../../componentes/comum/box1-fil';
 import Rodape from '../../componentes/comum/rodapê';
 
 

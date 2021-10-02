@@ -21,6 +21,7 @@ const Container = styled.div`
     }
 `;
 
+
 const Parte2 = styled.div`
     display: flex;
     flex-direction: column;
@@ -87,6 +88,11 @@ const Parte2 = styled.div`
     a:hover {
         text-decoration: underline;
         color: #FF005C;
+    }
+
+
+    [data-animacao] {
+        opacity: 0;
     }
   
 
