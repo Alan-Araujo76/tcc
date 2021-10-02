@@ -1,5 +1,5 @@
-import Cabecalho from '../../componentes/cabecalho';
-import Rodape from '../../componentes/rodapê';
+import Cabecalho from '../../componentes/comum/cabecalho';
+import Rodape from '../../componentes/comum/rodapê';
 
 import UsuSemFoto from '../../assets/img/usu-semfoto.png';
 import Coracao from '../../assets/img/coracao.png';

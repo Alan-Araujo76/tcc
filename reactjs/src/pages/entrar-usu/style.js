@@ -39,6 +39,7 @@ const Parte2 = styled.div`
     input {
         width: 30em;
         height: 3em;
+        padding: 10px;
     }
 
     .leva-princ {
@@ -78,26 +79,16 @@ const Parte2 = styled.div`
         margin-right: 10px;
     }
 
-    .bt-2 {
+    .bt-2 button {
         margin-left: 15px;
     }
 
-    button {
-        color: #fff;
-        background-color: transparent;
-        border: 3px solid #FF005C;
-        border-radius: 5px;
-        width: 10em;
-        height: 3em;
-        font-family: Montserrat;
-        cursor: pointer;
-    }
 
     a:hover {
         text-decoration: underline;
         color: #FF005C;
-        cursor: pointer;
     }
+  
 
 
     @media (max-width: 800px) {
@@ -128,16 +119,5 @@ const Parte2 = styled.div`
     }
 `;
 
-const Botoes = styled.button`
-    color: #fff;
-    background-color: transparent;
-    border: 3px solid #FF005C;
-    border-radius: 5px;
-    width: 10em;
-    height: 3em;
-    font-family: Montserrat;
-    cursor: pointer;
-`;
 
-
-export { Container, Parte2, Botoes }
+export { Container, Parte2 }

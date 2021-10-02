@@ -44,11 +44,14 @@ const Parte2 = styled.div`
     input {
         width: 30em;
         height: 3.5em;
+        padding: 10px;
     }
 
     .botao {
         margin-left: 20.5em;
     }
+
+
 
     @media (max-width: 800px) {
         display: flex;

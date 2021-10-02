@@ -30,6 +30,21 @@ const Parte2 = styled.div`
         margin-bottom: 20px;
     }
 
+    .inputsss {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inputsss-d {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sep {
+        display: flex;
+        flex-direction: row;
+    }
+
     .txt-1 {
         font-size: 15px;
         font-family: Montserrat;
@@ -52,8 +67,9 @@ const Parte2 = styled.div`
     }
 
     .btn {
-        margin-right: 4em;
+        margin-right: 9%;
         text-align: end;
+        margin-top: 3%;
     }
 
     .geral {
@@ -62,7 +78,8 @@ const Parte2 = styled.div`
     }
 
     .input-d input{
-        width: 32em;
+        width: 34em;
+        padding: 10px;
     }
 
     .bloco2 {

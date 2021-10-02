@@ -1,6 +1,6 @@
 
-import Cabecalho from '../../componentes/cabecalho'
-import Rodape from '../../componentes/rodapê'
+import Cabecalho from '../../componentes/comum/cabecalho'
+import Rodape from '../../componentes/comum/rodapê'
 
 import { Container } from './styled';
 

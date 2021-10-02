@@ -1,7 +1,7 @@
-import LinhaSep from '../../assets/img/linha-sep-cab.png';
-import Face from '../../assets/img/logo-face-rod.png';
-import TT from '../../assets/img/logo-tt-rod.png';
-import Insta from '../../assets/img/logo-insta-rod.png';
+import LinhaSep from '../../../assets/img/linha-sep-cab.png';
+import Face from '../../../assets/img/logo-face-rod.png';
+import TT from '../../../assets/img/logo-tt-rod.png';
+import Insta from '../../../assets/img/logo-insta-rod.png';
 
 
 

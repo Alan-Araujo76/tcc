@@ -1,5 +1,5 @@
-import Barra from '../../assets/img/barra-login.png'
-import Barra1 from '../../assets/img/linha-login-dei.png'
+import Barra from '../../../assets/img/barra-login.png'
+import Barra1 from '../../../assets/img/linha-login-dei.png'
 
 import { Parte1 } from './styled'
 

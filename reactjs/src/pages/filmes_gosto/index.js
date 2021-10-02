@@ -1,8 +1,8 @@
-import Cabecalho from '../../componentes/cabecalho'
-import Rodape from '../../componentes/rodapê'
+import Cabecalho from '../../componentes/comum/cabecalho'
+import Rodape from '../../componentes/comum/rodapê'
 import Capa from '../../assets/img/capa-filme.png'
 
-import ProxPag from '../../componentes/botao-prox-pag'
+import ProxPag from '../../componentes/comum/botao-prox-pag'
 
 import {Container, Bloco1, Bloco2} from './styled.js';
 

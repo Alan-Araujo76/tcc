@@ -1,5 +1,5 @@
-import FotoUsu from '../../assets/img/foto.png';
-import Lupa from '../../assets/img/lupa.png';
+import FotoUsu from '../../../assets/img/foto.png';
+import Lupa from '../../../assets/img/lupa.png';
 
 import { Container } from "./styled"
 

@@ -1,7 +1,8 @@
 import LinhaSep from '../../assets/img/linha-sep-tcc.png'
 
-import  LogoeBarra from '../../componentes/tituloEbarra-login'
-import { Botoes } from '../entrar-usu/style'
+import  LogoeBarra from '../../componentes/comum/tituloEbarra-login'
+import BotaoL from '../../componentes/styled/botoes-rosa'
+import Input from '../../componentes/styled/inputs-login/cadastrar'
 import { Container, Parte2 } from './style'
 
 export default function Cadastro() {
@@ -13,27 +14,15 @@ export default function Cadastro() {
                 <div className="bloco1">
                     <div className="txt">Dados Pessoais:</div>
 
-                    <div className="bloco-inp"> 
-                     <div className="inp">
-                      <div className="txt-1">Nome: </div>  
-                      <div className="input"><input placeholder="Digite seu nome"/></div>
-                     </div>
-
-                     <div className="inp">
-                      <div className="txt-1">Sobrenome: </div>  
-                      <div className="input"><input placeholder="Digite seu sobrenome"/></div>
-                     </div>
-                    </div>
-
-                    <div className="bloco-inp"> 
-                     <div className="inp">
-                      <div className="txt-1">Data de nascimento: </div>  
-                      <div className="input"><input  placeholder="Digite sua data de nascimento"/></div>
-                     </div>
-                     <div className="inp">
-                      <div className="txt-1">Genêro: </div>  
-                      <div className="input"><input placeholder="Digite seu genêro"/></div>
-                     </div>
+                    <div className="inputsss">
+                        <div className="sep">
+                            <Input nome="Nome:"/>
+                            <Input nome="Sobrenome:"/>
+                        </div>
+                        <div className="sep">
+                            <Input nome="Data de nascimento:"/>
+                            <Input nome="Gênero:"/>
+                        </div>
                     </div>
                 </div>
 
@@ -49,17 +38,12 @@ export default function Cadastro() {
                      </div>
                     </div>
 
-                    <div className="bloco-inp">
-                     <div className="inp"> 
-                        <div className="txt-1">Senha: </div>  
-                        <div className="input"><input  placeholder="Digite sua senha"/></div>
-                     </div>
-                     <div className="inp">
-                        <div className="txt-1">Confirme sua senha: </div>  
-                        <div className="input"><input  placeholder="Digite sua senha novamente"/></div>
-                     </div>
+                    <div className="inputsss-d">
+                        <Input nome="Data de nascimento:"/>
+                        <Input nome="Gênero:"/>
                     </div>
-                    <div className="btn"><Botoes>Cadastre-se</Botoes></div>
+                    
+                    <div className="btn"><BotaoL nome="Cadastrar"/></div>
 
                 </div>
             </Parte2>

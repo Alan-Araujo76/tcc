@@ -4,8 +4,8 @@ import capaFilme from '../../assets/img/capa-filme.png';
 import play from '../../assets/img/play.png';
 
 
-import Cabecalho from '../../componentes/cabecalho';
-import Rodape from '../../componentes/rodapê';
+import Cabecalho from '../../componentes/comum/cabecalho';
+import Rodape from '../../componentes/comum/rodapê';
 
 import ComentariosTi from './comentario-box-ti/index';
 import ListaTi from './listas-box-ti/index';

@@ -10,7 +10,7 @@ const Parte1 = styled.div`
 
     .txt {
         font-family: Montserrat;
-        font-size: 8em;
+        font-size: 800%;
         font-weight: bolder;
         line-height: 1em;
         margin-left: -2em;
@@ -18,7 +18,7 @@ const Parte1 = styled.div`
     }
 
     .barra {
-        margin: 0em 5em 0em 18em;
+        margin: 0em 50% 0em 18em;
     }
 
     .barra1 {

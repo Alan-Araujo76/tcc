@@ -1,7 +1,8 @@
-import  LogoeBarra from '../../componentes/tituloEbarra-login'
+import  LogoeBarra from '../../componentes/comum/tituloEbarra-login'
 
-import { Botoes } from '../entrar-usu/style'
+
 import { Container, Parte2 } from './style'
+import BotaoL from '../../componentes/styled/botoes-rosa'
 
 export default function Esqueci() {
     return(
@@ -16,10 +17,10 @@ export default function Esqueci() {
                 </div>
                 <div className="email-inp-bt">
                     <div className="txt1">E-mail:</div>
-                    <div className="input"><input /></div>
+                    <div className="input"><input placeholder="Digite seu e-mail"/></div>
                 </div>
                 <div className="botao">
-                    <Botoes>Enviar</Botoes>
+                    <BotaoL nome="Enviar" />
                 </div>
             </Parte2>
         </Container>

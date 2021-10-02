@@ -10,8 +10,8 @@ import Coracao from '../../assets/img/coracao.png';
 import Relogio from '../../assets/img/relogio.png';
 import LinhaBox from '../../assets/img/linha-box.png';
 
-import Cabecalho from '../../componentes/cabecalho';
-import Rodape from '../../componentes/rodapê';
+import Cabecalho from '../../componentes/comum/cabecalho';
+import Rodape from '../../componentes/comum/rodapê';
 
 import { Container } from './styled';
 

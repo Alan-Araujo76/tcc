@@ -8,9 +8,9 @@ import Play from '../../assets/img/play.png'
 
 import Estrela from '../../assets/img/estrelas.png'
 
-import Rodape from '../../componentes/rodapê';
-import Cabecalho from '../../componentes/cabecalho'
-import BotaoMais from '../../componentes/botao-mais';
+import Rodape from '../../componentes/comum/rodapê';
+import Cabecalho from '../../componentes/comum/cabecalho'
+import BotaoMais from '../../componentes/comum/botao-mais';
 
 import { Container, Parte1, Parte2 } from './styled'
 

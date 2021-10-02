@@ -1,6 +1,6 @@
 
 import { Container } from "./styled";
-import Mais from '../../assets/img/mais.png'
+import Mais from '../../../assets/img/mais.png'
 
 export default function BotaoMais() {
     return(
