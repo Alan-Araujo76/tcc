@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+const C = styled.div`
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+`;
 
 const Container = styled.div`
     display: flex;
@@ -7,8 +12,6 @@ const Container = styled.div`
     background-color: #000;
     justify-content: center;
     align-items: center;
-
-
 `;
 
 
@@ -216,7 +219,6 @@ const Parte2 = styled.div`
         align-items: center; 
         text-align: center;
         margin-bottom: 70px;
-        margin-top: 50px;
     }
 
 
@@ -254,7 +256,6 @@ const Parte2 = styled.div`
         margin-top: 3em;
         font-weight: bold;
         font-size: 24px;
-        margin-bottom: 20px;
     }
 
     .img-b2 img {
@@ -303,8 +304,8 @@ const Parte2 = styled.div`
     }
 
     .bt-1 {
-        text-align: center;
-        margin-left: 130px;
+        width: 720px;
+        text-align: end;
     }
 
     .bt-1 button{
@@ -383,4 +384,4 @@ const Parte2 = styled.div`
 
 `;
 
-export { Container, Parte1, Parte2 }
+export { C, Container, Parte1, Parte2 }

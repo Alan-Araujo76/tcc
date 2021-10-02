@@ -3,7 +3,7 @@ import Face from '../../../assets/img/logo-face-rod.png';
 import TT from '../../../assets/img/logo-tt-rod.png';
 import Insta from '../../../assets/img/logo-insta-rod.png';
 
-
+import { Link } from 'react-router-dom';
 
 import { Container } from './styled';
 
@@ -24,9 +24,9 @@ export default function Rodape() {
                     <div className="bloco1-p1">
                         <div className="subtitulo">Emails</div>
                         <div className="emails-b1">
-                            <div className="e1">eusoulindo@egato.com</div>
-                            <div className="e1">eusoulindo@egato.com</div>
-                            <div className="e1">eusoulindo@egato.com</div>
+                            <div className="e1">movieworld@gmail.com</div>
+                            <div className="e1">mvmovieworldmv@bol.com.br</div>
+                            <div className="e1">movieworldmv@hotmail.com.br</div>
                         </div>
                         <div className="subtitulo">Telefones</div>
                         <div className="emails-b1">
@@ -103,18 +103,17 @@ export default function Rodape() {
                     <div className="sla">
                         <div className="sub-subtitulo">Emails:</div>
                         <div className="b-p2">
-                            <div className="email">eusoulindo@egato.com</div>
-                            <div className="email">eusoulindo@egato.com</div>
-                            <div className="email">eusoulindo@egato.com</div>
+                            <div className="email">movieworld@gmail.com</div>
+                            <div className="email">mvmovieworld@bol.com.br</div>
+                            <div className="email">movieworldmv@hotmail.com.br</div>
                         </div>
                     </div>
 
                     <div className="sla">
                         <div className="sub-subtitulo">Telefones:</div>
                         <div className="b-p2">
-                            <div className="email">+55 (11) 00000-0000</div>
-                            <div className="email">+55 (11) 00000-0000</div>
-                            <div className="email">+55 (11) 00000-0000</div>
+                            <div className="email">+55 (11) 91011-1213</div>
+                            <div className="email">+55 (11) 91415-1617</div>
                         </div>
                     </div>
                 </div>

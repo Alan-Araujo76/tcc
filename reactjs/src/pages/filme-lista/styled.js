@@ -6,6 +6,7 @@ const Container = styled.div`
     background-color: #000;
     color: #fff;
 
+
 .titulo {
     color: #fff;
     font-size: 35px;

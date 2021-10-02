@@ -5,6 +5,7 @@ import Prox from '../../componentes/comum/botao-prox-pag';
 import Cabecalho from '../../componentes/comum/cabecalho';
 import Rodape from '../../componentes/comum/rodapê';
 
+
 import { Container } from './styled';
 
 export default function FilmeLista() {

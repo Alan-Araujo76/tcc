@@ -12,13 +12,14 @@ import Rodape from '../../componentes/comum/rodapê';
 import Cabecalho from '../../componentes/comum/cabecalho'
 import BotaoMais from '../../componentes/comum/botao-mais';
 
-import { Container, Parte1, Parte2 } from './styled'
+import { C, Container, Parte1, Parte2 } from './styled'
 
 export default function Perfil() {
     return(
+      <C>       
+        <Cabecalho />
         <Container>
-            <Cabecalho />
-
+          
             <Parte1>
                 <div className="titulo">
                     <div className="txt-t">C o n t a</div>
@@ -276,5 +277,6 @@ export default function Perfil() {
             </Parte2>
           <Rodape />
         </Container>
+      </C>
     )
 }

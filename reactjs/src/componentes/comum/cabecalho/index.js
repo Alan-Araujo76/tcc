@@ -2,7 +2,7 @@ import FotoUsu from '../../../assets/img/foto.png';
 import Lupa from '../../../assets/img/lupa.png';
 
 import { Container } from "./styled"
-
+import { Link } from 'react-router-dom';
 
 export default function Cabecalho() {
     return(
@@ -16,8 +16,9 @@ export default function Cabecalho() {
                     <div className="foto"><img src={FotoUsu} alt="" /></div>
                     <div className="nome-usu">gabrielmelo</div>
                 </div>
-                <div className="tr"> Trocar conta </div>
-                <div className="sair"> Sair </div>
+                
+                <div className="tr">Meus filmes</div>
+                <div className="sair"> Minhas listas </div>
                 <div className="barra-pesq">
                       <input type="text"/>
                       <img src={Lupa} alt="" />
