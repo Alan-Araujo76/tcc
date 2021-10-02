@@ -1,11 +1,10 @@
 import Cabecalho from '../../componentes/comum/cabecalho'
 import Rodape from '../../componentes/comum/rodapê'
 import Capa from '../../assets/img/capa-filme.png'
-
 import ProxPag from '../../componentes/comum/botao-prox-pag'
 import Box2 from '../../componentes/comum/box2-lis'
 
-import {Container, Bloco1, Bloco2} from './styled.js';
+import { Container, Bloco1 } from './styled.js';
 
 export default function FilmesGostos() {
     return(

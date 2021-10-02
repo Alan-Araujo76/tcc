@@ -1,8 +1,8 @@
 import Mais from '../../assets/img/mais.png';
 import Filme from '../../assets/img/capa-filme.png';
-
 import Prox from '../../componentes/comum/botao-prox-pag';
 import Cabecalho from '../../componentes/comum/cabecalho';
+import Box1 from '../../componentes/comum/box1-fil';
 import Rodape from '../../componentes/comum/rodapê';
 
 
@@ -22,7 +22,7 @@ export default function FilmeLista() {
 
             <div className="parte2">
                 <div className="linha">
-                    <div className="bloco">
+                    <div className="bloco-d">
                         <div className="botao"><button><img src={Mais} alt=""/></button></div>
                         <div className="desc-botao">ADICIONAR FILME</div>
                     </div>

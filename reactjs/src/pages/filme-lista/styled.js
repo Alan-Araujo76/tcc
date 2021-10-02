@@ -5,20 +5,23 @@ const Container = styled.div`
     flex-direction: column;
     background-color: #000;
     color: #fff;
+    align-items: center;
 
 
 .titulo {
     color: #fff;
     font-size: 35px;
     font-family: Montserrat;
+    font-weight: bold;
     padding: 0em 6.8em 1em;
+    width: 1680px;
 }
 
 .parte1 {
     color: #fff;
     background-color: #3B3B3B;
     padding: 1.5em;
-    margin: 0em 15em;
+    width: 1200px;
 }
 
 .desc {
@@ -38,8 +41,9 @@ const Container = styled.div`
 .parte2 {
     color: #fff;
     background-color: #3B3B3B;
-    margin: 3em 15em 8em;
-    padding-bottom: 4em;
+    padding: 2em;
+    width: 1200px;
+    margin-top: 3em;
 }
 
 .linha {
@@ -55,8 +59,23 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 93px;
+    width: 110px;
     height: 200px;
+}
+
+.bloco-d {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 110px;
+    height: 200px;
+}
+
+.bloco img {
+    width: 110px;
+    height: 155px;
 }
 
 .botao button {
@@ -66,6 +85,7 @@ const Container = styled.div`
     width: 6.5em;
     height: 6.5em;
     cursor: pointer;
+    padding: 3px 0px 0px 4px;
 }
 .botao:hover {
     transition: 0.8s;
@@ -73,9 +93,12 @@ const Container = styled.div`
 }
 
 .desc-botao {
-    font: 16px;
-    color: #fff;
-    padding-top: 15px;
+    font-size: 17px;
+    width: 100px;
+    text-align: center;
+    margin-top: 15px;
+    line-height: 22px;
+    font-weight: 500;
 }
 
 .img-filme {
@@ -83,15 +106,16 @@ const Container = styled.div`
 }
 
 .nm-filme {
-    font-size: 15px;
-    font-family: Montserrat;
-    color: #fff;
-    padding-top: 10px;
-    cursor: pointer;
+    font-size: 17px;
+    width: 100px;
+    text-align: center;
+    margin-top: 8px;
+    line-height: 22px;
+    font-weight: 500;
 }
-.nm-filme:hover {
-    color: #fff;
-    text-decoration: underline;
+
+.dif {
+    display: none;
 }
 
 @media (max-width: 800px) {

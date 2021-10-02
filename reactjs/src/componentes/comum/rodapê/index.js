@@ -3,8 +3,6 @@ import Face from '../../../assets/img/logo-face-rod.png';
 import TT from '../../../assets/img/logo-tt-rod.png';
 import Insta from '../../../assets/img/logo-insta-rod.png';
 
-import { Link } from 'react-router-dom';
-
 import { Container } from './styled';
 
 export default function Rodape() {

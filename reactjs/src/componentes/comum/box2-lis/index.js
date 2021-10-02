@@ -1,6 +1,5 @@
 import { BlocoC } from "./styled"
 import Capa from '../../../assets/img/capa-filme.png'
-import Mais from '../../../assets/img/mais.png'
 
 export default function BoxFil() {
     return(

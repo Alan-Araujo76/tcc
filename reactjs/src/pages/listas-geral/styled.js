@@ -8,15 +8,12 @@ const Container = styled.div`
     color: #fff;
     height: 100%;
 
-
     .titulo {
         font-size: 220%;
         font-weight: bolder;
         margin-bottom: 4%;
         margin-left: 10%;
     }
-
-
 
     button {
         border: 3px solid #FFB800;

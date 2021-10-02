@@ -5,7 +5,7 @@ import TituloC from '../../componentes/comum/titulo'
 import Box1 from '../../componentes/comum/box1-fil'
 import Box2 from '../../componentes/comum/box2-fil'
 
-import {Container, Bloco1, Bloco2} from './styled.js';
+import { Container } from './styled.js';
 
 export default function FilmesGostos() {
     return(

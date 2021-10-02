@@ -68,7 +68,14 @@ const Container = styled.div`
         height: 15px;
     }
 
-    
+    .barra-pesq button {
+        border: transparent;
+        background-color: transparent;
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
 
     .barra-pesq input {
        width: 11em;
@@ -85,6 +92,8 @@ const Container = styled.div`
     .logo-celular {
         display: none;
     }
+
+
 
 
 
