@@ -69,6 +69,14 @@ const Container = styled.div`
         
     }
 
+    @media (max-width: 800px) {
+ 
+
+       .back { background-size: 100% 35%; }
+       .filme { margin: 0px; height: 100px;  }
+       .imagen_do_filme img { width: 100px; height: 155px; }
+    }
+
     .faixa-2{
         display: flex;
         flex-direction: row;
@@ -383,6 +391,26 @@ const Container = styled.div`
     }
 
 
+    @media (max-width: 800px) {
+       .back { background-size: 100% 35%; }
+       .filme { margin: 0px; height: 100px;  }
+       .imagen_do_filme img { width: 100px; height: 155px; }
+    }
+
+
+    //.filme{
+    //    font-family: Montserrat;
+    //    height: 600px;  
+    //    color: white;
+
+    //    margin-left: 25%;
+     //   position: relative;
+
+    //    display: flex;
+    //    flex-direction: column;
+
+    //    justify-content: flex-end;
+    //}
 
 
 `;

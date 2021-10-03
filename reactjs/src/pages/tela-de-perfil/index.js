@@ -119,6 +119,7 @@ export default function Perfil() {
                     </div>
 
                     <div className="sss">
+                    <div className="titulo-p1-m">Filmes favoritos</div>
                       <div className="bloco-mobile">
                         <div className="divisao-mobile">
                           <div className="sub-bloco">
@@ -193,6 +194,7 @@ export default function Perfil() {
                     </div>
                   
                   <div className="sss">
+                  <div className="titulo-p1-m"> Assistir mais tarde</div> 
                     <div className="bloco-mobile">
                       <div className="divisao-mobile">
                         <div className="img-b2"><img src={Capa} alt="" /></div>
@@ -238,6 +240,7 @@ export default function Perfil() {
                     </div>
 
                   <div className="sss">
+                  <div className="titulo-p1-m"> Minhas listas</div>
                     <div className="bloco-mobile-d">
                       <div className="divisao-mobile">
                         <div className="ver-mais">

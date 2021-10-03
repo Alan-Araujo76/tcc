@@ -26,8 +26,8 @@ export default function Login() {
                 </div>
                 <div className="leva-princ">
                     <div className="botoes">
-                        <div className="dif"><BotaoL nome="Entrar"/></div>
-                        <BotaoL nome="Cadastrar"/>
+                        <div className="dif"><BotaoL imagem="" nome="Entrar"/></div>
+                        <BotaoL imagem="" nome="Cadastrar"/>
                     </div>
                     <div className="esq-senha"><Link to="/esqueci-senha">Esqueci senha</Link></div>
                 </div>

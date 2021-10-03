@@ -154,6 +154,10 @@ const Parte1 = styled.div`
         margin: 60px 0px;
     }
 
+    .titulo-p1-m { 
+        display: none
+      }
+
 
 
     @media (max-width: 800px) {
@@ -166,11 +170,14 @@ const Parte1 = styled.div`
         .txt-usu { font-size: 10px;  margin: 0px;}
         .bt-1 button { font-size: 8px; width: 70px; height: 20px; margin: 0px; }
         .infos { margin: 0px; }
-        .txt-fil { font-size: 10px; text-align: center; margin-top: 10px; width: 65px; }
+        .txt-fil { font-size: 8px; text-align: center; margin-top: 10px; width: 54px; }
         .img-fil img { height: 65px; }
         .titulo-b { margin-bottom: 10px; }
         .bloco-b { width: 22em;  height: 8em; }
+        .linha-sep-p { margin: 10px 0px 20px; }
+        .linha-sep1 { margin: 30px 0px;  }
         .linha-sep1 img { width: 350px; }
+        .bio { margin: 45px 0px 0px; }
 
         @media (min-width: 550px) {
             padding: 0px 50px;
@@ -356,18 +363,25 @@ const Parte2 = styled.div`
 
         .bloco-p1 { display: none; }
         .bloco-p2 { display: none; }
-        .sss { display: flex; flex-direction: column; align-items: center; }
+        .bloco-p1-d { display: none; }
+        .sss { display: flex; flex-direction: column; align-items: center; width: auto;}
         .p1 { align-items: center; }
         .bloco-mobile { display: flex; flex-direction: column; width: 24em;  height: 100%; background-color: #3B3B3B; margin-bottom: 70px; padding: 30px 25px; }
         .bloco-mobile-d { display: flex; flex-direction: column; width: 24em;  height: 100%; background-color: #3B3B3B; margin-bottom: 70px; padding: 30px 25px; }
         .divisao-mobile { display: flex; flex-direction: row; justify-content: space-between; text-align: center; }
         .divisao-mobile-d { display: flex; flex-direction: row; justify-content: space-between; text-align: center; margin-top: 20px; }
-        .titulo-p1 { margin-left: 1.5em; }
+        .titulo-p1 { display: none; }
+        .titulo-p1-m { display: flex; font-weight: bold; font-size: 24px; margin-bottom: 20px; }
         .img-b2 img { width: 70px; height: 110px; }
         .lista-b1 { margin: 7px 0px; }
         .divisao-mobile { margin: 10px 0px; }
         .desc-b3 { font-size: 12px; }
-        .estrela img { width: 110px;  height: 60px; margin: 0px; }
+        .estrela img { width: 100px;  height: 55px; margin: 0px; }
+        .titulo-p1-d { display: none; }
+        .avaliacao-b3 { margin: 0px; justify-content: center; align-items: center; }
+        .inp-bt { justify-content: space-between;  }
+        .inp-bt textarea { width: 20em; margin: 0px -20px 0px 0px; }
+        .bt-1 { }
         
 
         @media (min-width: 600px) {
