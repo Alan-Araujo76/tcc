@@ -6,6 +6,7 @@ const Container = styled.div`
     color: #fff;
     height: 100vh;
     padding: 3em 0em;
+    font-family: Montserrat;
 
     .txt {
         margin: 0em 0em 3em;
@@ -24,6 +25,7 @@ const Container = styled.div`
     .cat {
         display: flex;
         flex-direction: row;
+        align-items: center;
     }
 
     

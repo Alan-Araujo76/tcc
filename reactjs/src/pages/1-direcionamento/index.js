@@ -13,7 +13,7 @@ export default function Direcionamento() {
 
                 <div className="cat">
                     <h3>Telas de login:</h3>
-                    <h4><Link to="/login">- Tela de Login</Link></h4>
+                    <h4><Link to="/login"> - Tela de Login</Link></h4>
                     <h4><Link to="/cadastro">- Tela de Cadastrar</Link></h4>
                     <h4><Link to="/esqueci-senha">- Tela de Esqueci Senha</Link></h4>
                 </div>

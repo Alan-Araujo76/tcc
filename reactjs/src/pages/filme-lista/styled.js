@@ -41,9 +41,10 @@ const Container = styled.div`
 .parte2 {
     color: #fff;
     background-color: #3B3B3B;
-    padding: 2em;
+    padding: 1em;
     width: 1200px;
     margin-top: 3em;
+    box-shadow: 15px -5px 1px 5px #202020;
 }
 
 .linha {

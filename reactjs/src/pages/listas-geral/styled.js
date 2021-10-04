@@ -62,7 +62,7 @@ const Container = styled.div`
         background-color: #3b3b3b;
         margin: 0px 10%;
         padding: 2.5%;
-        box-shadow:  0px  1px 10px #c2c2c2;
+        box-shadow: 15px -5px 1px 5px #202020;
     }
 
     .dif {
