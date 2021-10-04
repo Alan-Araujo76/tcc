@@ -88,6 +88,7 @@ const Container = styled.div`
     cursor: pointer;
     padding: 3px 0px 0px 0px;
 }
+
 .botao:hover {
     transition: 0.8s;
     opacity: 0.6;

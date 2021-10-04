@@ -15,6 +15,8 @@ export default function FilmesGostos() {
             <TituloC nome="Filmes por gosto"/>
 
             <div className="filmes">
+        
+
                 <Box1/>
 
                 <Box2 />

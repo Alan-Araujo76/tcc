@@ -65,6 +65,11 @@ const Container = styled.div`
         box-shadow: 15px -10px 1px 0px #202020;
     }
 
+    .filme-d {
+        display: none;
+    }
+
+
     .dif {
         display: none;
     }

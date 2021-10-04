@@ -22,7 +22,8 @@ import AssistirMaisTarde from './pages/filmes-assistir-depois';
 import JaAssistidos from './pages/filmes-já-assist';
 
 // Tela de Lista
-import ListasG from './pages/listas-geral';
+import ListasGC from './pages/listas-geral-c';
+import ListasGS from './pages/listas-geral-s';
 import FilmeLista from './pages/filme-lista';
 import ListasPopulares from './pages/listas-populares';
 import CriarLista from './pages/criar-lista';
@@ -47,7 +48,8 @@ export default function Routes() {
                 <Route path="/filmespopulares" exact={true} component={FilmesPopulares} />
                 <Route path="/listapop" exact={true} component={ListasPopulares} />
                 <Route path="/listafil" exact={true} component={FilmeLista} />
-                <Route path="/listasg" exact={true} component={ListasG} />
+                <Route path="/listasgc" exact={true} component={ListasGC} />
+                <Route path="/listasgs" exact={true} component={ListasGS} />
                 <Route path="/comentario" exact={true} component={Comentario} />
                 <Route path="/detfilmes" exact={true} component={DetalhesFilme} />
                 <Route path="/assistimtarde" exact={true} component={AssistirMaisTarde} />

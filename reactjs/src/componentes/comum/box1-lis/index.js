@@ -7,6 +7,17 @@ import { Link } from 'react-router-dom';
 export default function BoxFil() {
     return(
         <BlocoC>
+            <div className="filme-d">
+                <Link to="/listafil">
+                    <div className="img-fil">
+                        <div className="img"><img src={Capa} alt="" /></div>
+                        <div className="img"><img src={Capa} alt="" /></div>
+                        <div className="img"><img src={Capa} alt="" /></div>
+                    </div>
+                </Link>
+                <div className="nome">Velozes e Furiosos 9</div>
+            </div>
+            
             <div className="filme-b">
                 <Link to="/criarlist">
                     <div className="botao"><button><img src={Mais} alt=""/></button></div>

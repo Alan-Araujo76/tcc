@@ -18,8 +18,8 @@ const BlocoC = styled.div`
     }
 
     .img-fil img {
-        width: 103%;
-        height: 101%;
+        width: 100px;
+        height: 155px;
         cursor: pointer;
     }
 
@@ -28,6 +28,9 @@ const BlocoC = styled.div`
         display: flex;
         flex-direction: column;
     }
+
+    
+
 
     .img-fil {
         display: flex;

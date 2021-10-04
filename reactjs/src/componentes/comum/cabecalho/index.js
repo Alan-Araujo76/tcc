@@ -22,7 +22,7 @@ export default function Cabecalho() {
                 </div>
                 
                 <div className="tr">Meus filmes</div>
-                <div className="sair"><Link to="listasg"> Minhas listas </Link></div>
+                <div className="sair"><Link to="listasgc"> Minhas listas </Link></div>
                 <div className="barra-pesq">
                       <input type="text"/>
                       <button><img src={Lupa} alt="" /></button>
