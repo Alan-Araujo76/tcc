@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 const Botao = styled.button`
+    display: flex;
+    flex-direction: row;
     color: #fff;
     background-color: transparent;
     border: 3px solid #FF005C;
@@ -12,6 +14,12 @@ const Botao = styled.button`
     text-align: center;
     align-items: center;
     justify-content: center;
+
+    :hover {
+        background-color: #FF005C;
+        color: #000;
+        font-weight: bold;
+    }
 `;
 
 

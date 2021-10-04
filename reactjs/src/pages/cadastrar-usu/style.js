@@ -67,8 +67,10 @@ const Parte2 = styled.div`
     }
 
     .btn {
+        display: flex;
+        flex-direction: row;
         margin-right: 9%;
-        text-align: end;
+        justify-content: flex-end;
         margin-top: 3%;
     }
 

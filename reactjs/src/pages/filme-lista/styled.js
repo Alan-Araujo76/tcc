@@ -86,7 +86,7 @@ const Container = styled.div`
     width: 6.5em;
     height: 6.5em;
     cursor: pointer;
-    padding: 3px 0px 0px 4px;
+    padding: 3px 0px 0px 0px;
 }
 .botao:hover {
     transition: 0.8s;

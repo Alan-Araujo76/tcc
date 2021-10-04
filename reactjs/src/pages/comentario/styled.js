@@ -44,13 +44,17 @@ const PartePrin = styled.div`
     }
 
     .excluir button{
-        text-decoration: underline;
         background-color: transparent;
         border: transparent;
-        color: red;
+        color: #fff;
         cursor: pointer;
         font-size: 16px;
         font-weight: 600;
+    }
+
+    button:hover {
+        text-decoration: underline;
+        color: red;
     }
 
     .usuario {

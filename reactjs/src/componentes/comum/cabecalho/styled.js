@@ -94,6 +94,12 @@ const Container = styled.div`
         display: none;
     }
 
+    select {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+    }
+
 
 
 

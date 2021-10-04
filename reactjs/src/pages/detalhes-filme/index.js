@@ -14,6 +14,7 @@ import Rodape from '../../componentes/comum/rodapê';
 import Com from '../../componentes/comum/comentario';
 
 import { Container } from './styled';
+import { Link } from 'react-router-dom';
 
 export default function DetalhesFilme() {
     return(
@@ -112,7 +113,7 @@ export default function DetalhesFilme() {
                         <Com />
                         <Com />
                     </div>
-                    <div className="verm-c"><button>Ver mais comentarios</button></div>
+                    <div className="verm-c"><button><Link to="comentario">Ver mais comentarios</Link></button></div>
                 </div>
 
 
@@ -120,7 +121,7 @@ export default function DetalhesFilme() {
                     <div className="bloco">
                         <div className="parte1-p2">
                             <div className="p1-g">
-                                <div className="img-p2"><img src="" alt=""/></div>
+                                <div className="img-p2"></div>
                                 <div className="txt-p2">ASSISTIDO</div>
                             </div>
 

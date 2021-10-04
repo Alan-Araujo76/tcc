@@ -43,7 +43,7 @@ export default function Cadastro() {
                         <Input nome="Gênero:"/>
                     </div>
                     
-                    <div className="btn"><BotaoL nome="Cadastrar"/></div>
+                    <div className="btn"><BotaoL imagem="" nome="Cadastrar"/></div>
 
                 </div>
             </Parte2>

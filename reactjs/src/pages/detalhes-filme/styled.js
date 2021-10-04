@@ -348,10 +348,7 @@ const Container = styled.div`
         font-size: 10px;
     }
 
-    .img-p2 img {
-        height: 80px;
-        width: 70px;
-    }
+    
 
     .img-p2-d img {
         height: 50px;
