@@ -14,11 +14,13 @@ const BlocoC = styled.div`
         line-height: 22px;
         font-weight: 500;
         margin-left: 5px;
+        cursor: pointer;
     }
 
     .img-fil img {
         width: 103%;
         height: 101%;
+        cursor: pointer;
     }
 
 

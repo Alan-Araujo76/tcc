@@ -83,6 +83,7 @@ const Container = styled.div`
        background-color: #3b3b3b;
        outline: none;
        color: #fff;
+       margin-right: -15px;
     }
 
     .parte-celular {

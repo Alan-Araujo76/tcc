@@ -11,8 +11,37 @@ const Container = styled.div`
     .titulo {
         font-size: 220%;
         font-weight: bolder;
-        margin-bottom: 4%;
+        margin-bottom: 1%;
         margin-left: 10%;
+    }
+
+    .tipos {
+        display: flex;
+        flex-direction: row;
+        margin: 2% 0% 2% 10%;
+    }
+
+    .box1 {
+        margin-right: -35px;
+    }
+
+    .box1 button {
+        border: none;
+        background-color: transparent;
+    }
+
+    .txt {
+        font-size: 100%;
+        font-weight: 500;
+        margin-bottom: -10px;
+    }
+
+    .img-tipos {
+        width: 60%;
+    }
+
+    .img-tipos img {
+        width: 100%;
     }
 
     button {

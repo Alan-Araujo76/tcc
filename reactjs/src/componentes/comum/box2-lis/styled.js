@@ -15,12 +15,15 @@ const BlocoC = styled.div`
         margin-top: 8px;
         line-height: 22px;
         font-weight: 500;
+        cursor: pointer;
     }
 
     img {
         width: 100px;
         height: 155px;
+        cursor: pointer;
     }
+
 
     .filmes {
         display: flex;
