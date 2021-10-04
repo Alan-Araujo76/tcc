@@ -44,7 +44,7 @@ const Container = styled.div`
     padding: 1em;
     width: 1200px;
     margin-top: 3em;
-    box-shadow: 15px -5px 1px 5px #202020;
+    box-shadow: 15px -10px 1px 0px #202020;
 }
 
 .linha {
