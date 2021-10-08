@@ -36,6 +36,15 @@ export default function Cabecalho() {
 
             <div className="logo-celular">
                     <div className="tt"><span style={{fontweight: "none"}}>Movies</span><span style={{color: "#FF005C", fontweight: "bolder"}}> World</span></div>
+                    
+                    <div className="usuario-m">
+                        <div className="foto"><img src={FotoUsu} alt="" /></div>
+                        <div className="nome-usu">gabrielmelo</div>
+                        <select>
+                            <div className="seta"><img src={Seta} alt="" /></div>
+                        </select>
+                    </div>
+                    
                     <div className="barra-pesq"><input type="text"/><img src={Lupa} alt="" /></div>
             </div>
 

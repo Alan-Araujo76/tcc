@@ -6,7 +6,7 @@ export default function Inp(props) {
         <Container> 
             <div className="inp">
                 <div className="txt-comp">{props.nome}</div>  
-                <div className="input"><input placeholder='Digite seu '/></div>
+                <div className="input"><input placeholder="Digite seu "/></div>
             </div>
         </Container>
     )

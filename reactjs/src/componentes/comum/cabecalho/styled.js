@@ -112,17 +112,18 @@ const Container = styled.div`
 
         .logo { display: none; }
         .parte2 { display: none; }
-        .logo-celular { display: flex; flex-direction: row; justify-content: space-between; width: 80%; }
-        .barra-pesq { margin-left: 75px; margin-top: 8px;}
+        .logo-celular { display: flex; flex-direction: row; justify-content: space-between; width: 80%; padding: 2px;  }
+        .barra-pesq { margin-top: 8px;}
         .tt { width: 10px; }
         .parte-celular { display: flex; flex-direction: row; text-align: center; margin-top: 30px; justify-content: space-between; width: 60%;}
-        .usuario { display: none; }
-        .troco { font-size: 0.8em; font-weight: bold;width: 100px; margin: 0px 60px;}
-        .sair { font-size: 0.8em; margin: 0px; width: 60px; }
-        .per { font-size: 0.8em; font-weight: bold; width: 100px;}
-        input { width: 9em; border:none; background-color: #D0D0D0; outline: none;}
-        .barra-pesq { height: 1.5em; width: 10.5em; }
-        .barra-pesq img { width: 12px; height: 12px; }
+        .usuario-m { display: flex; flex-direction: row; align-items: center; }
+        .nome-usu { font-size: 12px }
+        .troco { font-size: 0.8em; font-weight: bold; min-width: auto; margin: 0px 60px;}
+        .sair { font-size: 0.8em; margin: 0px; width: auto; }
+        .per { font-size: 0.8em; font-weight: bold; min-width: auto;}
+        .barra-pesq input { width: 6.5em; border:none; background-color: #3b3b3b; outline: none;  }
+        .barra-pesq { height: 1.5em; width: 6.5em; margin-left: -50px; }
+        .barra-pesq img { width: 10px; height: 10px; }
     }
 `;
 

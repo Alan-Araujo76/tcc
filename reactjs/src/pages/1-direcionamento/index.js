@@ -33,7 +33,7 @@ export default function Direcionamento() {
 
                 <div className="cat">
                     <h3>Telas de lista:</h3>
-                    <h4><Link to="/listasg">- Tela de Lista do usuario(Geral)</Link></h4>
+                    <h4><Link to="/listasgs">- Tela de Lista do usuario(Geral)</Link></h4>
                     <h4><Link to="/listafil">- Tela de Filme Lista</Link></h4>
                     <h4><Link to="/listapop">- Tela de Listas Populares</Link></h4>
                     <h4><Link to="/criarlist">- Tela para Criar Listas</Link></h4>
