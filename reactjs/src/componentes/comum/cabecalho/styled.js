@@ -112,9 +112,9 @@ const Container = styled.div`
 
         .logo { display: none; }
         .parte2 { display: none; }
-        .logo-celular { display: flex; flex-direction: row; justify-content: space-between; width: 80%; padding: 2px;  }
+        .logo-celular { display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 80%; }
         .barra-pesq { margin-top: 8px;}
-        .tt { width: 10px; }
+        .tt { width: 10px; font-weight: bold;}
         .parte-celular { display: flex; flex-direction: row; text-align: center; margin-top: 30px; justify-content: space-between; width: 60%;}
         .usuario-m { display: flex; flex-direction: row; align-items: center; }
         .nome-usu { font-size: 12px }
@@ -122,8 +122,29 @@ const Container = styled.div`
         .sair { font-size: 0.8em; margin: 0px; width: auto; }
         .per { font-size: 0.8em; font-weight: bold; min-width: auto;}
         .barra-pesq input { width: 6.5em; border:none; background-color: #3b3b3b; outline: none;  }
-        .barra-pesq { height: 1.5em; width: 6.5em; margin-left: -50px; }
+        .barra-pesq { height: 1.5em; width: 6.5em; margin-left: -50px; margin-bottom: 10px; }
         .barra-pesq img { width: 10px; height: 10px; }
+
+        @media (max-width: 500px) {
+            .parte-celular { width: 80%;}
+            .troco { font-size: 0.8em; width: 100%; }
+            .sair { font-size: 0.8em; width: 80%; }
+            .per { font-size: 0.8em; width: 100%; }
+        }
+
+        @media (max-width: 450px) {
+            .tt { font-size: 13px; }
+            .nome-usu { font-size: 10px; }
+            .foto img { width: 23px; height: 23px; }
+            .parte-celular { width: 80%;}
+            .troco { font-size: 0.7em; width: 100%; }
+            .sair { font-size: 0.7em; width: 20%; }
+            .per { font-size: 0.7em; width: 80%; }
+            .barra-pesq input { width: 5.5em; border:none; background-color: #3b3b3b; outline: none;  }
+            .barra-pesq { height: 1.5em; width: 5.5em; margin-left: -50px; }
+            .barra-pesq img { width: 10px; height: 10px; }
+        }
+            
     }
 `;
 

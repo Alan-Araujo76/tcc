@@ -11,12 +11,11 @@ const BlocoC = styled.div`
 
     .nome {
         font-size: 17px;
-        width: 100px;
+        width: 115px;
         text-align: center;
         margin-top: 8px;
         line-height: 22px;
         font-weight: 500;
-        margin-left: 10px;
     }
 
     .img {

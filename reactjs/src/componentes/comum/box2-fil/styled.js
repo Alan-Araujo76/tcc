@@ -8,9 +8,8 @@ const BlocoC = styled.div`
     
 
     .nome {
-        margin-left: 10px;
         font-size: 17px;
-        width: 100px;
+        width: 115px;
         text-align: center;
         margin-top: 8px;
         line-height: 22px;
