@@ -1,62 +1,72 @@
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Direcionamento from './pages/1-direcionamento';
+import Direcionamento from './pages/0_direcionamento';
 
-// Telas de Login
-import LoginPrin from './pages/entrar-usu';
-import Cadastrar from './pages/cadastrar-usu';
-import EsqSenha from './pages/esqueci-senha-usu';
 
-// Inserir um filme
-import Inserir from './pages/inserir-filme'
+import LoginPrin from './pages/2_LoginUsu';
+import Cadastrar from './pages/3_LoginCadastro';
+import EsqSenha from './pages/4_EsqSenha';
+import DetalhesFilme from './pages/5_FilmeG';
+import Comentario from './pages/6_Comentario';
+import Perfil from './pages/7_Perfil';
+import EditarPerfil from './pages/8_EditarPer';
+import ListasPopulares from './pages/9_ListasPops';
+import FilmesPopulares from './pages/10_FilmesPops';
+import FilmesGosto from './pages/11_FilmesPorGosto';
+import ListasGC from './pages/12_ListasG_C';
+import ListasGS from './pages/12_ListasG_S';
+import FilmeLista from './pages/13_FilmesDaLista';
+import CriarLista from './pages/14_CriarLista';
+import AssistirMaisTarde from './pages/15_AssistirDps';
+import JaAssistidos from './pages/16_JaAssistidos';
+import SobreNos from './pages/17_SobreNos';
 
-// Tela de Perfil
-import Perfil from './pages/tela-de-perfil';
-import EditarPerfil from './pages/editar-perfil';
 
-// Tela de categoria de filmes
-import FilmesPopulares from './pages/filmes-populares';
-import FilmesGosto from './pages/filmes_gosto';
-import AssistirMaisTarde from './pages/filmes-assistir-depois';
-import JaAssistidos from './pages/filmes-já-assist';
-
-// Tela de Lista
-import ListasGC from './pages/listas-geral-c';
-import ListasGS from './pages/listas-geral-s';
-import FilmeLista from './pages/filme-lista';
-import ListasPopulares from './pages/listas-populares';
-import CriarLista from './pages/criar-lista';
-
-import Comentario from './pages/comentario';
-import DetalhesFilme from './pages/detalhes-filme';
+// Telas de ADM
+import Inserir from './pages/Adm_InserirF';
+import LoginAdm from './pages/Adm_Login';
 
 //Tela Inicial
 import TelaInicial from './pages/tela inicial';
 
+
+
 export default function Routes() {
     return (
         <BrowserRouter>
-            <Switch>
+            <Switch> 
                 <Route path="/" exact={true} component={Direcionamento} />
+
+                <Route path="/telainicial" exact={true} component={TelaInicial} />
+
                 <Route path="/login" exact={true} component={LoginPrin} />
                 <Route path="/cadastro" exact={true} component={Cadastrar} />
                 <Route path="/esqueci-senha" exact={true} component={EsqSenha} />
+
+                <Route path="/detfilmes" exact={true} component={DetalhesFilme} />
+                <Route path="/comentario" exact={true} component={Comentario} />
+
                 <Route path="/perfil" exact={true} component={Perfil} />
                 <Route path="/editperfil" exact={true} component={EditarPerfil} />
-                <Route path="/filmesporgosto" exact={true} component={FilmesGosto} />
+
                 <Route path="/filmespopulares" exact={true} component={FilmesPopulares} />
                 <Route path="/listapop" exact={true} component={ListasPopulares} />
-                <Route path="/listafil" exact={true} component={FilmeLista} />
+
+                <Route path="/filmesporgosto" exact={true} component={FilmesGosto} />
+
                 <Route path="/listasgc" exact={true} component={ListasGC} />
                 <Route path="/listasgs" exact={true} component={ListasGS} />
-                <Route path="/comentario" exact={true} component={Comentario} />
-                <Route path="/detfilmes" exact={true} component={DetalhesFilme} />
+                <Route path="/listafil" exact={true} component={FilmeLista} />
+                <Route path="/criarlist" exact={true} component={CriarLista} />
+                
                 <Route path="/assistimtarde" exact={true} component={AssistirMaisTarde} />
                 <Route path="/jassistidos" exact={true} component={JaAssistidos} />
-                <Route path="/criarlist" exact={true} component={CriarLista} />
+                <Route path="/sobrenos" exact={true} component={SobreNos} />
+
+
                 <Route path="/jiue886kjhlhefiorechd54s" exact={true} component={Inserir} />
-                <Route path="/telainicial" exact={true} component={TelaInicial} />
+                <Route path="/admlogin83497" exact={true} component={LoginAdm} />
             </Switch>
         </BrowserRouter>
     )

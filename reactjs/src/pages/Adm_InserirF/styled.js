@@ -4,9 +4,8 @@ import styled from "styled-components";
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: #E5E5E4;
+    background-color: #000;
 
-    .linha {margin-top: -17px; text-align: center;}
 
     .parte2 {
         background-color: #E5E5E4;
@@ -19,7 +18,7 @@ const Cabecalho = styled.div`
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    background-color: #000; 
+    background-color: #2c2c2c; 
     padding: 15px 110px 15px 60px;
     color: #fff;
 
@@ -40,7 +39,7 @@ const Cabecalho = styled.div`
 
     .absolute {
         color: white;
-        background-color: #119FDC;
+        background-color: #FF005C;
         border: 3px solid white;
         border-radius: 50%;
         position: absolute;
@@ -49,17 +48,22 @@ const Cabecalho = styled.div`
         text-align: center;
         font-size: .7em;
         top: 8px;
-        margin-left: 30px; 
+        margin-left: 35px; 
+        margin-top: -4px;
     }
 
     button {
-        background-color: #000;
+        background-color: transparent;
         cursor: pointer;
         border: 3px solid #FF005C;
         padding: 6px;
         width: 42px;
         height: 42px;
         border-radius: 40px;
+    }
+
+    button:hover {
+        background-color: #FF005C;
     }
 
     .bt {
@@ -97,22 +101,23 @@ const Parteprincipal = styled.div`
 `;
 
 const Bloco1 = styled.div`
-    background-color: #000;
+    background-color: #2D2C2C;
     padding: 30px 50px;
     color: #fff;
+    border-radius: 8px;
 
     .linha1 {
         display: flex;
         flex-direction: row;
         margin-bottom: 18px;
-        width: 900px;
+        width: 920px;
         justify-content: space-between;
     }
 
 
     .inp1 {
         margin-right: 20px;
-        margin-left: 123px;
+        margin-left: 128px;
     }
 
     .inp3 {
@@ -122,18 +127,19 @@ const Bloco1 = styled.div`
 
     .inp1 input{
         height: 28px;
-        margin-right: 10px;
-        margin-left: 5px;
+        font-weight: 800;
     }
 
     .inp-d input {
         height: 32px;
-        width: 53.5em;
+        width: 55em;
+        font-weight: 800;
     }
 
     .inp-d1 input {
         height: 32px;
-        width: 53.5em;
+        width: 55em;
+        font-weight: 800;
     }
 
     .inp-d  {
@@ -156,7 +162,7 @@ const Bloco1 = styled.div`
         flex-direction: row;
         margin-left: 114px;
         margin-top: 15px;
-        width: 800px;
+        width: 805px;
         justify-content: space-between;
     }
 
@@ -174,6 +180,7 @@ const Bloco1 = styled.div`
         border: 1px solid #A8A8A8;
         resize: none;
         font-family: Montserrat;
+        font-weight: 800;
     }
 
     .btn {
@@ -181,14 +188,22 @@ const Bloco1 = styled.div`
     }
 
     .inpuu input {
-        width: 360px;
+        width: 366px;
+    }
+
+    input, textarea {
+        outline: 0;
     }
 
     .linha-1 {
         display: flex;
         flex-direction: row;
         margin-bottom: 18px;
-        width: 900px;
+        width: 950px;
+    }
+
+    .linha-1 input { 
+        font-weight: 800;
     }
 
     
@@ -198,9 +213,10 @@ const Bloco1 = styled.div`
 
 
 const Bloco2 = styled.div`
-    background-color: #000;
+    background-color: #2D2C2C;
     padding: 30px 25px 30px 50px;
     margin-top: 45px;
+    border-radius: 8px;
 
     td button {
         border-radius: 50%;

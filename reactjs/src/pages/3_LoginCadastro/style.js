@@ -15,6 +15,7 @@ const Container = styled.div `
         flex-direction: column;  
         padding: 1.5em 0em;
         height: 100%;
+        align-items: center;
     }
 `;
 
@@ -115,8 +116,8 @@ const Parte2 = styled.div`
         .barra img{ width: 350px; }
         .bloco2 { margin-top: 25px; }
         .botao { margin: 0px; }
-        .input-d input{  width: 18em; }
-        .barra { margin: 20px 0px; }
+        .barra { width: 90%; margin: 20px 0px; }
+        .barra img { width: 100%; }
         .inp { margin-top: 20px; }
         input { width: 250px; }
         .input-d input{ width: 250px; }

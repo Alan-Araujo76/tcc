@@ -79,13 +79,13 @@ export default function CadastrarFilme() {
             </div>
         </Cabecalho>
 
-        <div className="linha"> <img src={Linha} alt=""/> </div>
+        
 
             <Parteprincipal>
             <Bloco1>
                 <div className="titulo">
                     <div className="barra"><img src={BarraT} alt="" /></div>
-                    <div className="texto1">Novo Produto</div>
+                    <div className="texto1">Novo Filme</div>
                 </div>
 
                 <div className="inputs">
@@ -125,7 +125,7 @@ export default function CadastrarFilme() {
             <Bloco2>
                 <div className="titulo">
                         <div className="barra"><img src={BarraT} alt="" /></div>
-                        <div className="texto1">Produtos Cadastrados</div>
+                        <div className="texto1">Filmes já Cadastrados</div>
                 </div>
 
 

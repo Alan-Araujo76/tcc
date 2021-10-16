@@ -7,6 +7,7 @@ const Container = styled.div`
     background-color: #000;
     color: #fff;
     align-items: center;
+    font-family: Montserrat;
 
     .barra img {
         width: 100%;
@@ -33,9 +34,64 @@ const Container = styled.div`
         margin-top: .8em;
     }
 
+    .p1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .p1d {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 5px;
+        margin-bottom: -15px;
+    }
+
+    .nome {
+        margin-left: 23px;
+        margin-top: 10px;
+        font-size: 12px;
+        
+        font-weight: 700;
+    }
+
+    .nome-0 {
+        font-size: 12px;  
+        font-weight: 700;
+    }
+
+    .nome-1 {
+        margin-left: 3px;
+        margin-top: 10px;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
     .parte2 {
         display: flex;
         flex-direction: row;
+    }
+
+    .descricao {
+        display: flex;
+        flex-direction: row;
+        font-size: 12px;
+        width: 55%;
+    }
+
+    .desc {
+        display: flex;
+        flex-direction: row;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .desc img {
+        height: 10px;
+        width: 10px;
+        margin-top: 6px;
+        margin-left: 5px;
     }
 
     .titulo-g {
@@ -106,6 +162,10 @@ const Container = styled.div`
 
     .mobile {
         display: none;
+    }
+
+    .redes-d {
+        margin-left: -15px;
     }
 
 

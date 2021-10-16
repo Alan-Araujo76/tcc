@@ -4,6 +4,7 @@ import Prox from '../../componentes/comum/botao-prox-pag';
 import Cabecalho from '../../componentes/comum/cabecalho';
 import Rodape from '../../componentes/comum/rodapê';
 
+import { Link } from 'react-router-dom';
 
 import { Container } from './styled';
 
@@ -22,8 +23,10 @@ export default function FilmeLista() {
             <div className="parte2">
                 <div className="linha">
                     <div className="bloco-d">
-                        <div className="botao"><button><img src={Mais} alt=""/></button></div>
-                        <div className="desc-botao">ADICIONAR FILME</div>
+                        <Link to="/criarlist">
+                            <div className="botao"><button><img src={Mais} alt=""/></button></div>
+                            <div className="desc-botao">ADICIONAR FILME</div>
+                        </Link>
                     </div>
                     <div className="bloco">
                         <div className="img-filme"><img src={Filme} alt=""/></div>

@@ -77,6 +77,9 @@ const Container = styled.div`
 .bloco img {
     width: 110px;
     height: 155px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 .botao button {
@@ -87,6 +90,9 @@ const Container = styled.div`
     height: 6.5em;
     cursor: pointer;
     padding: 3px 0px 0px 0px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 .botao:hover {
