@@ -1,7 +1,8 @@
-import axios from 'axios';
-const api = axios.create({
+import Axios from 'axios';
+const api = Axios.create({
     baseURL: ('https://movies-world.netlify.app')
 })
+
 
 
 export default class Api {
@@ -27,6 +28,8 @@ export default class Api {
 
 
 
+
+
     async ListarU(){
         let r = await api.get('/usuario');
         return r.data;
@@ -45,6 +48,8 @@ export default class Api {
         let r = await api.delete('/usuario/' + id);
         return r.data;
     }
+
+
 
 
 
