@@ -44,7 +44,34 @@ const Container = styled.div`
     }
 
 
+    .tipos {
+        display: flex;
+        flex-direction: row;
+        margin: 0% 0% 2% 9.5%;
+    }
 
+    .box1 {
+        margin-right: -5px;
+    }
+
+    .box1 button {
+        border: none;
+        background-color: transparent;
+    }
+
+    .txt {
+        font-size: 100%;
+        font-weight: 500;
+        margin-bottom: -10px;
+    }
+
+    .img-tipos {
+        width: 75%;
+    }
+
+    .img-tipos img {
+        width: 100%;
+    }
 
     @media (max-width: 800px) {
         text-align: center;
