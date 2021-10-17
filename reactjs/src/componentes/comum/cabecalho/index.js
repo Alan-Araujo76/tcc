@@ -21,7 +21,7 @@ export default function Cabecalho() {
                     </select>
                 </div>
                 
-                <div className="tr">Meus filmes</div>
+                <div className="tr"><Link to="meusfilmes">Meus filmes</Link></div>
                 <div className="sair"><Link to="listasgc"> Minhas listas </Link></div>
                 <div className="barra-pesq">
                       <input type="text"/>

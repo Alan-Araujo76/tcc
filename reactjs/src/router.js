@@ -18,10 +18,12 @@ import ListasGC from './pages/12_ListasG_C';
 import ListasGS from './pages/12_ListasG_S';
 import FilmeLista from './pages/13_FilmesDaLista';
 import CriarLista from './pages/14_CriarLista';
-import AssistirMaisTarde from './pages/15_AssistirDps';
-import JaAssistidos from './pages/16_JaAssistidos';
-import SobreNos from './pages/17_SobreNos';
-
+import AssistirMaisTarde from './pages/15_MeusF_AD';
+import JaAssistidos from './pages/15_MeusF_JA';
+import SobreNos from './pages/16_SobreNos';
+import Contatos from './pages/16_SobreNos';
+import PoliticaP from './pages/16_SobreNos';
+import TermosU from './pages/16_SobreNos';
 
 // Telas de ADM
 import Inserir from './pages/Adm_InserirF';
@@ -61,9 +63,13 @@ export default function Routes() {
                 <Route path="/criarlist" exact={true} component={CriarLista} />
                 
                 <Route path="/assistimtarde" exact={true} component={AssistirMaisTarde} />
-                <Route path="/jassistidos" exact={true} component={JaAssistidos} />
-                <Route path="/sobrenos" exact={true} component={SobreNos} />
+                <Route path="/meusfilmes" exact={true} component={JaAssistidos} />
 
+                <Route path="/sobrenos" exact={true} component={SobreNos} />
+                <Route path="/contatos" exact={true} component={Contatos} />
+
+                <Route path="/politicap" exact={true} component={PoliticaP} />
+                <Route path="/termosU" exact={true} component={TermosU} />
 
                 <Route path="/jiue886kjhlhefiorechd54s" exact={true} component={Inserir} />
                 <Route path="/admlogin83497" exact={true} component={LoginAdm} />
