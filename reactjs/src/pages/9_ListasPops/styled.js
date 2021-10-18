@@ -67,6 +67,8 @@ const Bloco1 = styled.div`
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
+    flex-wrap: wrap;
+    margin: 0.5em;
 
     .nome {
         font-size: 17px;
