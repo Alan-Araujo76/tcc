@@ -71,4 +71,18 @@ export default class Api {
         let r = await api.delete('/usuario/' + id);
         return r.data;
     }
+
+
+    async ListarAS (){
+        let r = await api.get('/lista_item');
+        return r.data;
+    }
+
+
+    async AlterarAS (){
+        let r = await api.post('/lista_item');
+        return r.data;
+    }
+
+
 }
