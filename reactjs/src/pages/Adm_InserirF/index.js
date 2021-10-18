@@ -9,7 +9,7 @@ import FotoP from '../../assets/img/mdm.jpg';
 import BotaoL from '../../componentes/styled/botoes-rosa'
 import { Container, Cabecalho, Parteprincipal, Bloco1, Bloco2 } from './styled';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -48,7 +48,7 @@ export default function CadastrarFilme() {
           toast.dark('💕 Produto cadastrado com sucesso!');
         }
     } else {
-      let r = await api.Alterar(idAlterando, nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor);
+      let r = await api.AlterarF(nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor);
 
       if(r.erro) {
         toast.error(`${r.erro}`);
@@ -58,8 +58,42 @@ export default function CadastrarFilme() {
       }
     }
 
+    LimparCampos();
     Listar();
   }
+
+  function LimparCampos() {
+    setNome('');
+    setGenero('');
+    setSinopse('');
+    setDescricao('');
+    setDiretor('');
+    setLancamento('');
+    setPlataforma('');
+    setAvalicao('');
+    setimg_maior('');
+    setimg_menor('');
+    setIdAlterando(0);
+  }
+
+  async function Editar(item) {
+      setNome(item.nm_filme);
+      setGenero(item.ds_genero);
+      setSinopse(item.ds_sinopse);
+      setDescricao(item.ds_descricao);
+      setDiretor(item.nm_diretor)
+      setLancamento(item.ano_lancamento);
+      setPlataforma(item.ds_plataforma);
+      setAvalicao(item.ds_avaliacao);
+      setimg_maior(item.img_capa_maior);
+      setimg_menor(item.img_capa_menor);
+      setIdAlterando(item.id_filme);
+  }
+
+
+  useEffect(() => {
+    Listar();
+  }, []);
 
 
     return(
@@ -91,33 +125,33 @@ export default function CadastrarFilme() {
                 <div className="inputs">
 
                     <div className="linha1">
-                        <div className="inp1">Nome:   <input type="text"  onChange={e => setNome(e.target.value)} /></div>
-                        <div className="inp">Genêro:   <input type="text" onChange={e => setGenero(e.target.value)}/></div>
-                        <div className="inp2">Diretor:   <input type="text"  onChange={e => setDiretor(e.target.value)}/></div>
+                        <div className="inp1">Nome:   <input type="text" value={nome} onChange={e => setNome(e.target.value)} /></div>
+                        <div className="inp">Genêro:   <input type="text" value={genero} onChange={e => setGenero(e.target.value)}/></div>
+                        <div className="inp2">Diretor:   <input type="text"  value={diretor} onChange={e => setDiretor(e.target.value)}/></div>
                     </div>
 
                     <div className="linha-1">
-                        <div className="inp3">Data de lançamento:   <input type="text" onChange={e => setLancamento(e.target.value)}/></div>
-                        <div className="inpuu">Plataformas Dis. :   <input type="text" onChange={e => setPlataforma(e.target.value)}/></div>
+                        <div className="inp3">Data de lançamento:   <input type="text" value={lancamento} onChange={e => setLancamento(e.target.value)}/></div>
+                        <div className="inpuu">Plataformas Dis. :   <input type="text" value={plataforma} onChange={e => setPlataforma(e.target.value)}/></div>
                     </div>
 
                     <div className="linha1">
-                        <div className="inp-d">Capa do Filme(Maior):   <input type="url" onChange={e => setimg_maior(e.target.value)}/></div>
+                        <div className="inp-d">Capa do Filme(Maior):   <input type="url" value={img_maior} onChange={e => setimg_maior(e.target.value)}/></div>
                     </div>
                     <div className="linha1">
-                        <div className="inp-d1">Capa do Filme(Menor):   <input type="url" onChange={e => setimg_menor(e.target.value)}/></div>
+                        <div className="inp-d1">Capa do Filme(Menor):   <input type="url" value={img_menor} onChange={e => setimg_menor(e.target.value)}/></div>
                     </div>
 
                     <div className="linha-d">
                         <div className="texto">Descrição:</div>
-                        <div className="text">  <textarea type="text" onChange={e => setDescricao(e.target.value)}/></div>
+                        <div className="text">  <textarea type="text" value={descricao} onChange={e => setDescricao(e.target.value)}/></div>
                     </div>
                     <div className="linha-d1">
                       <div className="sep">
                         <div className="texto">Sinopse:</div>
-                        <div className="text">  <textarea type="text" onChange={e => setSinopse(e.target.value)}/></div>
+                        <div className="text">  <textarea type="text" value={sinopse} onChange={e => setSinopse(e.target.value)}/></div>
                       </div>
-                        <div className="btn"><BotaoL onClick={Inserir}>imagem="" nome="Cadastrar"</BotaoL></div>
+                        <div className="btn"><BotaoL imagem="" nome="Cadastrar" onClick={Inserir}></BotaoL></div>
                     </div>
                 </div>
             </Bloco1>
@@ -177,7 +211,7 @@ export default function CadastrarFilme() {
                     <td> {item.img_capa_maior} </td>
                     <td> {item.ds_descricao} </td>
                     <td> {item.ds_sinopse} </td>
-                    <td className="coluna-acao"> <button> <img src={Lapis} alt="" /> </button> </td>
+                    <td className="coluna-acao"> <button onClick={() => Editar(item)}> <img src={Lapis} alt="" /> </button> </td>
                     <td className="coluna-acao"> <button> <img src={Lixeira} alt="" /> </button> </td>
                   </tr> 
                 )}

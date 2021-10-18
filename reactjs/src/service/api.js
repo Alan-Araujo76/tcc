@@ -1,6 +1,6 @@
 import Axios from 'axios';
 const api = Axios.create({
-    baseURL: ('https://movies-world.netlify.app')
+    baseURL: ('http://localhost:3030')
 })
 
 
