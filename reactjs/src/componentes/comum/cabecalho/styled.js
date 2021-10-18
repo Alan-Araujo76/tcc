@@ -66,6 +66,7 @@ const Container = styled.div`
     .barra-pesq img {
         width: 15px;
         height: 15px;
+        margin-left: 10px;
     }
 
     .barra-pesq button {

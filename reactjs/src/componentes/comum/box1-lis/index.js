@@ -14,8 +14,8 @@ export default function BoxFil() {
                         <div className="img"><img src={Capa} alt="" /></div>
                         <div className="img"><img src={Capa} alt="" /></div>
                     </div>
+                    <div className="nome">Velozes e Furiosos 9</div>
                 </Link>
-                <div className="nome">Velozes e Furiosos 9</div>
             </div>
             
             <div className="filme-b">

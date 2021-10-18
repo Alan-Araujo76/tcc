@@ -3,6 +3,9 @@ import Face from '../../../assets/img/logo-face-rod.png';
 import TT from '../../../assets/img/logo-tt-rod.png';
 import Insta from '../../../assets/img/logo-insta-rod.png';
 
+import Seta from '../../../assets/img/seta-sn.png';
+
+import { Link } from 'react-router-dom';
 import { Container } from './styled';
 
 export default function Rodape() {
@@ -35,17 +38,21 @@ export default function Rodape() {
                 </div>
 
                 <div className="parte-p2">
-                    <div className="titulo-d">Sobre nós</div>
+                    <div className="titulo-d">Redes Sociais</div>
                     <div className="bloco1-p1">
-                        <div className="emails-b1">
-                            <div className="e1">Não sei o que colocar  hehe 0.0</div>
-                            <div className="e1">Não sei o que colocar  hehe 0.0</div>
-                            <div className="e1">Não sei o que colocar  hehe 0.0</div>
-                            <div className="e1">Não sei o que colocar  hehe 0.0</div>
-                            <div className="e1">Não sei o que colocar  hehe 0.0</div>
-                            <div className="e1">Não sei o que colocar  hehe 0.0</div>
-                            <div className="e1">Não sei o que colocar  hehe 0.0</div>
-                            <div className="e1">Não sei o que colocar  hehe 0.0</div>
+                        <div className="redes">
+                            <div className="p1">
+                                <div className="redes-s"><img src={Face} alt="" /></div>
+                                <div className="nome">FACEBOOK</div>
+                            </div>
+                            <div className="p1d">
+                                <div className="redes-d"><img src={Insta} alt="" /></div>
+                                <div className="nome-0">INSTAGRAM</div>
+                            </div>
+                            <div className="p1">
+                                <div className="redes-s"><img src={TT} alt="" /></div>
+                                <div className="nome-1">TWITER</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -53,11 +60,15 @@ export default function Rodape() {
                 <div className="parte-p3">
                     <div className="titulo-p2"></div>
                     <div className="bloco1-p1">
-                        <div className="titulo-d">Redes Sociais</div>
-                        <div className="img-b1">
-                            <div className="redes-s"><img src={Face} alt="" /></div>
-                            <div className="redes-s1"><img src={Insta} alt="" /></div>
-                            <div className="redes-s2"><img src={TT} alt="" /></div>
+                        <div className="titulo-d">Sobre Nós</div>
+                        <div className="descricao">
+                            Somos uma plataforma feita para os amantes do cinema! Só aqui você consegue ter...  
+                        </div>
+
+                        <div className="desc">
+                            <Link to="/sobrenos">
+                            Conheça mais sobre nós <img src={Seta} alt="" />
+                            </Link>
                         </div>
 
                         <div className="subtitulos">

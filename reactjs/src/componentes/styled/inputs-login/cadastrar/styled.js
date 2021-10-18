@@ -24,6 +24,9 @@ const Container = styled.div`
         padding: 10px;
     }
 
+    @media (max-width: 800px) {
+        input { width: auto; }
+    }
 `;
 
 
