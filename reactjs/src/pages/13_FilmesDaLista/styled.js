@@ -50,8 +50,9 @@ const Container = styled.div`
 .linha {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 3em 4em 0em;
+    justify-items: center;
+    flex-wrap: wrap;
+    padding: 3em 1em 0em;
 }
 
 .bloco {
@@ -60,16 +61,18 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin: 0em 2.4em 4em;
     width: 110px;
     height: 200px;
 }
 
-.bloco-d {
+.bloco-botao {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin: 0em 2.4em 4em;
     width: 110px;
     height: 200px;
 }
