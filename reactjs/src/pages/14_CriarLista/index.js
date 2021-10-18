@@ -2,6 +2,8 @@
 import Cabecalho from '../../componentes/comum/cabecalho'
 import Rodape from '../../componentes/comum/rodapê'
 
+import Copiar from '../../assets/img/copiar.png'
+
 import { Container } from './styled';
 
 
@@ -18,14 +20,17 @@ export default function CriarLista() {
                             <div className="inp"><input /></div>
                         </div>
                         
-                        <div className="g-d">
-                            <div className="nome"><button>Procurar filme</button></div>
-                            <div className="inp"><input/></div>
+                        <div className="g-0">
+                            <div className="nome-d">Link:</div>
+                        <div className="g-1">
+                            <input type="text"/>
+                            <button><img src={Copiar} alt="" /></button>
+                        </div>
                         </div>
 
                         <div className="g-d">
-                            <div className="nome"><button>Gerar link</button></div>
-                            <div className="inp"><input/></div>
+                            <div className="nome"><button>Procurar Filme</button></div>
+                            <div className="inp-2"><input placeholder="Digite o nome do filme"/></div>
                         </div>
                     </div>
                     <div className="parte-2">

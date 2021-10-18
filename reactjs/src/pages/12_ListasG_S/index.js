@@ -3,7 +3,6 @@ import Rodape from '../../componentes/comum/rodapê'
 import ProxPag from '../../componentes/comum/botao-prox-pag'
 import Box1 from '../../componentes/comum/box1-lis'
 import Box2 from '../../componentes/comum/box2-lis'
-
 import LinhaSep from '../../assets/img/linhasep-listass.png';
 
 import { Link } from 'react-router-dom';

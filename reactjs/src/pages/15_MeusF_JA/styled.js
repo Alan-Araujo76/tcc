@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -8,12 +9,33 @@ const Container = styled.div`
     height: 100%;
 
 
+    .tipos {
+        display: flex;
+        flex-direction: row;
+        margin: 0% 0% 2% 9.5%;
+    }
 
-    .titulo {
-        font-size: 35px;
-        font-weight: bolder;
-        margin-bottom: 2em;
-        margin-left: 140px;
+    .box1 {
+        margin-right: -5px;
+    }
+
+    .box1 button {
+        border: none;
+        background-color: transparent;
+    }
+
+    .txt {
+        font-size: 100%;
+        font-weight: 500;
+        margin-bottom: -10px;
+    }
+
+    .img-tipos {
+        width: 75%;
+    }
+
+    .img-tipos img {
+        width: 100%;
     }
 
 
@@ -22,10 +44,6 @@ const Container = styled.div`
         flex-direction: row;
         justify-content: center;
         margin-top: 4.5em;
-    }
-
-    .dif {
-        display: none;
     }
 
     button {
@@ -40,11 +58,7 @@ const Container = styled.div`
         margin: 0px 5px;
         font-size: 14px;
         font-family: Montserrat;
-  
     }
-
-
-
 
     @media (max-width: 800px) {
         text-align: center;
