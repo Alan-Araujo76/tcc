@@ -222,9 +222,9 @@ app.post('/lista_item', async (req, resp) => {
         let {nome, descricao, lista } = req.body;
 
         let x = await db.infob_mw_lista_item.create({
-            id_lista_item: nome, 
-            id_filme: descricao,
-            id_lista_item: lista
+            nm_lista_item: nome, 
+            nm_filme: descricao,
+            nm_lista_item: lista
         })
          resp.send('lista criada!')  
     } catch(e) {
@@ -298,9 +298,6 @@ app.delete('/comentario/:id', async(req, resp) => {
         resp.send({ erro: e.toString()});
     }
 })
-
-
-
 
 
 app.listen(process.env.PORT,
