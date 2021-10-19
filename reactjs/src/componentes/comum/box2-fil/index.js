@@ -1,6 +1,5 @@
 import { BlocoC } from "./styled"
 import Capa from '../../../assets/img/capa-filme.png'
-import { Link } from 'react-router-dom';
 
 export default function BoxFil() {
     return(
