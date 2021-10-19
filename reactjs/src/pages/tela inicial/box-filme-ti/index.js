@@ -26,7 +26,7 @@ export default function BoxFilme(){
             <div className="filme-ti">
                 <img src={capaFilme} alt="" />
             </div>
-            <div className="filme-ti">
+            <div className="filme2-ti">
                 <img src={capaFilme} alt="" />
             </div>
             <div className="filme1-ti">

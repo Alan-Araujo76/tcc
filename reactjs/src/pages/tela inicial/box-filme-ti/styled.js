@@ -15,8 +15,12 @@ const Conteiner = styled.div`
             margin: 1em 2em;
             width: 6em;
         }
-
         .filme1-ti img{
+            align-self: center;
+            margin: 1em 2em;
+            width: 6em;
+        }
+        .filme2-ti img{
             align-self: center;
             margin: 1em 2em;
             width: 6em;
@@ -57,8 +61,11 @@ const Conteiner = styled.div`
             padding: 1em 1em 1em 12%;
 
             .filme-ti img{
-                align-self: center;
                 margin: .5em .5em;
+                width: 4em;
+            }
+            .filme2-ti img{
+                margin: .5em .5em .5em .5em;
                 width: 4em;
             }
             .filme1-ti img{
@@ -75,7 +82,7 @@ const Conteiner = styled.div`
                 height: 35%;
             }
             .botao2-ti img{
-                padding: .5em .3em .3em .3em;
+                padding: .5em .3em .3em 0em;
                 width: 120%;
             }
         }

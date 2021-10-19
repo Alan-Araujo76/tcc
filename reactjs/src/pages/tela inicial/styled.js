@@ -101,6 +101,10 @@ const Container = styled.div`
             color: #ffff;
         }
         @media(max-width: 1200px){
+            .conteiner-ti{
+                margin-top: 1em;
+            }            
+
             .conteiner-ti > img{
                 width: 90%;
                 height: 90%;
@@ -115,9 +119,12 @@ const Container = styled.div`
             
             .titulo-box-ti{
                 margin-left: 5%;
+                font-size: 100%;
             }
             
-
+            .conteudo-cl-ti{
+                flex-direction: column;
+            }
         }
 `
 export { Container }
