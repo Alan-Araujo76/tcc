@@ -254,9 +254,18 @@ const Bloco2 = styled.div`
         height:  61.93px;
         color: #6D6868;
         font-weight: 600;
-        padding: .1em 2em;
+        padding: 1em 2em;
         font-weight: 500;
         background-color: #E5E5E4;
+        text-align: justify;
+    }
+    .imgM img {
+        height: 100px;
+        width: 200px;
+    }
+   .imgM1 img {
+        height: 150px;
+        width: 100px;
     }
 
 
