@@ -95,7 +95,7 @@ export default function CadastrarFilme() {
   }
 
 
-  async function deletar(idAlterando) {
+  async function Deletar(idAlterando) {
     confirmAlert({
       title: 'Remover Filme',
       message: `Tem certeza que deseja remover o filme ${idAlterando} ?`,
@@ -214,7 +214,7 @@ export default function CadastrarFilme() {
                     <td> {item.dt_lancamento} </td>
                     <td> {item.ds_plataforma} </td>
                     <td className="coluna-acao"> <button onClick={() => Editar(item)}> <img src={Lapis} alt="" /> </button> </td>
-                    <td className="coluna-acao"> <button onClick={() => deletar(item.id_matricula)}> <img src={Lixeira} alt="" /> </button> </td>
+                    <td className="coluna-acao"> <button onClick={() => Deletar(item.id_matricula)}> <img src={Lixeira} alt="" /> </button> </td>
                   </tr> 
                 )}
               </tbody> 
@@ -241,7 +241,7 @@ export default function CadastrarFilme() {
                     <td title={ item.ds_descricao != null && item.ds_descricao.length > 12 ? item.ds_descricao : null }> {item.ds_descricao} </td>
                     <td title={ item.ds_sinopse != null && item.ds_sinopse.length > 12 ? item.ds_sinopse : null }> {item.ds_sinopse} </td>
                     <td className="coluna-acao"> <button onClick={() => Editar(item)}> <img src={Lapis} alt="" /> </button> </td>
-                    <td className="coluna-acao"> <button onClick={() => deletar(item.id_matricula)}> <img src={Lixeira} alt="" /> </button> </td>
+                    <td className="coluna-acao"> <button onClick={() => Deletar(item.id_matricula)}> <img src={Lixeira} alt="" /> </button> </td>
                   </tr> 
                 )}
               </tbody> 
