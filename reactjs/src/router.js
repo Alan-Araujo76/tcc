@@ -30,7 +30,7 @@ import Inserir from './pages/Adm_InserirF';
 import LoginAdm from './pages/Adm_Login';
 
 //Tela Inicial
-import TelaInicial from './pages/tela inicial';
+import TelaInicial from './pages/1_TelaInicial';
 
 
 
