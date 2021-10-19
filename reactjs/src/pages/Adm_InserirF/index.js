@@ -238,8 +238,8 @@ export default function CadastrarFilme() {
                   <tr>
                     <td className="imgM"> <img src={item.img_capa_menor} alt=""/> </td>
                     <td className="imgM1"> <img src={item.img_capa_maior} alt=""/> </td>
-                    <td title={ item.ds_descricao != null && item.ds_descricao.length > 12 ? item.ds_descricao : null }> {item.ds_descricao} </td>
-                    <td title={ item.ds_sinopse != null && item.ds_sinopse.length > 12 ? item.ds_sinopse : null }> {item.ds_sinopse} </td>
+                    <td title={ item.ds_descricao != null && item.ds_descricao.length > 150 ? item.ds_descricao : null }> { item.ds_descricao != null && item.ds_descricao.length >= 150 ? item.ds_descricao.substr(0, 150) + '...' : item.ds_descricao } </td>
+                    <td title={ item.ds_sinopse != null && item.ds_sinopse.length > 150 ? item.ds_sinopse : null }> { item.ds_sinopse != null && item.ds_sinopse.length >= 150 ? item.ds_sinopse.substr(0, 150) + '...' : item.ds_sinopse } </td>
                     <td className="coluna-acao"> <button onClick={() => Editar(item)}> <img src={Lapis} alt="" /> </button> </td>
                     <td className="coluna-acao"> <button onClick={() => Deletar(item.id_matricula)}> <img src={Lixeira} alt="" /> </button> </td>
                   </tr> 
