@@ -43,65 +43,7 @@ const Container = styled.div`
            font-weight: 600;
         }
 
-        .box-filmes-ti{
-            margin: 0px auto 0px auto;
-            display: flex;
-            flex-direction: column;
-            background-color: rgba(196, 196, 196, 0.2);
-            width: 70em;
-        }
-        .boxPT1-ti{
-            align-self: center;
-            display: flex;
-            flex-direction: row;
-            padding: 1em 0px 0em 0px;
-        }
-        .boxPT2-ti{
-            align-self: center;
-            display: flex;
-            flex-direction: row;
-            padding: 0em 0px 1em 0px;
-        }
-        .filme-ti img{
-            align-self: center;
-            margin: 1.5em 3em;
-            width: 8em;
-        }
-        .filme1-ti img{
-            align-self: center;
-            margin: 1.5em 6em 1.5em 3em;
-            width: 8em;
-        }
-        .botao-ti div{
-            padding: .5em;
-            align-self: center;
-
-            color: #FFFFFF;
-            font: 24px Montserrat;
-            font-weight: 600;
-        }
-        .botao2-ti{
-            margin: 1.5em 4em 1em 0em;
-            display: flex;
-            flex-direction: column;
-            align-self: center;
-
-            width: 120px;
-            height: 120px;
-            border-radius: 100%;
-            border:  0px;  
-            background-color: #FFB800;
-        }
-        .botao2-ti img{
-            align-self: center;
-            padding: 2em 1.5em 2em 2em;
-        }
-       
-        .botao-ti button:hover{
-            cursor: pointer;
-            transition: .5s;
-            background-color: #ffb7009c;
-        }
+        
 
         .conteudo-cl-ti{
             display: flex;

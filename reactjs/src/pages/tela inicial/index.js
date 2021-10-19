@@ -1,7 +1,6 @@
 import { Container } from './styled';
 import capaMaior from '../../assets/img/capa-maior.jpeg';
-import capaFilme from '../../assets/img/capa-filme.png';
-import play from '../../assets/img/play.png';
+import BoxFilme from './box-filme-ti/index';
 
 
 import Cabecalho from '../../componentes/comum/cabecalho';
@@ -22,44 +21,7 @@ export default function TelaInicial(){
                 <div className="conteudo-box-ti">
                     <div className="titulo-box-ti">Filmes populares:</div>
                     <div className="box-filmes-ti">
-                        <div className="boxPT1-ti">
-                            <div className="filme-ti">
-                                <img src={capaFilme} alt="" />
-                            </div>
-                            <div className="filme-ti">
-                                <img src={capaFilme} alt="" />
-                            </div>
-                            <div className="filme-ti">
-                                <img src={capaFilme} alt="" /> 
-                            </div>
-                            <div className="filme-ti">
-                                <img src={capaFilme} alt="" />
-                            </div>
-                            <div className="filme-ti">
-                                <img src={capaFilme} alt="" />
-                            </div>
-                        </div>
-                        <div className="boxPT2-ti">
-                            <div className="filme-ti">
-                                <img src={capaFilme} alt="" />
-
-                            </div>
-                            <div className="filme-ti">
-                                <img src={capaFilme} alt="" />
-                            </div>
-                            <div className="filme-ti">
-                                <img src={capaFilme} alt="" />
-                            </div>
-                            <div className="filme1-ti">
-                                <img src={capaFilme} alt="" />
-                            </div>
-                            <div className="botao-ti">
-                                <button className="botao2-ti"><img src={play} alt=""/></button>
-                                <div>
-                                    ver mais
-                                </div>
-                            </div>
-                        </div>
+                        <BoxFilme/>
                     </div>
                 </div>
                 <div className="conteudo-cl-ti">
