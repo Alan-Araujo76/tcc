@@ -6,6 +6,7 @@ const Conteiner = styled.div`
         background-color: rgba(196, 196, 196, 0.2);
         width: 70em;
         margin: 0px auto 0px auto;
+        padding: ;
 
 
         .filme-ti img{
