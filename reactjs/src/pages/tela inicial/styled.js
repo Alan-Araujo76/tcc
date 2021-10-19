@@ -102,52 +102,19 @@ const Container = styled.div`
         }
         @media(max-width: 1200px){
             .conteiner-ti > img{
-                margin-top: 1em;
-                width: 95%;
-                height: 95%;
+                width: 90%;
+                height: 90%;
             }
             .titulo-ti{
-                margin-top: 1em;
-                color: #ffff;
-                font: 30px Montserrat;
-                font-weight: 600;
+                font-size: 130%;
             }
     
             .subTitulo-ti{
-                color: #AAAAAA;
-                font: 20px Montserrat;
-                margin-bottom: 2em;
-                font-weight: 600;
+                font-size: 90%;
             }
-            .box-filmes-ti{
-                margin: 0px auto 0px auto;
-                display: flex;
-                flex-direction: column;
-                background-color: rgba(196, 196, 196, 0.2);
-                width: 40em;
-                height: 20em;
-            }
-            .boxPT1-ti{
-                align-self: center;
-                display: flex;
-                flex-direction: row;
-                padding: 1em 0px 0em 0px;
-            }
-            .boxPT2-ti{
-                align-self: center;
-                display: flex;
-                flex-direction: row;
-                padding: 0em 0px 1em 0px;
-            }
-            .filme-ti img{
-                align-self: center;
-                margin: 1.5em 3em;
-                width: 50%;
-            }
-            .filme1-ti img{
-                align-self: center;
-                margin: 1.5em 6em 1.5em 3em;
-                width: 10%;
+            
+            .titulo-box-ti{
+                margin-left: 5%;
             }
             
 
