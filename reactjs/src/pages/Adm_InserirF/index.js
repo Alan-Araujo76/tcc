@@ -1,6 +1,5 @@
 import Lapis from '../../assets/img/alterar.svg';
 import Lixeira from '../../assets/img/lixeira.svg';
-import Linha from '../../assets/img/barradeitada.png';
 import BarraT from '../../assets/img/barra-tcc.png';
 import Att from '../../assets/img/atualizar.svg';
 import Sair from '../../assets/img/sair.svg';
@@ -13,6 +12,9 @@ import { useState, useEffect } from 'react';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+import { confirmAlert } from 'react-confirm-alert'; 
+import 'react-confirm-alert/src/react-confirm-alert.css';
 
 import Api from '../../service/api';
 const api = new Api();
@@ -37,7 +39,8 @@ export default function CadastrarFilme() {
     setFilme(r);
   }
 
-  async function Inserir() {
+  async function InserirFil() {
+
     if(idAlterando === 0) {
       let r = await api.InserirF(nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor);
       
@@ -76,6 +79,7 @@ export default function CadastrarFilme() {
     setIdAlterando(0);
   }
 
+
   async function Editar(item) {
       setNome(item.nm_filme);
       setGenero(item.ds_genero);
@@ -88,6 +92,31 @@ export default function CadastrarFilme() {
       setimg_maior(item.img_capa_maior);
       setimg_menor(item.img_capa_menor);
       setIdAlterando(item.id_filme);
+  }
+
+
+  async function deletar(idAlterando) {
+    confirmAlert({
+      title: 'Remover Filme',
+      message: `Tem certeza que deseja remover o filme ${idAlterando} ?`,
+      buttons: [
+        {
+          label: 'Sim',
+          onClick: async () => {
+            let r = await api.RemoverF(idAlterando);
+            if (r.error)
+              toast.error(`${r.error}`);
+            else {
+              toast.dark('🗑️ Filme removido!');
+              Listar();
+            }
+          }
+        },
+        {
+          label: 'Não'
+        }
+      ]
+    });
   }
 
 
@@ -151,7 +180,7 @@ export default function CadastrarFilme() {
                         <div className="texto">Sinopse:</div>
                         <div className="text">  <textarea type="text" value={sinopse} onChange={e => setSinopse(e.target.value)}/></div>
                       </div>
-                        <div className="btn"><BotaoL imagem="" nome="Cadastrar" onClick={Inserir}></BotaoL></div>
+                        <div className="btn"><BotaoL imagem="" nome="Cadastrar" onClick={InserirFil}></BotaoL></div>
                     </div>
                 </div>
             </Bloco1>
@@ -184,8 +213,8 @@ export default function CadastrarFilme() {
                     <td> {item.nm_diretor} </td>
                     <td> {item.dt_lancamento} </td>
                     <td> {item.ds_plataforma} </td>
-                    <td className="coluna-acao"> <button> <img src={Lapis} alt="" /> </button> </td>
-                    <td className="coluna-acao"> <button> <img src={Lixeira} alt="" /> </button> </td>
+                    <td className="coluna-acao"> <button onClick={() => Editar(item)}> <img src={Lapis} alt="" /> </button> </td>
+                    <td className="coluna-acao"> <button onClick={() => deletar(item.id_matricula)}> <img src={Lixeira} alt="" /> </button> </td>
                   </tr> 
                 )}
               </tbody> 
@@ -207,12 +236,12 @@ export default function CadastrarFilme() {
               <tbody>
                 {filme.map((item) => 
                   <tr>
-                    <td> {item.img_capa_menor} </td>
-                    <td> {item.img_capa_maior} </td>
-                    <td> {item.ds_descricao} </td>
-                    <td> {item.ds_sinopse} </td>
+                    <td className="imgM"> <img src={item.img_capa_menor} alt=""/> </td>
+                    <td className="imgM1"> <img src={item.img_capa_maior} alt=""/> </td>
+                    <td title={ item.ds_descricao != null && item.ds_descricao.length > 12 ? item.ds_descricao : null }> {item.ds_descricao} </td>
+                    <td title={ item.ds_sinopse != null && item.ds_sinopse.length > 12 ? item.ds_sinopse : null }> {item.ds_sinopse} </td>
                     <td className="coluna-acao"> <button onClick={() => Editar(item)}> <img src={Lapis} alt="" /> </button> </td>
-                    <td className="coluna-acao"> <button> <img src={Lixeira} alt="" /> </button> </td>
+                    <td className="coluna-acao"> <button onClick={() => deletar(item.id_matricula)}> <img src={Lixeira} alt="" /> </button> </td>
                   </tr> 
                 )}
               </tbody> 
