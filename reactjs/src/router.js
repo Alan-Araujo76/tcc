@@ -26,7 +26,6 @@ import PoliticaP from './pages/18_PoliticaDeP';
 import TermosU from './pages/19_TermodUso';
 
 // Telas de ADM
-import Inserir from './pages/Adm_InserirF';
 import LoginAdm from './pages/Adm_Login';
 
 //Tela Inicial
@@ -71,7 +70,6 @@ export default function Routes() {
                 <Route path="/politicap" exact={true} component={PoliticaP} />
                 <Route path="/termosU" exact={true} component={TermosU} />
 
-                <Route path="/jiue886kjhlhefiorechd54s" exact={true} component={Inserir} />
                 <Route path="/admlogin83497" exact={true} component={LoginAdm} />
             </Switch>
         </BrowserRouter>

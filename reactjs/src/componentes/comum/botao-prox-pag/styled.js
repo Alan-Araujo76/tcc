@@ -5,7 +5,7 @@ const Geral = styled.div`
     display: flex; 
     flex-direction: row;
     justify-content: center;
-    margin-top: 3.5em;
+    margin-top: 0em;
 `;
 
 const Botao1 = styled.button`

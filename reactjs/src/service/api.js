@@ -1,6 +1,6 @@
 import Axios from 'axios';
 const api = Axios.create({
-    baseURL: ('https://movies-world.netlify.app')
+    baseURL: ('http://localhost:3030')
 })
 
 
@@ -83,6 +83,34 @@ export default class Api {
         let r = await api.post('/lista_item');
         return r.data;
     }
+
+    async ListarC (){
+        let r = await api.get('/comentario');
+        return r.data;
+    }
+
+
+    async InserirC(filme, usuario, mensagem, data, curtidas) {
+        let r = await api.post('/comentario', { filme, usuario, mensagem, data, curtidas});
+        return r.data;
+    }
+
+
+    async AlterarC(id,filme, usuario, mensagem, data, curtidas) {
+        let r = await api.put('/comentario/' + id, { filme, usuario, mensagem, data, curtidas })
+        return r.data;
+    }
+
+
+
+
+    async RemoverC(id) {
+        let r = await api.delete('/comentario/' + id);
+        return r.data;
+    }
+
+
+
 
 
 }
