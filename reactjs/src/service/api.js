@@ -96,19 +96,27 @@ export default class Api {
     }
 
 
-    async AlterarC(id,filme, usuario, mensagem, data, curtidas) {
-        let r = await api.put('/comentario/' + id, { filme, usuario, mensagem, data, curtidas })
+    async AlterarC(id,filme, usuario, mensagem, curtidas) {
+        let r = await api.put('/comentario/' + id, { filme, usuario, mensagem,  curtidas })
         return r.data;
     }
-
-
-
 
     async RemoverC(id) {
         let r = await api.delete('/comentario/' + id);
         return r.data;
     }
 
+
+    
+    async ListarLP (){
+        let r = await api.get('/lista_popular');
+        return r.data;
+    }
+
+    async AlterarLP(nome_lista,descricao) {
+        let r = await api.put('/lista_popular/' + id, { nome_lista, descricao })
+        return r.data;
+    }
 
 
 
