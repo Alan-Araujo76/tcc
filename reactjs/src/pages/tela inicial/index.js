@@ -34,7 +34,7 @@ export default function TelaInicial(){
 
 
     const SetaDireira = (e) => {
-        console.log(carousel.current.offsetWidth);
+        
         carousel.current.scrolRight = carousel.current.scrollRight + carousel.current.offsetWidth;
     }
     
