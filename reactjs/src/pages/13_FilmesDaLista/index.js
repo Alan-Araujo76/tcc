@@ -6,6 +6,7 @@ import Rodape from '../../componentes/comum/rodapê';
 
 import { Link } from 'react-router-dom';
 
+
 import { Container } from './styled';
 
 export default function FilmeLista() {

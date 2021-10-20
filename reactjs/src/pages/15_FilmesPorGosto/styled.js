@@ -15,7 +15,19 @@ const Container = styled.div`
         margin-bottom: 2em;
         margin-left: 140px;
     }
+    .caMwGp button {
+        margin-top: 1em;
+    }
 
+    .caMwGp{
+        margin-top: 1.5em;
+    }
+
+    .filmes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
     .prox-pag {
         display: flex; 

@@ -25,7 +25,12 @@ export default class Api {
         return r.data;
     }
 
-
+//
+    async ListarFG(){
+        let r = await api.get('/filmesgosto');
+        return r.data;
+    }
+    
 
 
 
@@ -113,7 +118,7 @@ export default class Api {
         return r.data;
     }
 
-    async AlterarLP(nome_lista,descricao) {
+    async AlterarLP( id, nome_lista,descricao ) {
         let r = await api.put('/lista_popular/' + id, { nome_lista, descricao })
         return r.data;
     }
