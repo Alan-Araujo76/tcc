@@ -7,8 +7,10 @@ const Container = styled.div`
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
         body {
-        margin: 0px;
-      }
+            width: 100%;
+            min-height: 100vh;
+            margin: 0px;
+        }
 
       * { box-sizing: border-box; }
 
@@ -18,9 +20,44 @@ const Container = styled.div`
             background-color: black;
             align-items: center;
         }
-        .conteiner-ti > img{
+        .conteiner-ti .carousel-ti{
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+        .carousel-item{
+            width: 76em;
+            display: flex;
+            flex-direction: row;
+        }
+        .carousel-ti{
+            width: 76em;
+            display: flex;
+            flex-direction: row;
+        }
+        .carousel-ti img{
+            flex: none;
             width: 76em;
             height: 36em;
+        }
+        .setaEsquerda img{
+            position: absolute;
+            margin: 15em 1em 1em -4em;
+            width: 86px;
+            height: 86px;
+            transform: rotate(180deg);
+        }
+        .carousel-ti button{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding-bottom: 40em;
+        }
+        .setaDireita img{
+            position: absolute;
+            margin: 15em 1em 1em -3em;
+            width: 86px;
+            height: 86px;
         }
         .titulo-ti{
             margin-top: 1em;
@@ -124,6 +161,18 @@ const Container = styled.div`
             
             .conteudo-cl-ti{
                 flex-direction: column;
+            }
+            .comentarios-ti{
+                width: 130%;
+                margin-left:-9%;
+            }
+            .comentarios-ti hr{
+                margin: 1% 1% 1% 20%;
+                width: 56%;
+            }
+            .titulo-cl-ti{
+                font-size: 50%;
+                margin-left: 20%;
             }
         }
 `

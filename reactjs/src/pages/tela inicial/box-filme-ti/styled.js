@@ -58,28 +58,28 @@ const Conteiner = styled.div`
 
         @media(max-width: 1200px){
             width: 90%;
-            padding: 1em 1em 1em 12%;
+            padding: .3em .3em .3em 10%;
 
             .filme-ti img{
-                margin: .5em .5em;
+                margin: .7em;
                 width: 4em;
             }
             .filme2-ti img{
-                margin: .5em .5em .5em .5em;
+                margin: .5em;
                 width: 4em;
             }
             .filme1-ti img{
                 display: none;
             }
             .botao-ti div{
-                padding: .5em 1em 1em 1em;
+                padding: .5em 1em 1em 2em;
                 font-size: 80%;
             }
             .botao2-ti{
                 padding: 0em 0em 1em 1em;
-                margin: .5em;
-                width: 40%;
-                height: 35%;
+                margin: 1em 1em 1em 1.2em;
+                width: 50%;
+                height: 45%;
             }
             .botao2-ti img{
                 padding: .5em .3em .3em 0em;

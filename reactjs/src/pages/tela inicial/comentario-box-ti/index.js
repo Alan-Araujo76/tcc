@@ -6,7 +6,7 @@ export default function ComentariosTi(){
     return(
         <Comentario>
             <div className="box-comentario">
-                <img src={perfilFoto} width="35" height="53" alt="" />
+                <img src={perfilFoto} alt="" />
                 <div>
                     <div className="nome-cl-ti">  
                         Gabriel Melo 
@@ -19,7 +19,7 @@ export default function ComentariosTi(){
                         Sobre: 
                     </div>
                     <div className="coracao-ti">
-                        <img src={coracao} width="43" height="33" alt="" />
+                        <img src={coracao} alt="" />
                     </div>
                     </div>
                 </div>
