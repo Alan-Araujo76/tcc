@@ -8,7 +8,7 @@ import FotoP from '../../assets/img/mdm.jpg';
 import BotaoL from '../../componentes/styled/botoes-rosa'
 import { Container, Cabecalho, Parteprincipal, Bloco1, Bloco2 } from './styled';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -16,7 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { confirmAlert } from 'react-confirm-alert'; 
 import 'react-confirm-alert/src/react-confirm-alert.css';
 
-import Api from '../../service/api';
+import Api from '../../1_service/api';
 const api = new Api();
 
 
@@ -34,12 +34,15 @@ export default function CadastrarFilme() {
   const [img_menor, setimg_menor] = useState('');
   const [idAlterando, setIdAlterando] = useState(0);
 
+  const loading = useRef(null);
+
   async function Listar() {
     let r = await api.ListarF();
     setFilme(r);
   }
 
   async function InserirFil() {
+    loading.current.continuousStart();
 
     if(idAlterando === 0) {
       let r = await api.InserirF(nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor);
@@ -48,7 +51,7 @@ export default function CadastrarFilme() {
           toast.error(`${r.erro}`);
           return;
       } else {
-          toast.dark('💕 Produto cadastrado com sucesso!');
+          toast.dark('💕 Filme cadastrado com sucesso!');
         }
     } else {
       let r = await api.AlterarF(nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor);
@@ -57,7 +60,7 @@ export default function CadastrarFilme() {
         toast.error(`${r.erro}`);
         return;
       } else {
-        toast.dark('✏️ Produto alterado!');
+        toast.dark('✏️ Filme alterado!');
       }
     }
 
@@ -73,7 +76,6 @@ export default function CadastrarFilme() {
     setDiretor('');
     setLancamento('');
     setPlataforma('');
-    setAvalicao('');
     setimg_maior('');
     setimg_menor('');
     setIdAlterando(0);
@@ -95,15 +97,15 @@ export default function CadastrarFilme() {
   }
 
 
-  async function deletar(idAlterando) {
+  async function Deletar(IdAlterando) {
     confirmAlert({
       title: 'Remover Filme',
-      message: `Tem certeza que deseja remover o filme ${idAlterando} ?`,
+      message: `Tem certeza que deseja remover o filme ${IdAlterando} ?`,
       buttons: [
         {
           label: 'Sim',
           onClick: async () => {
-            let r = await api.RemoverF(idAlterando);
+            let r = await api.RemoverF(IdAlterando);
             if (r.error)
               toast.error(`${r.error}`);
             else {
@@ -212,9 +214,9 @@ export default function CadastrarFilme() {
                     <td> {item.ds_genero} </td>
                     <td> {item.nm_diretor} </td>
                     <td> {item.dt_lancamento} </td>
-                    <td> {item.ds_plataforma} </td>
+                    <td title={ item.ds_plataforma != null && item.ds_plataforma.length > 30 ? item.ds_plataforma : null }> { item.ds_plataforma != null && item.ds_plataforma.length >= 30 ? item.ds_plataforma.substr(0, 30) + '...' : item.ds_plataforma } </td>
                     <td className="coluna-acao"> <button onClick={() => Editar(item)}> <img src={Lapis} alt="" /> </button> </td>
-                    <td className="coluna-acao"> <button onClick={() => deletar(item.id_matricula)}> <img src={Lixeira} alt="" /> </button> </td>
+                    <td className="coluna-acao"> <button onClick={() => Deletar(item.id_matricula)}> <img src={Lixeira} alt="" /> </button> </td>
                   </tr> 
                 )}
               </tbody> 
@@ -241,7 +243,7 @@ export default function CadastrarFilme() {
                     <td title={ item.ds_descricao != null && item.ds_descricao.length > 150 ? item.ds_descricao : null }> { item.ds_descricao != null && item.ds_descricao.length >= 150 ? item.ds_descricao.substr(0, 150) + '...' : item.ds_descricao } </td>
                     <td title={ item.ds_sinopse != null && item.ds_sinopse.length > 150 ? item.ds_sinopse : null }> { item.ds_sinopse != null && item.ds_sinopse.length >= 150 ? item.ds_sinopse.substr(0, 150) + '...' : item.ds_sinopse } </td>
                     <td className="coluna-acao"> <button onClick={() => Editar(item)}> <img src={Lapis} alt="" /> </button> </td>
-                    <td className="coluna-acao"> <button onClick={() => deletar(item.id_matricula)}> <img src={Lixeira} alt="" /> </button> </td>
+                    <td className="coluna-acao"> <button onClick={() => Deletar(item.id_matricula)}> <img src={Lixeira} alt="" /> </button> </td>
                   </tr> 
                 )}
               </tbody> 

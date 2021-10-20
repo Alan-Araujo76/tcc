@@ -8,7 +8,19 @@ const Container = styled.div`
     color: #fff;
     height: 100%;
 
+    .caMwGp button {
+        margin-top: 1em;
+    }
 
+    .caMwGp{
+        margin-top: 1.5em;
+    }
+
+    .filmes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
     .tipos {
         display: flex;
         flex-direction: row;

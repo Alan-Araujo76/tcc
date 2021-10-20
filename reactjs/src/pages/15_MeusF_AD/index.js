@@ -1,14 +1,30 @@
 import Cabecalho from '../../componentes/comum/cabecalho'
 import Rodape from '../../componentes/comum/rodapê'
+import ProxPag from '../../componentes/comum/botao-prox-pag'
 import TituloC from '../../componentes/comum/titulo'
-import Box1 from '../../componentes/comum/box1-fil'
-import Box2 from '../../componentes/comum/box2-fil'
+import Filmes from '../../componentes/comum/box-fil';
 
-import { Container } from './styled.js';
 import LinhaSep from '../../assets/img/linhasep-listass.png';
 import { Link } from 'react-router-dom';
 
+import { Container } from './styled.js';
+
+import { useState, useEffect } from 'react'
+import Api from '../../1_service/api';
+const api = new Api();
+
 export default function FilmesGostos() {
+    const [filme, setFilme] = useState([]);
+
+    async function Listar() {
+        let r = await api.ListarFG();
+        setFilme(r);
+    }
+
+    useEffect(() => {
+        Listar();
+      }, []);
+
     return(
         <Container>
             <Cabecalho/>
@@ -33,12 +49,14 @@ export default function FilmesGostos() {
             </div>
 
             <div className="filmes">
-                <Box1 />
-
-                <Box2 />
-                <Box2 />
-                <Box2 />
+                {filme.map(item => 
+                    <Filmes 
+                    key={item.id}
+                    info={item} />
+                )}
             </div>
+
+            <ProxPag />
 
 
             <Rodape/>

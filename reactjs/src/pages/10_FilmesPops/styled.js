@@ -7,12 +7,24 @@ const Container = styled.div`
     background-color: #000;
     color: #fff;
     height: 100%;
+    min-height: 100vh;
 
     .dif {
         display: none;
     }
+    .caMwGp button {
+        margin-top: 1em;
+    }
 
+    .caMwGp{
+        margin-top: 1.5em;
+    }
 
+    .filmes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
     .titulo {
         font-size: 35px;

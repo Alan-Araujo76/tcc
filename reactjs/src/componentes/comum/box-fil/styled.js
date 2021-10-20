@@ -6,8 +6,11 @@ const BlocoC = styled.div`
     display: flex;
     flex-direction: row;
     margin: 0px 140px 0px 140px;
-    justify-content: space-between;
     text-align: center;
+    color: #fff;
+    margin-right: -2.5%;
+    width: 115px;
+    margin-bottom: 3em;
 
     .nome {
         font-size: 17px;
@@ -16,6 +19,7 @@ const BlocoC = styled.div`
         margin-top: 8px;
         line-height: 22px;
         font-weight: 500;
+        color: #fff;
     }
 
     .img {
