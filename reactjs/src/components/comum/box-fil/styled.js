@@ -9,6 +9,7 @@ const BlocoC = styled.div`
     margin-right: -2.5%;
     width: 115px;
     margin-bottom: 3em;
+    position: relative;
 
     .nome {
         font-size: 17px;
@@ -24,6 +25,29 @@ const BlocoC = styled.div`
     .img img {
         width: 115px;
         height: 170px;
+    }
+
+    .remover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 1px solid #000;
+        cursor: pointer;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        font-weight: bold;
+        color: red;    
+        visibility: hidden;
+    }
+    :hover {
+        .remover {
+            visibility: visible;
+        }
     }
 
 

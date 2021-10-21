@@ -1,5 +1,5 @@
 import { Container } from './styled.js';
-import Cabecalho from '../../componentes/comum/cabecalho'
+import Cabecalho from '../../components/comum/cabecalho'
 import Local from '../../assets/img/local.png'; 
 import Face from '../../assets/img/face-c.png'; 
 import Arroba from '../../assets/img/arroba.png'; 

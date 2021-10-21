@@ -1,8 +1,8 @@
 import LinhaSep from '../../assets/img/linha-sep-tcc.png'
 
-import  LogoeBarra from '../../componentes/comum/tituloEbarra-login'
-import BotaoL from '../../componentes/styled/botoes-rosa'
-import Input from '../../componentes/styled/inputs-login/cadastrar'
+import  LogoeBarra from '../../components/comum/tituloEbarra-login'
+import BotaoL from '../../components/styled/botoes-rosa'
+import Input from '../../components/styled/inputs-login/cadastrar'
 import { Container, Parte2 } from './style'
 
 export default function Cadastro() {

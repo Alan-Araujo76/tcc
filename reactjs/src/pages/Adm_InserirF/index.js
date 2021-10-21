@@ -5,7 +5,7 @@ import Att from '../../assets/img/atualizar.svg';
 import Sair from '../../assets/img/sair.svg';
 import FotoP from '../../assets/img/mdm.jpg';
 
-import BotaoL from '../../componentes/styled/botoes-rosa'
+import BotaoL from '../../components/styled/botoes-rosa'
 import { Container, Cabecalho, Parteprincipal, Bloco1, Bloco2 } from './styled';
 
 import { useState, useEffect, useRef } from 'react';

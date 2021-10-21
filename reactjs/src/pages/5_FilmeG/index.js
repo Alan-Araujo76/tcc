@@ -9,9 +9,9 @@ import Coracao from '../../assets/img/coracao.png';
 import Relogio from '../../assets/img/relogio.png';
 import LinhaBox from '../../assets/img/linha-box.png';
 
-import Cabecalho from '../../componentes/comum/cabecalho';
-import Rodape from '../../componentes/comum/rodapê';
-import Com from '../../componentes/comum/comentario';
+import Cabecalho from '../../components/comum/cabecalho';
+import Rodape from '../../components/comum/rodapê';
+import Com from '../../components/comum/comentario';
 
 import { Container } from './styled';
 import { Link } from 'react-router-dom';

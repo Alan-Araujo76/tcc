@@ -1,8 +1,8 @@
-import Cabecalho from '../../componentes/comum/cabecalho'
-import Rodape from '../../componentes/comum/rodapê'
-import ProxPag from '../../componentes/comum/botao-prox-pag'
-import Box1 from '../../componentes/comum/box1-lis'
-import Box2 from '../../componentes/comum/box2-lis'
+import Cabecalho from '../../components/comum/cabecalho'
+import Rodape from '../../components/comum/rodapê'
+import ProxPag from '../../components/comum/botao-prox-pag'
+import Box1 from '../../components/comum/box1-lis'
+import Box2 from '../../components/comum/box2-lis'
 
 import LinhaSep from '../../assets/img/linhasep-listass.png';
 

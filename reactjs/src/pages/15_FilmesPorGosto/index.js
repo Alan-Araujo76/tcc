@@ -1,8 +1,8 @@
-import Cabecalho from '../../componentes/comum/cabecalho'
-import Rodape from '../../componentes/comum/rodapê'
-import ProxPag from '../../componentes/comum/botao-prox-pag'
-import TituloC from '../../componentes/comum/titulo'
-import Filmes from '../../componentes/comum/box-fil';
+import Cabecalho from '../../components/comum/cabecalho'
+import Rodape from '../../components/comum/rodapê'
+import ProxPag from '../../components/comum/botao-prox-pag'
+import TituloC from '../../components/comum/titulo'
+import Filmes from '../../components/comum/box-fil';
 
 import LinhaSep from '../../assets/img/linhasep-listass.png';
 import { Link } from 'react-router-dom';

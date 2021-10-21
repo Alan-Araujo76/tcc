@@ -1,8 +1,8 @@
 import LogoFace from '../../assets/img/logo(facebook).png'
 import LogoGoogle from '../../assets/img/logo(google).png'
 
-import  LogoeBarra from '../../componentes/comum/tituloEbarra-login'
-import BotaoL from '../../componentes/styled/botoes-rosa'
+import  LogoeBarra from '../../components/comum/tituloEbarra-login'
+import BotaoL from '../../components/styled/botoes-rosa'
 
 import { Container, Parte2 } from './style'
 

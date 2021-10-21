@@ -4,8 +4,8 @@ import 'react-multi-carousel/lib/styles.css';
 import seta from '../../assets/img/seta.png'
 import { useEffect, useState , useRef} from 'react'
 
-import Cabecalho from '../../componentes/comum/cabecalho';
-import Rodape from '../../componentes/comum/rodapê';
+import Cabecalho from '../../components/comum/cabecalho';
+import Rodape from '../../components/comum/rodapê';
 
 import ComentariosTi from './comentario-box-ti/index';
 import ListaTi from './listas-box-ti/index';

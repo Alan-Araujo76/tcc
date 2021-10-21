@@ -1,6 +1,6 @@
 
-import Cabecalho from '../../componentes/comum/cabecalho'
-import Rodape from '../../componentes/comum/rodapê'
+import Cabecalho from '../../components/comum/cabecalho'
+import Rodape from '../../components/comum/rodapê'
 
 import Copiar from '../../assets/img/copiar.png'
 
