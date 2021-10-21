@@ -52,7 +52,7 @@ export default function FilmesGostos() {
                 {filme.map(item => 
                     <Filmes 
                     key={item.id}
-                    info={item} />
+                    filmes={item} />
                 )}
             </div>
 

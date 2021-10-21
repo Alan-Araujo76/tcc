@@ -27,6 +27,7 @@ import TermosU from './pages/19_TermodUso';
 
 // Telas de ADM
 import LoginAdm from './pages/Adm_Login';
+import InserirF from './pages/Adm_InserirF';
 
 
 //Tela Inicial
@@ -72,6 +73,7 @@ export default function Routes() {
                 <Route path="/termosU" exact={true} component={TermosU} />
 
                 <Route path="/admlogin83497" exact={true} component={LoginAdm} />
+                <Route path="/adminserir54hu897" exact={true} component={InserirF} />
             </Switch>
         </BrowserRouter>
     )

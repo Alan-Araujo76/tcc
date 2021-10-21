@@ -7,6 +7,8 @@ const Container = styled.div`
     background-color: #000;
     color: #fff;
     height: 100%;
+    min-height: 100vh;
+
 
     .dif {
         display: none;
@@ -16,7 +18,7 @@ const Container = styled.div`
     }
 
     .caMwGp{
-        margin-top: 1.5em;
+        margin-top: 0em;
     }
 
     .filmes {
@@ -28,7 +30,7 @@ const Container = styled.div`
     .tipos {
         display: flex;
         flex-direction: row;
-        margin: 0% 0% 2% 9.5%;
+        margin: 0% 0% 3% 9.5%;
     }
 
     .box1 {

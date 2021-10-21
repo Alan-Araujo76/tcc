@@ -15,6 +15,7 @@ export default function FilmesGostos() {
 
     async function Listar() {
         let r = await api.ListarFG();
+        console.log(r);
         setFilme(r);
     }
 
@@ -32,7 +33,7 @@ export default function FilmesGostos() {
                 {filme.map(item => 
                     <Filmes 
                     key={item.id}
-                    info={item} />
+                    filmes={item} />   
                 )}
             </div>
 
