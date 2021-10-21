@@ -79,13 +79,13 @@ export default class Api {
 
 
     async ListarAS (){
-        let r = await api.get('/lista_item');
+        let r = await api.get('/listaAssistirT');
         return r.data;
     }
 
 
     async AlterarAS (){
-        let r = await api.post('/lista_item');
+        let r = await api.post('/listaAssistirT1');
         return r.data;
     }
 
