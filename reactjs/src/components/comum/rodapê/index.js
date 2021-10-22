@@ -11,69 +11,69 @@ import { Container } from './styled';
 export default function Rodape() {
     return(
         <Container>
-            <div className="barra"> <img src={LinhaSep} alt="" /> </div>
-            <div className="qlq-coisa">
-            <div className="parte1">
+            <div className="barra-r"> <img src={LinhaSep} alt="" /> </div>
+            <div className="qlq-coisa-r">
+            <div className="parte1-r">
                 Movies<span style={{color: "#FF005C",  fontweight: "none"}}> World</span>
             </div>
 
-            <div className="parte2">
+            <div className="parte2-r">
 
-                <div className="parte-p1">
-                    <div className="titulo-g">Duvidas? Entre em contato</div>
-                    <div className="titulo-p2">Formas de contato</div>
-                    <div className="bloco1-p1">
-                        <div className="subtitulo">Emails</div>
-                        <div className="emails-b1">
-                            <div className="e1">movieworld@gmail.com</div>
-                            <div className="e1">mvmovieworldmv@bol.com.br</div>
-                            <div className="e1">movieworldmv@hotmail.com.br</div>
+                <div className="parte-p1-r">
+                    <div className="titulo-g-r">Duvidas? Entre em contato</div>
+                    <div className="titulo-p2-r">Formas de contato</div>
+                    <div className="bloco1-p1-r">
+                        <div className="subtitulo-r">Emails</div>
+                        <div className="emails-b1-r">
+                            <div className="e1-r">movieworld@gmail.com</div>
+                            <div className="e1-r">mvmovieworldmv@bol.com.br</div>
+                            <div className="e1-r">movieworldmv@hotmail.com.br</div>
                         </div>
-                        <div className="subtitulo">Telefones</div>
-                        <div className="emails-b1">
-                            <div className="e1">11 91011-1213</div>
-                            <div className="e1">11 91415-1617</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="parte-p2">
-                    <div className="titulo-d">Redes Sociais</div>
-                    <div className="bloco1-p1">
-                        <div className="redes">
-                            <div className="p1">
-                                <div className="redes-s"><img src={Face} alt="" /></div>
-                                <div className="nome">FACEBOOK</div>
-                            </div>
-                            <div className="p1d">
-                                <div className="redes-d"><img src={Insta} alt="" /></div>
-                                <div className="nome-0">INSTAGRAM</div>
-                            </div>
-                            <div className="p1">
-                                <div className="redes-s"><img src={TT} alt="" /></div>
-                                <div className="nome-1">TWITER</div>
-                            </div>
+                        <div className="subtitulo-r">Telefones</div>
+                        <div className="emails-b1-r">
+                            <div className="e1-r">11 91011-1213</div>
+                            <div className="e1-r">11 91415-1617</div>
                         </div>
                     </div>
                 </div>
 
-                <div className="parte-p3">
-                    <div className="titulo-p2"></div>
-                    <div className="bloco1-p1">
-                        <div className="titulo-d">Sobre Nós</div>
-                        <div className="descricao">
+                <div className="parte-p2-r">
+                    <div className="titulo-d-r">Redes Sociais</div>
+                    <div className="bloco1-p1-r">
+                        <div className="redes-r">
+                            <div className="p1-r">
+                                <div className="redes-s-r"><img src={Face} alt="" /></div>
+                                <div className="nome-r">FACEBOOK</div>
+                            </div>
+                            <div className="p1d-r">
+                                <div className="redes-d-r"><img src={Insta} alt="" /></div>
+                                <div className="nome-0-r">INSTAGRAM</div>
+                            </div>
+                            <div className="p1">
+                                <div className="redes-s-r"><img src={TT} alt="" /></div>
+                                <div className="nome-1-r">TWITER</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="parte-p3-r">
+                    <div className="titulo-p2-r"></div>
+                    <div className="bloco1-p1-r">
+                        <div className="titulo-d-r">Sobre Nós</div>
+                        <div className="descricao-r">
                             Somos uma plataforma feita para os amantes do cinema! Só aqui você consegue ter...  
                         </div>
 
-                        <div className="desc">
-                            <Link to="/sobrenos">
+                        <div className="desc-r">
+                            <Link to="/sobrenos-r">
                             Conheça mais sobre nós <img src={Seta} alt="" />
                             </Link>
                         </div>
 
-                        <div className="subtitulos">
-                            <div className="titulo-p2d"><Link to="termosU">Termos de uso</Link></div>
-                            <div className="titulo-p2di"><Link to="politicap">Declaração de privacidade</Link></div>
+                        <div className="subtitulos-r">
+                            <div className="titulo-p2d-r"><Link to="termosU">Termos de uso</Link></div>
+                            <div className="titulo-p2di-r"><Link to="politicap">Declaração de privacidade</Link></div>
                         </div>
                     </div>
                 </div>

@@ -105,13 +105,9 @@ export default function CadastrarFilme() {
         {
           label: 'Sim',
           onClick: async () => {
-            let r = await api.RemoverF(IdAlterando);
-            if (r.error)
-              toast.error(`${r.error}`);
-            else {
-              toast.dark('🗑️ Filme removido!');
+              const r = await api.RemoverF(idAlterando);
+              toast.dark('🗑️ Filme Removido!');
               Listar();
-            }
           }
         },
         {
@@ -213,7 +209,7 @@ export default function CadastrarFilme() {
                     <td> {item.nm_filme} </td>
                     <td> {item.ds_genero} </td>
                     <td> {item.nm_diretor} </td>
-                    <td> {item.dt_lancamento} </td>
+                    <td> {item.ano_lancamento} </td>
                     <td title={ item.ds_plataforma != null && item.ds_plataforma.length > 30 ? item.ds_plataforma : null }> { item.ds_plataforma != null && item.ds_plataforma.length >= 30 ? item.ds_plataforma.substr(0, 30) + '...' : item.ds_plataforma } </td>
                     <td className="coluna-acao"> <button onClick={() => Editar(item)}> <img src={Lapis} alt="" /> </button> </td>
                     <td className="coluna-acao"> <button onClick={() => Deletar(item.id_matricula)}> <img src={Lixeira} alt="" /> </button> </td>

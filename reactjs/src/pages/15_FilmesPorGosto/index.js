@@ -33,12 +33,12 @@ export default function FilmesGostos() {
 
             <div className="tipos">
                 <div className="box1"><Link to="/meusfilmes">
-                    <div className="txt">Já assistidos</div>
+                    <div className="txt-d">Já assistidos</div>
                     <div className="img-tipos"><img src={LinhaSep} alt="" /></div>
                 </Link></div>
                 
-                <div className="box"><Link to="/assistimtarde">
-                    <div className="txt">Assistir mais tarde</div>
+                <div className="box-c"><Link to="/assistimtarde">
+                    <div className="txt-d">Assistir mais tarde</div>
                     <div className="img-tipos"><img src={LinhaSep} alt="" /></div>
                 </Link></div>
 
