@@ -22,7 +22,7 @@ const Container = styled.div`
 
     .fundo img {
         width: 100%;
-        height: 100vh;
+        height: 75vh;
         position: absolute;  
         opacity: 0.5;
         top: 0px;

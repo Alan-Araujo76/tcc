@@ -66,7 +66,7 @@ export default function Rodape() {
                         </div>
 
                         <div className="desc-r">
-                            <Link to="/sobrenos-r">
+                            <Link to="/sobrenos">
                             Conheça mais sobre nós <img src={Seta} alt="" />
                             </Link>
                         </div>
