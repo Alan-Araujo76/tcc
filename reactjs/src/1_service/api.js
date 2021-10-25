@@ -114,6 +114,16 @@ export default class Api {
         let r = await api.put('/lista_popular/' + id, { nome_lista, descricao })
         return r.data;
     }
+     async ListarJS (){
+        let r = await api.get('/MeusF_Ja');
+        return r.data;
+    }
 
 
+    async AlterarJS (){
+        let r = await api.post('/MeusF_Ja');
+        return r.data;
+    }
 }
+
+
