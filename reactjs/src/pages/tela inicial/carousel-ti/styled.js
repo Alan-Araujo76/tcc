@@ -1,16 +1,14 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
-    .conteiner-ti .carousel-ti{
+        .carousel-item{
             display: flex;
             overflow-x: auto;
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
-        .carousel-ti .carousel-item ::-webkit-scrollbar{
-            display: none;
-        }
+        
         .carousel-item{
-            width: 76em;
             display: flex;
             flex-direction: row;
         }
@@ -21,12 +19,12 @@ const Container = styled.div`
         }
         .carousel-ti img{
             flex: none;
-            width: 76em;
+            width: 99.9%;
             height: 36em;
         }
         .setaEsquerda img{
             position: absolute;
-            margin: 15em 1em 1em -4.5em;
+            margin: 15em 1em 1em -4.2em;
             width: 86px;
             height: 86px;
             transform: rotate(180deg);
@@ -39,7 +37,7 @@ const Container = styled.div`
         }
         .setaDireita img{
             position: absolute;
-            margin: 15em 1em 1em -3.7em;
+            margin: 15em 1em 1em -4.5em;
             width: 86px;
             height: 86px;
         }
