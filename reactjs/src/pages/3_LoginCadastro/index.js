@@ -16,12 +16,12 @@ export default function Cadastro() {
 
                     <div className="inputsss">
                         <div className="sep">
-                            <Input nome="Nome:"/>
-                            <Input nome="Sobrenome:"/>
+                            <Input nome="Nome:" placeholder="Digite seu nome"/>
+                            <Input nome="Sobrenome:" placeholder="Digite seu sobrenome"/>
                         </div>
                         <div className="sep">
-                            <Input nome="Data de nascimento:"/>
-                            <Input nome="Gênero:"/>
+                            <Input nome="Data de nascimento:" placeholder="Digite sua data de nascimento"/>
+                            <Input nome="Gênero:" placeholder="Digite seu gênero"/>
                         </div>
                     </div>
                 </div>
@@ -39,8 +39,8 @@ export default function Cadastro() {
                     </div>
 
                     <div className="inputsss-d">
-                        <Input nome="Data de nascimento:"/>
-                        <Input nome="Gênero:"/>
+                        <Input nome="Senha:" placeholder="Digite sua senha"/>
+                        <Input nome="Confirme sua senha:" placeholder="Confirme sua senha"/>
                     </div>
                     
                     <div className="btn"><BotaoL imagem="" nome="Cadastrar"/></div>

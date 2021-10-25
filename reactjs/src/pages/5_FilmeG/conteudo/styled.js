@@ -22,7 +22,7 @@ const Container = styled.div`
 
     .fundo img {
         width: 100%;
-        height: 75vh;
+        height: 100vh;
         position: absolute;  
         opacity: 0.5;
         top: 0px;
@@ -206,6 +206,12 @@ const Container = styled.div`
         margin-top: -10px;
         font-size: 30px;
         width: 500px;
+    }
+
+    @media (max-width: 800px) {
+        .back { background-size: 100% 35%; }
+        .filme { margin: 0px; height: 100px;  }
+        .imagen_do_filme img { width: 100px; height: 155px; }
     }
 `;
 

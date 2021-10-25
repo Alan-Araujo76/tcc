@@ -21,7 +21,13 @@ const Container = styled.div`
     input {
         width: 15em;
         height: 2.3em;
-        padding: 10px;
+        padding: 8px;
+        font-weight: 500;
+    }
+    input::placeholder {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 12px;
     }
 
     @media (max-width: 800px) {
