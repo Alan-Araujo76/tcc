@@ -17,48 +17,11 @@ const Container = styled.div`
         .conteiner-ti{
             display: flex;
             flex-direction: column;
+            justify-content: center;
             background-color: black;
             align-items: center;
         }
-        .conteiner-ti .carousel-ti{
-            display: flex;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-        }
-        .carousel-item{
-            width: 76em;
-            display: flex;
-            flex-direction: row;
-        }
-        .carousel-ti{
-            width: 76em;
-            display: flex;
-            flex-direction: row;
-        }
-        .carousel-ti img{
-            flex: none;
-            width: 76em;
-            height: 36em;
-        }
-        .setaEsquerda img{
-            position: absolute;
-            margin: 15em 1em 1em -4em;
-            width: 86px;
-            height: 86px;
-            transform: rotate(180deg);
-        }
-        .carousel-ti button{
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            padding-bottom: 40em;
-        }
-        .setaDireita img{
-            position: absolute;
-            margin: 15em 1em 1em -3em;
-            width: 86px;
-            height: 86px;
-        }
+        
         .titulo-ti{
             margin-top: 1em;
             color: #ffff;
