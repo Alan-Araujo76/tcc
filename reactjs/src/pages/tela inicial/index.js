@@ -3,8 +3,8 @@ import BoxFilme from './box-filme-ti/index';
 import 'react-multi-carousel/lib/styles.css';
 
 
-import Cabecalho from '../../componentes/comum/cabecalho';
-import Rodape from '../../componentes/comum/rodapê';
+import Cabecalho from '../../components/comum/cabecalho';
+import Rodape from '../../components/comum/rodapê';
 
 import ComentariosTi from './comentario-box-ti/index';
 import ListaTi from './listas-box-ti/index';

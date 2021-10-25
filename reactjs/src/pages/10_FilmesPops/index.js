@@ -1,10 +1,13 @@
-import Cabecalho from '../../componentes/comum/cabecalho'
-import Rodape from '../../componentes/comum/rodapê'
-import ProxPag from '../../componentes/comum/botao-prox-pag'
-import TituloC from '../../componentes/comum/titulo'
-import Filmes from '../../componentes/comum/box-fil';
+import Cabecalho from '../../components/comum/cabecalho'
+import Rodape from '../../components/comum/rodapê'
+import ProxPag from '../../components/comum/botao-prox-pag'
+import TituloC from '../../components/comum/titulo'
+import Filmes from '../../components/comum/box-fil';
 
 import { Container } from './styled.js';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { useState, useEffect } from 'react'
 import Api from '../../1_service/api';
@@ -15,24 +18,36 @@ export default function FilmesGostos() {
 
     async function Listar() {
         let r = await api.ListarFG();
+        console.log(r);
         setFilme(r);
+    }
+
+    const onFRemove = async (id) => {
+        const r = await api.RemoverF(id);
+        toast.dark('🗑️ Filme Removido!');
+        
+        Listar();
     }
 
     useEffect(() => {
         Listar();
       }, []);
 
+    
+
     return(
         <Container>
+            <ToastContainer />
             <Cabecalho/>
-
             <TituloC nome="Filmes populares"/>  
             
             <div className="filmes">
                 {filme.map(item => 
                     <Filmes 
                     key={item.id}
-                    info={item} />
+                    filmes={item} 
+                    onRemove={onFRemove}
+                    />   
                 )}
             </div>
 
@@ -43,13 +58,12 @@ export default function FilmesGostos() {
         </Container>
     )
 }
-//import Modal from '../10_FilmesPops/modal';
 
-//const [exibirModal, setExibirModal] = useState(false);
-
-//<Modal show={exibirModal}>
+//import Modal from './modal';
+//<Modal options={exibirModal}>
 //<div>
-//    <h1>Sou</h1>
+//<h2> Promoção Relâmpago </h2>
+//<p> Não perca as promoções usando o cupom FREI50 </p>
 //</div>
 //</Modal>
 //<button onClick={() => setExibirModal(true)} style={{cursor: "pointer"}}></button>

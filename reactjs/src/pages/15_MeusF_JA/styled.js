@@ -7,13 +7,15 @@ const Container = styled.div`
     background-color: #000;
     color: #fff;
     height: 100%;
+    min-height: 100vh;
+
 
     .caMwGp button {
         margin-top: 1em;
     }
 
     .caMwGp{
-        margin-top: 1.5em;
+        margin-top: 0em;
     }
 
     .filmes {
@@ -24,7 +26,7 @@ const Container = styled.div`
     .tipos {
         display: flex;
         flex-direction: row;
-        margin: 0% 0% 2% 9.5%;
+        margin: 0% 0% 3% 9.5%;
     }
 
     .box1 {
@@ -35,15 +37,31 @@ const Container = styled.div`
         border: none;
         background-color: transparent;
     }
+    .box-c {
+        margin: 0px 2em;
+    }
 
+      
     .txt {
         font-size: 100%;
         font-weight: 500;
-        margin-bottom: -10px;
+        margin-bottom: -13px;
+        background-color: #424242;
+        width: 145.49px;
+        padding-bottom: 3.5px;
+        text-align: center;
     }
 
+    .txt-d {
+        font-size: 100%;
+        font-weight: 500;
+        margin-bottom: -10px;
+        text-align: center;
+    }
+
+
     .img-tipos {
-        width: 75%;
+        width: 146px;
     }
 
     .img-tipos img {

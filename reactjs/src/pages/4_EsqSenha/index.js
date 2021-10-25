@@ -1,8 +1,8 @@
-import  LogoeBarra from '../../componentes/comum/tituloEbarra-login'
+import  LogoeBarra from '../../components/comum/tituloEbarra-login'
 
 
 import { Container, Parte2 } from './style'
-import BotaoL from '../../componentes/styled/botoes-rosa'
+import BotaoL from '../../components/styled/botoes-rosa'
 
 export default function Esqueci() {
     return(

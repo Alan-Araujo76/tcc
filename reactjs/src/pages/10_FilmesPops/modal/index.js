@@ -1,7 +1,7 @@
-import { Container } from "../../13_FilmesDaLista/styled";
+import { Container } from "./styled";
 
 export default function Index(props) {
-    <Container>
+    <Container show={props.show}>
         <div>
            {props.children}
         </div>

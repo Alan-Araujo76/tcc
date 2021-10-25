@@ -1,6 +1,6 @@
-import Cabecalho from '../../componentes/comum/cabecalho';
-import Rodape from '../../componentes/comum/rodapê';
-import Com from '../../componentes/comum/comentario';
+import Cabecalho from '../../components/comum/cabecalho';
+import Rodape from '../../components/comum/rodapê';
+import Com from '../../components/comum/comentario';
 import LinhaSep from '../../assets/img/linha-comentario.png';
 
 

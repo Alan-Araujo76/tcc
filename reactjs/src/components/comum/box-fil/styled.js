@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import Remover from '../../../assets/img/Xremover.png'
-
 const BlocoC = styled.div`
     display: flex;
     flex-direction: row;
@@ -11,6 +9,7 @@ const BlocoC = styled.div`
     margin-right: -2.5%;
     width: 115px;
     margin-bottom: 3em;
+    position: relative;
 
     .nome {
         font-size: 17px;
@@ -22,24 +21,33 @@ const BlocoC = styled.div`
         color: #fff;
     }
 
-    .img {
-        background-image: url(${Remover});
-        background-position: fi;
-        background-size: 30px 30px;
-        background-repeat: no-repeat;
-        position: relative;
-    }
 
     .img img {
         width: 115px;
         height: 170px;
     }
 
+    .remover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        visibility: hidden;
+    }
+    :hover {
+        .remover {
+            visibility: visible;
+        }
+    }
 
     .remover img {
-        width: 20px;
         height: 20px;
+        width: 20px;
     }
+
 
     @media (max-width: 800px) {
         margin: 0% 10%;

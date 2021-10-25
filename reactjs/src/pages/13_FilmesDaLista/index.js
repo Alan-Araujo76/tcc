@@ -1,8 +1,8 @@
 import Mais from '../../assets/img/mais.png';
 import Filme from '../../assets/img/capa-filme.png';
-import Prox from '../../componentes/comum/botao-prox-pag';
-import Cabecalho from '../../componentes/comum/cabecalho';
-import Rodape from '../../componentes/comum/rodapê';
+import Prox from '../../components/comum/botao-prox-pag';
+import Cabecalho from '../../components/comum/cabecalho';
+import Rodape from '../../components/comum/rodapê';
 
 import { Link } from 'react-router-dom';
 

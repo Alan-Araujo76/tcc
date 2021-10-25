@@ -1,7 +1,7 @@
 import { Container } from './styled.js';
 
-import Cabecalho from '../../componentes/comum/cabecalho'
-import TituloC from '../../componentes/comum/titulo'
+import Cabecalho from '../../components/comum/cabecalho'
+import TituloC from '../../components/comum/titulo'
 
 import Img1 from '../../assets/img/img_pp1.png'
 import Img2 from '../../assets/img/img_pp.png'

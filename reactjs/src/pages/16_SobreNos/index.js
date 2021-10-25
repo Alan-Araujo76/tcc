@@ -1,5 +1,5 @@
 import Cinema from '../../assets/img/cinema.png'
-import Cabecalho from '../../componentes/comum/cabecalho'
+import Cabecalho from '../../components/comum/cabecalho'
 import { Container } from './styled.js';
 
 export default function Index() {

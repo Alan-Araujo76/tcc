@@ -25,16 +25,11 @@ export default class Api {
         return r.data;
     }
 
-//
     async ListarFG(){
         let r = await api.get('/filmesgosto');
         return r.data;
     }
     
-
-
-
-
     async ListarU(){
         let r = await api.get('/usuario');
         return r.data;
@@ -53,10 +48,6 @@ export default class Api {
         let r = await api.delete('/usuario/' + id);
         return r.data;
     }
-
-
-
-
 
     async ListarL(){
         let r = await api.get('/usuario');
@@ -77,15 +68,18 @@ export default class Api {
         return r.data;
     }
 
-
-    async ListarAS (){
-        let r = await api.get('/lista_item');
+    async ListarAT (){
+        let r = await api.get('/listaAssistirT');
         return r.data;
     }
 
+    async AlterarAT (){
+        let r = await api.post('/listaAssistirT1');
+        return r.data;
+    }
 
-    async AlterarAS (){
-        let r = await api.post('/lista_item');
+    async RemoverAT (id){
+        let r = await api.delete('/listaAssistirT1/' + id);
         return r.data;
     }
 
@@ -111,8 +105,6 @@ export default class Api {
         return r.data;
     }
 
-
-    
     async ListarLP (){
         let r = await api.get('/lista_popular');
         return r.data;
@@ -122,8 +114,6 @@ export default class Api {
         let r = await api.put('/lista_popular/' + id, { nome_lista, descricao })
         return r.data;
     }
-
-
 
 
 }

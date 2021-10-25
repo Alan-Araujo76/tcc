@@ -9,22 +9,22 @@ const Container = styled.div`
     align-items: center;
     font-family: Montserrat;
 
-    .barra img {
+    .barra-r img {
         width: 100%;
         margin-top: 3em;
     }
 
-    .barra {
+    .barra-r {
         width: 100%;
     }
 
-    .qlq-coisa {
+    .qlq-coisa-r {
         display: flex;
         flex-direction: row;
         padding: 2.3em 8em;
     }
 
-    .parte1 {
+    .parte1-r {
         font-family: Montserrat;
         font-size: 3em;
         font-weight: bolder;
@@ -34,12 +34,12 @@ const Container = styled.div`
         margin-top: .8em;
     }
 
-    .p1 {
+    .p1-r {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
-    .p1d {
+    .p1d-r {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -47,7 +47,7 @@ const Container = styled.div`
         margin-bottom: -15px;
     }
 
-    .nome {
+    .nome-r {
         margin-left: 23px;
         margin-top: 10px;
         font-size: 12px;
@@ -55,31 +55,31 @@ const Container = styled.div`
         font-weight: 700;
     }
 
-    .nome-0 {
+    .nome-0-r {
         font-size: 12px;  
         font-weight: 700;
     }
 
-    .nome-1 {
+    .nome-1-r {
         margin-left: 3px;
         margin-top: 10px;
         font-size: 12px;
         font-weight: 700;
     }
 
-    .parte2 {
+    .parte2-r {
         display: flex;
         flex-direction: row;
     }
 
-    .descricao {
+    .descricao-r {
         display: flex;
         flex-direction: row;
         font-size: 12px;
         width: 55%;
     }
 
-    .desc {
+    .desc-r {
         display: flex;
         flex-direction: row;
         font-size: 12px;
@@ -87,75 +87,75 @@ const Container = styled.div`
         margin-top: 10px;
     }
 
-    .desc img {
+    .desc-r img {
         height: 10px;
         width: 10px;
         margin-top: 6px;
         margin-left: 5px;
     }
 
-    .titulo-g {
+    .titulo-g-r {
         font-size: 20px;
         margin-bottom: 30px;
     }
 
-    .parte-p1 {
+    .parte-p1-r {
         display: flex;
         flex-direction: column;
     }
 
-    .titulo-p2 {
+    .titulo-p2-r {
         font-size: 14px;
         font-weight: bold;
         margin-bottom: 10px;
     }
 
-    .subtitulo {
+    .subtitulo-r {
         font-size: 12px;
         font-weight: bold;
         margin: 15px 0px;
     }
 
-    .e1 {
+    .e1-r {
         font-size: 10px; 
     }
 
-    .titulo-d {
+    .titulo-d-r {
         font-size: 14px;
         font-weight: bold;
         margin: 57px 0px 10px 0px;
     }
 
 
-    .parte-p2 {
+    .parte-p2-r {
         margin: 0px 100px;
     }
 
-    .img-b1 {
+    .img-b1-r {
         display: flex;
         flex-direction: row;
         margin-left: 18px;
     }
 
-    .redes-s {
+    .redes-s-r {
         margin-top: 18px;
     }
 
-    .redes-s1 {
+    .redes-s1-r {
         margin: 0px 18px;
     }
 
-    .redes-s2 {
+    .redes-s2-r {
         margin-top: 12px;
     }
 
-    .titulo-p2d {
+    .titulo-p2d-r {
         font-size: 14px;
         font-weight: bold;
         margin-top: 50px;   
     }
 
-    .titulo-p2di {
+    .titulo-p2di-r {
         font-size: 14px;
         font-weight: bold; 
     }
@@ -164,7 +164,7 @@ const Container = styled.div`
         display: none;
     }
 
-    .redes-d {
+    .redes-d-r {
         margin-left: -15px;
     }
 
