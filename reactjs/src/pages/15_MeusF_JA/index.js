@@ -9,16 +9,22 @@ import { Link } from 'react-router-dom';
 
 import { Container } from './styled.js';
 
+import {Loader} from '../../components/comum/loader'
+
 import { useState, useEffect } from 'react'
 import Api from '../../1_service/api';
 const api = new Api();
 
 export default function FilmesGostos() {
     const [filme, setFilme] = useState([]);
+    const [ loading, setLoading ] = useState(true);
 
     async function Listar() {
+        setLoading(true);
         let r = await api.ListarFG();
         setFilme(r);
+
+        setLoading(false);
     }
 
     useEffect(() => {
@@ -49,11 +55,15 @@ export default function FilmesGostos() {
             </div>
 
             <div className="filmes">
-                {filme.map(item => 
-                    <Filmes 
-                    key={item.id}
-                    filmes={item} />
-                )}
+                {loading && <Loader />}
+
+                { !loading &&
+                    filme.map(item => 
+                        <Filmes 
+                        key={item.id}
+                        filmes={item} />
+                    )
+                }
             </div>
 
             <ProxPag />

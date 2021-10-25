@@ -2,7 +2,7 @@ import Cabecalho from '../../components/comum/cabecalho'
 import Rodape from '../../components/comum/rodapê'
 import ProxPag from '../../components/comum/botao-prox-pag'
 import TituloC from '../../components/comum/titulo'
-import Filmes from '../../components/comum/box-fil';
+import Filmes from '../../components/comum/box-fil_D';
 
 import { Container } from './styled.js';
 
@@ -15,6 +15,7 @@ const api = new Api();
 
 export default function FilmesGostos() {
     const [filme, setFilme] = useState([]);
+    const [exibirModal, setExibirModal] = useState(false);
 
     async function Listar() {
         let r = await api.ListarFG();
