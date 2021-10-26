@@ -13,22 +13,12 @@ export default function Carousel(){
             carousel.scrollLeft = 0;
         else 
             carousel.scrollLeft = nextPosition;
-        
-
-        //carousel.scrollTo(76*16*2, 0);
-
-
     }
-
+    
     function voltar() {
         let carousel = document.getElementsByClassName("carousel-item")[0];
-        let x = carousel.scrollRight - carousel.offsetWidth;
-
-        if (x > (filme.length * carousel.offsetWidth + carousel.offsetWidth))
-            carousel.scrollRight = 0;
-        else 
-            carousel.scrollRight = x;
-
+        let voltar = carousel.scrollLeft - carousel.offsetWidth;
+        carousel.scrollLeft = voltar;
     }
 
     function App(){
