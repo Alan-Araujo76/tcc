@@ -27,6 +27,67 @@ const BlocoC = styled.div`
         height: 170px;
     }
 
+    .img-m img {
+        width: 115px;
+        height: 170px;
+    }
+    .geral-m {
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+        font-family: Montserrat;
+    }
+
+    .nome-m {
+        font-size: 17px;
+        width: 115px;
+        text-align: center;
+        margin-top: 8px;
+        line-height: 22px;
+        font-weight: 500;
+        color: #000;
+    }
+
+    .sub-m {
+        text-align: justify;
+        width: 300px;
+        color: #000;
+    }
+
+    .p2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .botao button {
+        color: #000;
+        background-color: transparent;
+        border: 3px solid #FFB800;
+        border-radius: 15px;
+        width: 9em;
+        height: 2.8em;
+        font-weight: bolder;
+        font-family: Montserrat;
+        font-size: 13px;
+        cursor: pointer; 
+    }
+
+    .sub2-m {
+        text-align: justify;
+        width: 300px;
+        color: #000;
+    }
+
+    .botao {
+        text-align: end;
+    }
+
+    .sep {
+        margin: 0px 30px;
+    }
+
+
     .remover {
         display: flex;
         justify-content: center;
@@ -49,6 +110,8 @@ const BlocoC = styled.div`
     }
 
 
+
+
     @media (max-width: 800px) {
         margin: 0% 10%;
         .filme-d { display: none; }
@@ -65,3 +128,5 @@ const BlocoC = styled.div`
 
 
 export { BlocoC }
+
+
