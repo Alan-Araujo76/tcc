@@ -188,19 +188,6 @@ const Container = styled.div`
         margin-left: 5px;
     }
 
-    h5{
-        margin-top: -10px;
-        font-size: 30px;
-        width: 500px;
-    }
-
-
-
-
-
-
-
-
     .critica {
         display: flex;
         flex-direction: row;

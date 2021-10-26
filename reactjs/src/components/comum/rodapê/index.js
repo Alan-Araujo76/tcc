@@ -49,7 +49,7 @@ export default function Rodape() {
                                 <div className="redes-d-r"><img src={Insta} alt="" /></div>
                                 <div className="nome-0-r">INSTAGRAM</div>
                             </div>
-                            <div className="p1">
+                            <div className="p1-r">
                                 <div className="redes-s-r"><img src={TT} alt="" /></div>
                                 <div className="nome-1-r">TWITER</div>
                             </div>

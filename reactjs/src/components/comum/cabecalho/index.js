@@ -1,6 +1,7 @@
 import FotoUsu from '../../../assets/img/foto.png';
 import Lupa from '../../../assets/img/lupa.png';
 import Seta from '../../../assets/img/seta-baixo.png';
+import Menu from '../menu';
 
 import { Container } from "./styled"
 import { Link } from 'react-router-dom';
@@ -14,11 +15,7 @@ export default function Cabecalho() {
 
             <div className="parte2">
                 <div className="usuario">
-                            <div className="foto"><img src={FotoUsu} alt="" /></div>
-                            <div className="nome-usu">gabrielmelo</div>
-                    <select>
-                        <div className="seta"><img src={Seta} alt="" /></div>
-                    </select>
+                        <Menu/>
                 </div>
                 
                 <div className="tr"><Link to="meusfilmes">Meus filmes</Link></div>

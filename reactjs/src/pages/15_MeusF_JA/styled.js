@@ -76,20 +76,6 @@ const Container = styled.div`
         margin-top: 4.5em;
     }
 
-    button {
-        border: 3px solid #FFB800;
-        background-color: #424242;
-        color: #fff;
-        height: 43px;
-        width: 44px;
-        padding: 10px 15px;
-        border-radius: 10px;
-        cursor: pointer;
-        margin: 0px 5px;
-        font-size: 14px;
-        font-family: Montserrat;
-    }
-
     @media (max-width: 800px) {
         text-align: center;
 

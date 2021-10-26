@@ -13,6 +13,7 @@ import Conteudo from './conteudo';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 import Api from '../../1_service/api';
+import Cabecalho from '../../components/comum/cabecalho';
 const api = new Api();
 
 export default function DetalhesFilme() {
@@ -31,7 +32,8 @@ export default function DetalhesFilme() {
     return(
 
         <Container>
-        
+            <Cabecalho/>
+            
             {filme.map(item => 
                 <Conteudo 
                     key={item.id}

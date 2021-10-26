@@ -4,13 +4,13 @@ import Estrelas from '../../../assets/img/estrelas.png';
 import ExpVin from '../../../assets/img/vin-exp1.jpeg';
 import ExpPaul from '../../../assets/img/paul-exp1.jpeg';
 import ExpMiche from '../../../assets/img/miche-exp1.jpeg';
-import Cabecalho from '../../../components/comum/cabecalho';
 
 export default function(props) {
     return(
         <Container>
-            <Cabecalho className="cabecalho"/>
-            <div className="fundo"> <img src={props.filmes.img_maior} alt="" /> </div>
+            <div className="fundo"> 
+                <img src={props.filmes.img_maior} alt="" />
+            </div>
             <div class="filme">
                 <div class="Nome_do_filme"><b>{props.filmes.nome}</b></div>
                 <div class="diretor">

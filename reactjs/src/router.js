@@ -56,7 +56,7 @@ export default function Routes() {
                 <Route path="/filmespopulares" exact={true} component={FilmesPopulares} />
                 <Route path="/listapop" exact={true} component={ListasPopulares} />
 
-                <Route path="/filmesporgosto" exact={true} component={FilmesGosto} />
+                <Route path="/filmespgosto" exact={true} component={FilmesGosto} />
 
                 <Route path="/listasgc" exact={true} component={ListasGC} />
                 <Route path="/listasgs" exact={true} component={ListasGS} />

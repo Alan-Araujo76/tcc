@@ -39,6 +39,13 @@ const Container = styled.div`
         flex-direction: row;
         align-items: center;
     }
+
+    .p1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
     .p1d-r {
         display: flex;
         flex-direction: row;

@@ -42,7 +42,7 @@ export default function FilmesGostos() {
                     <div className="img-tipos"><img src={LinhaSep} alt="" /></div>
                 </Link></div>
 
-                <div className="box"><Link to="/filmesporgosto">
+                <div className="box"><Link to="/filmespgosto">
                     <div className="txt">Por gosto</div>
                     <div className="img-tipos"><img src={LinhaSep} alt="" /></div>
                 </Link></div>
