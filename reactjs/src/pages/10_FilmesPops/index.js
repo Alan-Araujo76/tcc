@@ -5,6 +5,7 @@ import TituloC from '../../components/comum/titulo'
 import Filmes from '../../components/comum/box-fil_D';
 
 import { Container } from './styled.js';
+import Modal from './modal';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -40,6 +41,13 @@ export default function FilmesGostos() {
         <Container>
             <ToastContainer />
             <Cabecalho/>
+
+            <Modal options={exibirModal}>
+                <div>
+                    <h2> Promoção Relâmpago </h2>
+                    <p> Não perca as promoções usando o cupom FREI50 </p>
+                </div>
+            </Modal>
             <TituloC nome="Filmes populares"/>  
             
             <div className="filmes">
@@ -60,11 +68,3 @@ export default function FilmesGostos() {
     )
 }
 
-//import Modal from './modal';
-//<Modal options={exibirModal}>
-//<div>
-//<h2> Promoção Relâmpago </h2>
-//<p> Não perca as promoções usando o cupom FREI50 </p>
-//</div>
-//</Modal>
-//<button onClick={() => setExibirModal(true)} style={{cursor: "pointer"}}></button>
