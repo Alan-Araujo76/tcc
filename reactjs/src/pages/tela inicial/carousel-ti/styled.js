@@ -11,10 +11,10 @@ const Container = styled.div`
         .carousel-item{
             display: flex;
             flex-direction: row;
-            margin-left: 1em;
+            margin-left: .8em;
         }
         .carousel-ti{
-            width: 76em;
+            width: 74em;
             display: flex;
             flex-direction: row;
 
@@ -22,12 +22,12 @@ const Container = styled.div`
         .carousel-item img{
             flex: none;
             width: 99%;
-            height: 36em;
-            margin-right: 1em;
+            height: 34em;
+            margin-right: .8em;
         }
         .setaEsquerda img{
             position: absolute;
-            margin: 15em 1em 1em -4em;
+            margin: 15em 1em 1em -3.5em;
             width: 86px;
             height: 86px;
             transform: rotate(180deg);
@@ -40,7 +40,7 @@ const Container = styled.div`
         }
         .setaDireita img{
             position: absolute;
-            margin: 15em 1em 1em -1.5em;
+            margin: 15em 1em 1em -3em;
             width: 86px;
             height: 86px;
         }
