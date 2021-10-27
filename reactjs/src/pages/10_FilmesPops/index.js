@@ -5,7 +5,6 @@ import TituloC from '../../components/comum/titulo'
 import Filmes from '../../components/comum/box-fil_D';
 
 import { Container } from './styled.js';
-import Modal from './modal';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -16,10 +15,10 @@ const api = new Api();
 
 export default function FilmesGostos() {
     const [filme, setFilme] = useState([]);
-    const [exibirModal, setExibirModal] = useState(false);
+    const [exibirModal, setExibirModal] = useState({show: false});
 
     async function Listar() {
-        let r = await api.ListarFG();
+        let r = await api.ListarF();
         console.log(r);
         setFilme(r);
     }
@@ -42,15 +41,9 @@ export default function FilmesGostos() {
             <ToastContainer />
             <Cabecalho/>
 
-            <Modal options={exibirModal}>
-                <div>
-                    <h2> Promoção Relâmpago </h2>
-                    <p> Não perca as promoções usando o cupom FREI50 </p>
-                </div>
-            </Modal>
             <TituloC nome="Filmes populares"/>  
             
-            <div className="filmes">
+            <div className="filmes" >
                 {filme.map(item => 
                     <Filmes 
                     key={item.id}

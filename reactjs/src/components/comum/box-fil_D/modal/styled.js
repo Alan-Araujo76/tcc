@@ -4,7 +4,8 @@ const Container = styled.div`
     display: ${props => props.show === true ? 'display' : 'none'};
     height: 100vh;
     width: 100vw;
-    background-color: #000;
+    background-color: #fff;
+    color: #fff;
 `;
 
 export { Container }
