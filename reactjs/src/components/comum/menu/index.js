@@ -3,7 +3,8 @@ import FotoUsu from '../../../../src/assets/img/foto.png';
 import Seta from '../../../assets/img/seta-baixo.png';
 import Br from '../../../assets/img/br-menu.png';
 import { Contaier } from './styled';
-
+import Cookies from 'js-cookie'  
+import { useHistory } from 'react-router-dom';
 import {
   Menu,
   MenuItem,
@@ -13,7 +14,14 @@ import '@szhsin/react-menu/dist/index.css';
 import { Link } from 'react-router-dom';
 
 
+
+
 export default function App() {
+  const navegação = useHistory();
+
+let LogarUsuario = Cookies.get('Usuario Logado');
+if (LogarUsuario == null )
+  navegação.push('/login');
   return (
     <Contaier>
     <Menu style={{display: 'flex', flexDirection: 'row', backgroundColor: 'transparent', }} menuButton={<MenuButton>
