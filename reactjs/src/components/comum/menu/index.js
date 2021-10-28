@@ -1,4 +1,5 @@
-import FotoUsu from '../../../assets/img/foto.png';
+
+import FotoUsu from '../../../../src/assets/img/foto.png';
 import Seta from '../../../assets/img/seta-baixo.png';
 import Br from '../../../assets/img/br-menu.png';
 import { Contaier } from './styled';
@@ -10,6 +11,7 @@ import {
 } from '@szhsin/react-menu';
 import '@szhsin/react-menu/dist/index.css';
 import { Link } from 'react-router-dom';
+
 
 export default function App() {
   return (
