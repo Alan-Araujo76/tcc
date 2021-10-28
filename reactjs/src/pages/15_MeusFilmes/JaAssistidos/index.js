@@ -23,9 +23,10 @@ import Api from '../../../1_service/api';
 const api = new Api();
 
 export default function FilmesGostos(props) {
-    const [filme, setFilme] = useState([]);
+    const [ filme, setFilme ] = useState([]);
     const [ loading, setLoading ] = useState(true);
-    const [exibirModal, setExibirModal] = useState({show: false})
+    const [ exibirModal, setExibirModal ] = useState({show: false})
+    const [ ordenação, setOrdenação ] = useState('A - Z')
 
     async function Listar() {
         setLoading(true);
@@ -44,7 +45,7 @@ export default function FilmesGostos(props) {
 
     useEffect(() => {
         Listar();
-      }, []);
+      }, [ordenação]);
 
     return(
         <Container>
@@ -68,6 +69,16 @@ export default function FilmesGostos(props) {
                     <div className="txt-d">Por gosto</div>
                     <div className="img-tipos"><img src={LinhaSep} alt="" /></div>
                 </Link></div>
+
+                <div className="p2">
+                    <div className="ordenar">
+                        <select onClick={e => setOrdenação(e.target.value)}>
+                            <option value="AZ">A - Z</option>
+                            <option value="ZA">Z - A</option>
+                            <option value="Avaliação">Avaliação</option>
+                        </select>
+                    </div>
+                </div>
             </div>
 
             <div className="filmes">

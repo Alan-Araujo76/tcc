@@ -29,6 +29,11 @@ export default class Api {
         let r = await api.get('/filmesgosto');
         return r.data;
     }
+
+    async ListarFP(){
+        let r = await api.get('/filmespops');
+        return r.data;
+    }
     
     async ListarU(){
         let r = await api.get('/usuario');

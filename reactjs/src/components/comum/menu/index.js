@@ -1,5 +1,3 @@
-import React from 'react';
-
 import FotoUsu from '../../../assets/img/foto.png';
 import Seta from '../../../assets/img/seta-baixo.png';
 import Br from '../../../assets/img/br-menu.png';

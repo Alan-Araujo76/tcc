@@ -76,6 +76,11 @@ const Container = styled.div`
         margin-top: 4.5em;
     }
 
+    .ordenar option {
+        border: transparent;
+        
+    }
+
     @media (max-width: 800px) {
         text-align: center;
 
