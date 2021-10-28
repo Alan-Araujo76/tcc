@@ -10,6 +10,9 @@ import ComentariosTi from './comentario-box-ti/index';
 import ListaTi from './listas-box-ti/index';
 import Carousel from './carousel-ti';
 
+import Api from '../../1_service/api';
+const api = new Api();
+
 export default function TelaInicial(){
 
     return(
