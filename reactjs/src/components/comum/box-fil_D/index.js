@@ -3,7 +3,7 @@ import { BlocoC } from "./styled"
 import Removerb from '../../../assets/img/Xremover.png';
 import eu from '../../../assets/img/eu.jpg';
 
-import Modal from './modal'
+import Modal from '../modal'
 
 import Api from '../../../1_service/api';
 const api = new Api();
