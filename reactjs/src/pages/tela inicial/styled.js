@@ -6,11 +6,10 @@ const Container = styled.div`
         background-color: black;
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-        body {
-            width: 100%;
-            min-height: 100vh;
-            margin: 0px;
-        }
+        width: 100%;
+        min-height: 100vh;
+        margin: 0px;
+
 
       * { box-sizing: border-box; }
 
