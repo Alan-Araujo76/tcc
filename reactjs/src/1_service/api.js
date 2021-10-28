@@ -30,6 +30,11 @@ export default class Api {
         return r.data;
     }
 
+    async ListarJa(){
+        let r = await api.get('/filmesjassistidos');
+        return r.data;
+    }
+
     async ListarFP(){
         let r = await api.get('/filmespops');
         return r.data;
