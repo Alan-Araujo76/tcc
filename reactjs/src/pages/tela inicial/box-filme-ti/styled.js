@@ -30,7 +30,7 @@ const Conteiner = styled.div`
             background-color:transparent;
             border: none;
         }
-        .botao-ti div img{
+        .botao-ti div img{aa
             width: 60%;
             height: 30%;
             border-radius: 100%;
