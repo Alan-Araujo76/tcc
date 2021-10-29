@@ -8,12 +8,52 @@ const Container = styled.div `
     align-items: center;
     height: 100vh;
 
+   
     .kPpjPc {
         color: #000;
         font-weight: 600;
     }
 
-   
+    input::placeholder {
+        font-family: Montserrat;
+    }
+
+    .geral-m {
+        margin: 10px 40px;
+        color: #000;
+        font-family: Montserrat;
+    }
+
+    .txt-m {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    
+    .bt-m {
+        margin-top: 20px;
+    }
+
+    .inp-modal {
+        display: flex;
+        flex-direction: column;
+        margin: 10em 0em;
+    }
+
+    .r-m {
+        font-size: 14px;
+    }
+
+    .inp-modal input {
+        width: 100%;
+        height: 40px;
+        font-size: 17px;
+    }
+
+    .txt-m {
+        color: #000;
+    }
+
 
     @media (max-width: 800px) {
         display: flex;
@@ -30,25 +70,9 @@ const Parte2 = styled.div`
     margin-right: -19.8em;
     color: #fff;
 
-    .geral-m {
-        margin: 10px;
-        color: #000;
-        font-family: Montserrat;
-    }
-
-    .inp-modal {
-        display: flex;
-        flex-direction: column;
-        margin: 2em 0em;
-    }
-
-    input {
-        width: 80%;
-        height: 40px;
-    }
-
-    .txt-m {
-        color: #000;
+    .kPpjPc {
+        color: #fff;
+        font-weight: 600;
     }
 
     .txt {
@@ -66,12 +90,6 @@ const Parte2 = styled.div`
         font-size: 20px;
         font-family: Montserrat;
         margin-bottom: 5px;
-    }
-
-    .input input {
-        width: 30em;
-        height: 3.5em;
-        padding: 10px;
     }
 
     .botao {

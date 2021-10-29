@@ -24,7 +24,7 @@ export default function App() {
 
       <MenuItem><Link to="/perfil">Meu perfil</Link></MenuItem>
       <MenuItem><Link to="/editperfil">Editar perfil</Link></MenuItem>
-      <MenuItem><Link to="/filmespgosto">Filmes por gosto</Link></MenuItem>
+      <MenuItem><Link to="/meusfilmes/comfP">Filmes por gosto</Link></MenuItem>
       <MenuItem><img src={Br} alt="" /></MenuItem>
       <MenuItem>Trocar de conta</MenuItem>
       <MenuItem>Sair</MenuItem>

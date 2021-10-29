@@ -10,9 +10,7 @@ const Container = styled.div`
     min-height: 100vh;
 
 
-    .dif {
-        display: none;
-    }
+
     .caMwGp button {
         margin-top: 1em;
     }
@@ -26,11 +24,30 @@ const Container = styled.div`
         flex-direction: row;
         flex-wrap: wrap;
     }
-
     .tipos {
         display: flex;
         flex-direction: row;
-        margin: 0% 0% 3% 9.5%;
+        margin: 0% 10% 3% 9.5%;
+        justify-content: space-between;
+    }
+
+    .p1 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .p2 select {
+        background-color: transparent;   
+        color: #fff;
+        border: 2px solid #fff;
+        padding: 5px 8px;
+        border-radius: 5px;
+        font-family: Montserrat;
+    }
+
+    .p2 option {
+        color: #000;
+        font-family: Montserrat;
     }
 
     .box1 {
@@ -41,11 +58,11 @@ const Container = styled.div`
         border: none;
         background-color: transparent;
     }
-
     .box-c {
         margin: 0px 2em;
     }
 
+      
     .txt {
         font-size: 100%;
         font-weight: 500;
@@ -80,7 +97,11 @@ const Container = styled.div`
         margin-top: 4.5em;
     }
 
-    
+    .ordenar option {
+        border: transparent;
+        
+    }
+
     @media (max-width: 800px) {
         text-align: center;
 
@@ -91,84 +112,6 @@ const Container = styled.div`
     }
 `;
 
-
-const Bloco1 = styled.div`
-    display: flex;
-    flex-direction: row;
-    margin: 0px 140px 0px 140px;
-    justify-content: space-between;
-    text-align: center;
-
-    .nome {
-        font-size: 17px;
-        width: 100px;
-        text-align: center;
-        margin-top: 8px;
-        line-height: 22px;
-        font-weight: 500;
-        margin-left: 10px;
-    }
-
-    img {
-        width: 115px;
-        height: 170px;
-    }
-
-    @media (max-width: 800px) {
-        margin: 0% 10%;
-        .filme-d { display: none; }
-    }
-
-
-    @media (max-width: 450px) {
-        margin: 0% 5%; 
-        .titulo { font-weight: bold; }
-        .nome { font-size: 12px;  width: 85px; line-height: 15px; }
-        img {  width: 85px; height: 140px; }
-    }
-    
-    
-`;
-
-const Bloco2 = styled.div`
-    display: flex;
-    flex-direction: row;
-    margin: 60px 140px 00px 140px;
-    justify-content: space-between;
-    
-
-    .nome {
-        margin-left: 10px;
-        font-size: 17px;
-        width: 100px;
-        text-align: center;
-        margin-top: 8px;
-        line-height: 22px;
-        font-weight: 500;
-    }
-
-    img {
-        width: 115px;
-        height: 170px;
-    }
-
-
-    @media (max-width: 800px) {
-        margin: 10% 10% 0%;
-        .filme-d { display: none; }
-    }
-
-
-    @media (max-width: 450px) {
-        margin: 10% 5% 0%; 
-        .titulo { font-weight: bold; }
-        .nome { font-size: 12px;  width: 85px;  line-height: 15px; }
-        img {  width: 85px; height: 140px; }
-    }
-
-    
-    
-`;
 
 const BlocoC = styled.div`
     display: flex;
@@ -296,4 +239,4 @@ const BlocoC = styled.div`
     }
 `;
 
-export { Container, Bloco1, Bloco2, BlocoC }
+export { Container, BlocoC }
