@@ -5,7 +5,6 @@ import  LogoeBarra from '../../components/comum/tituloEbarra-login'
 import BotaoL from '../../components/styled/botoes-rosa'
 import { useState } from 'react';
 import { Container, Parte2 } from './style'
-import Cookies from 'js-cookie';
 
 import { Link, useHistory } from 'react-router-dom';
 
