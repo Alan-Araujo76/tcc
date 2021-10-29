@@ -25,35 +25,26 @@ const Conteiner = styled.div`
             margin: 1em 2em;
             width: 6em;
         }
-        .botao-ti div{
-            padding: .5em 1em 1em 1.5em;
-            align-self: center;
-
-            color: #FFFFFF;
-            font: 24px Montserrat;
-            font-weight: 600;
+        .botao-ti{
+            margin: 1em 1em 1em 1em;
+            background-color:transparent;
+            border: none;
         }
-        .botao2-ti{
-            margin: 1em 1em 1em 2.5em;
-            display: flex;
-            flex-direction: column;
-            align-self: center;
-
-            width: 100px;
-            height: 100px;
+        .botao-ti div img{
+            width: 60%;
+            height: 30%;
             border-radius: 100%;
             border:  0px;  
             background-color: #FFB800;
         }
-        .botao2-ti img{
-            align-self: center;
-            padding: 1.5em 1.5em 1em 2em;
+        .botao-ti img{
+            margin: 0px auto 0px auto;
+            padding: 0em 0em 0em .5em;
         }
-       
-        .botao-ti button:hover{
-            cursor: pointer;
-            transition: .5s;
-            background-color: #ffb7009c;
+        .ver-mais{
+            color: white;
+            font: 2em Montserrat;
+            margin: -.5em 1em 1em 1em;
         }
 
         @media(max-width: 1200px){
