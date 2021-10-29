@@ -22,12 +22,12 @@ export default function FilmesGostos(props) {
     const [exibirModal, setExibirModal] = useState({show: false})
 
     async function Listar() {
-        let r = await api.ListarF();
+        let r = await api.ListarAT();
         setFilme(r);
     }
 
     const Remove = async (id) => {
-        const r = await api.RemoverF(id);
+        const r = await api.RemoverAT(id);
         toast.dark('🗑️ Filme Removido!');
         
         Listar();
