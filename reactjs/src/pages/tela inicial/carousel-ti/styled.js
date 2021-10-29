@@ -14,7 +14,7 @@ const Container = styled.div`
             margin-left: .8em;
         }
         .carousel-ti{
-            width: 74em;
+            width: 70em;
             display: flex;
             flex-direction: row;
 
@@ -22,7 +22,7 @@ const Container = styled.div`
         .carousel-item img{
             flex: none;
             width: 99%;
-            height: 34em;
+            height: 30em;
             margin-right: .8em;
         }
         .setaEsquerda img{

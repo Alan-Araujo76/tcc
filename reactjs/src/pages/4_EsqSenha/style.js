@@ -8,6 +8,13 @@ const Container = styled.div `
     align-items: center;
     height: 100vh;
 
+    .kPpjPc {
+        color: #000;
+        font-weight: 600;
+    }
+
+   
+
     @media (max-width: 800px) {
         display: flex;
         flex-direction: column;   
@@ -23,6 +30,26 @@ const Parte2 = styled.div`
     margin-right: -19.8em;
     color: #fff;
 
+    .geral-m {
+        margin: 10px;
+        color: #000;
+        font-family: Montserrat;
+    }
+
+    .inp-modal {
+        display: flex;
+        flex-direction: column;
+        margin: 2em 0em;
+    }
+
+    input {
+        width: 80%;
+        height: 40px;
+    }
+
+    .txt-m {
+        color: #000;
+    }
 
     .txt {
         font-size: 35px;
@@ -41,7 +68,7 @@ const Parte2 = styled.div`
         margin-bottom: 5px;
     }
 
-    input {
+    .input input {
         width: 30em;
         height: 3.5em;
         padding: 10px;

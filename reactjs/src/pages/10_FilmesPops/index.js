@@ -6,7 +6,7 @@ import Modal from '../../components/comum/modal'
 
 import eu from '../../assets/img/eu.jpg';
 
-import Cookies from 'js-cookie'
+import Cookies from 'js-cookie';
 
 import { Container, BlocoC } from './styled.js';
 
@@ -98,4 +98,3 @@ export default function FilmesGostos(props) {
         </Container>
     )
 }
-
