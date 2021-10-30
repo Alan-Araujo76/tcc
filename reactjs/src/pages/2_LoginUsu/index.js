@@ -8,14 +8,14 @@ import { Container, Parte2 } from './style'
 
 import { Link, useHistory } from 'react-router-dom';
 
-export default function Login() {
+export default function Login(props) {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
 
     const nav = useHistory();
     
-    async function Login() {
-        const r = await axios.post(`http://localhost:3030/login`, {email: senha, senha: senha});
+    async function login() {
+        const r = await axios.post(`http://localhost:3030/login`, {email: email, senha: senha});
         if (r.data.status === 'ok') {
         nav.push('/telainicial')    
         }else {
@@ -40,7 +40,7 @@ export default function Login() {
                 </div>
                 <div className="leva-princ">
                     <div className="botoes">
-                        <div onClick={Login} className="dif"><BotaoL imagem="" nome="Entrar" />  </div>
+                        <div onClick={login} className="dif"><BotaoL imagem="" nome="Entrar" />  </div>
                         <Link to="/cadastro"><BotaoL imagem="" nome="Cadastrar"/> </Link>
                     </div>
                     <div className="esq-senha"><Link to="/esqueci-senha">Esqueci senha</Link></div>
