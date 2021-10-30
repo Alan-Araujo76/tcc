@@ -2,13 +2,13 @@ import Cabecalho from '../../../components/comum/cabecalho'
 import Rodape from '../../../components/comum/rodapê'
 import ProxPag from '../../../components/comum/botao-prox-pag'
 import TituloC from '../../../components/comum/titulo'
-import eu from '../../../assets/img/eu.jpg';
-
 import Modal from '../../../components/comum/modal'
 
 import LinhaSep from '../../../assets/img/linhasep-listass.png';
 import { Link } from 'react-router-dom';
 
+
+import {Loader} from '../../../components/comum/loader'
 import { Container, BlocoC } from './styled.js';
 
 import { useState, useEffect } from 'react'
@@ -18,11 +18,15 @@ const api = new Api();
 export default function FilmesGostos(props) {
     const [filme, setFilme] = useState([]);
     const [exibirModal, setExibirModal] = useState({show: false})
+    const [ loading, setLoading ] = useState(true);
 
     async function Listar() {
-        let r = await api.ListarF();
+        setLoading(true);
+        
+        let r = await api.ListarJa();
         setFilme(r);
-        console.log(r);
+
+        setLoading(false);
     }
 
     useEffect(() => {
@@ -41,19 +45,22 @@ export default function FilmesGostos(props) {
                     <div className="img-tipos"><img src={LinhaSep} alt="" /></div>
                 </Link></div>
                 
-                <div className="box-c"><Link to="/assistimtarde">
+                <div className="box-c"><Link to="/meusfilmes/comfA">
                     <div className="txt-d">Assistir mais tarde</div>
                     <div className="img-tipos"><img src={LinhaSep} alt="" /></div>
                 </Link></div>
 
-                <div className="box"><Link to="/filmespgosto">
+                <div className="box"><Link to="/meusfilmes/comfP">
                     <div className="txt">Por gosto</div>
                     <div className="img-tipos"><img src={LinhaSep} alt="" /></div>
                 </Link></div>
             </div>
 
             <div className="filmes">
-                {filme.map(item => 
+            {loading && <Loader />}
+
+            { !loading &&
+                filme.map(item => 
                    <BlocoC>
                     <Modal options={exibirModal}>
                         <div className="geral-m">
@@ -71,18 +78,12 @@ export default function FilmesGostos(props) {
                         </div>
                     </Modal>
                    
-                   <div className="filme">
-                       {Array != 0
-                           ? <div onClick={() => setExibirModal({show: true})}>
-                               <div className="img"><img src={item.img_menor} alt="" /></div> 
-                               <div className="nome" title={ item.nome != null && item.nome > 25? item.nome : null }>{ item.nome != null && item.nome >= 25 ? item.nome.substr(0, 25) + '...' : item.nome }</div>
-                           </div>
-       
-                           : <div><img src={eu} alt="" /><div>Você ainda não inseriu nenum filme</div></div> 
-       
-           
-                       }
-                   </div>
+                    <div className="filme">
+                        <div>
+                            <div className="img" onClick={() => setExibirModal({show: true})}><img src={item.img_menor} alt="" /></div> 
+                            <div className="nome" onClick={() => setExibirModal({show: true})} title={ item.nome != null && item.nome > 25? item.nome : null }>{ item.nome != null && item.nome >= 25 ? item.nome.substr(0, 25) + '...' : item.nome }</div>
+                        </div>
+                    </div>
                   </BlocoC>
                 )}
             </div>

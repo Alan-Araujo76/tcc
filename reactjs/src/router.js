@@ -56,14 +56,14 @@ export default function Routes() {
                 <Route path="/filmespopulares" exact={true} component={FilmesPopulares} />
                 <Route path="/listapop" exact={true} component={ListasPopulares} />
 
-                <Route path="/filmespgosto" exact={true} component={FilmesGosto} />
+                <Route path="/meusfilmes/comfP" exact={true} component={FilmesGosto} />
 
                 <Route path="/listasgc" exact={true} component={ListasGC} />
                 <Route path="/listasgs" exact={true} component={ListasGS} />
                 <Route path="/listafil" exact={true} component={FilmeLista} />
                 <Route path="/criarlist" exact={true} component={CriarLista} />
                 
-                <Route path="/assistimtarde" exact={true} component={AssistirMaisTarde} />
+                <Route path="/meusfilmes/comfA" exact={true} component={AssistirMaisTarde} />
                 <Route path="/meusfilmes" exact={true} component={JaAssistidos} />
 
                 <Route path="/sobrenos" exact={true} component={SobreNos} />

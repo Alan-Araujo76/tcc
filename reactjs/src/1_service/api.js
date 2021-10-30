@@ -7,7 +7,7 @@ const api = Axios.create({
 
 export default class Api {
     async ListarF(){
-        let r = await api.get('/filme');
+        let r = await api.get('/filme/listar');
         return r.data;
     }
     async InserirF(nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor) {
@@ -30,8 +30,8 @@ export default class Api {
         return r.data;
     }
 
-    async ListarJa(){
-        let r = await api.get('/filmesjassistidos');
+    async ListarJa(ordenacao){
+        let r = await api.get('/filmeUsu/ja?ordenacao=' + ordenacao);
         return r.data;
     }
 
