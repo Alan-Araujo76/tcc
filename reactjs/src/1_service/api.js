@@ -93,10 +93,15 @@ export default class Api {
         return r.data;
     }
 
-    async ListarC (){
-        let r = await api.get('/comentario');
+    async ListarCf (){
+        let r = await api.get('/comentario/listarf');
         return r.data;
     }
+    async ListarCu (){
+        let r = await api.get('/comentario/listaru');
+        return r.data;
+    }
+
 
 
     async InserirC(filme, usuario, mensagem, data, curtidas) {

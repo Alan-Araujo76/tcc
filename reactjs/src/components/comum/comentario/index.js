@@ -3,14 +3,40 @@ import { Geral } from "./styled"
 import LinhaSep from '../../../assets/img/linha-comentario.png';
 import UsuSemFoto from '../../../assets/img/usu-semfoto.png';
 import Coracao from '../../../assets/img/coracao.png';
+import { useEffect, useState } from "react";
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import Api from '../../../1_service/api';
+const api = new Api();
 
 
 export default function ComenC(props) {
+    const [comentario, setComentario] = useState();
+
+    async function Listar() {
+        let r = await api.ListarCu();
+        setComentario(r);
+        console.log(r);
+    }
+
+    const Remove = async (id) => {
+        const r = await api.RemoverC(id);
+        toast.dark('🗑️ Filme Removido!');
+        
+        Listar();
+    }
+
+    useEffect(() => {
+        Listar();
+    }, []);
+
     return(
         <Geral>
                 <div className="usuario">
                     <div className="ft-perfil"><img src={UsuSemFoto} alt="" /></div>
-                    <div className="nome">jj</div>
+                    <div className="nome">{props.info.infob_mw_usuario.nm_usuario}</div>
                 </div>
 
                 <div className="comentario-txt">jjjjj</div>

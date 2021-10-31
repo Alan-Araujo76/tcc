@@ -142,7 +142,7 @@ const PartePrin = styled.div`
         display: flex;
         flex-direction: column;
         background-color: #3B3B3B;
-        padding: 1.5em 2.5em;
+        padding: 1.5em 2em;
         width: 60em;
         height: 40em;
 
