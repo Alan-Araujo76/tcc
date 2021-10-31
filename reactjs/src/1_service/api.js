@@ -44,8 +44,8 @@ export default class Api {
         let r = await api.get('/usuario');
         return r.data;
     }
-    async InserirU(nome, sobrenome, username, email, senha, genero, localizacao, redes, fotoperfil) {
-        let r = await api.post('/usuario', { nome, sobrenome, username, email, senha, genero, localizacao, redes, fotoperfil });
+    async InserirU(nome, sobrenome, username, email, senha, genero, localizacao, redes, fotoperfil, codigo) {
+        let r = await api.post('/usuario', { nome, sobrenome, username, email, senha, genero, localizacao, redes, fotoperfil, codigo});
         return r.data;
     }
 
