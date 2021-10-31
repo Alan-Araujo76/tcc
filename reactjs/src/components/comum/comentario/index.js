@@ -36,7 +36,7 @@ export default function ComenC(props) {
         <Geral>
                 <div className="usuario">
                     <div className="ft-perfil"><img src={UsuSemFoto} alt="" /></div>
-                    <div className="nome">{props.info.infob_mw_usuario.nm_usuario}</div>
+                    <div className="nome">jjjjj</div>
                 </div>
 
                 <div className="comentario-txt">jjjjj</div>
