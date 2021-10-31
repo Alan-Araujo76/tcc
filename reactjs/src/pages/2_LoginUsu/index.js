@@ -13,15 +13,26 @@ export default function Login(props) {
     const [senha, setSenha] = useState('');
 
     const nav = useHistory();
-    
+
     async function login() {
+        const r = await axios.post(`http://localhost:3030/login/login`, { email: email, senha: senha });
+        if (r.data.status === 'ok') {
+            nav.push('/telainicial');
+        } else {
+            alert(r.data.mensagem);
+        }
+    }
+
+
+    {/*async function login() {
         const r = await axios.post(`http://localhost:3030/login`, {email: email, senha: senha});
         if (r.data.status === 'ok') {
         nav.push('/telainicial')    
         }else {
             alert(r.data.mensagem); 
         }
-    } 
+        console.log(r);
+    } */}
 
     return(
         <Container>
@@ -31,7 +42,7 @@ export default function Login(props) {
                 <div className="inputs">
                     <div className="email"> 
                       <div className="txt-1">Email: </div>  
-                      <div className="input"><input placeholder="Digite seu e-mail"value={email} onChange={e => setEmail(e.target.value)}/> </div> 
+                      <div className="input"><input placeholder="Digite seu e-mail" value={email} onChange={e => setEmail(e.target.value)}/> </div> 
                     </div>
                     <div className="senha"> 
                       <div className="txt-1">Senha: </div>  

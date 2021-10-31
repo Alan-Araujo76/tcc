@@ -6,7 +6,7 @@ import 'react-multi-carousel/lib/styles.css';
 import Cabecalho from '../../components/comum/cabecalho';
 import Rodape from '../../components/comum/rodapê';
 
-import ComentariosTi from './comentario-box-ti/index';
+//import ComentariosTi from './comentario-box-ti/index';
 import ListaTi from './listas-box-ti/index';
 import Carousel from './carousel-ti';
 
@@ -36,9 +36,7 @@ export default function TelaInicial(){
                             CRÍTICAS POPULARES ESTA SEMANA
                         </div>
                         <hr/>
-                        <ComentariosTi/>
-                        <ComentariosTi/>
-                        <ComentariosTi/>
+                       
                     </div>
                     <div className="listas-ti">
                         <div className="titulo-l-ti">

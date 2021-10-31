@@ -7,6 +7,7 @@ import Direcionamento from './pages/0_direcionamento';
 import LoginPrin from './pages/2_LoginUsu';
 import Cadastrar from './pages/3_LoginCadastro';
 import EsqSenha from './pages/4_EsqSenha';
+import Recuperacao from './pages/4_Recuperacao';
 import DetalhesFilme from './pages/5_FilmeG';
 import Comentario from './pages/6_Comentario';
 import Perfil from './pages/7_Perfil';
@@ -46,6 +47,7 @@ export default function Routes() {
                 <Route path="/login" exact={true} component={LoginPrin} />
                 <Route path="/cadastro" exact={true} component={Cadastrar} />
                 <Route path="/esqueci-senha" exact={true} component={EsqSenha} />
+                <Route path="/recuperacao" exact={true} component={Recuperacao} />
 
                 <Route path="/detfilmes" exact={true} component={DetalhesFilme} />
                 <Route path="/comentario" exact={true} component={Comentario} />
