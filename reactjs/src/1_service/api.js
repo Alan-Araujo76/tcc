@@ -129,7 +129,6 @@ export default class Api {
         return r.data;
     }
 
-
     async AlterarJS (){
         let r = await api.post('/MeusF_Ja');
         return r.data;

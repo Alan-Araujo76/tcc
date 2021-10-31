@@ -52,7 +52,7 @@ export default function CriarLista() {
 
     return(
         <Container>
-            <ToastContainer/>
+            <ToastContainer />
             <Cabecalho/>
             <div className="geral">
                 <div className="titulo">Criar lista</div>
