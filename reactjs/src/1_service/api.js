@@ -93,10 +93,15 @@ export default class Api {
         return r.data;
     }
 
-    async ListarC (){
-        let r = await api.get('/comentario');
+    async ListarCf (){
+        let r = await api.get('/comentario/listarf');
         return r.data;
     }
+    async ListarCu (){
+        let r = await api.get('/comentario/listaru');
+        return r.data;
+    }
+
 
 
     async InserirC(filme, usuario, mensagem, data, curtidas) {
@@ -129,9 +134,27 @@ export default class Api {
         return r.data;
     }
 
-
     async AlterarJS (){
         let r = await api.post('/MeusF_Ja');
+        return r.data;
+    }
+
+    async ListarLis(){
+        let r = await api.get('/listaaa');
+        return r.data;
+    }
+    async InserirLis(nome, descricao) {
+        let r = await api.post('/listaaa', { nome, descricao });
+        return r.data;
+    }
+
+    async AlterarLis(id, nome, descricao) {
+        let r = await api.put('/listaaa/' + id, { nome, descricao })
+        return r.data;
+    }
+
+    async RemoverLis(id) {
+        let r = await api.delete('/listaaa/' + id);
         return r.data;
     }
 }

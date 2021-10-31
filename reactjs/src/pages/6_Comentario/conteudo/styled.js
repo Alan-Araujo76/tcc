@@ -15,9 +15,14 @@ const Geral = styled.div`
         margin-left: 15px;
     }
 
+    .ft-perfil img {
+        height: 55px;
+        width: 40px;
+    }
+
     .comentario-txt {
         font-size: 15px;
-        margin-left: 50px;
+        margin-left: 55px;
         text-align: justify;
         text-justify: inter-word;
         line-height: 18px;
@@ -26,7 +31,7 @@ const Geral = styled.div`
     .pt3-b2 {
         display: flex;
         flex-direction: column;
-        margin-left: 50px;
+        margin-left: 55px;
         margin-top: 20px;
     }
 
@@ -66,6 +71,9 @@ const Geral = styled.div`
         background-color: transparent;
         border: transparent;
         cursor: pointer;
+    }
+    .like button:hover {
+        background-color: red;
     }
 
     .like img{
