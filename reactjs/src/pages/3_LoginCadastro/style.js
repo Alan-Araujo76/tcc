@@ -60,7 +60,6 @@ const Parte2 = styled.div`
         display: flex;
         flex-direction: row;
         margin-bottom: 15px;
-        margin-left: 2em;
     }
 
     .inp {
