@@ -27,7 +27,7 @@ export default function Login(props) {
         console.log(senha);
         const r = await axios.post(`http://localhost:3030/login/login`, { email: email, senha: senha });
         console.log(r);
-        if (r.data.status === 'ok') {
+        if (r.data.status === "OK" || r.data.status === 200) {
             nav.push('/telainicial');
         } else {
             alert(r.data.mensagem);
