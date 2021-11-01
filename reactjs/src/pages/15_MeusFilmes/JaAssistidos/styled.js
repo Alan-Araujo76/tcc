@@ -10,6 +10,7 @@ const Container = styled.div`
     min-height: 100vh;
 
 
+
     .caMwGp button {
         margin-top: 1em;
     }
@@ -26,7 +27,27 @@ const Container = styled.div`
     .tipos {
         display: flex;
         flex-direction: row;
-        margin: 0% 0% 3% 9.5%;
+        margin: 0% 10% 3% 9.5%;
+        justify-content: space-between;
+    }
+
+    .p1 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .p2 select {
+        background-color: transparent;   
+        color: #fff;
+        border: 2px solid #fff;
+        padding: 5px 8px;
+        border-radius: 5px;
+        font-family: Montserrat;
+    }
+
+    .p2 option {
+        color: #000;
+        font-family: Montserrat;
     }
 
     .box1 {

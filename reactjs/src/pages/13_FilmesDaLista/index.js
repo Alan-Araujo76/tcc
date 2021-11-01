@@ -6,7 +6,6 @@ import Rodape from '../../components/comum/rodapê';
 
 import { Link } from 'react-router-dom';
 
-
 import { Container } from './styled';
 
 export default function FilmeLista() {
@@ -28,90 +27,6 @@ export default function FilmeLista() {
                             <div className="botao"><button><img src={Mais} alt=""/></button></div>
                             <div className="desc-botao">ADICIONAR FILME</div>
                         </Link>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
-                    </div>
-                    <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
                     </div>
                     <div className="bloco">
                         <div className="img-filme"><img src={Filme} alt=""/></div>
