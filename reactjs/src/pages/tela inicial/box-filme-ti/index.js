@@ -1,4 +1,4 @@
-import capaFilme from '../../../assets/img/capa-filme.png';
+
 import play from '../../../assets/img/play.png';
 import {Conteiner} from './styled'
 import {useState, useEffect} from 'react'
@@ -10,18 +10,19 @@ export default function BoxFilme(){
     const [filme, setFilme] = useState([]);
     
     async function Listar(){
-        let r = await api.ListarFP()
+        let r = await api.ListarF()
         setFilme(r)
     }
 
     useEffect(() => {
         Listar();
     }, []);
+
     return(
         <Conteiner>
             <div className="filme-ti">
                 {filme.map(item =>
-                   <img src={item.imagem} alt="" /> 
+                   <img src={item.img_menor} alt="" /> 
                 )}
                 <button className="botao-ti">
                     <div><img src={play}  alt=""/></div>
