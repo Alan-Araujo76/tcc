@@ -14,23 +14,16 @@ const Conteiner = styled.div`
             align-self: center;
             margin: 1em 2em;
             width: 6em;
-        }
-        .filme1-ti img{
-            align-self: center;
-            margin: 1em 2em;
-            width: 6em;
-        }
-        .filme2-ti img{
-            align-self: center;
-            margin: 1em 2em;
-            width: 6em;
+            height: 9em;
+            cursor: pointer;
         }
         .botao-ti{
-            margin: 1em 1em 1em 1em;
+            position: absolute;
+            margin: 1.5em 0em;
             background-color:transparent;
             border: none;
         }
-        .botao-ti div img{aa
+        .botao-ti div img{
             width: 60%;
             height: 30%;
             border-radius: 100%;
@@ -44,7 +37,10 @@ const Conteiner = styled.div`
         .ver-mais{
             color: white;
             font: 2em Montserrat;
-            margin: -.5em 1em 1em 1em;
+            margin: .5em 1em 1em 1em;
+        }
+        .botao-ti:hover{
+            cursor: pointer;
         }
 
         @media(max-width: 1200px){
