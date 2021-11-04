@@ -101,6 +101,17 @@ export default class Api {
     //////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////
 
+
+    async ListarCU() {
+        let r = await api.get('/comentario/listaru');
+        return r.data;
+    }
+
+    async ListarC(filme, usuario, mensagem, data, curtidas, id) {
+        let r = await api.get('/comentario/' + id, { filme, usuario, mensagem, data, curtidas});
+        return r.data;
+    }
+
     async InserirC(filme, usuario, mensagem, data, curtidas) {
         let r = await api.post('/comentario', { filme, usuario, mensagem, data, curtidas});
         return r.data;
@@ -120,25 +131,40 @@ export default class Api {
     /////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////
 
+     async ListarAT(){
+         let r = await api.get('/AssistirT');
+         return r.data;
+     }
 
+     async InserirAT(filme, lista ){
+        let r = await api.get('/AssistirT', { filme, lista });
+        return r.data;
+    }
+
+    async RemoverAT(id) {
+        let r = await api.delete('/AssistirT/' + id);
+        return r.data;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////
 
 
     async ListarLis(){
-        let r = await api.get('/listaaa');
+        let r = await api.get('/lista');
         return r.data;
     }
     async InserirLis(nome, descricao) {
-        let r = await api.post('/listaaa', { nome, descricao });
+        let r = await api.post('/lista', { nome, descricao });
         return r.data;
     }
 
     async AlterarLis(id, nome, descricao) {
-        let r = await api.put('/listaaa/' + id, { nome, descricao })
+        let r = await api.put('/lista/' + id, { nome, descricao })
         return r.data;
     }
 
     async RemoverLis(id) {
-        let r = await api.delete('/listaaa/' + id);
+        let r = await api.delete('/lista/' + id);
         return r.data;
     }
 }
