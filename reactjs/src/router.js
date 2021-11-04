@@ -7,6 +7,7 @@ import Direcionamento from './pages/0_direcionamento';
 import LoginPrin from './pages/2_LoginUsu';
 import Cadastrar from './pages/3_LoginCadastro';
 import EsqSenha from './pages/4_EsqSenha';
+import Recuperacao from './pages/4_Recuperacao';
 import DetalhesFilme from './pages/5_FilmeG';
 import Comentario from './pages/6_Comentario';
 import Perfil from './pages/7_Perfil';
@@ -46,6 +47,7 @@ export default function Routes() {
                 <Route path="/login" exact={true} component={LoginPrin} />
                 <Route path="/cadastro" exact={true} component={Cadastrar} />
                 <Route path="/esqueci-senha" exact={true} component={EsqSenha} />
+                <Route path="/recuperacao" exact={true} component={Recuperacao} />
 
                 <Route path="/detfilmes" exact={true} component={DetalhesFilme} />
                 <Route path="/comentario" exact={true} component={Comentario} />
@@ -56,14 +58,14 @@ export default function Routes() {
                 <Route path="/filmespopulares" exact={true} component={FilmesPopulares} />
                 <Route path="/listapop" exact={true} component={ListasPopulares} />
 
-                <Route path="/filmespgosto" exact={true} component={FilmesGosto} />
+                <Route path="/meusfilmes/comfP" exact={true} component={FilmesGosto} />
 
                 <Route path="/listasgc" exact={true} component={ListasGC} />
                 <Route path="/listasgs" exact={true} component={ListasGS} />
                 <Route path="/listafil" exact={true} component={FilmeLista} />
                 <Route path="/criarlist" exact={true} component={CriarLista} />
                 
-                <Route path="/assistimtarde" exact={true} component={AssistirMaisTarde} />
+                <Route path="/meusfilmes/comfA" exact={true} component={AssistirMaisTarde} />
                 <Route path="/meusfilmes" exact={true} component={JaAssistidos} />
 
                 <Route path="/sobrenos" exact={true} component={SobreNos} />

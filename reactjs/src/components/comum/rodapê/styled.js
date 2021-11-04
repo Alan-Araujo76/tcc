@@ -11,7 +11,7 @@ const Container = styled.div`
 
     .barra-r img {
         width: 100%;
-        margin-top: 3em;
+        margin-top: 3.3em;
     }
 
     .barra-r {

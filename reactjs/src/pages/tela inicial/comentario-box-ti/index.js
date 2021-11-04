@@ -1,4 +1,4 @@
-import perfilFoto from '../../../assets/img/mdm.jpg';
+{/*import perfilFoto from '../../../assets/img/mdm.jpg';
 import coracao from '../../../assets/img/coracao.png';
 import {Comentario} from './styled';
 
@@ -42,4 +42,4 @@ export default function ComentariosTi(){
            </div> 
         </Comentario>
     )
-}
+}*/}

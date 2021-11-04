@@ -82,6 +82,10 @@ const Parte2 = styled.div`
         text-align: inline;
     }
 
+    .input-d {
+        margin-bottom: 2em;
+    }
+
     .email-inp-bt {
         margin: 80px 0px 50px 50px;
     }

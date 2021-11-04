@@ -5,20 +5,30 @@ import Conteudo from './conteudo';
 import { Container, PartePrin } from './styled';
 import { useState, useEffect } from "react";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import Api from '../../1_service/api';
 const api = new Api();
 
-export default function Comentarios() {
+export default function Comentarios(props) {
     const [filme, setFilme] = useState([]);
 
-    async function Listar() {
-        let r = await api.ListarC();
+    async function ListarU() {
+        let r = await api.ListarCu();
         console.log(r);
         setFilme(r);
     }
 
+    const Remove = async (id) => {
+        const r = await api.RemoverC(id);
+        toast.dark('🗑️ Filme Removido!');
+        
+        ListarU();
+    }
+
     useEffect(() => {
-        Listar();
+        ListarU();
     }, []);
 
 
@@ -28,8 +38,10 @@ export default function Comentarios() {
             <PartePrin>
                 <div className="titulo">Comentários:</div>
                 <div className="bloco1">
+                <div>
                     <div className="txt-c">Há muita coisa acontecendo para este tempo de execução e os setpieces são um pouco desanimadores em comparação com as entradas anteriores. Eles poderiam ter pelo menos, feito com que John Cena vencesse aquele grandalhão no final.</div>
-                    <div className="excluir"><button>Excluir</button></div>
+                    <div className="excluir"><button onClick={Remove}>Excluir</button></div>
+                </div>
                 </div>
 
 

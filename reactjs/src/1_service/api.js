@@ -6,8 +6,17 @@ const api = Axios.create({
 
 
 export default class Api {
+
+
+    async Logar(email, senha) {
+        let r = await api.post('/login/login', {email, senha});
+        return r.data;
+    }
+
+
+
     async ListarF(){
-        let r = await api.get('/filme');
+        let r = await api.get('/filme/listar');
         return r.data;
     }
     async InserirF(nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor) {
@@ -30,8 +39,8 @@ export default class Api {
         return r.data;
     }
 
-    async ListarJa(){
-        let r = await api.get('/filmesjassistidos');
+    async ListarJa(ordenacao){
+        let r = await api.get('/filmeUsu/ja?ordenacao=' + ordenacao);
         return r.data;
     }
 
@@ -44,8 +53,8 @@ export default class Api {
         let r = await api.get('/usuario');
         return r.data;
     }
-    async InserirU(nome, sobrenome, username, email, senha, genero, localizacao, redes, fotoperfil) {
-        let r = await api.post('/usuario', { nome, sobrenome, username, email, senha, genero, localizacao, redes, fotoperfil });
+    async InserirU(nome, sobrenome, username, email, senha, genero, nascimento) {
+        let r = await api.post('/usuario/cadastrar', { nome, sobrenome, username, email, senha, genero, nascimento});
         return r.data;
     }
 
@@ -63,6 +72,7 @@ export default class Api {
         let r = await api.get('/usuario');
         return r.data;
     }
+
     async InserirL(nome, sobrenome, username, email, senha, genero, localizacao, redes, fotoperfil) {
         let r = await api.post('/usuario', { nome, sobrenome, username, email, senha, genero, localizacao, redes, fotoperfil });
         return r.data;
@@ -78,26 +88,9 @@ export default class Api {
         return r.data;
     }
 
-    async ListarAT (){
-        let r = await api.get('/listaAssistirT');
-        return r.data;
-    }
 
-    async AlterarAT (){
-        let r = await api.post('/listaAssistirT1');
-        return r.data;
-    }
-
-    async RemoverAT (id){
-        let r = await api.delete('/listaAssistirT1/' + id);
-        return r.data;
-    }
-
-    async ListarC (){
-        let r = await api.get('/comentario');
-        return r.data;
-    }
-
+    //////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////
 
     async InserirC(filme, usuario, mensagem, data, curtidas) {
         let r = await api.post('/comentario', { filme, usuario, mensagem, data, curtidas});
@@ -115,23 +108,28 @@ export default class Api {
         return r.data;
     }
 
-    async ListarLP (){
-        let r = await api.get('/lista_popular');
+    /////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+    async ListarLis(){
+        let r = await api.get('/listaaa');
+        return r.data;
+    }
+    async InserirLis(nome, descricao) {
+        let r = await api.post('/listaaa', { nome, descricao });
         return r.data;
     }
 
-    async AlterarLP( id, nome_lista,descricao ) {
-        let r = await api.put('/lista_popular/' + id, { nome_lista, descricao })
-        return r.data;
-    }
-     async ListarJS (){
-        let r = await api.get('/MeusF_Ja');
+    async AlterarLis(id, nome, descricao) {
+        let r = await api.put('/listaaa/' + id, { nome, descricao })
         return r.data;
     }
 
-
-    async AlterarJS (){
-        let r = await api.post('/MeusF_Ja');
+    async RemoverLis(id) {
+        let r = await api.delete('/listaaa/' + id);
         return r.data;
     }
 }
