@@ -2,8 +2,6 @@ import { Geral } from "./styled"
 import LinhaSep from '../../../assets/img/linha-comentario.png';
 import Coracao from '../../../assets/img/coracao.png';
 import UsuSemFoto from '../../../assets/img/usu-semfoto.png'
-import { useState } from "react";
-
 
 export default function ComenC(props) {
     return(

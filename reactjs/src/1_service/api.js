@@ -101,6 +101,17 @@ export default class Api {
     //////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////
 
+
+    async ListarCU() {
+        let r = await api.get('/comentario/listaru');
+        return r.data;
+    }
+
+    async ListarC(filme, usuario, mensagem, data, curtidas, id) {
+        let r = await api.get('/comentario/' + id, { filme, usuario, mensagem, data, curtidas});
+        return r.data;
+    }
+
     async InserirC(filme, usuario, mensagem, data, curtidas) {
         let r = await api.post('/comentario', { filme, usuario, mensagem, data, curtidas});
         return r.data;
