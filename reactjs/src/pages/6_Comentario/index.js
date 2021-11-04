@@ -15,13 +15,14 @@ export default function Comentarios(props) {
     const [filme, setFilme] = useState([]);
 
     async function ListarU() {
-        let r = await api.ListarCu();
+        let r = await api.ListarCU();
         console.log(r);
         setFilme(r);
     }
 
-    const Remove = async (id) => {
-        const r = await api.RemoverC(id);
+    const Remove = async () => {
+        const r = await api.RemoverC();
+
         toast.dark('🗑️ Filme Removido!');
         
         ListarU();
