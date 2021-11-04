@@ -115,21 +115,21 @@ export default class Api {
 
 
     async ListarLis(){
-        let r = await api.get('/listaaa');
+        let r = await api.get('/lista');
         return r.data;
     }
     async InserirLis(nome, descricao) {
-        let r = await api.post('/listaaa', { nome, descricao });
+        let r = await api.post('/lista', { nome, descricao });
         return r.data;
     }
 
     async AlterarLis(id, nome, descricao) {
-        let r = await api.put('/listaaa/' + id, { nome, descricao })
+        let r = await api.put('/lista/' + id, { nome, descricao })
         return r.data;
     }
 
     async RemoverLis(id) {
-        let r = await api.delete('/listaaa/' + id);
+        let r = await api.delete('/lista/' + id);
         return r.data;
     }
 }

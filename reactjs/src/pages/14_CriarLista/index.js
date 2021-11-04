@@ -14,6 +14,7 @@ const api = new Api();
 
 export default function CriarLista() {
 
+    const [filme, setFilme] = useState([]);
     const [listas, setListas] = useState([]);
     const [lista, setLista] = useState('');
     const [descricao, setDescricao] = useState('');
@@ -21,6 +22,11 @@ export default function CriarLista() {
     async function listar() {
         let r = await api.ListarLis();
         setListas(r);
+    }
+
+    async function listarFilmes() {
+        let r = await api.ListarF();
+        setFilme(r);
     }
 
     async function inserirLista() {
@@ -72,7 +78,7 @@ export default function CriarLista() {
                         </div>
 
                         <div className="g-d">
-                            <div className="nome"><button>Procurar Filme</button></div>
+                            <div className="nome"><button onClick={listarFilmes}>Procurar Filme</button></div>
                             <div className="inp-2"><input placeholder="Digite o nome do filme"/></div>
                         </div>
                     </div>
