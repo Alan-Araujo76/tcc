@@ -42,6 +42,7 @@ const Conteiner = styled.div`
         .botao-ti:hover{
             cursor: pointer;
         }
+        
 
         @media(max-width: 1200px){
             width: 90%;
