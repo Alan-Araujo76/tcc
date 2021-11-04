@@ -45,6 +45,7 @@ const Container = styled.div`
         height: 40px;
         border-radius: 3px;
         font-family: Montserrat;
+        border: none;
     }
     .inps {
         display: flex;
@@ -59,6 +60,7 @@ const Container = styled.div`
         border-radius: 3px;
         padding: 0px 10px;
         font-family: Montserrat;
+        border: none;
     }
     .text textarea {
         width: 400px;

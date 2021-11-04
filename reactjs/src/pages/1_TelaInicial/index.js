@@ -1,65 +1,33 @@
 import { Container } from './styled';
-import capaMaior from '../../assets/img/capa-maior.jpeg';
-import capaFilme from '../../assets/img/capa-filme.png';
-import play from '../../assets/img/play.png';
+import BoxFilme from './box-filme-ti/index';
+import 'react-multi-carousel/lib/styles.css';
 
 
-import Cabecalho from '../../componentes/comum/cabecalho';
-import Rodape from '../../componentes/comum/rodapê';
+import Cabecalho from '../../components/comum/cabecalho';
+import Rodape from '../../components/comum/rodapê';
 
-import ComentariosTi from './comentario-box-ti/index';
+//import ComentariosTi from './comentario-box-ti/index';
 import ListaTi from './listas-box-ti/index';
+import Carousel from './carousel-ti';
+
+import Api from '../../1_service/api';
+const api = new Api();
 
 export default function TelaInicial(){
+
     return(
-        
         <Container>
             <Cabecalho/>
             <div className="conteiner-ti">
-                <img src={capaMaior} alt="" />
+                
+                    <Carousel/>
+               
                 <div className="titulo-ti">Acompanhe tudo sobre filmes</div>
                 <div className="subTitulo-ti">A rede social para amantes de cinema</div>
                 <div className="conteudo-box-ti">
                     <div className="titulo-box-ti">Filmes populares:</div>
                     <div className="box-filmes-ti">
-                        <div className="boxPT1-ti">
-                            <div className="filme-ti">
-                                <img src={capaFilme} alt="" />
-                            </div>
-                            <div className="filme-ti">
-                                <img src={capaFilme} alt="" />
-                            </div>
-                            <div className="filme-ti">
-                                <img src={capaFilme} alt="" /> 
-                            </div>
-                            <div className="filme-ti">
-                                <img src={capaFilme} alt="" />
-                            </div>
-                            <div className="filme-ti">
-                                <img src={capaFilme} alt="" />
-                            </div>
-                        </div>
-                        <div className="boxPT2-ti">
-                            <div className="filme-ti">
-                                <img src={capaFilme} alt="" />
-
-                            </div>
-                            <div className="filme-ti">
-                                <img src={capaFilme} alt="" />
-                            </div>
-                            <div className="filme-ti">
-                                <img src={capaFilme} alt="" />
-                            </div>
-                            <div className="filme1-ti">
-                                <img src={capaFilme} alt="" />
-                            </div>
-                            <div className="botao-ti">
-                                <button className="botao2-ti"><img src={play} alt=""/></button>
-                                <div>
-                                    ver mais
-                                </div>
-                            </div>
-                        </div>
+                        <BoxFilme/>
                     </div>
                 </div>
                 <div className="conteudo-cl-ti">
@@ -68,9 +36,7 @@ export default function TelaInicial(){
                             CRÍTICAS POPULARES ESTA SEMANA
                         </div>
                         <hr/>
-                        <ComentariosTi/>
-                        <ComentariosTi/>
-                        <ComentariosTi/>
+                       
                     </div>
                     <div className="listas-ti">
                         <div className="titulo-l-ti">

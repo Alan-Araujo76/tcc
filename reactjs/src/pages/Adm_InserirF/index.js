@@ -1,20 +1,22 @@
 import Lapis from '../../assets/img/alterar.svg';
 import Lixeira from '../../assets/img/lixeira.svg';
-import Linha from '../../assets/img/barradeitada.png';
 import BarraT from '../../assets/img/barra-tcc.png';
 import Att from '../../assets/img/atualizar.svg';
 import Sair from '../../assets/img/sair.svg';
 import FotoP from '../../assets/img/mdm.jpg';
 
-import BotaoL from '../../componentes/styled/botoes-rosa'
+import BotaoL from '../../components/styled/botoes-rosa'
 import { Container, Cabecalho, Parteprincipal, Bloco1, Bloco2 } from './styled';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Api from '../../service/api';
+import { confirmAlert } from 'react-confirm-alert'; 
+import 'react-confirm-alert/src/react-confirm-alert.css';
+
+import Api from '../../1_service/api';
 const api = new Api();
 
 
@@ -32,12 +34,16 @@ export default function CadastrarFilme() {
   const [img_menor, setimg_menor] = useState('');
   const [idAlterando, setIdAlterando] = useState(0);
 
+  const loading = useRef(null);
+
   async function Listar() {
     let r = await api.ListarF();
     setFilme(r);
   }
 
-  async function Inserir() {
+  async function InserirFil() {
+    loading.current.continuousStart();
+
     if(idAlterando === 0) {
       let r = await api.InserirF(nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor);
       
@@ -45,21 +51,76 @@ export default function CadastrarFilme() {
           toast.error(`${r.erro}`);
           return;
       } else {
-          toast.dark('💕 Produto cadastrado com sucesso!');
+          toast.dark('💕 Filme cadastrado com sucesso!');
         }
     } else {
-      let r = await api.Alterar(idAlterando, nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor);
+      let r = await api.AlterarF(nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor);
 
       if(r.erro) {
         toast.error(`${r.erro}`);
         return;
       } else {
-        toast.dark('✏️ Produto alterado!');
+        toast.dark('✏️ Filme alterado!');
       }
     }
 
+    LimparCampos();
     Listar();
   }
+
+  function LimparCampos() {
+    setNome('');
+    setGenero('');
+    setSinopse('');
+    setDescricao('');
+    setDiretor('');
+    setLancamento('');
+    setPlataforma('');
+    setimg_maior('');
+    setimg_menor('');
+    setIdAlterando(0);
+  }
+
+
+  async function Editar(item) {
+      setNome(item.nm_filme);
+      setGenero(item.ds_genero);
+      setSinopse(item.ds_sinopse);
+      setDescricao(item.ds_descricao);
+      setDiretor(item.nm_diretor)
+      setLancamento(item.ano_lancamento);
+      setPlataforma(item.ds_plataforma);
+      setAvalicao(item.ds_avaliacao);
+      setimg_maior(item.img_capa_maior);
+      setimg_menor(item.img_capa_menor);
+      setIdAlterando(item.id_filme);
+  }
+
+
+  async function Deletar(IdAlterando) {
+    confirmAlert({
+      title: 'Remover Filme',
+      message: `Tem certeza que deseja remover o filme ${IdAlterando} ?`,
+      buttons: [
+        {
+          label: 'Sim',
+          onClick: async () => {
+              const r = await api.RemoverF(idAlterando);
+              toast.dark('🗑️ Filme Removido!');
+              Listar();
+          }
+        },
+        {
+          label: 'Não'
+        }
+      ]
+    });
+  }
+
+
+  useEffect(() => {
+    Listar();
+  }, []);
 
 
     return(
@@ -91,33 +152,33 @@ export default function CadastrarFilme() {
                 <div className="inputs">
 
                     <div className="linha1">
-                        <div className="inp1">Nome:   <input type="text"  onChange={e => setNome(e.target.value)} /></div>
-                        <div className="inp">Genêro:   <input type="text" onChange={e => setGenero(e.target.value)}/></div>
-                        <div className="inp2">Diretor:   <input type="text"  onChange={e => setDiretor(e.target.value)}/></div>
+                        <div className="inp1">Nome:   <input type="text" value={nome} onChange={e => setNome(e.target.value)} /></div>
+                        <div className="inp">Genêro:   <input type="text" value={genero} onChange={e => setGenero(e.target.value)}/></div>
+                        <div className="inp2">Diretor:   <input type="text"  value={diretor} onChange={e => setDiretor(e.target.value)}/></div>
                     </div>
 
                     <div className="linha-1">
-                        <div className="inp3">Data de lançamento:   <input type="text" onChange={e => setLancamento(e.target.value)}/></div>
-                        <div className="inpuu">Plataformas Dis. :   <input type="text" onChange={e => setPlataforma(e.target.value)}/></div>
+                        <div className="inp3">Data de lançamento:   <input type="text" value={lancamento} onChange={e => setLancamento(e.target.value)}/></div>
+                        <div className="inpuu">Plataformas Dis. :   <input type="text" value={plataforma} onChange={e => setPlataforma(e.target.value)}/></div>
                     </div>
 
                     <div className="linha1">
-                        <div className="inp-d">Capa do Filme(Maior):   <input type="url" onChange={e => setimg_maior(e.target.value)}/></div>
+                        <div className="inp-d">Capa do Filme(Maior):   <input type="url" value={img_maior} onChange={e => setimg_maior(e.target.value)}/></div>
                     </div>
                     <div className="linha1">
-                        <div className="inp-d1">Capa do Filme(Menor):   <input type="url" onChange={e => setimg_menor(e.target.value)}/></div>
+                        <div className="inp-d1">Capa do Filme(Menor):   <input type="url" value={img_menor} onChange={e => setimg_menor(e.target.value)}/></div>
                     </div>
 
                     <div className="linha-d">
                         <div className="texto">Descrição:</div>
-                        <div className="text">  <textarea type="text" onChange={e => setDescricao(e.target.value)}/></div>
+                        <div className="text">  <textarea type="text" value={descricao} onChange={e => setDescricao(e.target.value)}/></div>
                     </div>
                     <div className="linha-d1">
                       <div className="sep">
                         <div className="texto">Sinopse:</div>
-                        <div className="text">  <textarea type="text" onChange={e => setSinopse(e.target.value)}/></div>
+                        <div className="text">  <textarea type="text" value={sinopse} onChange={e => setSinopse(e.target.value)}/></div>
                       </div>
-                        <div className="btn"><BotaoL onClick={Inserir}>imagem="" nome="Cadastrar"</BotaoL></div>
+                        <div className="btn"><BotaoL imagem="" nome="Cadastrar" onClick={InserirFil}></BotaoL></div>
                     </div>
                 </div>
             </Bloco1>
@@ -148,10 +209,10 @@ export default function CadastrarFilme() {
                     <td> {item.nm_filme} </td>
                     <td> {item.ds_genero} </td>
                     <td> {item.nm_diretor} </td>
-                    <td> {item.dt_lancamento} </td>
-                    <td> {item.ds_plataforma} </td>
-                    <td className="coluna-acao"> <button> <img src={Lapis} alt="" /> </button> </td>
-                    <td className="coluna-acao"> <button> <img src={Lixeira} alt="" /> </button> </td>
+                    <td> {item.ano_lancamento} </td>
+                    <td title={ item.ds_plataforma != null && item.ds_plataforma.length > 30 ? item.ds_plataforma : null }> { item.ds_plataforma != null && item.ds_plataforma.length >= 30 ? item.ds_plataforma.substr(0, 30) + '...' : item.ds_plataforma } </td>
+                    <td className="coluna-acao"> <button onClick={() => Editar(item)}> <img src={Lapis} alt="" /> </button> </td>
+                    <td className="coluna-acao"> <button onClick={() => Deletar(item.id_matricula)}> <img src={Lixeira} alt="" /> </button> </td>
                   </tr> 
                 )}
               </tbody> 
@@ -173,12 +234,12 @@ export default function CadastrarFilme() {
               <tbody>
                 {filme.map((item) => 
                   <tr>
-                    <td> {item.img_capa_menor} </td>
-                    <td> {item.img_capa_maior} </td>
-                    <td> {item.ds_descricao} </td>
-                    <td> {item.ds_sinopse} </td>
-                    <td className="coluna-acao"> <button> <img src={Lapis} alt="" /> </button> </td>
-                    <td className="coluna-acao"> <button> <img src={Lixeira} alt="" /> </button> </td>
+                    <td className="imgM"> <img src={item.img_capa_menor} alt=""/> </td>
+                    <td className="imgM1"> <img src={item.img_capa_maior} alt=""/> </td>
+                    <td title={ item.ds_descricao != null && item.ds_descricao.length > 150 ? item.ds_descricao : null }> { item.ds_descricao != null && item.ds_descricao.length >= 150 ? item.ds_descricao.substr(0, 150) + '...' : item.ds_descricao } </td>
+                    <td title={ item.ds_sinopse != null && item.ds_sinopse.length > 150 ? item.ds_sinopse : null }> { item.ds_sinopse != null && item.ds_sinopse.length >= 150 ? item.ds_sinopse.substr(0, 150) + '...' : item.ds_sinopse } </td>
+                    <td className="coluna-acao"> <button onClick={() => Editar(item)}> <img src={Lapis} alt="" /> </button> </td>
+                    <td className="coluna-acao"> <button onClick={() => Deletar(item.id_matricula)}> <img src={Lixeira} alt="" /> </button> </td>
                   </tr> 
                 )}
               </tbody> 

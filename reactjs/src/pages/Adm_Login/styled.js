@@ -14,7 +14,7 @@ const Container = styled.div`
     .bloco {
         display: flex;
         flex-direction: column;
-        width: 40%;
+        width: 50%;
         height: 50%;
         padding: 55px 0px;
         align-items: center;
@@ -22,11 +22,12 @@ const Container = styled.div`
         background-color: #FF005C;
         box-shadow: 0px 4px 5px 5px #7C6E73;
         color: #fff;
-        justify-content: space-between;
+        position: relative;
     }
 
     .p1 {
         margin-left: -40%;
+        margin-bottom: 12%;
     }
     .p2 {
         margin-left: -40%;
@@ -40,7 +41,7 @@ const Container = styled.div`
     }
 
     .bt {
-        margin-top: 20px;
+        margin-top: 50px;
         text-align: end;
         margin-left: 144%;
     }

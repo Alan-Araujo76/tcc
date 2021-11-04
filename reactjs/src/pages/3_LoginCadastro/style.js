@@ -60,7 +60,6 @@ const Parte2 = styled.div`
         display: flex;
         flex-direction: row;
         margin-bottom: 15px;
-        margin-left: 2em;
     }
 
     .inp {
@@ -97,11 +96,14 @@ const Parte2 = styled.div`
     input {
         width: 15em;
         height: 2.3em;
+        padding: 8px;
+        font-weight: 500;
     }
 
-    placeholder {
-        color: #2d2d2d;
+    input::placeholder {
         font-family: Montserrat;
+        font-weight: 500;
+        font-size: 12px;
     }
 
     @media (max-width: 800px) {

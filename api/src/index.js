@@ -1,238 +1,27 @@
-import db from "./db.js";
 import express from 'express'
 import cors from 'cors'
+
+import Usuario from './Controller/usuarioController.js';
+import Comentario from './Controller/comentarioController.js';
+import FilmeUsu from './Controller/filmeUsuController.js';
+import Filme from './Controller/filmeController.js';
+import Lista from './Controller/listaController.js';
+import ListaItem from './Controller/listaItemController.js';
+import Login from './Controller/loginController.js';
+
+
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-
-app.get('/filme', async(req, resp) => {
-    try {
-        let a = await db.infob_mw_filme.findAll();
-        resp.send(a);
-    } catch(e) {
-        resp.send({erro: e.toString()})
-    }
-})
-
-app.post('/filme', async(req, resp) => {
-    try {
-        let { nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor } = req.body;
-        
-        let i = await db.infob_mw_filme.create({
-            nm_filme: nome,
-            ds_genero: genero,
-            dt_lancamento: lancamento,
-            nm_diretor: diretor, 
-            ds_sinopse: sinopse,
-            ds_avaliacao: avaliacao,
-            ds_descricao: descricao,
-            ds_plataforma: plataforma,
-            img_capa_maior: img_maior,
-            img_capa_menor: img_menor
-        })
-        resp.send("Filme inserido!");
-    } catch(e) {
-        resp.send({erro: e.toString()})
-    }
-})
-
-
-app.put('/filme/:id', async(req, resp) => {
-    try {
-        let { nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor } = req.body;
-        let { id } = req.params;
-
-        let a = await db.infob_mw_filme.update({
-            nm_filme: nome,
-            ds_genero: genero,
-            dt_lancamento: lancamento,
-            nm_diretor: diretor, 
-            ds_sinopse: sinopse,
-            ds_avaliacao: avaliacao,
-            ds_descricao: descricao,
-            ds_plataforma: plataforma,
-            img_capa_maior: img_maior,
-            img_capa_menor: img_menor
-        },
-        {
-            where: {id_filme: id}
-        })
-        resp.sendStatus("Filme alterado!");
-    } catch(e) {
-        resp.send({erro: e.toString()})
-    }
-})
-
-
-app.delete('/filme/:id', async(req, resp) => {
-    try {
-        let { id } = req.params;
-        let d = db.infob_mw_filme.destroy({ where: {id_filme: id}})
-        resp.send("Filme removido!");
-    } catch(e) {
-        resp.send({ erro: e.toString()});
-    }
-})
-
-
-//
-
-
-app.get('/usuario', async(req, resp) => {
-    try {
-        let a = await db.infob_mw_usuario.findAll();
-        resp.send(a);
-    } catch(e) {
-        resp.send({erro: e.toString()})
-    }
-})
-
-app.post('/usuario', async(req, resp) => {
-    try {
-        let { nome, sobrenome, username, email, senha, genero, localizacao, redes, fotoperfil } = req.body;
-        
-        let i = await db.infob_mw_usuario.create({
-            nm_usuario: nome,
-            nm_sobrenome: sobrenome,
-            nm_username: username,
-            ds_email: email,
-            ds_senha: senha,
-            ds_genero: genero,
-            ds_nascimento: new Date(),
-            ds_localizacao: localizacao,
-            ds_redes_sociais: redes,
-            ds_foto: fotoperfil
-        })
-        resp.send("Usuário inserido!");
-    } catch(e) {
-        resp.send({erro: e.toString()})
-    }
-})
-
-
-app.put('/usuario/:id', async(req, resp) => {
-    try {
-        let { nome, sobrenome, username, email, senha, genero, nascimento, localizacao, redes, fotoperfil } = req.body;
-        let { id } = req.params;
-
-        let a = await db.infob_mw_usuario.update({
-            nm_usuario: nome,
-            nm_sobrenome: sobrenome,
-            nm_username: username,
-            ds_email: email,
-            ds_senha: senha,
-            ds_genero: genero,
-            ds_nascimento: nascimento,
-            ds_localizacao: localizacao,
-            ds_redes_sociais: redes,
-            ds_foto: fotoperfil
-        },
-        {
-            where: {id_usuario: id}
-        })
-        resp.send("Usuário alterado!");
-    } catch(e) {
-        resp.send({erro: e.toString()})
-    }
-})
-
-
-app.delete('/usuario/:id', async(req, resp) => {
-    try {
-        let { id } = req.params;
-        let d = db.infob_mw_usuario.destroy({ where: {id_usuario: id}})
-        resp.send("Produto removido!");
-    } catch(e) {
-        resp.send({ erro: e.toString()});
-    }
-})
-
-//
-
-app.get('/lista', async(req, resp) => {
-    try {
-        let l = await db.infob_mw_usuario.findAll();
-        resp.send(l);
-    } catch(e) {
-        resp.send({ erro: e.toString() })
-    }
-})
-
-app.post('/lista', async(req, resp) => {
-    try {
-        let { nome, descricao } = req.body;
-
-        let i = await db.infob_mw_usuario.create({
-            nm_lista: nome, 
-            ds_descricao: descricao
-        })
-        resp.send('Lista criada!')
-    } catch(e) {
-        resp.send({ erro: e.toString() })
-    }
-})
-
-app.put('/lista/:id', async(req, resp) => {
-    try {
-        let { nome, descricao } = req.body;
-        let { id } = req.params;
-
-        let a = await db.infob_mw_usuario.update({
-            nm_lista: nome,
-            ds_descricao: descricao
-        },
-        {
-            where: {id_lista: id}
-        })
-        resp.send('Lista alterada!')
-    } catch(e) {
-        resp.send({ erro: e.toString() })
-    }
-})
-
-app.delete('/lista/:id', async(req, resp) => {
-    try {
-        let { id } = req.params;
-
-        let d = await db.infob_mw_usuario.destroy({ where: {id_lista: id }})
-        resp.send('Lista removida!')
-    } catch(e) {
-        resp.send({erro: e.toString()})
-    }
-})
-
-
-app.get('/lista_item', async(req, resp) => {
-    try {
-        let x = await db.infob_mw_lista_item.findAll();
-        resp.send(x);
-    } catch(e) {
-        resp.send({ erro: e.toString() })
-    }
-})
-
-
-app.post('/lista_item', async (req, resp) => {
-    try{
-        let {nome, descricao, lista } = req.body;
-
-        let x = await db.infob_mw_lista_item.create({
-            id_lista_item: nome, 
-            id_filme: descricao,
-            id_lista_item: lista
-        })
-         resp.send('lista criada!')  
-    } catch(e) {
-         resp.send({erro: e.toString() })
-    }
-
-})
-
-
-
-
+app.use('/filme', Filme)
+app.use('/filusu', FilmeUsu)
+app.use('/lista', Lista)
+app.use('/listem', ListaItem)
+app.use('/usuario', Usuario)
+app.use('/comentario', Comentario)
+app.use('/login', Login)
 
 app.listen(process.env.PORT,
     x => console.log(`Subiu a api, hehe ${process.env.PORT}`))

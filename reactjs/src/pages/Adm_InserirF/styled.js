@@ -5,6 +5,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     background-color: #000;
+    min-height: 100vh;
 
 
     .parte2 {
@@ -110,8 +111,19 @@ const Bloco1 = styled.div`
         display: flex;
         flex-direction: row;
         margin-bottom: 18px;
-        width: 920px;
+        width: 960px;
         justify-content: space-between;
+    }
+    .linha-1 {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 18px;
+        width: 900px;
+        justify-content: space-between;
+    }
+
+    .inp input{
+        font-weight: 800;
     }
 
 
@@ -127,6 +139,7 @@ const Bloco1 = styled.div`
 
     .inp1 input{
         height: 28px;
+        font-weight: 800;
         font-weight: 800;
     }
 
@@ -148,6 +161,10 @@ const Bloco1 = styled.div`
 
     .inp2 {
         margin-left: 30px;
+    }
+    
+    .inp2 input{
+        font-weight: 800;
     }
 
     .linha-d {
@@ -252,10 +269,22 @@ const Bloco2 = styled.div`
         text-align: left;
         height:  61.93px;
         color: #6D6868;
+        width: 250px;
         font-weight: 600;
-        padding: .1em 2em;
+        padding: 1em 2em;
         font-weight: 500;
         background-color: #E5E5E4;
+        text-align: justify;
+        align-items: center;
+        justify-content: center;
+    }
+    .imgM img {
+        height: 550%;
+        width: 60%;
+    }
+   .imgM1 img {
+        height: 350%;
+        width: 100%;
     }
 
 

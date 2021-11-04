@@ -1,5 +1,5 @@
-import Cabecalho from '../../componentes/comum/cabecalho';
-import Rodape from '../../componentes/comum/rodapê';
+import Cabecalho from '../../components/comum/cabecalho';
+import Rodape from '../../components/comum/rodapê';
 import LinhaSep from '../../assets/img/linha-sep.png';
 import Foto from '../../assets/img/foto.png';
 

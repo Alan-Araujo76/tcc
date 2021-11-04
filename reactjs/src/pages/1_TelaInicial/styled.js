@@ -6,22 +6,21 @@ const Container = styled.div`
         background-color: black;
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-        body {
+        width: 100%;
+        min-height: 100vh;
         margin: 0px;
-      }
+
 
       * { box-sizing: border-box; }
 
         .conteiner-ti{
             display: flex;
             flex-direction: column;
+            justify-content: center;
             background-color: black;
             align-items: center;
         }
-        .conteiner-ti > img{
-            width: 76em;
-            height: 36em;
-        }
+        
         .titulo-ti{
             margin-top: 1em;
             color: #ffff;
@@ -43,65 +42,7 @@ const Container = styled.div`
            font-weight: 600;
         }
 
-        .box-filmes-ti{
-            margin: 0px auto 0px auto;
-            display: flex;
-            flex-direction: column;
-            background-color: rgba(196, 196, 196, 0.2);
-            width: 70em;
-        }
-        .boxPT1-ti{
-            align-self: center;
-            display: flex;
-            flex-direction: row;
-            padding: 1em 0px 0em 0px;
-        }
-        .boxPT2-ti{
-            align-self: center;
-            display: flex;
-            flex-direction: row;
-            padding: 0em 0px 1em 0px;
-        }
-        .filme-ti img{
-            align-self: center;
-            margin: 1.5em 3em;
-            width: 8em;
-        }
-        .filme1-ti img{
-            align-self: center;
-            margin: 1.5em 6em 1.5em 3em;
-            width: 8em;
-        }
-        .botao-ti div{
-            padding: .5em;
-            align-self: center;
-
-            color: #FFFFFF;
-            font: 24px Montserrat;
-            font-weight: 600;
-        }
-        .botao2-ti{
-            margin: 1.5em 4em 1em 0em;
-            display: flex;
-            flex-direction: column;
-            align-self: center;
-
-            width: 120px;
-            height: 120px;
-            border-radius: 100%;
-            border:  0px;  
-            background-color: #FFB800;
-        }
-        .botao2-ti img{
-            align-self: center;
-            padding: 2em 1.5em 2em 2em;
-        }
-       
-        .botao-ti button:hover{
-            cursor: pointer;
-            transition: .5s;
-            background-color: #ffb7009c;
-        }
+        
 
         .conteudo-cl-ti{
             display: flex;
@@ -159,56 +100,42 @@ const Container = styled.div`
             color: #ffff;
         }
         @media(max-width: 1200px){
-            .conteiner-ti > img{
+            .conteiner-ti{
                 margin-top: 1em;
-                width: 95%;
-                height: 95%;
+            }            
+
+            .conteiner-ti > img{
+                width: 90%;
+                height: 90%;
             }
             .titulo-ti{
-                margin-top: 1em;
-                color: #ffff;
-                font: 30px Montserrat;
-                font-weight: 600;
+                font-size: 130%;
             }
     
             .subTitulo-ti{
-                color: #AAAAAA;
-                font: 20px Montserrat;
-                margin-bottom: 2em;
-                font-weight: 600;
-            }
-            .box-filmes-ti{
-                margin: 0px auto 0px auto;
-                display: flex;
-                flex-direction: column;
-                background-color: rgba(196, 196, 196, 0.2);
-                width: 40em;
-                height: 20em;
-            }
-            .boxPT1-ti{
-                align-self: center;
-                display: flex;
-                flex-direction: row;
-                padding: 1em 0px 0em 0px;
-            }
-            .boxPT2-ti{
-                align-self: center;
-                display: flex;
-                flex-direction: row;
-                padding: 0em 0px 1em 0px;
-            }
-            .filme-ti img{
-                align-self: center;
-                margin: 1.5em 3em;
-                width: 50%;
-            }
-            .filme1-ti img{
-                align-self: center;
-                margin: 1.5em 6em 1.5em 3em;
-                width: 10%;
+                font-size: 90%;
             }
             
-
+            .titulo-box-ti{
+                margin-left: 5%;
+                font-size: 100%;
+            }
+            
+            .conteudo-cl-ti{
+                flex-direction: column;
+            }
+            .comentarios-ti{
+                width: 130%;
+                margin-left:-9%;
+            }
+            .comentarios-ti hr{
+                margin: 1% 1% 1% 20%;
+                width: 56%;
+            }
+            .titulo-cl-ti{
+                font-size: 50%;
+                margin-left: 20%;
+            }
         }
 `
 export { Container }

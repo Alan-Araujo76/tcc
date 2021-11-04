@@ -14,8 +14,10 @@ const Container = styled.div`
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        text-align: center;
         margin-top: -4%;
     }
+
 
     .titulo {
         font-family: Montserrat;
