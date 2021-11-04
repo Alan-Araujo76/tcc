@@ -15,9 +15,9 @@ export default function Esqueci() {
     const nav = useHistory();
 
     async function Recuperar() {
-        const r = await axios.post(`http://localhost:3030/login/esqueci`, { email: email  });
-        if (r.data.status === 'ok') {
-            nav.push('/perfil');
+        const r = await axios.post(`http://localhost:3030/login/esqueci`, { email: email  }); console.log(email);
+        if (r.data.status === 'OK') { 
+            nav.push( setExibirModal({show: true}));
         } else {
             alert(r.data.mensagem);
         }
@@ -45,7 +45,7 @@ export default function Esqueci() {
                     <div className="txt1">E-mail:</div>
                     <div className="input"><input style={{width: '30em', height: '3.5em', padding: '8px'}} type={Number} placeholder="Digite seu e-mail"  value={email} onChange={e => setEmail(e.target.value)} /></div>
                 </div>
-                <div className="botao" onClick={Recuperar}>
+                <div className="botao" >
                     <button onClick={Recuperar}><BotaoL nome="Enviar"/></button>
                 </div>
             </Parte2>
