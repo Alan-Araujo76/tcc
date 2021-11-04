@@ -131,7 +131,22 @@ export default class Api {
     /////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////
 
+     async ListarAT(){
+         let r = await api.get('/AssistirT');
+         return r.data;
+     }
 
+     async InserirAT(filme, lista ){
+        let r = await api.get('/AssistirT', { filme, lista });
+        return r.data;
+    }
+
+    async RemoverAT(id) {
+        let r = await api.delete('/AssistirT/' + id);
+        return r.data;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////
 
 
     async ListarLis(){
