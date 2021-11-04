@@ -40,11 +40,8 @@ export default function Carousel(){
         window.setTimeout(() => { animando = false; }, 1000);
     }
 
-
-
-    
     async function Listar(){
-        let r = await api.ListarF()
+        let r = await api.ListarCarrousel()
         setFilme(r)
     }
 

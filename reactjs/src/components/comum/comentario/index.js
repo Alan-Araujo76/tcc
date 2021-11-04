@@ -16,7 +16,7 @@ export default function ComenC(props) {
     const [comentario, setComentario] = useState();
 
     async function Listar() {
-        let r = await api.ListarCu();
+        let r = await api.ListarCU();
         setComentario(r);
         console.log(r);
     }
@@ -31,6 +31,8 @@ export default function ComenC(props) {
     useEffect(() => {
         Listar();
     }, []);
+
+
 
     return(
         <Geral>
