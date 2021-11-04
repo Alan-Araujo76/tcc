@@ -15,8 +15,17 @@ export default class Api {
 
 
 
-    async ListarF(){
+    async ListarF() {
         let r = await api.get('/filme/listar');
+        return r.data;
+    }
+
+    async ListarBox() {
+        let r = await api.get('/filme/boxFilme');
+        return r.data;
+    }
+    async ListarCarrousel() {
+        let r = await api.get('/filme/carrousel');
         return r.data;
     }
     async InserirF(nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor) {
@@ -91,6 +100,17 @@ export default class Api {
 
     //////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////
+
+
+    async ListarCU() {
+        let r = await api.get('/comentario/listaru');
+        return r.data;
+    }
+
+    async ListarC(filme, usuario, mensagem, data, curtidas, id) {
+        let r = await api.get('/comentario/' + id, { filme, usuario, mensagem, data, curtidas});
+        return r.data;
+    }
 
     async InserirC(filme, usuario, mensagem, data, curtidas) {
         let r = await api.post('/comentario', { filme, usuario, mensagem, data, curtidas});

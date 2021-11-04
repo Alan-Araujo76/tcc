@@ -8,7 +8,10 @@ const Conteiner = styled.div`
         margin: 0px auto 0px auto;
         padding: 1em 1em 1em 2em;
     
-
+        .filme-ti {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
         .filme-ti img{
             align-self: center;
@@ -18,7 +21,7 @@ const Conteiner = styled.div`
             cursor: pointer;
         }
         .botao-ti{
-            position: absolute;
+            position: relative;
             margin: 1.5em 0em;
             background-color:transparent;
             border: none;
