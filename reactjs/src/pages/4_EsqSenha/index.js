@@ -7,6 +7,7 @@ import { Container, Parte2 } from './style'
 import BotaoL from '../../components/styled/botoes-rosa'
 import { useState } from 'react';
 import { useHistory } from 'react-router';
+import { toast, ToastContainer } from 'react-toastify';
 
 export default function Esqueci() {
     const [exibirModal, setExibirModal] = useState({show: false});
@@ -16,15 +17,19 @@ export default function Esqueci() {
 
     async function Recuperar() {
         const r = await axios.post(`http://localhost:3030/login/esqueci`, { email: email  }); console.log(email);
-        if (r.data.status === 'OK') { 
-            nav.push( setExibirModal({show: true}));
+        console.log(r.data);
+        if (r.data.status === 'Código Enviado') { 
+            setExibirModal({show: true});
+            toast('O código foi enviado no seu email.')
         } else {
-            alert(r.data.mensagem);
+            alert(r.data.status);
         }
+        // console.log(r)
     }
 
     return(
         <Container>
+            <ToastContainer />
             <LogoeBarra />
 
             <Modal options={exibirModal}>
