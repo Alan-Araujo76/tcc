@@ -1,6 +1,6 @@
 import Axios from 'axios';
 const api = Axios.create({
-    baseURL: ('https://mw-heroku.herokuapp.com/')
+    baseURL: ('https://mw-heroku.herokuapp.com')
 })
 
 

@@ -10,7 +10,7 @@ export default function BoxFilme(){
     const [filme, setFilme] = useState([]);
     
     async function Listar(){
-        let r = await api.ListarBox()
+        let r = await api.ListarF()
         setFilme(r)
     }
 
