@@ -33,7 +33,6 @@ export default function App() {
     <Contaier>
     {usuario.map(item => 
       
-    {
     <Menu style={{display: 'flex', flexDirection: 'row', backgroundColor: 'transparent', }} menuButton={<MenuButton>
       <div className="foto">
         { item.ds_foto == null
@@ -54,7 +53,6 @@ export default function App() {
       <MenuItem>Trocar de conta</MenuItem>
       <MenuItem>Sair</MenuItem>
     </Menu>
-    }
     )}
     </Contaier>
   );

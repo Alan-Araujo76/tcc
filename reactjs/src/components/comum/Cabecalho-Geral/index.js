@@ -16,7 +16,7 @@ const api = new Api();
 
 
 export default function Cabecalho() {
-    const [ usuario, setUsuario ] = useState([]);
+    const [ setUsuario ] = useState([]);
 
     async function Listar() {
         let r = await api.ListarU();
@@ -26,32 +26,32 @@ export default function Cabecalho() {
 
     useEffect(() => {
         Listar();
-    }, []);
+    }, );
 
     return(
         <Container>
             <div className="logo">
                 <Link to="telainicial"><span style={{fontweight: "none"}}>Movies</span><span style={{color: "#FF005C", fontweight: "bolder"}}> World</span></Link>
             </div>
-
-            <div className="parte2">
-                <div className="usuario">
-                        <Menu/>
+            
+                <div className="parte2">
+                    <div className="usuario">
+                            <Menu/>
+                    </div>  
+                    <div className="tr"><Link to="meusfilmes">Meus filmes</Link></div>
+                    <div className="sair"><Link to="listasgc"> Minhas listas </Link></div>
+                    <div className="barra-pesq">
+                        <input type="text"/>
+                        <button><img src={Lupa} alt="" /></button>
+                    </div>
                 </div>
-                
-                <div className="tr"><Link to="meusfilmes">Meus filmes</Link></div>
-                <div className="sair"><Link to="listasgc"> Minhas listas </Link></div>
-                <div className="barra-pesq">
-                      <input type="text"/>
-                      <button><img src={Lupa} alt="" /></button>
-                </div>
-            </div>
 
 
 
 
 
 
+            
             <div className="logo-celular">
                     <div className="tt"><span style={{fontweight: "none"}}>Movies</span><span style={{color: "#FF005C", fontweight: "bolder"}}> World</span></div>
                     

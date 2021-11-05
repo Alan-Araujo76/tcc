@@ -24,7 +24,7 @@ export default function ComenC() {
     return(
     
         <Geral>  
-            {filme.map(item => {
+            {filme.map(item => 
                 <div>
                 <div className="usuario">
                     <div className="ft-perfil">
@@ -53,7 +53,7 @@ export default function ComenC() {
                 </div>
                 <div className="linha"><img src={LinhaSep} alt="" /></div>  
                 </div>
-            })
+            )
             }
         </Geral>
         

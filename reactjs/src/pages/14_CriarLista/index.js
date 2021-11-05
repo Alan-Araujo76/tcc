@@ -7,7 +7,7 @@ import Rodape from '../../components/comum/Rodape-Geral'
 import Copiar from '../../assets/img/copiar.png'
 
 import { Container } from './styled';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Api from '../../service/api';
 const api = new Api();
@@ -15,9 +15,8 @@ const api = new Api();
 export default function CriarLista() {
     const [lista, setLista] = useState('');
     const [descricao, setDescricao] = useState('');
-    const [filme, setFilme] = useState([]);
-    const [listas, setListas] = useState([]);
->>>>>>> d5141b9268562bab71b89312a260d333208f1af7
+    const [ setFilme ] = useState([]);
+    const [ setListas ] = useState([]);
 
     async function listar() {
         let r = await api.ListarLis();
@@ -44,6 +43,10 @@ export default function CriarLista() {
                 toast.dark('Lista alterada!');
         }
     }
+
+    useEffect(() => {
+        listar();
+    }, );
 
     return(
         <Container>

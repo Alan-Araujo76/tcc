@@ -68,8 +68,8 @@ export default function FilmesGostos(props) {
     }
 
     useEffect(() => {
-        Listar();
-      }, [ordenacao]);
+        Listar(ordenacao);
+      }, );
 
 
     return(
