@@ -8,26 +8,10 @@ import { Container } from "./styled"
 
 
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 
-
-import Api from '../../../service/api';
-const api = new Api();
 
 
 export default function Cabecalho() {
-    const [ setUsuario ] = useState([]);
-
-    async function Listar() {
-        let r = await api.ListarU();
-        console.log(r);
-        setUsuario(r);
-    }
-
-    useEffect(() => {
-        Listar();
-    }, );
-
     return(
         <Container>
             <div className="logo">
