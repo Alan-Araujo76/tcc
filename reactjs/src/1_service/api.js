@@ -13,19 +13,17 @@ export default class Api {
         return r.data;
     }
 
-
-
     async ListarF() {
-        let r = await api.get('/filme/listar');
+        let r = await api.get('/filme');
         return r.data;
     }
 
     async ListarBox() {
-        let r = await api.get('/filme/boxFilme');
+        let r = await api.get('/filme/boxfilme');
         return r.data;
     }
-    async ListarCarrousel() {
-        let r = await api.get('/filme/carrousel');
+    async ListarCarousel() {
+        let r = await api.get('/filme/carousel');
         return r.data;
     }
     async InserirF(nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor) {
