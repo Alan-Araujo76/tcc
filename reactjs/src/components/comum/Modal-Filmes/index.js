@@ -6,7 +6,7 @@ const Container = styled.div`
     top: 0px;
     left: 0px;
 
-    //display: ${show === true ? 'flex' : 'none'};
+    display: ${props => props.show === true ? 'flex' : 'none'};
     justify-content: center;
     align-items: center;
 
@@ -21,14 +21,14 @@ const Container = styled.div`
     padding: 1.5em;
   }
 
-  //animation: ${show === true ? 'show_animation' : 'none'} .3s forwards;
-  //animation-delay: .1s;
+  animation: ${props => props.show === true ? 'show_animation' : 'none'} .3s forwards;
+  animation-delay: .1s;
   
-  //@keyframes show_animation {
-    //100% {
-   //   background-color: rgba(0,0,0,0.6);
-   // }
-  //}
+  @keyframes show_animation {
+    100% {
+      background-color: rgba(0,0,0,0.6);
+    }
+  }
   
 `
 
