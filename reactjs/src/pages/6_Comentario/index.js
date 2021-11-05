@@ -20,15 +20,8 @@ export default function Comentarios(props) {
         setFilme(r);
     }
 
-<<<<<<< HEAD
-    const Remove = async (id) => {
-        const r = await api.RemoverC(id);
-        console.log(r);
-=======
     const Remove = async () => {
         const r = await api.RemoverC();
-
->>>>>>> 964f1b1927e6299aa6655e093049c5af6d256a27
         toast.dark('🗑️ Filme Removido!');
         ListarU();
     }
@@ -67,32 +60,3 @@ export default function Comentarios(props) {
         </Container>
     )
 }
-               //   <Com/>
-                 // <div className="linha"><img src={LinhaSep} alt="" /></div>
-                //  <Com/>
-               //   <div className="linha"><img src={LinhaSep} alt="" /></div>
-                //  <Com/>
-               //   <div className="linha"><img src={LinhaSep} alt="" /></div>
-               //   <Com/>
-                //  <div className="linha"><img src={LinhaSep} alt="" /></div>
-              //    <Com/>
-               //   <div className="linha"><img src={LinhaSep} alt="" /></div>
-               //   <Com/>
-               //   <div className="linha"><img src={LinhaSep} alt="" /></div>
-               ///   <Com/>
-               //   <div className="linha"><img src={LinhaSep} alt="" /></div>
-               //   <Com/>
-              //    <div className="linha"><img src={LinhaSep} alt="" /></div>
-              //    <Com/>
-              //    <div className="linha"><img src={LinhaSep} alt="" /></div>
-             //     <Com/>
-              //    <div className="linha"><img src={LinhaSep} alt="" /></div>
-               //   <Com/>
-              //    <div className="linha"><img src={LinhaSep} alt="" /></div>
-               //   <Com/>
-               //   <div className="linha"><img src={LinhaSep} alt="" /></div>
-               //   <Com/>
-               //   <div className="linha"><img src={LinhaSep} alt="" /></div>
-                 // <Com/>
-                 // <div className="linha"><img src={LinhaSep} alt="" /></div>
-                 // <Com/>

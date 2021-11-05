@@ -10,7 +10,7 @@ import { useHistory } from 'react-router';
 import { toast, ToastContainer } from 'react-toastify';
 
 export default function Esqueci() {
-    const [exibirModal] = useState({show: false});
+    const [exibirModal, setExibirModal] = useState({show: false});
     const [ email, setEmail] = useState('');
 
     const nav = useHistory();
