@@ -2,18 +2,15 @@ import  LogoeBarra from '../../components/comum/tituloEbarra-login'
 
 import axios from 'axios';
 
-import Modal from '../../components/comum/modal'
+import Modal from '../../components/comum/Modal-Filmes'
 import { Container, Parte2 } from './style'
 import BotaoL from '../../components/styled/botoes-rosa'
 import { useState } from 'react';
-import { useHistory } from 'react-router';
 import { toast, ToastContainer } from 'react-toastify';
 
 export default function Esqueci() {
     const [exibirModal, setExibirModal] = useState({show: false});
     const [ email, setEmail] = useState('');
-
-    const nav = useHistory();
 
     async function Recuperar() {
         const r = await axios.post(`http://localhost:3030/login/esqueci`, { email: email  }); console.log(email);

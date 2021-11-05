@@ -1,10 +1,15 @@
 import FotoUsu from '../../../assets/img/foto.png';
 import Lupa from '../../../assets/img/lupa.png';
 import Seta from '../../../assets/img/seta-baixo.png';
-import Menu from '../menu';
+import Menu from '../../styled/Menu-Geral';
+
 
 import { Container } from "./styled"
+
+
 import { Link } from 'react-router-dom';
+
+
 
 export default function Cabecalho() {
     return(
@@ -12,25 +17,25 @@ export default function Cabecalho() {
             <div className="logo">
                 <Link to="telainicial"><span style={{fontweight: "none"}}>Movies</span><span style={{color: "#FF005C", fontweight: "bolder"}}> World</span></Link>
             </div>
-
-            <div className="parte2">
-                <div className="usuario">
-                        <Menu/>
+            
+                <div className="parte2">
+                    <div className="usuario">
+                            <Menu/>
+                    </div>  
+                    <div className="tr"><Link to="meusfilmes">Meus filmes</Link></div>
+                    <div className="sair"><Link to="listasgc"> Minhas listas </Link></div>
+                    <div className="barra-pesq">
+                        <input type="text"/>
+                        <button><img src={Lupa} alt="" /></button>
+                    </div>
                 </div>
-                
-                <div className="tr"><Link to="meusfilmes">Meus filmes</Link></div>
-                <div className="sair"><Link to="listasgc"> Minhas listas </Link></div>
-                <div className="barra-pesq">
-                      <input type="text"/>
-                      <button><img src={Lupa} alt="" /></button>
-                </div>
-            </div>
 
 
 
 
 
 
+            
             <div className="logo-celular">
                     <div className="tt"><span style={{fontweight: "none"}}>Movies</span><span style={{color: "#FF005C", fontweight: "bolder"}}> World</span></div>
                     

@@ -1,8 +1,8 @@
 import seta from '../../../assets/img/seta.png'
-import { useEffect, useState , useRef} from 'react'
+import { useEffect, useState } from 'react'
 import { Container} from './styled';
 
-import Api from '../../../1_service/api';
+import Api from '../../../service/api';
 const api = new Api();
 
 export default function Carousel(){

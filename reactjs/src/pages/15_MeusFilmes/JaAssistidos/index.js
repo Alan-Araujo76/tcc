@@ -1,26 +1,26 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Cabecalho from '../../../components/comum/cabecalho'
-import Rodape from '../../../components/comum/rodapê'
-import ProxPag from '../../../components/comum/botao-prox-pag'
+import Cabecalho from '../../../components/comum/Cabecalho-Geral'
+import Rodape from '../../../components/comum/Rodape-Geral'
+import ProxPag from '../../../components/comum/ProxPag-Button'
 import TituloC from '../../../components/comum/titulo'
 import Removerb from '../../../assets/img/Xremover.png';
 
-import Modal from '../../../components/comum/modal'
+import Modal from '../../../components/comum/Modal-Filmes'
 
 import LinhaSep from '../../../assets/img/linhasep-listass.png';
 import { Link } from 'react-router-dom';
 
 import { Container, BlocoC } from './styled.js';
 
-import {Loader} from '../../../components/comum/loader'
+import {Loader} from '../../../components/comum/Loader-Filmes'
 
 import { useState, useEffect } from 'react'
 import Cookies from 'js-cookie'
 import { useHistory } from 'react-router-dom';
 
-import Api from '../../../1_service/api';
+import Api from '../../../service/api';
 const api = new Api();
 
 //import axios from 'axios';
@@ -33,7 +33,7 @@ export default function FilmesGostos(props) {
     const [ ordenacao, setOrdanacao ] = useState('A - Z')
     const navigation = useHistory();
 
-    function Comprar() {
+    function Navegação() {
         let ler = Cookies.get('/filmes');
 
         ler = ler !== undefined
@@ -61,14 +61,15 @@ export default function FilmesGostos(props) {
 
     const Remove = async (id) => {
         const r = await api.RemoverF(id);
+        console.log(r);
         toast.dark('🗑️ Filme Removido!');
         
         Listar();
     }
 
     useEffect(() => {
-        Listar();
-      }, [ordenacao]);
+        Listar(ordenacao);
+      }, );
 
 
     return(
@@ -124,7 +125,7 @@ export default function FilmesGostos(props) {
                                     <div className="sub-m"><b>Diretor:</b> {item.diretor}</div>
                                     <div className="sub-m"><b>Descrição:</b> { item.descricao != null && item.descricao >= 105 ? item.descricao.substr(0, 105) + '...' : item.descricao }</div>
                                     <div className="sub2-m"><b>Plataformas:</b> {item.plataforma}</div>
-                                    <div className="botao"><button onClick={Comprar}>Ver mais</button></div>
+                                    <div className="botao"><button onClick={Navegação}>Ver mais</button></div>
                                 </div>
                             </div>
                         </Modal>

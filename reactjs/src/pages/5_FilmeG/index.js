@@ -5,27 +5,24 @@ import Coracao from '../../assets/img/coracao.png';
 import Relogio from '../../assets/img/relogio.png';
 import LinhaBox from '../../assets/img/linha-box.png';
 
-import Rodape from '../../components/comum/rodapê';
-import Com from '../../components/comum/comentario';
+import Rodape from '../../components/comum/Rodape-Geral';
+import Com from '../../components/comum/Conte-Comment';
 import ExpVin from '../../assets/img/vin-exp1.jpeg';
 import ExpPaul from '../../assets/img/paul-exp1.jpeg';
 import ExpMiche from '../../assets/img/miche-exp1.jpeg';
+import Cabecalho from '../../components/comum/Cabecalho-Geral';
 import { Container, ContainerC } from './styled';
 
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react'
-import Api from '../../1_service/api';
-import Cabecalho from '../../components/comum/cabecalho';
+import Api from '../../service/api';
 const api = new Api();
 
 export default function DetalhesFilme(props) {
-    const [ filmes, setFilmes ] = useState(props.location);
-    console.log(filmes)
-
+    const [ filmes, setFilmes ] = useState(props.location.state);
 
     async function Listar() {
         let r = await api.ListarF();
-        console.log(r)
         setFilmes(r);
     }
 

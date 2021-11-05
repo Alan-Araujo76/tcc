@@ -1,6 +1,6 @@
 import Axios from 'axios';
 const api = Axios.create({
-    baseURL: ('http://localhost:3030')
+    baseURL: ('https://mw-heroku.herokuapp.com/')
 })
 
 
@@ -57,7 +57,7 @@ export default class Api {
     }
     
     async ListarU(){
-        let r = await api.get('/usuario');
+        let r = await api.get('/usuario/listar');
         return r.data;
     }
     async InserirU(nome, sobrenome, username, email, senha, genero, nascimento) {
