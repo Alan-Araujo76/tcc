@@ -41,7 +41,7 @@ export default function Carousel(){
     }
 
     async function Listar(){
-        let r = await api.ListarF()
+        let r = await api.ListarCarousel()
         setFilme(r)
     }
 
