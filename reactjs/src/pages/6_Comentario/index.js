@@ -21,7 +21,11 @@ export default function Comentarios(props) {
     }
 
     const Remove = async () => {
+<<<<<<< HEAD
         const r = await api.RemoverC(); console.log(r);
+=======
+        const r = await api.RemoverC();
+>>>>>>> d5141b9268562bab71b89312a260d333208f1af7
         toast.dark('🗑️ Filme Removido!');
         ListarU();
     }
@@ -59,4 +63,8 @@ export default function Comentarios(props) {
             <Rodape />
         </Container>
     )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d5141b9268562bab71b89312a260d333208f1af7

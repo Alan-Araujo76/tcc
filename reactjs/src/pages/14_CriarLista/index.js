@@ -13,10 +13,11 @@ import Api from '../../service/api';
 const api = new Api();
 
 export default function CriarLista() {
-    const [ setFilme] = useState([]);
-    const [ setListas] = useState([]);
     const [lista, setLista] = useState('');
     const [descricao, setDescricao] = useState('');
+    const [filme, setFilme] = useState([]);
+    const [listas, setListas] = useState([]);
+>>>>>>> d5141b9268562bab71b89312a260d333208f1af7
 
     async function listar() {
         let r = await api.ListarLis();
