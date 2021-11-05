@@ -1,12 +1,22 @@
 import Axios from 'axios';
 const api = Axios.create({
-    baseURL: ('https://mw-heroku.herokuapp.com')
+    baseURL: ('http://localhost:3030')
 })
 
 
 
 export default class Api {
 
+
+    async ListarBox() {
+        let r = await api.get('/f');
+        return r.data;
+    }
+
+    async ListarCarousel() {
+        let r = await api.get('/carousel');
+        return r.data;
+    }
 
     async Logar(email, senha) {
         let r = await api.post('/login/login', {email, senha});
@@ -18,14 +28,6 @@ export default class Api {
         return r.data;
     }
 
-    async ListarBox() {
-        let r = await api.get('/filme/boxfilme');
-        return r.data;
-    }
-    async ListarCarousel() {
-        let r = await api.get('/filme/carousel');
-        return r.data;
-    }
     async InserirF(nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor) {
         let r = await api.post('/filme', { nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor });
         return r.data;
