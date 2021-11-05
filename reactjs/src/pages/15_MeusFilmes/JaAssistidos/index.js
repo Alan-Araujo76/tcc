@@ -33,7 +33,7 @@ export default function FilmesGostos(props) {
     const [ ordenacao, setOrdanacao ] = useState('A - Z')
     const navigation = useHistory();
 
-    function Comprar() {
+    function Navegação() {
         let ler = Cookies.get('/filmes');
 
         ler = ler !== undefined
@@ -125,7 +125,7 @@ export default function FilmesGostos(props) {
                                     <div className="sub-m"><b>Diretor:</b> {item.diretor}</div>
                                     <div className="sub-m"><b>Descrição:</b> { item.descricao != null && item.descricao >= 105 ? item.descricao.substr(0, 105) + '...' : item.descricao }</div>
                                     <div className="sub2-m"><b>Plataformas:</b> {item.plataforma}</div>
-                                    <div className="botao"><button onClick={Comprar}>Ver mais</button></div>
+                                    <div className="botao"><button onClick={Navegação}>Ver mais</button></div>
                                 </div>
                             </div>
                         </Modal>

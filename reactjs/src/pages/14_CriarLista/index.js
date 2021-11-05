@@ -13,14 +13,8 @@ import Api from '../../service/api';
 const api = new Api();
 
 export default function CriarLista() {
-<<<<<<< HEAD
-    const [lista, setLista] = useState('');
-    const [descricao, setDescricao] = useState('');
-
-=======
-
-    const [filme, setFilme] = useState([]);
-    const [listas, setListas] = useState([]);
+    const [ setFilme] = useState([]);
+    const [ setListas] = useState([]);
     const [lista, setLista] = useState('');
     const [descricao, setDescricao] = useState('');
 
@@ -34,7 +28,6 @@ export default function CriarLista() {
         setFilme(r);
     }
 
->>>>>>> 964f1b1927e6299aa6655e093049c5af6d256a27
     async function inserirLista() {
         if(lista && descricao) {
             let r = await api.InserirLis(lista, descricao);

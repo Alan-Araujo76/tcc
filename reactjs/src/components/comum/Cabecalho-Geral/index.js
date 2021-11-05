@@ -8,7 +8,7 @@ import { Container } from "./styled"
 
 
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 import Api from '../../../service/api';
@@ -23,6 +23,10 @@ export default function Cabecalho() {
         console.log(r);
         setUsuario(r);
     }
+
+    useEffect(() => {
+        Listar();
+    }, []);
 
     return(
         <Container>

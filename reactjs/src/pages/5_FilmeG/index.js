@@ -19,13 +19,10 @@ import Api from '../../service/api';
 const api = new Api();
 
 export default function DetalhesFilme(props) {
-    const [ filmes, setFilmes ] = useState(props.location);
-    console.log(filmes)
-
+    const [ filmes, setFilmes ] = useState(props.location.state);
 
     async function Listar() {
         let r = await api.ListarF();
-        console.log(r)
         setFilmes(r);
     }
 

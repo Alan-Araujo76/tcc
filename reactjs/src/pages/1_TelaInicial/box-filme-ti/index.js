@@ -1,7 +1,3 @@
-<<<<<<< HEAD:reactjs/src/pages/tela inicial/box-filme-ti/index.js
-=======
-
->>>>>>> 964f1b1927e6299aa6655e093049c5af6d256a27:reactjs/src/pages/1_TelaInicial/box-filme-ti/index.js
 import play from '../../../assets/img/play.png';
 import {Conteiner} from './styled'
 import {useState, useEffect} from 'react'
@@ -18,9 +14,9 @@ export default function BoxFilme(){
         setFilme(r)
     }
 
-    async function verMais() {
+    //async function verMais() {
         //
-    }
+    //}
 
     useEffect(() => {
         Listar();
