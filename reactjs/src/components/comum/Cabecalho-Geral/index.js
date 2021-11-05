@@ -15,15 +15,15 @@ export default function Cabecalho() {
     return(
         <Container>
             <div className="logo">
-                <Link to="telainicial"><span style={{fontweight: "none"}}>Movies</span><span style={{color: "#FF005C", fontweight: "bolder"}}> World</span></Link>
+                <Link to="/"><span style={{fontweight: "none"}}>Movies</span><span style={{color: "#FF005C", fontweight: "bolder"}}> World</span></Link>
             </div>
             
                 <div className="parte2">
                     <div className="usuario">
                             <Menu/>
                     </div>  
-                    <div className="tr"><Link to="meusfilmes">Meus filmes</Link></div>
-                    <div className="sair"><Link to="listasgc"> Minhas listas </Link></div>
+                    <div className="tr"><Link to="/meusfilmes">Meus filmes</Link></div>
+                    <div className="sair"><Link to="/listasgc"> Minhas listas </Link></div>
                     <div className="barra-pesq">
                         <input type="text"/>
                         <button><img src={Lupa} alt="" /></button>
