@@ -2,8 +2,12 @@ import seta from '../../../assets/img/seta.png'
 import { useEffect, useState } from 'react'
 import { Container} from './styled';
 
+import Api from '../../../1_service/api';
+const api = new Api();
+
 export default function Carousel(){
-    const [filme,setFilme] = useState([]);
+    const [filme, setFilme] = useState([]);
+
 
     let animando = false;
     function next() {
@@ -36,26 +40,13 @@ export default function Carousel(){
         window.setTimeout(() => { animando = false; }, 1000);
     }
 
-    function App(){
-        const r = [
-            {
-                imagem: "https://br.web.img3.acsta.net/newsv7/21/09/04/16/34/5699718.jpg"
-            },
-            {
-                imagem: "https://multiversomais.com/wp-content/uploads/2021/05/MK.jpg"
-            },
-            {
-                imagem: "https://www.gaz.com.br/packages/uploads/2021/08/o-esquadrao-suicida-2-1.jpg"
-            },
-            {
-                imagem: "https://eagoracast.com/wp-content/uploads/2021/07/maligna1-capa.png"
-            }
-        ]
-         setFilme(r);
+    async function Listar(){
+        let r = await api.ListarCarrousel()
+        setFilme(r)
     }
 
     useEffect(() =>{
-        App()
+        Listar()
     },[])
 
     return(
@@ -66,7 +57,7 @@ export default function Carousel(){
                 </button>
                 <div className="carousel-item">
                     {filme.map((item,i) =>
-                        <img key={i} src={item.imagem} alt="" />
+                        <img key={i} src={item.img_maior} alt="" />
                     )}
                 </div>
                 <button className="setaDireita" onClick={next}>

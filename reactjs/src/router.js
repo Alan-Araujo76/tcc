@@ -32,7 +32,7 @@ import InserirF from './pages/Adm_InserirF';
 
 
 //Tela Inicial
-import TelaInicial from './pages/tela inicial';
+import TelaInicial from './pages/1_TelaInicial';
 
 
 

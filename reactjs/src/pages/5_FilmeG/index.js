@@ -25,6 +25,7 @@ export default function DetalhesFilme(props) {
 
     async function Listar() {
         let r = await api.ListarF();
+        console.log(r)
         setFilmes(r);
     }
 

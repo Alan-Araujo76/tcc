@@ -2,7 +2,10 @@ import { Geral } from "./styled"
 import LinhaSep from '../../../assets/img/linha-comentario.png';
 import Coracao from '../../../assets/img/coracao.png';
 import UsuSemFoto from '../../../assets/img/usu-semfoto.png'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 964f1b1927e6299aa6655e093049c5af6d256a27
 
 export default function ComenC(props) {
     return(
