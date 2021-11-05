@@ -1,6 +1,6 @@
 import { Container } from './styled.js';
 
-import Cabecalho from '../../components/comum/cabecalho'
+import Cabecalho from '../../components/comum/Cabecalho-Geral'
 import TituloC from '../../components/comum/titulo'
 
 import Img1 from '../../assets/img/img_pp1.png'

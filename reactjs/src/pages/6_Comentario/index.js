@@ -1,5 +1,5 @@
-import Cabecalho from '../../components/comum/cabecalho';
-import Rodape from '../../components/comum/rodapê';
+import Cabecalho from '../../components/comum/Cabecalho-Geral';
+import Rodape from '../../components/comum/Rodape-Geral';
 import Conteudo from './conteudo';
 
 import { Container, PartePrin } from './styled';
@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Api from '../../1_service/api';
+import Api from '../../service/api';
 const api = new Api();
 
 export default function Comentarios(props) {
@@ -22,8 +22,8 @@ export default function Comentarios(props) {
 
     const Remove = async (id) => {
         const r = await api.RemoverC(id);
+        console.log(r);
         toast.dark('🗑️ Filme Removido!');
-        
         ListarU();
     }
 
@@ -34,6 +34,7 @@ export default function Comentarios(props) {
 
     return(
         <Container>
+            <ToastContainer />
             <Cabecalho/>
             <PartePrin>
                 <div className="titulo">Comentários:</div>

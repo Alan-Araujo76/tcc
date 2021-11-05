@@ -1,12 +1,29 @@
 import FotoUsu from '../../../assets/img/foto.png';
 import Lupa from '../../../assets/img/lupa.png';
 import Seta from '../../../assets/img/seta-baixo.png';
-import Menu from '../menu';
+import Menu from '../../styled/Menu-Geral';
+
 
 import { Container } from "./styled"
+
+
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+
+
+import Api from '../../../service/api';
+const api = new Api();
+
 
 export default function Cabecalho() {
+    const [ usuario, setUsuario ] = useState([]);
+
+    async function Listar() {
+        let r = await api.ListarU();
+        console.log(r);
+        setUsuario(r);
+    }
+
     return(
         <Container>
             <div className="logo">

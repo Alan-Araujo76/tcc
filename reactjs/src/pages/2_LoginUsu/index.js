@@ -10,11 +10,9 @@ import { useState } from 'react';
 import { Container, Parte2 } from './style'
 
 import { Link, useHistory } from 'react-router-dom';
-import { useRef } from 'react';
-import Cookies from 'js-cookie'
 
-import Api from '../../1_service/api';
-const api = new Api();
+//import Api from '../../service/api';
+//const api = new Api();
 
 export default function Login(props) {
     const [email, setEmail] = useState('');
@@ -27,30 +25,16 @@ export default function Login(props) {
         console.log(senha);
         const r = await axios.post(`http://localhost:3030/login/login`, { email: email, senha: senha });
         console.log(r);
-        if (r.data.status === "OK" || r.data.status === 200) {
-            nav.push('/telainicial');
+        if (r.data.status === 'ok') {
+            nav.push('/');
         } else {
-            alert(r.data.mensagem);
+            toast(r.data.mensagem);
         }
     } 
 
-
-    {/*const logar = async () => {
-        console.log(email);
-        console.log(senha);
-
-        let r = await api.Logar(email, senha);
-        console.log(r);
-        if(r.erro) {
-            toast.error(`${r.erro}`)
-        } else {
-            navigation.push('/telainicial');
-        }
-
-    }*/}
-
     return(
         <Container>
+            <ToastContainer />
             <LogoeBarra />
 
             <Parte2>

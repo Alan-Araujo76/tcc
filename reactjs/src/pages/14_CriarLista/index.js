@@ -1,27 +1,20 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Cabecalho from '../../components/comum/cabecalho'
-import Rodape from '../../components/comum/rodapê'
+import Cabecalho from '../../components/comum/Cabecalho-Geral'
+import Rodape from '../../components/comum/Rodape-Geral'
 
 import Copiar from '../../assets/img/copiar.png'
 
 import { Container } from './styled';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-import Api from '../../1_service/api';
+import Api from '../../service/api';
 const api = new Api();
 
 export default function CriarLista() {
-
-    const [listas, setListas] = useState([]);
     const [lista, setLista] = useState('');
     const [descricao, setDescricao] = useState('');
-
-    async function listar() {
-        let r = await api.ListarLis();
-        setListas(r);
-    }
 
     async function inserirLista() {
         if(lista && descricao) {
@@ -37,18 +30,7 @@ export default function CriarLista() {
             else 
                 toast.dark('Lista alterada!');
         }
-
-        listar();
     }
-
-    async function editarLista(item) {
-        setLista(item.nm_lista);
-        setDescricao(item.ds_descricao);
-    }
-
-    useEffect(() => {
-        listar();
-    }, [])
 
     return(
         <Container>

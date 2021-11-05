@@ -3,15 +3,15 @@ import BoxFilme from './box-filme-ti/index';
 import 'react-multi-carousel/lib/styles.css';
 
 
-import Cabecalho from '../../components/comum/cabecalho';
-import Rodape from '../../components/comum/rodapê';
+import Cabecalho from '../../components/comum/Cabecalho-Geral';
+import Rodape from '../../components/comum/Rodape-Geral';
 
 //import ComentariosTi from './comentario-box-ti/index';
 import ListaTi from './listas-box-ti/index';
 import Carousel from './carousel-ti';
 
-import Api from '../../1_service/api';
-const api = new Api();
+//import Api from '../../service/api';
+//const api = new Api();
 
 export default function TelaInicial(){
 

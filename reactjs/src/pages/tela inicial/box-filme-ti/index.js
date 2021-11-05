@@ -1,9 +1,8 @@
-import capaFilme from '../../../assets/img/capa-filme.png';
 import play from '../../../assets/img/play.png';
 import {Conteiner} from './styled'
 import {useState, useEffect} from 'react'
 
-import Api from '../../../1_service/api';
+import Api from '../../../service/api';
 const api = new Api();
 
 export default function BoxFilme(){

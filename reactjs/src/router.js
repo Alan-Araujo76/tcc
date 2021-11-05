@@ -40,9 +40,9 @@ export default function Routes() {
     return (
         <BrowserRouter>
             <Switch> 
-                <Route path="/" exact={true} component={Direcionamento} />
+                <Route path="/dire" exact={true} component={Direcionamento} />
 
-                <Route path="/telainicial" exact={true} component={TelaInicial} />
+                <Route path="/" exact={true} component={TelaInicial} />
 
                 <Route path="/login" exact={true} component={LoginPrin} />
                 <Route path="/cadastro" exact={true} component={Cadastrar} />

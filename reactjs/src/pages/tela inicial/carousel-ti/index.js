@@ -1,5 +1,5 @@
 import seta from '../../../assets/img/seta.png'
-import { useEffect, useState , useRef} from 'react'
+import { useEffect, useState } from 'react'
 import { Container} from './styled';
 
 export default function Carousel(){

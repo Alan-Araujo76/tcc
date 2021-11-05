@@ -11,14 +11,39 @@ import {
 } from '@szhsin/react-menu';
 import '@szhsin/react-menu/dist/index.css';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
+import Api from '../../../service/api';
+const api = new Api();
 
 export default function App() {
+    const [ usuario, setUsuario ] = useState([]);
+
+    async function Listar() {
+        let r = await api.ListarU();
+        console.log(r);
+        setUsuario(r);
+    }
+
+    useEffect(() => {
+      Listar();
+    }, []);
+
   return (
     <Contaier>
+    {usuario.map(item => 
+      
+    {
     <Menu style={{display: 'flex', flexDirection: 'row', backgroundColor: 'transparent', }} menuButton={<MenuButton>
-      <div className="foto"><img src={FotoUsu} alt="" /></div>
-      <div className="nome-usu">gabrielmelo</div>
+      <div className="foto">
+        { item.ds_foto == null
+            ? <img src={FotoUsu} alt="" />
+
+            : <img src={item.ds_foto} alt="" />
+        }
+      </div>
+
+      <div className="nome-usu">{item.nm_username}</div>
       <div className="seta"><img src={Seta} alt="" /></div>
     </MenuButton>}>
 
@@ -29,6 +54,8 @@ export default function App() {
       <MenuItem>Trocar de conta</MenuItem>
       <MenuItem>Sair</MenuItem>
     </Menu>
+    }
+    )}
     </Contaier>
   );
 }

@@ -2,19 +2,35 @@ import Contrato from '../../assets/img/contrato.png';
 import LinhaSep from '../../assets/img/linha-sep.png';
 import LinhaSep1 from '../../assets/img/linha-sep1.png';
 import SepFilmes from '../../assets/img/sep-filmes.png';
-import FotoUsu from '../../assets/img/foto.png'
 import Capa from '../../assets/img/capa-filme.png'
 import Play from '../../assets/img/play.png'
+import UsuSemFoto from '../../assets/img/usu-semfoto.png'
 
 import Estrela from '../../assets/img/estrelas.png'
 
-import Rodape from '../../components/comum/rodapê';
-import Cabecalho from '../../components/comum/cabecalho'
+import Rodape from '../../components/comum/Rodape-Geral';
+import Cabecalho from '../../components/comum/Cabecalho-Geral'
 import BotaoMais from '../../components/comum/botao-mais';
 
 import { C, Container, Parte1, Parte2 } from './styled'
+import { useEffect, useState } from 'react';
+
+import Api from '../../service/api';
+const api = new Api();
 
 export default function Perfil() {
+    const [ usuario, setUsuario ] = useState([]);
+
+    async function Listar() {
+        let r = await api.ListarU();
+        setUsuario(r);
+        console.log(r);
+    }
+
+    useEffect(() => {
+      Listar();
+    }, []);
+
     return(
       <C>       
         <Cabecalho />
@@ -30,12 +46,21 @@ export default function Perfil() {
                 </div>
 
                 <div className="linha-sep-p"><img src={LinhaSep} alt="" /></div>
-                
+
+            {usuario.map(item =>   
             <div className="infos">
                 <div className="info-usu">
-                    <div className="foto-pessoa"><img src={FotoUsu} alt="" /></div>
+                    <div className="foto-pessoa">
+                      { item.ds_foto == null
+                          ? <img src={UsuSemFoto} alt="" />
+
+                          : <img src={item.ds_foto} alt="" />
+                      }
+                    </div>
+
+
                     <div className="nm-bt">
-                    <div className="txt-usu">Nome Usuário</div>
+                    <div className="txt-usu">{item.nm_username}</div>
                         <div className="bt-1"><button>Editar perfil</button></div>
                     </div>
                 </div>
@@ -59,11 +84,13 @@ export default function Perfil() {
                         <div className="img-fil"><img src={SepFilmes} alt="" /></div>
                     </div>
                 </div>
+                )}
 
                 <div className="bio">
                     <div className="titulo-b">Bio:</div>
                     <div className="bloco-b"></div>
                 </div>
+            
                 <div className="linha-sep1"><img src={LinhaSep1} alt="" /></div>
             </Parte1>
 

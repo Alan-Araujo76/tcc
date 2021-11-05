@@ -1,17 +1,15 @@
 import LinhaSep from '../../assets/img/linha-sep-tcc.png'
 import  LogoeBarra from '../../components/comum/tituloEbarra-login'
 import BotaoL from '../../components/styled/botoes-rosa'
-import input from '../../components/styled/inputs-login/cadastrar'
 import { Container, Parte2 } from './style'
 
-import Cookies from 'js-cookie'
 import { useHistory } from 'react-router-dom';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Api from '../../1_service/api';
+import Api from '../../service/api';
 const api = new Api();
 
 
@@ -25,7 +23,6 @@ export default function Cadastro() {
 
 
     const navigation = useHistory();
-    const loading = useRef();
 
     const logar = async () => {
         let r = await api.InserirU(nome, sobrenome, username, email, senha, nascimento);
@@ -39,6 +36,7 @@ export default function Cadastro() {
 
     return(
         <Container>
+            <ToastContainer />
             <LogoeBarra />
 
             <Parte2>
@@ -58,7 +56,7 @@ export default function Cadastro() {
                             </div>
                         </div>
 
-                        <div className="sep"> 
+                        <div className="sep-d"> 
                             <div className="inp">
                                 <div className="txt-comp">Username:</div>  
                                 <input nome="Username:" placeholder="Digite seu username"  value={username} onChange={e => setUsername(e.target.value)}/>

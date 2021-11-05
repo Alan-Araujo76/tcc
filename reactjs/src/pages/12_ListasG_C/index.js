@@ -1,8 +1,7 @@
-import Cabecalho from '../../components/comum/cabecalho'
-import Rodape from '../../components/comum/rodapê'
-import ProxPag from '../../components/comum/botao-prox-pag'
+import Cabecalho from '../../components/comum/Cabecalho-Geral'
+import Rodape from '../../components/comum/Rodape-Geral'
+import ProxPag from '../../components/comum/ProxPag-Button'
 import Box1 from '../../components/comum/box1-lis'
-import Box2 from '../../components/comum/box2-lis'
 
 import LinhaSep from '../../assets/img/linhasep-listass.png';
 
@@ -34,9 +33,6 @@ export default function FilmesGostos() {
                 <div className="filmes">
                     <Box1 />
 
-                    <Box2 />
-                    <Box2 />
-                    <Box2 />
                 </div>
 
                 <ProxPag />

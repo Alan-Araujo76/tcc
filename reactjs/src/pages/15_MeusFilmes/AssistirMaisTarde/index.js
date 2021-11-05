@@ -1,29 +1,32 @@
+////////////////////////// COMPONENTES //////////////////////////
+import Cabecalho from '../../../components/comum/Cabecalho-Geral'
+import Rodape from '../../../components/comum/Rodape-Geral'
+import ProxPag from '../../../components/comum/ProxPag-Button'
+import TituloC from '../../../components/comum/titulo'
+import Modal from '../../../components/comum/Modal-Filmes'
+import {Loader} from '../../../components/comum/Loader-Filmes'
+
+
+////////////////////////// IMAGENS //////////////////////////
+import Removerb from '../../../assets/img/Xremover.png';
+import LinhaSep from '../../../assets/img/linhasep-listass.png';
+
+
+////////////////////////// STYLED //////////////////////////
+import { Container, BlocoC } from './styled.js';
+
+
+////////////////////////// OUTROS //////////////////////////
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Cabecalho from '../../../components/comum/cabecalho'
-import Rodape from '../../../components/comum/rodapê'
-import ProxPag from '../../../components/comum/botao-prox-pag'
-import TituloC from '../../../components/comum/titulo'
-import Removerb from '../../../assets/img/Xremover.png';
-
-import Modal from '../../../components/comum/modal'
-
-import LinhaSep from '../../../assets/img/linhasep-listass.png';
 import { Link } from 'react-router-dom';
-
-import { Container, BlocoC } from './styled.js';
-
-import {Loader} from '../../../components/comum/loader'
-
 import { useState, useEffect } from 'react'
-import Cookies from 'js-cookie'
-import { useHistory } from 'react-router-dom';
 
-import Api from '../../../1_service/api';
+
+////////////////////////// API //////////////////////////
+import Api from '../../../service/api';
 const api = new Api();
-
-//import axios from 'axios';
 
 
 export default function FilmesGostos(props) {
@@ -31,6 +34,7 @@ export default function FilmesGostos(props) {
     const [ loading, setLoading ] = useState(true);
     const [ exibirModal, setExibirModal ] = useState({show: false})
     const [ ordenacao, setOrdanacao ] = useState('A - Z')
+    
     async function Listar() {
         setLoading(true);
         
@@ -43,6 +47,7 @@ export default function FilmesGostos(props) {
 
     const Remove = async (id) => {
         const r = await api.RemoverF(id);
+        console.log(r);
         toast.dark('🗑️ Filme Removido!');
         
         Listar();
@@ -50,8 +55,9 @@ export default function FilmesGostos(props) {
 
     useEffect(() => {
         Listar();
-      }, [ordenacao]);
+    }, [ordenacao]);
 
+    
 
     return(
         <Container>
@@ -90,8 +96,10 @@ export default function FilmesGostos(props) {
             </div>
 
             <div className="filmes">
-                
-                    {filme.map(item => 
+                {loading && <Loader />}
+
+                { !loading &&
+                    filme.map(item => 
                         <BlocoC>
                         <Modal options={exibirModal}>
                             <div className="geral-m">

@@ -16,7 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { confirmAlert } from 'react-confirm-alert'; 
 import 'react-confirm-alert/src/react-confirm-alert.css';
 
-import Api from '../../1_service/api';
+import Api from '../../service/api';
 const api = new Api();
 
 
@@ -106,6 +106,7 @@ export default function CadastrarFilme() {
           label: 'Sim',
           onClick: async () => {
               const r = await api.RemoverF(idAlterando);
+              console.log(r);
               toast.dark('🗑️ Filme Removido!');
               Listar();
           }

@@ -65,14 +65,3 @@ export default function Modal(props) {
 
 
 
-{/*import { Container } from "./styled";
-
-export default function Index(props) {
-    return(
-    <Container show={props.show}>
-        <div>
-           {props.children}
-        </div>
-    </Container>
-    )
-} */}

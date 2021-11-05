@@ -2,14 +2,12 @@ import  LogoeBarra from '../../components/comum/tituloEbarra-login'
 
 import axios from 'axios';
 
-import Modal from '../../components/comum/modal'
 import { Container, Parte2 } from './style'
 import BotaoL from '../../components/styled/botoes-rosa'
 import { useState } from 'react';
 import { useHistory } from 'react-router';
 
 export default function Esqueci() {
-    const [exibirModal, setExibirModal] = useState({show: false});
     const [ email, setEmail] = useState('');
 
     const nav = useHistory();

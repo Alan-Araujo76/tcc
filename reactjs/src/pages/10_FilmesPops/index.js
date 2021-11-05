@@ -1,8 +1,8 @@
-import Cabecalho from '../../components/comum/cabecalho'
-import Rodape from '../../components/comum/rodapê'
-import ProxPag from '../../components/comum/botao-prox-pag'
+import Cabecalho from '../../components/comum/Cabecalho-Geral'
+import Rodape from '../../components/comum/Rodape-Geral'
+import ProxPag from '../../components/comum/ProxPag-Button'
 import TituloC from '../../components/comum/titulo'
-import Modal from '../../components/comum/modal'
+import Modal from '../../components/comum/Modal-Filmes'
 
 import eu from '../../assets/img/eu.jpg';
 
@@ -15,7 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom';
 
-import Api from '../../1_service/api';
+import Api from '../../service/api';
 const api = new Api();
 
 export default function FilmesGostos(props) {
@@ -78,7 +78,7 @@ export default function FilmesGostos(props) {
                     </Modal>
                     
                     <div className="filme">
-                        {Array.length != 0
+                        {Array.length !== 0
                             ? <div onClick={() => setExibirModal({show: true})}>
                                 <div className="img"><img src={item.imagem} alt="" /></div> 
                                 <div className="nome" title={ item.nome != null && item.nome.length > 25? item.nome : null }>{ item.nome != null && item.nome.length >= 25 ?item.nome.substr(0, 25) + '...' : item.nome }</div>
