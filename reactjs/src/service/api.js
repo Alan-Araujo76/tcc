@@ -24,7 +24,7 @@ export default class Api {
     }
 
     async ListarF() {
-        let r = await api.get('/filme');
+        let r = await api.get('/filme/listar');
         return r.data;
     }
 
@@ -44,7 +44,7 @@ export default class Api {
     }
 
     async ListarFG(){
-        let r = await api.get('/filmesgosto');
+        let r = await api.get('/filmeUsu/filmesgosto');
         return r.data;
     }
 
@@ -54,7 +54,7 @@ export default class Api {
     }
 
     async ListarFP(){
-        let r = await api.get('/filmespops');
+        let r = await api.get('/filusu/filmespops');
         return r.data;
     }
     
@@ -62,6 +62,13 @@ export default class Api {
         let r = await api.get('/usuario/listar');
         return r.data;
     }
+
+    async ListarM(id){
+        let r = await api.get('/usuario/listarMenu' + id);
+        return r.data;
+    }
+
+
     async InserirU(nome, sobrenome, username, email, senha, genero, nascimento) {
         let r = await api.post('/usuario/cadastrar', { nome, sobrenome, username, email, senha, genero, nascimento});
         return r.data;

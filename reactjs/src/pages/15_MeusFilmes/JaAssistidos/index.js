@@ -33,43 +33,23 @@ export default function FilmesGostos(props) {
     const [ ordenacao, setOrdanacao ] = useState('A - Z')
     const navigation = useHistory();
 
-    function Navegação() {
-        let ler = Cookies.get('/filmes');
-
-        ler = ler !== undefined
-            ? JSON.parse(ler)
-            : [];
-
-        if(ler.some(item => item.id === filme.id) === false) 
-            ler.push({...filme, qtd: 1 });
-        
-
-        Cookies.set('filmes', JSON.stringify(ler))
-
-        navigation.push('/detfilmes');
-    }
-
+    
 
     async function Listar() {
-        setLoading(true);
-        
-        let r = await api.ListarF(ordenacao);
+        let r = await api.ListarF();
         setFilme(r);
-
-        setLoading(false);
     }
 
     const Remove = async (id) => {
         const r = await api.RemoverF(id);
-        console.log(r);
         toast.dark('🗑️ Filme Removido!');
         
         Listar();
     }
 
     useEffect(() => {
-        Listar(ordenacao);
-      }, );
+        Listar();
+      }, [ordenacao]);
 
 
     return(
@@ -109,10 +89,7 @@ export default function FilmesGostos(props) {
             </div>
 
             <div className="filmes">
-                {loading && <Loader />}
-
-                { !loading &&
-                    filme.map(item => 
+                { filme.map(item => 
                         <BlocoC>
                         <Modal options={exibirModal}>
                             <div className="geral-m">
@@ -125,7 +102,9 @@ export default function FilmesGostos(props) {
                                     <div className="sub-m"><b>Diretor:</b> {item.diretor}</div>
                                     <div className="sub-m"><b>Descrição:</b> { item.descricao != null && item.descricao >= 105 ? item.descricao.substr(0, 105) + '...' : item.descricao }</div>
                                     <div className="sub2-m"><b>Plataformas:</b> {item.plataforma}</div>
-                                    <div className="botao"><button onClick={Navegação}>Ver mais</button></div>
+                                    <Link to={{ pathname: '/detfilmes', state: props.item}}>
+                                        <div className="botao"><button>Ver mais</button></div>
+                                    </Link>
                                 </div>
                             </div>
                         </Modal>

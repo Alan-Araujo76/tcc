@@ -6,23 +6,35 @@ import Modal from '../../components/comum/Modal-Filmes'
 import { Container, Parte2 } from './style'
 import BotaoL from '../../components/styled/botoes-rosa'
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 
-export default function Esqueci() {
+export default function Esqueci(props) {
     const [exibirModal, setExibirModal] = useState({show: false});
     const [ email, setEmail] = useState('');
+    const [ codigo, setCodigo] = useState();
 
-    async function Recuperar() {
-        const r = await axios.post(`http://localhost:3030/login/esqueci`, { email: email  }); console.log(email);
-        console.log(r.data);
+
+    async function EnvEmail() {
+        const r = await axios.post(`http://localhost:3030/login/esqueci`, { email: email  }); 
         if (r.data.status === 'Código Enviado') { 
             setExibirModal({show: true});
             toast('O código foi enviado no seu email.')
         } else {
             alert(r.data.status);
         }
-        // console.log(r)
     }
+
+    const nav = useHistory();
+
+    async function validarCodigo() {
+        const r = await axios.post(`http://localhost:3030/login/validarCodigo`, { email: email, codigo: codigo  }); console.log(codigo);console.log(email);
+        if (r.data.status === 'Código validado.') {
+          nav.push('/recuperacao', { email: email, codigo: codigo });
+        } else {
+          toast(r.data.mensagem);
+        } 
+      }
 
     return(
         <Container>
@@ -32,8 +44,8 @@ export default function Esqueci() {
             <Modal options={exibirModal}>
                 <div className="geral-m">
                     <div className="txt-m">Insira o código enviado em seu email</div>
-                    <div classNama="inp-modal"><input style={{width: '100%', height: '3.5em', padding: '10px'}} placeholder="Digite o código de recuperação"/><div className="r-m">Reenvie o código</div></div>
-                    <div className="bt-m"><BotaoL nome="Confirmar"/></div>
+                    <div classNama="inp-modal"><input style={{width: '100%', height: '3.5em', padding: '10px'}} placeholder="Digite o código de recuperação" type={Number} value={codigo} onChange={e => setCodigo(e.target.value)}/><div className="r-m">Reenvie o código</div></div>
+                    <div className="bt-m"><button onClick={validarCodigo}><BotaoL nome="Confirmar"/></button></div>
                 </div>
             </Modal>
 
@@ -48,7 +60,7 @@ export default function Esqueci() {
                     <div className="input"><input style={{width: '30em', height: '3.5em', padding: '8px'}} type={Number} placeholder="Digite seu e-mail"  value={email} onChange={e => setEmail(e.target.value)} /></div>
                 </div>
                 <div className="botao" >
-                    <button onClick={Recuperar}><BotaoL nome="Enviar"/></button>
+                    <button onClick={EnvEmail} style={{backgroundColor: 'transparent', border: 'transparent'}}><BotaoL nome="Enviar"/></button>
                 </div>
             </Parte2>
         </Container>

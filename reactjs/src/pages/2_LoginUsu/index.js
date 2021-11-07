@@ -21,16 +21,13 @@ export default function Login(props) {
     const nav = useHistory();
 
     async function logar() {
-        console.log(email);
-        console.log(senha);
         const r = await axios.post(`http://localhost:3030/login/login`, { email: email, senha: senha });
-        console.log(r);
         if (r.data.status === 'ok') {
             nav.push('/');
         } else {
             toast(r.data.mensagem);
         }
-    } 
+    }
 
     return(
         <Container>

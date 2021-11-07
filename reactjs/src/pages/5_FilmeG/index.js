@@ -20,13 +20,15 @@ const api = new Api();
 
 export default function DetalhesFilme(props) {
     const [ filmes, setFilmes ] = useState(props.location.state);
-
+    console.log(filmes);
+    
     async function Listar() {
         let r = await api.ListarF();
+        console.log(r);
         setFilmes(r);
     }
 
-    useEffect(() => {
+    useEffect(() => {  
         Listar();
     }, []);
 
@@ -72,9 +74,9 @@ export default function DetalhesFilme(props) {
                     <div className="sinopse">
                             <div className="sinopse_filme">{filmes.sinopse}</div>
                     </div>
-
-                            
-
+                          <Com />
+                          <Com />
+                          <Com />
                     </div>
                 
                     <div className="box">

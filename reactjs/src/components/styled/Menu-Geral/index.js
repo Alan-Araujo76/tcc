@@ -18,10 +18,9 @@ const api = new Api();
 
 export default function App() {
     const [ usuario, setUsuario ] = useState([]);
-
+    console.log(usuario)
     async function Listar() {
         let r = await api.ListarU();
-        console.log(r);
         setUsuario(r);
     }
 
@@ -31,18 +30,17 @@ export default function App() {
 
   return (
     <Contaier>
-    {usuario.map(item => 
-      
+
     <Menu style={{display: 'flex', flexDirection: 'row', backgroundColor: 'transparent', }} menuButton={<MenuButton>
       <div className="foto">
-        { item.ds_foto == null
+        { usuario.ds_foto == null
             ? <img src={FotoUsu} alt="" />
 
-            : <img src={item.ds_foto} alt="" />
+            : <img src={usuario.ds_foto} alt="" />
         }
       </div>
 
-      <div className="nome-usu">{item.nm_username}</div>
+      <div className="nome-usu">{usuario.nm_username}</div>
       <div className="seta"><img src={Seta} alt="" /></div>
     </MenuButton>}>
 
@@ -53,7 +51,7 @@ export default function App() {
       <MenuItem>Trocar de conta</MenuItem>
       <MenuItem>Sair</MenuItem>
     </Menu>
-    )}
+
     </Contaier>
   );
 }

@@ -35,27 +35,23 @@ export default function FilmesGostos(props) {
     const [ exibirModal, setExibirModal ] = useState({show: false})
     const [ ordenacao, setOrdanacao ] = useState('A - Z')
     
-    async function Listar() {
-        setLoading(true);
-        
-        let r = await api.ListarF(ordenacao);
-        setFilme(r);
-        console.log(r);
 
-        setLoading(false);
+    
+    async function Listar() {
+        let r = await api.ListarF();
+        setFilme(r);
     }
 
     const Remove = async (id) => {
         const r = await api.RemoverF(id);
-        console.log(r);
         toast.dark('🗑️ Filme Removido!');
         
         Listar();
     }
 
     useEffect(() => {
-        Listar(ordenacao);
-    }, );
+        Listar();
+    }, [ordenacao]);
 
     
 
@@ -96,10 +92,7 @@ export default function FilmesGostos(props) {
             </div>
 
             <div className="filmes">
-                {loading && <Loader />}
-
-                { !loading &&
-                    filme.map(item => 
+                {filme.map(item => 
                         <BlocoC>
                         <Modal options={exibirModal}>
                             <div className="geral-m">
@@ -112,20 +105,19 @@ export default function FilmesGostos(props) {
                                     <div className="sub-m"><b>Diretor:</b> {item.diretor}</div>
                                     <div className="sub-m"><b>Descrição:</b> { item.descricao != null && item.descricao >= 105 ? item.descricao.substr(0, 105) + '...' : item.descricao }</div>
                                     <div className="sub2-m"><b>Plataformas:</b> {item.plataforma}</div>
-                                    <Link to={{ pathname: '/detfilmes', state: props.item}}>
-                                        <div className="botao"><button>Ver mais</button></div>
-                                    </Link>
+                                    <div className="botao"><button>Ver mais</button></div>
                                 </div>
                             </div>
                         </Modal>
                        
                         <div className="filme">
                             <div>
+
                                <div className="remover" onClick={Remove}> <img src={Removerb} alt=""/> </div>
-                               <Link onClick={() => setExibirModal({show: true})} to={{state: props.item}}>
-                                <div className="img"><img src={item.img_menor} alt="" /></div> 
-                                <div className="nome" title={ item.nome != null && item.nome > 25? item.nome : null }>{ item.nome != null && item.nome >= 25 ? item.nome.substr(0, 25) + '...' : item.nome }</div>
-                               </Link>
+                                <Link to={{ pathname: '/detfilmes', state: item}}>
+                                    <div className="img"><img src={item.img_menor} alt="" /></div> 
+                                    <div className="nome" title={ item.nome != null && item.nome > 25? item.nome : null }>{ item.nome != null && item.nome >= 25 ? item.nome.substr(0, 25) + '...' : item.nome }</div>
+                                </Link>
                             </div>
                         </div>
                       </BlocoC>
@@ -140,6 +132,7 @@ export default function FilmesGostos(props) {
     )
 }
 
+//onClick={() => setExibirModal({show: true})}
 
 //'http://localhost:3030/filmesjassistidos?ordenacao=' + ordenacao
 // const resp = await axios.get('http://localhost:3030/filmesjassistidos?ordenacao=' + ordenacao) setOrdanacao([...resp.data])
