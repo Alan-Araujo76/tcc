@@ -21,6 +21,7 @@ import Cookies from 'js-cookie'
 import { useHistory } from 'react-router-dom';
 
 import Api from '../../../service/api';
+import axios from 'axios';
 const api = new Api();
 
 //import axios from 'axios';
@@ -31,13 +32,19 @@ export default function FilmesGostos(props) {
     const [ loading, setLoading ] = useState(true);
     const [ exibirModal, setExibirModal ] = useState({show: false})
     const [ ordenacao, setOrdanacao ] = useState('A - Z')
-    const navigation = useHistory();
-
-    
+    const [pagina, setPagina] = useState(1);
+    const [totalPaginas, setTotalPaginas] = useState(0);
+    console.log(filme);
 
     async function Listar() {
-        let r = await api.ListarF();
-        setFilme(r);
+        const resp = await axios.get('http://localhost:3030/filusu/ja/filmes?page=' + pagina);
+        console.log(resp);
+        setFilme([...resp.data.itens]);
+        setTotalPaginas(resp.data.totalPaginas);
+    }
+
+    function irPara(pagina) {
+        setPagina(pagina);
     }
 
     const Remove = async (id) => {
@@ -49,7 +56,7 @@ export default function FilmesGostos(props) {
 
     useEffect(() => {
         Listar();
-      }, [ordenacao]);
+      }, [ordenacao, pagina]);
 
 
     return(
@@ -120,7 +127,14 @@ export default function FilmesGostos(props) {
                     )}
             </div>
 
-            <ProxPag />
+            <div>
+                <ProxPag 
+                    totalPaginas={totalPaginas}
+                    pagina={pagina}
+                    onPageChange={irPara}
+                />
+            </div>
+                    
 
 
             <Rodape/>

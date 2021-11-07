@@ -26,20 +26,27 @@ import { useState, useEffect } from 'react'
 
 ////////////////////////// API //////////////////////////
 import Api from '../../../service/api';
+import axios from 'axios'
 const api = new Api();
 
 
 export default function FilmesGostos(props) {
     const [ filme, setFilme ] = useState([]);
-    const [ loading, setLoading ] = useState(true);
     const [ exibirModal, setExibirModal ] = useState({show: false})
     const [ ordenacao, setOrdanacao ] = useState('A - Z')
-    
+    const [ pagina, setPagina ] = useState(1);
+    const [ totalPaginas, setTotalPaginas ] = useState(0);
+    console.log(filme);
 
-    
     async function Listar() {
-        let r = await api.ListarF();
-        setFilme(r);
+        const resp = await axios.get('http://localhost:3030/filusu/ja/filmes?page=' + pagina);
+        console.log(resp);
+        setFilme([...resp.data.itens]);
+        setTotalPaginas(resp.data.totalPaginas);
+    }
+
+    function irPara(pagina) {
+        setPagina(pagina);
     }
 
     const Remove = async (id) => {
@@ -51,7 +58,7 @@ export default function FilmesGostos(props) {
 
     useEffect(() => {
         Listar();
-    }, [ordenacao]);
+    }, [ordenacao, pagina]);
 
     
 
@@ -97,7 +104,7 @@ export default function FilmesGostos(props) {
                         <Modal options={exibirModal}>
                             <div className="geral-m">
                                 <div className="p1-m">
-                                    <div className="img-m"><img src={ item.img_menor } alt="" /></div>
+                                    <div className="img-m"><img src={item.img_menor} alt="" /></div>
                                     <div className="nome-m" title={ item.nome != null && item.nome > 25? item.nome : null }>{ item.nome != null && item.nome >= 25 ? item.nome.substr(0, 25) + '..' : item.nome }</div>
                                 </div>
                                 <div className="sep"></div>
@@ -124,7 +131,13 @@ export default function FilmesGostos(props) {
                     )}
             </div>
 
-            <ProxPag />
+            <div>
+                <ProxPag 
+                    totalPaginas={totalPaginas}
+                    pagina={pagina}
+                    onPageChange={irPara}
+                />
+            </div>
 
 
             <Rodape/>

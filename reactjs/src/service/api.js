@@ -28,6 +28,11 @@ export default class Api {
         return r.data;
     }
 
+    async ListarFPG(page) {
+        let r = await api.get('/filusu/ja/filmes?page=' + page);
+        return r.data;
+    }
+
     async InserirF(nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor) {
         let r = await api.post('/filme', { nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor });
         return r.data;

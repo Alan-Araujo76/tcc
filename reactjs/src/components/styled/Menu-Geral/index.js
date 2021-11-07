@@ -13,19 +13,34 @@ import '@szhsin/react-menu/dist/index.css';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
-import Api from '../../../service/api';
-const api = new Api();
+import Cookies from 'js-cookie';
+import { useHistory } from 'react-router';
+
+//import Api from '../../../service/api';
+//const api = new Api();
+
+function lerUsuarioLogado(nav) {
+  let logado = Cookies.get('usuario-logado');
+  if(logado == null)
+      nav.push('/login');
+
+  let usuarioLogado = JSON.parse(logado);
+  return usuarioLogado;
+}
 
 export default function App() {
-    const [ usuario, setUsuario ] = useState([]);
-    console.log(usuario)
-    async function Listar() {
-        let r = await api.ListarU();
-        setUsuario(r);
+    const nav = useHistory(); 
+    let usuarioLog = lerUsuarioLogado(nav);
+    const [ usuario, setUsuario ] = useState(usuarioLog.data.usuario);
+    console.log(usuario);
+
+    const logoff = () => {
+      Cookies.remove('usuario-logado');
+      nav.push('/login');
     }
 
     useEffect(() => {
-      Listar();
+  
     }, []);
 
   return (
@@ -48,8 +63,8 @@ export default function App() {
       <MenuItem><Link to="/editperfil">Editar perfil</Link></MenuItem>
       <MenuItem><Link to="/meusfilmes/comfP">Filmes por gosto</Link></MenuItem>
       <MenuItem><img src={Br} alt="" /></MenuItem>
-      <MenuItem>Trocar de conta</MenuItem>
-      <MenuItem>Sair</MenuItem>
+      <MenuItem onClick={logoff}>Trocar de conta</MenuItem>
+      <MenuItem onClick={logoff}>Sair</MenuItem>
     </Menu>
 
     </Contaier>

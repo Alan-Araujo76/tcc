@@ -9,6 +9,8 @@ import BotaoL from '../../components/styled/botoes-rosa'
 import { useState } from 'react';
 import { Container, Parte2 } from './style'
 
+import  Cookies from 'js-cookie';
+
 import { Link, useHistory } from 'react-router-dom';
 
 //import Api from '../../service/api';
@@ -21,8 +23,9 @@ export default function Login(props) {
     const nav = useHistory();
 
     async function logar() {
-        const r = await axios.post(`http://localhost:3030/login/login`, { email: email, senha: senha });
+        const r = await axios.post(`http://localhost:3030/login/login`, { email: email, senha: senha }); console.log(r);
         if (r.data.status === 'ok') {
+            Cookies.set('usuario-logado', JSON.stringify(r));
             nav.push('/');
         } else {
             toast(r.data.mensagem);
