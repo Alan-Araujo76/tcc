@@ -28,7 +28,7 @@
          const r = await axios.post(`http:localhost:3030/login/login`, { email: email, senha: senha }); console.log(r);
          if (r.data.status === 'ok') {
              Cookies.set('usuario-logado', JSON.stringify(r));
-             nav.push('/');
+             nav.push('/telaini');
          } else {
              toast(r.data.mensagem);
          }

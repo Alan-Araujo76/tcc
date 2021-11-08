@@ -43,8 +43,8 @@ export default function Routes() {
                 {/* <Route path="/dire" exact={true} component={Direcionamento} /> */}
 
               
-                <Route path="/l" exact={true} component={LoginPrin} />
-                <Route path="/" exact={true} component={TelaInicial} />
+                <Route path="/" exact={true} component={LoginPrin} />
+                <Route path="/telaini" exact={true} component={TelaInicial} />
 
                 {/*   <Route path="/" exact={true} component={TelaInicial} />
                 <Route path="/cadastro" exact={true} component={Cadastrar} />
