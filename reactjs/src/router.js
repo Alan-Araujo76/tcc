@@ -42,7 +42,7 @@ export default function Routes() {
             <Switch> 
                 {/* <Route path="/dire" exact={true} component={Direcionamento} /> */}
 
-                <Route path="/" exact={true} component={LoginPrin} />
+                <Route path="/login" exact={true} component={LoginPrin} />
 
                 {/* <Route path="/login" exact={true} component={LoginPrin} />
                 <Route path="/cadastro" exact={true} component={Cadastrar} />
