@@ -16,6 +16,7 @@ import { C, Container, Parte1, Parte2 } from './styled'
 import { useEffect, useState } from 'react';
 
 import Api from '../../service/api';
+import { Link } from 'react-router-dom';
 const api = new Api();
 
 export default function Perfil(props) {
@@ -61,7 +62,9 @@ export default function Perfil(props) {
 
                     <div className="nm-bt">
                     <div className="txt-usu">{usu.nm_username}</div>
+                    <Link to={{ pathname: '/editperfil', state: usu}}>
                         <div className="bt-1"><button>Editar perfil</button></div>
+                    </Link>
                     </div>
                 </div>
                     <div className="info-fil">
