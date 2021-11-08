@@ -42,10 +42,10 @@ export default function Routes() {
             <Switch> 
                 {/* <Route path="/dire" exact={true} component={Direcionamento} /> */}
 
-                <Route path="/" exact={true} component={TelaInicial} />
-                <Route path="/login" exact={true} component={LoginPrin} />
+              
+                <Route path="/" exact={true} component={LoginPrin} />
                 
-                {/* 
+                {/*   <Route path="/" exact={true} component={TelaInicial} />
                 <Route path="/cadastro" exact={true} component={Cadastrar} />
                 <Route path="/esqueci-senha" exact={true} component={EsqSenha} />
                 <Route path="/recuperacao" exact={true} component={Recuperacao} />
