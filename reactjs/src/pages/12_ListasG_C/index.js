@@ -8,6 +8,10 @@ import LinhaSep from '../../assets/img/linhasep-listass.png';
 import { Link } from 'react-router-dom';
 import {Container } from './styled.js';
 
+import Api from '../../service/api';
+import { useEffect, useState } from 'react';
+const api = new Api();
+
 export default function FilmesGostos() {
     return(
         <Container>
@@ -32,7 +36,6 @@ export default function FilmesGostos() {
 
                 <div className="filmes">
                     <Box1 />
-
                 </div>
 
                 <ProxPag />

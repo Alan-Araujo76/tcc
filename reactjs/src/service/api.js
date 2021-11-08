@@ -162,9 +162,11 @@ export default class Api {
 
 
     async ListarLis(){
-        let r = await api.get('/lista');
+        let r = await api.get('/listar');
         return r.data;
     }
+
+
     async InserirLis(nome, descricao) {
         let r = await api.post('/lista', { nome, descricao });
         return r.data;

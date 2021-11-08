@@ -21,16 +21,7 @@ const api = new Api();
 
 export default function Perfil(props) {
     const [ usu, setUsu ] = useState(props.location.state);
-
-    /*async function Listar() {
-        let r = await api.ListarU();
-        setUsuario(r);
-        console.log(r);
-    }
-
-    useEffect(() => {
-      Listar();
-    }, []);*/
+    const [ filme, setFil ] = useState('');
 
     return(
       <C>       
@@ -99,7 +90,7 @@ export default function Perfil(props) {
 
             <Parte2>
                 <div className="p1">
-                    <div className="titulo-p1">Filmes favoritos</div>
+                    <div className="titulo-p1">Filmes já assistidos</div>
 
                     <div className="bloco-p1">
                       <div className="sub-bloco">
