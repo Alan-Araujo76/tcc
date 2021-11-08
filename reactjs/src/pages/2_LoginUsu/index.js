@@ -16,7 +16,7 @@ import { Link, useHistory } from 'react-router-dom';
 //import Api from '../../service/api';
 //const api = new Api();
 
-export default function Login(props) {
+export default function Login() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
 

@@ -12,8 +12,7 @@ export default function ComenC() {
     const [filme, setFilme] = useState([]);
 
     async function ListarU() {
-        let r = await api.ListarCU();
-        console.log(r);
+        let r = await api.ListarC();
         setFilme(r);
     }
 
@@ -28,13 +27,9 @@ export default function ComenC() {
                 <div>
                 <div className="usuario">
                     <div className="ft-perfil">
-                    { item.infob_mw_usuario[0].ds_foto == null
-                        ? <img src={UsuSemFoto} alt="" />
-
-                        : <img src={item.infob_mw_usuario[0].ds_foto} alt="" />
-                    }
+                        <img src={UsuSemFoto} alt="" />
                     </div>
-                    <div className="nome">{item.infob_mw_usuario[0].nm_username}</div>
+                    <div className="nome">thomis</div>
                 </div>
 
                 <div className="comentario-txt">{item.ds_mensagem}</div>

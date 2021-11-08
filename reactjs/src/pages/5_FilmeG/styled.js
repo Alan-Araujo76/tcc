@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import CapaMaior from '../../assets/img/capa-maior.jpeg';
+
 
 const Container = styled.div`
     display: flex;
@@ -10,16 +10,8 @@ const Container = styled.div`
     font-family: Montserrat;
     position: static;
 
-    .back {
-        background-image: url(${CapaMaior});
-        background-size: 100% 95%;
-        background-repeat: no-repeat;
-        background-position: static static;
-    }
-
     .filme{
         font-family: Montserrat;
-        height: 600px;  
         color: white;
 
         margin-left: 25%;
@@ -29,6 +21,7 @@ const Container = styled.div`
         flex-direction: column;
 
         justify-content: flex-end;
+        margin-top: -5em;
     }
 
     .plataformas {
@@ -401,46 +394,41 @@ const Container = styled.div`
 
 
 const ContainerC = styled.div`
-    .back {
-        background-image: url(${CapaMaior});
-        background-size: 100% 95%;
-        background-repeat: no-repeat;
-        background-position: absolute;
-    }
-    .back {
-        opacity: 0.5;
-    }
-
-    .cabecalho  {
+    .jxdiNp  {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         position: relative;
     }
 
+    .sc-bqyKOL {
+        position: absolute;
+        width: 80%;
+    }
+
     .fundo img {
         width: 100%;
-        height: 100vh;
+        height: 80vh;
         position: absolute;  
         opacity: 0.5;
-        top: 0px;
+        top: 1px;
     }
+
+    .fundo {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        height: 80vh;
+    }
+
+
 
     .iPzoRb {
         padding-top: 20px;
         margin-top: -.3em;
     }
 
-    .filme{ 
-        display: flex;
-        flex-direction: column;
-        font-family: Montserrat;
-        width: 420px;
-        color: white;
-        position: relative;
-        bottom: -1em;
-    }
-
+    
     .plataformas {
         width: 300px;
         font-weight: bold;

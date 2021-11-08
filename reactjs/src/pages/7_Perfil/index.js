@@ -18,10 +18,10 @@ import { useEffect, useState } from 'react';
 import Api from '../../service/api';
 const api = new Api();
 
-export default function Perfil() {
-    const [ usuario, setUsuario ] = useState([]);
+export default function Perfil(props) {
+    const [ usu, setUsu ] = useState(props.location.state);
 
-    async function Listar() {
+    /*async function Listar() {
         let r = await api.ListarU();
         setUsuario(r);
         console.log(r);
@@ -29,7 +29,7 @@ export default function Perfil() {
 
     useEffect(() => {
       Listar();
-    }, []);
+    }, []);*/
 
     return(
       <C>       
@@ -47,20 +47,20 @@ export default function Perfil() {
 
                 <div className="linha-sep-p"><img src={LinhaSep} alt="" /></div>
 
-            {usuario.map(item =>   
+           
             <div className="infos">
                 <div className="info-usu">
                     <div className="foto-pessoa">
-                      { item.ds_foto == null
+                      { usu.ds_foto == null
                           ? <img src={UsuSemFoto} alt="" />
 
-                          : <img src={item.ds_foto} alt="" />
+                          : <img src={usu.ds_foto} alt="" />
                       }
                     </div>
 
 
                     <div className="nm-bt">
-                    <div className="txt-usu">{item.nm_username}</div>
+                    <div className="txt-usu">{usu.nm_username}</div>
                         <div className="bt-1"><button>Editar perfil</button></div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@ export default function Perfil() {
                         <div className="img-fil"><img src={SepFilmes} alt="" /></div>
                     </div>
                 </div>
-                )}
+                
 
                 <div className="bio">
                     <div className="titulo-b">Bio:</div>

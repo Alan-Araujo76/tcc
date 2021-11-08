@@ -74,16 +74,18 @@ const Container = styled.div`
         height: 35px;
         color: #fff;
         font-family: Montserrat;
+        padding: 0px 10px;
     }
 
     .inpd input {
         background-color: #3b3b3b;
         border: transparent;
         border-radius: 8px;
-        width: 190px;
+        width: 450px;
         height: 35px;
         color: #fff;
         font-family: Montserrat;
+        padding: 0px 10px;
     }
 
 
@@ -148,7 +150,24 @@ const Container = styled.div`
         text-align: start;
     }
 
+    .ordenar select {
+        background-color: transparent;   
+        color: #fff;
+        border: 2px solid #fff;
+        padding: 5px 8px;
+        border-radius: 5px;
+        font-family: Montserrat;
+        width: 190px;
+    }
 
+    .ordenar option {
+        color: #000;
+        font-family: Montserrat;
+    }
+
+    .ordenar option {
+        border: transparent;   
+    }
 
 `;
 

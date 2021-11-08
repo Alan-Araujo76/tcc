@@ -32,16 +32,11 @@ export default function App() {
     const nav = useHistory(); 
     let usuarioLog = lerUsuarioLogado(nav);
     const [ usuario, setUsuario ] = useState(usuarioLog.data.usuario);
-    console.log(usuario);
 
     const logoff = () => {
       Cookies.remove('usuario-logado');
       nav.push('/login');
     }
-
-    useEffect(() => {
-  
-    }, []);
 
   return (
     <Contaier>
@@ -59,8 +54,8 @@ export default function App() {
       <div className="seta"><img src={Seta} alt="" /></div>
     </MenuButton>}>
 
-      <MenuItem><Link to="/perfil">Meu perfil</Link></MenuItem>
-      <MenuItem><Link to="/editperfil">Editar perfil</Link></MenuItem>
+      <MenuItem><Link to={{ pathname: '/perfil', state: usuario}}>Meu perfil</Link></MenuItem>
+      <MenuItem><Link to={{ pathname: '/editperfil', state: usuario}}>Editar perfil</Link></MenuItem>
       <MenuItem><Link to="/meusfilmes/comfP">Filmes por gosto</Link></MenuItem>
       <MenuItem><img src={Br} alt="" /></MenuItem>
       <MenuItem onClick={logoff}>Trocar de conta</MenuItem>

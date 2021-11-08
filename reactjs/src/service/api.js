@@ -119,8 +119,8 @@ export default class Api {
         return r.data;
     }
 
-    async ListarC(filme, usuario, mensagem, data, curtidas, id) {
-        let r = await api.get('/comentario/' + id, { filme, usuario, mensagem, data, curtidas});
+    async ListarC() {
+        let r = await api.get('/comentario/listar');
         return r.data;
     }
 

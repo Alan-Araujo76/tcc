@@ -50,6 +50,8 @@ const Container = styled.div`
         font-family: Montserrat;
     }
 
+
+
     .box1 {
         margin-right: -5px;
     }
@@ -98,8 +100,7 @@ const Container = styled.div`
     }
 
     .ordenar option {
-        border: transparent;
-        
+        border: transparent;   
     }
 
     @media (max-width: 800px) {

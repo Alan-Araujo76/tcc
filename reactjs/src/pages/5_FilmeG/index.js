@@ -21,26 +21,17 @@ const api = new Api();
 export default function DetalhesFilme(props) {
     const [ filmes, setFilmes ] = useState(props.location.state);
     console.log(filmes);
-    
-    async function Listar() {
-        let r = await api.ListarF();
-        console.log(r);
-        setFilmes(r);
-    }
-
-    useEffect(() => {  
-        Listar();
-    }, []);
 
     return(
 
         <Container>
-            <Cabecalho/>
             
             <ContainerC>
-                <div classNameName="fundo"> 
-                    <img src={filmes.img_maior} alt="" />
-                </div>
+                <div classNameName="fundo">
+                <Cabecalho/> 
+                    
+                    <img src={filmes.img_maior} alt="" style={{width: "100%", height: "90vh"}}/>
+
                 <div className="filme">
                     <div className="Nome_do_filme"><b>{filmes.nome}</b></div>
                     <div className="diretor">
@@ -48,6 +39,7 @@ export default function DetalhesFilme(props) {
                             <div>Direct by</div>
                             <div>{filmes.diretor}</div>
                     </div>
+                </div>
                 </div>
                 
                 <div className="faixa-2">
@@ -60,9 +52,9 @@ export default function DetalhesFilme(props) {
 
                         <div className="nota">
                         <div classNameName="dif-f2">Nota geral:</div>
-                        <div classNameName="parte-dif">
+                        <div className="parte-dif">
                             <div className="estrela"><img src={Estrelas} alt="" /></div>
-                            <div classNameName="nota-final">• {filmes.avaliacao}</div>
+                            <div className="nota-final">• {filmes.avaliacao}</div>
                         </div>
                     </div>    
                     </div>
@@ -74,9 +66,6 @@ export default function DetalhesFilme(props) {
                     <div className="sinopse">
                             <div className="sinopse_filme">{filmes.sinopse}</div>
                     </div>
-                          <Com />
-                          <Com />
-                          <Com />
                     </div>
                 
                     <div className="box">

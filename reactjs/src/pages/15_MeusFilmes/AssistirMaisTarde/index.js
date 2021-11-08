@@ -36,11 +36,10 @@ export default function FilmesGostos(props) {
     const [ ordenacao, setOrdanacao ] = useState('A - Z')
     const [ pagina, setPagina ] = useState(1);
     const [ totalPaginas, setTotalPaginas ] = useState(0);
-    console.log(filme);
+
 
     async function Listar() {
         const resp = await axios.get('http://localhost:3030/filusu/ja/filmes?page=' + pagina);
-        console.log(resp);
         setFilme([...resp.data.itens]);
         setTotalPaginas(resp.data.totalPaginas);
     }
@@ -48,6 +47,7 @@ export default function FilmesGostos(props) {
     function irPara(pagina) {
         setPagina(pagina);
     }
+
 
     const Remove = async (id) => {
         const r = await api.RemoverF(id);

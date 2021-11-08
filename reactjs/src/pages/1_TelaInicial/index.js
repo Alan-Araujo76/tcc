@@ -2,33 +2,15 @@ import { Container } from './styled';
 import BoxFilme from './box-filme-ti/index';
 import 'react-multi-carousel/lib/styles.css';
 
-import Cookies from 'js-cookie';
-import { useHistory } from 'react-router';
-
 import Cabecalho from '../../components/comum/Cabecalho-Geral';
 import Rodape from '../../components/comum/Rodape-Geral';
 
 //import ComentariosTi from './comentario-box-ti/index';
 import ListaTi from './listas-box-ti/index';
 import Carousel from './carousel-ti';
-import { useState } from 'react';
 
-function lerUsuarioLogado(nav) {
-    let logado = Cookies.get('usuario-logado');
-    if(logado == null)
-        nav.push('/login');
-
-    let usuarioLogado = JSON.parse(logado);
-    return usuarioLogado;
-}
 
 export default function TelaInicial(){
-    //const nav = useHistory(); 
-    //let usuarioLog = lerUsuarioLogado(nav);
-    //const [ usuario, setUsuario ] = useState();
-
-   
-
     return(
         <Container>
             <Cabecalho/>
