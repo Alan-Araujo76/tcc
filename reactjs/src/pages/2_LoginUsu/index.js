@@ -20,12 +20,12 @@
 
  export default function Login() {
      const [email, setEmail] = useState('');
-     const [senha, setSenha] = useState('');
+     const [senhahh, setSenhahh] = useState('');
 
      const nav = useHistory();
 
      async function logar() {
-         const r = await axios.post(`https://mw-heroku.herokuapp.com/login/login`, { email: email, senha: senha }); console.log(r);
+         const r = await axios.post(`https://mw-heroku.herokuapp.com/login/login`, { email: email, senhahh: senhahh }); console.log(r);
          if (r.data.status === 'ok') {
              Cookies.set('usuario-logado', JSON.stringify(r));
              nav.push('/telaini');
@@ -45,9 +45,9 @@
                        <div className="txt-1">Email: </div>  
                        <div className="input"><input placeholder="Digite seu e-mail" value={email} onChange={e => setEmail(e.target.value)}/> </div> 
                      </div>
-                     <div className="senha"> 
-                       <div className="txt-1">Senha: </div>  
-                       <div className="input"><input type="password" placeholder="Digite sua senha"value={senha} onChange={e => setSenha(e.target.value)}/> </div>
+                     <div className="senhahh"> 
+                       <div className="txt-1">Senhahh: </div>  
+                       <div className="input"><input type="password" placeholder="Digite sua senhahh"value={senhahh} onChange={e => setSenhahh(e.target.value)}/> </div>
                      </div>
                  </div>
                  <div className="leva-princ">
@@ -55,7 +55,7 @@
                          <div onClick={logar} className="dif"><BotaoL imagem="" nome="Entrar" />  </div>
                          <Link to="/cadastro"><BotaoL imagem="" nome="Cadastrar"/> </Link>
                      </div>
-                     <div className="esq-senha"><Link to="/esqueci-senha">Esqueci senha</Link></div>
+                     <div className="esq-senhahh"><Link to="/esqueci-senhahh">Esqueci senhahh</Link></div>
                  </div>
                  <div className="entrar-com">
                      <div className="txt">Ou entrar com:</div>
