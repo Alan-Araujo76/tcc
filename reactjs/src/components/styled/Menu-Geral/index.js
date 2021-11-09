@@ -19,7 +19,7 @@ import { useHistory } from 'react-router';
 //import Api from '../../../service/api';
 //const api = new Api();
 
-function lerUsuarioLogado(nav) {
+{/*function lerUsuarioLogado(nav) {
   let logado = Cookies.get('usuario-logado');
   if(logado == null) {
       nav.push('/login');
@@ -28,17 +28,17 @@ function lerUsuarioLogado(nav) {
 
   let usuarioLogado = JSON.parse(logado);
   return usuarioLogado;
-}
+}*/}
 
 export default function App() {
-    const nav = useHistory(); 
+    {/*const nav = useHistory(); 
     let usuarioLog = lerUsuarioLogado(nav);
     const [ usuario, setUsuario ] = useState(usuarioLog ? usuarioLog.data.usuario : '');
 
     const logoff = () => {
       Cookies.remove('usuario-logado');
       nav.push('/login');
-    }
+    }*/}
 
   return (
     <Contaier>

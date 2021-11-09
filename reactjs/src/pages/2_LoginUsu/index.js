@@ -26,6 +26,7 @@
 
      async function logar() {
          const r = await axios.post(`https://mw-heroku.herokuapp.com/login/login`, { email: email, senhahh: senhahh }); console.log(r);
+         console.log(r);
          if (r.data.status === 'ok') {
              Cookies.set('usuario-logado', JSON.stringify(r));
              nav.push('/telaini');
