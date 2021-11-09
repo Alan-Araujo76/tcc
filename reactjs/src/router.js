@@ -5,8 +5,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 
 import LoginPrin from './pages/2_LoginUsu';
-// import Cadastrar from './pages/3_LoginCadastro';
-// import EsqSenha from './pages/4_EsqSenha';
+import Cadastrar from './pages/3_LoginCadastro';
+import EsqSenha from './pages/4_EsqSenha';
 // import Recuperacao from './pages/4_Recuperacao';
 // import DetalhesFilme from './pages/5_FilmeG';
 // import Comentario from './pages/6_Comentario';
@@ -20,7 +20,7 @@ import LoginPrin from './pages/2_LoginUsu';
 // import FilmeLista from './pages/13_FilmesDaLista';
 // import CriarLista from './pages/14_CriarLista';
 // import AssistirMaisTarde from './pages/15_MeusFilmes/AssistirMaisTarde';
-// import JaAssistidos from './pages/15_MeusFilmes/JaAssistidos';
+import JaAssistidos from './pages/15_MeusFilmes/JaAssistidos';
 // import SobreNos from './pages/16_SobreNos';
 // import Contatos from './pages/17_Contatos';
 // import PoliticaP from './pages/18_PoliticaDeP';
@@ -45,7 +45,9 @@ export default function Routes() {
               
                 <Route path="/" exact={true} component={LoginPrin} />
                 <Route path="/telaini" exact={true} component={TelaInicial} />
-
+                <Route path="/cadastro" exact={true} component={Cadastrar} />
+                <Route path="/esqueci-senha" exact={true} component={EsqSenha} />
+                <Route path="/meusfilmes" exact={true} component={JaAssistidos} />
                 {/*   <Route path="/" exact={true} component={TelaInicial} />
                 <Route path="/cadastro" exact={true} component={Cadastrar} />
                 <Route path="/esqueci-senha" exact={true} component={EsqSenha} />
