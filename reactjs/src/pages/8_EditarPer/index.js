@@ -95,8 +95,7 @@ export default function EditarPerfil(props) {
                             <select>
                                 <option value="Feminino">Feminino</option>
                                 <option value="Masculino">Masculino</option>
-                                <option value="LGBTQI+">LGBTQI+</option>
-                                <option value="LGBTQI+">Prefiro não dizer</option>
+                                <option value="LGBTQI+">outro</option>
                             </select>
                         </div>
                      </div>

@@ -4,8 +4,6 @@ import Rodape from '../../../components/comum/Rodape-Geral'
 import ProxPag from '../../../components/comum/ProxPag-Button'
 import TituloC from '../../../components/comum/titulo'
 import Modal from '../../../components/comum/Modal-Filmes'
-import {Loader} from '../../../components/comum/Loader-Filmes'
-
 
 ////////////////////////// IMAGENS //////////////////////////
 import LinhaSep from '../../../assets/img/linhasep-listass.png';
@@ -18,7 +16,7 @@ import { Container, BlocoC } from './styled.js';
 ////////////////////////// OUTROS //////////////////////////
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react'
-
+import axios from 'axios';
 
 ////////////////////////// API //////////////////////////
 import Api from '../../../service/api';
@@ -28,20 +26,23 @@ const api = new Api();
 export default function FilmesGostos(props) {
     const [filme, setFilme] = useState([]);
     const [exibirModal, setExibirModal] = useState({show: false})
-    const [ loading, setLoading ] = useState(true);
-    
+    const [pagina, setPagina] = useState(1);
+    const [totalPaginas, setTotalPaginas] = useState(0);
 
     async function Listar() {
-        setLoading(true);
-        
-        let r = await api.ListarF();
-        setFilme(r);
-
-        setLoading(false);
+        const resp = await axios.get('http://localhost:3030/filusu/ja/filmes?page=' + pagina);
+        setFilme([...resp.data.itens]);
+        setTotalPaginas(resp.data.totalPaginas);
     }
+
+    function irPara(pagina) {
+        setPagina(pagina);
+    }
+
+
     useEffect(() => {
         Listar();
-      }, []);
+      }, [pagina]);
 
 
 
@@ -73,10 +74,9 @@ export default function FilmesGostos(props) {
 
 
             <div className="filmes">
-                {loading && <Loader />}
+                
 
-                { !loading &&
-                    filme.map(item => 
+                { filme.map(item => 
                         <BlocoC>
 
                             <Modal options={exibirModal}>
@@ -111,7 +111,11 @@ export default function FilmesGostos(props) {
                 )}
             </div>
 
-            <ProxPag />
+            <ProxPag 
+                    totalPaginas={totalPaginas}
+                    pagina={pagina}
+                    onPageChange={irPara}
+                />
             <Rodape/>
         </Container>
     )

@@ -57,7 +57,7 @@ export default function Carousel(){
                 </button>
                 <div className="carousel-item">
                     {filme.map((item,i) =>
-                        <img key={i} src={item.img_maior} alt="" />
+                        <img src={item.img_maior} alt="" />
                     )}
                 </div>
                 <button className="setaDireita" onClick={next}>
