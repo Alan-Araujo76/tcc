@@ -103,8 +103,10 @@ export default function FilmesGostos(props) {
                    
                             <div className="filme">
                                 <div>
-                                    <div className="img" onClick={() => setExibirModal({show: true})}><img src={item.img_menor} alt="" /></div> 
-                                    <div className="nome" onClick={() => setExibirModal({show: true})} title={ item.nome != null && item.nome > 25? item.nome : null }>{ item.nome != null && item.nome >= 25 ? item.nome.substr(0, 25) + '...' : item.nome }</div>
+                                <Link to={{ pathname: '/detfilmes', state: item}}>
+                                    <div className="img" ><img src={item.img_menor} alt="" /></div> 
+                                    <div className="nome" title={ item.nome != null && item.nome > 25? item.nome : null }>{ item.nome != null && item.nome >= 25 ? item.nome.substr(0, 25) + '...' : item.nome }</div>
+                                </Link>
                                 </div>
                             </div>
                         </BlocoC>
