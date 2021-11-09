@@ -45,11 +45,7 @@ export default function App() {
 
     <Menu style={{display: 'flex', flexDirection: 'row', backgroundColor: 'transparent', }} menuButton={<MenuButton>
       <div className="foto">
-        { usuario.ds_foto == null
-            ? <img src={FotoUsu} alt="" />
-
-            : <img src={usuario.ds_foto} alt="" />
-        }
+            <img src={FotoUsu} alt="" />
       </div>
 
       <div className="nome-usu">{usuario.nm_username}</div>
