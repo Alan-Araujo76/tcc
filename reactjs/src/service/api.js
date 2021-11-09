@@ -13,8 +13,8 @@ export default class Api {
         return r.data;
     }
 
-    async ListarCarousel() {
-        let r = await api.get('/carousel');
+async ListarCarousel() {
+        let r = await api.get('/carousel/');
         return r.data;
     }
 

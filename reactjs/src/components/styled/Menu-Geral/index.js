@@ -33,7 +33,7 @@ function lerUsuarioLogado(nav) {
 export default function App() {
     const nav = useHistory(); 
     let usuarioLog = lerUsuarioLogado(nav);
-    const [ usuario, setUsuario ] = useState(usuarioLog.data);
+    const [ usuario, setUsuario ] = useState(usuarioLog.data.usuario);
     console.log(usuario);
 
     const logoff = () => {
