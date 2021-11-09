@@ -8,7 +8,6 @@ const api = new Api();
 export default function Carousel(){
     const [filme, setFilme] = useState([]);
 
-
     let animando = false;
     function next() {
         if (animando === true)

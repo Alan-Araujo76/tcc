@@ -93,7 +93,7 @@ export default function FilmesGostos(props) {
                                         <div className="sub-m"><b>Diretor:</b> {item.diretor}</div>
                                         <div className="sub-m"><b>Descrição:</b> { item.descricao != null && item.descricao >= 105 ? item.descricao.substr(0, 105) + '...' : item.descricao }</div>
                                         <div className="sub2-m"><b>Plataformas:</b> {item.plataforma}</div>
-                                        <Link to={{ pathname: '/detfilmes', state: props.item}}>
+                                        <Link to={{ pathname: '/detfilmes', state: item}}>
                                             <div className="botao"><button>Ver mais</button></div>
                                         </Link>
                                     </div>

@@ -3,8 +3,26 @@ import Capa from '../../../assets/img/capa-filme.png'
 import Mais from '../../../assets/img/mais.png'
 
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from "react";
+
+import Api from '../../../service/api';
+const api = new Api();
 
 export default function BoxFil() {
+    const [filme, setFilme] = useState([]);
+    console.log(filme);
+
+    async function Listar() {
+        let r = await api.ListarLis();
+        console.log(r);
+        setFilme(r);
+    }
+
+    useEffect(() => {
+        Listar();
+    }, []);
+
+
     return(
         <BlocoC>
             <div className="filme-d">

@@ -1,6 +1,6 @@
 import Axios from 'axios';
 const api = Axios.create({
-    baseURL: ('https://mw-heroku.herokuapp.com')
+    baseURL: ('http://localhost:3030')
 })
 
 
@@ -13,8 +13,8 @@ export default class Api {
         return r.data;
     }
 
-    async ListarCarousel() {
-        let r = await api.get('/carousel');
+async ListarCarousel() {
+        let r = await api.get('/carousel/');
         return r.data;
     }
 
@@ -162,9 +162,11 @@ export default class Api {
 
 
     async ListarLis(){
-        let r = await api.get('/lista');
+        let r = await api.get('/listar');
         return r.data;
     }
+
+
     async InserirLis(nome, descricao) {
         let r = await api.post('/lista', { nome, descricao });
         return r.data;

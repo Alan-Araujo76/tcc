@@ -15,7 +15,7 @@ export default function Cabecalho() {
     return(
         <Container>
             <div className="logo">
-                <Link to="/"><span style={{fontweight: "none"}}>Movies</span><span style={{color: "#FF005C", fontweight: "bolder"}}> World</span></Link>
+                <Link to="/telaini"><span style={{fontweight: "none"}}>Movies</span><span style={{color: "#FF005C", fontweight: "bolder"}}> World</span></Link>
             </div>
             
                 <div className="parte2">
