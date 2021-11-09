@@ -14,12 +14,12 @@ import EsqSenha from './pages/4_EsqSenha';
 // import EditarPerfil from './pages/8_EditarPer';
 // import ListasPopulares from './pages/9_ListasPops';
 // import FilmesPopulares from './pages/10_FilmesPops';
-// import FilmesGosto from './pages/15_MeusFilmes/PorGosto';
+import FilmesGosto from './pages/15_MeusFilmes/PorGosto';
 // import ListasGC from './pages/12_ListasG_C';
 // import ListasGS from './pages/12_ListasG_S';
 // import FilmeLista from './pages/13_FilmesDaLista';
 // import CriarLista from './pages/14_CriarLista';
-// import AssistirMaisTarde from './pages/15_MeusFilmes/AssistirMaisTarde';
+import AssistirMaisTarde from './pages/15_MeusFilmes/AssistirMaisTarde';
 import JaAssistidos from './pages/15_MeusFilmes/JaAssistidos';
 // import SobreNos from './pages/16_SobreNos';
 // import Contatos from './pages/17_Contatos';
@@ -48,6 +48,9 @@ export default function Routes() {
                 <Route path="/cadastro" exact={true} component={Cadastrar} />
                 <Route path="/esqueci-senha" exact={true} component={EsqSenha} />
                 <Route path="/meusfilmes" exact={true} component={JaAssistidos} />
+                <Route path="/meusfilmes/comfA" exact={true} component={AssistirMaisTarde}/>
+                <Route path="/meusfilmes/comfP" exact={true} component={FilmesGosto} />
+
                 {/*   <Route path="/" exact={true} component={TelaInicial} />
                 <Route path="/cadastro" exact={true} component={Cadastrar} />
                 <Route path="/esqueci-senha" exact={true} component={EsqSenha} />
