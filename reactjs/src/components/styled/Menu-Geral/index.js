@@ -21,7 +21,6 @@ import { useHistory } from 'react-router';
 
 function lerUsuarioLogado(nav) {
   let logado = Cookies.get('usuario-logado');
-  console.log(logado);
   if(logado == null) {
       nav.push('/');
       return null;
