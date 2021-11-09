@@ -22,18 +22,9 @@
      const [email, setEmail] = useState('');
      const [senhahh, setSenhahh] = useState('');
 
-     const nav = useHistory();
+     //const nav = useHistory();
 
-     async function logar() {
-         const r = await axios.post(`https://mw-heroku.herokuapp.com/login/login`, { email: email, senhahh: senhahh }); console.log(r);
-         console.log(r);
-         if (r.data.status === 'ok') {
-             Cookies.set('usuario-logado', JSON.stringify(r));
-             nav.push('/telaini');
-         } else {
-             toast(r.data.mensagem);
-         }
-     }
+     
 
      return(
          <Container>
@@ -53,7 +44,7 @@
                  </div>
                  <div className="leva-princ">
                      <div className="botoes">
-                         <div onClick={logar} className="dif"><BotaoL imagem="" nome="Entrar" />  </div>
+                         <div className="dif"><BotaoL imagem="" nome="Entrar" />  </div>
                          <Link to="/cadastro"><BotaoL imagem="" nome="Cadastrar"/> </Link>
                      </div>
                      <div className="esq-senhahh"><Link to="/esqueci-senhahh">Esqueci senhahh</Link></div>
@@ -69,3 +60,19 @@
          </Container>
      )
  }
+
+
+ {/*
+    async function logar() {
+    const r = await axios.post(`https://mw-heroku.herokuapp.com/login/login`, { email: email, senhahh: senhahh }); console.log(r);
+    console.log(r);
+    if (r.data.status === 'ok') {
+        Cookies.set('usuario-logado', JSON.stringify(r));
+        nav.push('/telaini');
+    } else {
+        toast(r.data.mensagem);
+    }
+}
+
+onClick={logar} 
+*/}
