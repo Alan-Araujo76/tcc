@@ -10,8 +10,8 @@ import EsqSenha from './pages/4_EsqSenha';
 // import Recuperacao from './pages/4_Recuperacao';
 // import DetalhesFilme from './pages/5_FilmeG';
 // import Comentario from './pages/6_Comentario';
-// import Perfil from './pages/7_Perfil';
-// import EditarPerfil from './pages/8_EditarPer';
+import Perfil from './pages/7_Perfil';
+import EditarPerfil from './pages/8_EditarPer';
 // import ListasPopulares from './pages/9_ListasPops';
 import FilmesPopulares from './pages/10_FilmesPops';
 import FilmesGosto from './pages/15_MeusFilmes/PorGosto';
@@ -51,7 +51,9 @@ export default function Routes() {
                 <Route path="/meusfilmes/comfA" exact={true} component={AssistirMaisTarde}/>
                 <Route path="/meusfilmes/comfP" exact={true} component={FilmesGosto} />
                 <Route path="/filmespopulares" exact={true} component={FilmesPopulares} />
-               
+                <Route path="/perfil" exact={true} component={Perfil} />
+                <Route path="/editperfil" exact={true} component={EditarPerfil} />
+
 
 
                 {/*   <Route path="/" exact={true} component={TelaInicial} />
