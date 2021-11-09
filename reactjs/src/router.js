@@ -8,8 +8,8 @@ import LoginPrin from './pages/2_LoginUsu';
 import Cadastrar from './pages/3_LoginCadastro';
 import EsqSenha from './pages/4_EsqSenha';
 // import Recuperacao from './pages/4_Recuperacao';
-// import DetalhesFilme from './pages/5_FilmeG';
-// import Comentario from './pages/6_Comentario';
+import DetalhesFilme from './pages/5_FilmeG';
+import Comentario from './pages/6_Comentario';
 // import Perfil from './pages/7_Perfil';
 // import EditarPerfil from './pages/8_EditarPer';
 // import ListasPopulares from './pages/9_ListasPops';
@@ -50,6 +50,9 @@ export default function Routes() {
                 <Route path="/meusfilmes" exact={true} component={JaAssistidos} />
                 <Route path="/meusfilmes/comfA" exact={true} component={AssistirMaisTarde}/>
                 <Route path="/meusfilmes/comfP" exact={true} component={FilmesGosto} />
+                <Route path="/detfilmes" exact={true} component={DetalhesFilme} />
+                <Route path="/comentario" exact={true} component={Comentario} />
+
 
                 {/*   <Route path="/" exact={true} component={TelaInicial} />
                 <Route path="/cadastro" exact={true} component={Cadastrar} />
