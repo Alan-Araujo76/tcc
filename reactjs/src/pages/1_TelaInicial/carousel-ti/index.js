@@ -56,7 +56,7 @@ export default function Carousel(){
                     <img src={seta} alt=""/>
                 </button>
                 <div className="carousel-item">
-                    {filme.map((item,i) =>
+                    {filme.map(item =>
                         <img src={item.img_maior} alt="" />
                     )}
                 </div>
