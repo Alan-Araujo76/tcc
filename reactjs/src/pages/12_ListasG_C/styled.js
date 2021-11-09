@@ -44,7 +44,11 @@ const Container = styled.div`
         width: 100%;
     }
 
+<<<<<<< HEAD
   
+=======
+   
+>>>>>>> 4bbde8c1c8043ab8670ab41420f1c25d51f7c56c
 
     .filmes {
         background-color: #3b3b3b;

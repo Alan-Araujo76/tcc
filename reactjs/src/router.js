@@ -1,15 +1,15 @@
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Direcionamento from './pages/0_direcionamento';
+// import Direcionamento from './pages/0_direcionamento';
 
 
 import LoginPrin from './pages/2_LoginUsu';
 import Cadastrar from './pages/3_LoginCadastro';
 import EsqSenha from './pages/4_EsqSenha';
-import Recuperacao from './pages/4_Recuperacao';
-import DetalhesFilme from './pages/5_FilmeG';
-import Comentario from './pages/6_Comentario';
+import Recuperacao from './pages/4_Recuperacao';//
+import DetalhesFilme from './pages/5_FilmeG';//
+import Comentario from './pages/6_Comentario';//
 import Perfil from './pages/7_Perfil';
 import EditarPerfil from './pages/8_EditarPer';
 import ListasPopulares from './pages/9_ListasPops';
@@ -40,11 +40,11 @@ export default function Routes() {
     return (
         <BrowserRouter>
             <Switch> 
-                <Route path="/dire" exact={true} component={Direcionamento} />
+                {/* <Route path="/dire" exact={true} component={Direcionamento} /> */}
 
-                <Route path="/" exact={true} component={TelaInicial} />
-
-                <Route path="/login" exact={true} component={LoginPrin} />
+              
+                <Route path="/" exact={true} component={LoginPrin} />
+                <Route path="/telaini" exact={true} component={TelaInicial} />
                 <Route path="/cadastro" exact={true} component={Cadastrar} />
                 <Route path="/esqueci-senha" exact={true} component={EsqSenha} />
                 <Route path="/recuperacao" exact={true} component={Recuperacao} />
