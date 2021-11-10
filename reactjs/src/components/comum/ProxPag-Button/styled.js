@@ -28,6 +28,14 @@ const Geral = styled.div`
     .page:nth-child(${props => props.paginaAtual - 1}) {
         background-color: #424242;
     }
+
+    .page:nth-child(${props => props.paginaAtual + 2}) {
+        background-color: #424242;
+    }
+
+    .page:nth-child(${props => props.paginaAtual - 2}) {
+        background-color: #424242;
+    }
 `;
 
 
