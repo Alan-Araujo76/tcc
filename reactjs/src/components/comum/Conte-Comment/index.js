@@ -30,7 +30,7 @@ export default function ComenC() {
                     <div className="ft-perfil">
                         <img src={UsuSemFoto} alt="" />
                     </div>
-                    <div className="nome">thomis</div>
+                    <div className="nome">{item.id_usuario}</div>
                 </div>
 
                 <div className="comentario-txt">{item.ds_mensagem}</div>

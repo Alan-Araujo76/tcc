@@ -9,7 +9,7 @@ export default class Api {
 
 
     async ListarBox() {
-        let r = await api.get('/f');
+        let r = await api.get('/f/fi');
         return r.data;
     }
 
