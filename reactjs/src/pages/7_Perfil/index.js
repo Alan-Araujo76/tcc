@@ -24,12 +24,13 @@ export default function Perfil(props) {
     const [ usu, setUsu ] = useState(props.location.state);
     const [ filme, setFil ] = useState([]);
 
+
     async function Listar() {
       const r = api.ListarJP();
-      console.log(r);
       setFil(r);
+      
     }
-
+    console.log(filme);
 
     useEffect(() => {
         Listar();
@@ -108,7 +109,7 @@ export default function Perfil(props) {
                       <div className="bloco-p1">
                           <div className="sub-bloco">
                             <Link to='meusfilmes'>
-                            <div className="capa-p1"><img src={item.img_menor} alt="" /></div>
+                            <div className="capa-p1"><img src={item[0].img_menor} alt="" /></div>
                             <div className="txt-p1">{item.nome}</div>
                             </Link>
                         </div>

@@ -48,8 +48,6 @@ export default function FilmesGostos(props) {
         setPagina(pagina);
     }
 
-
-
     const Remove = async (id) => {
         const r = await api.RemoverF(id);
 
