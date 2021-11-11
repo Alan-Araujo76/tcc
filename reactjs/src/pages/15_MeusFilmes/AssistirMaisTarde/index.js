@@ -50,9 +50,12 @@ export default function FilmesGostos(props) {
 
     const Remove = async (id) => {
         const r = await api.RemoverF(id);
-
-        toast.dark('🗑️ Filme Removido!');
-        await Listar();
+        if(r.data == "Filme removido!") {
+            toast.dark('🗑️ Filme Removido!');
+            Listar();
+        } else {
+            toast(r.data);
+        }
     }
 
     useEffect(() => {

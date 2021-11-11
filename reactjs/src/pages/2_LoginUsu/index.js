@@ -4,6 +4,9 @@
  import { ToastContainer, toast } from 'react-toastify';
  import 'react-toastify/dist/ReactToastify.css';
 
+import GoogleLogin from 'react-google-login'
+import FacebookLogin from 'react-facebook-login'
+
  import LogoFace from '../../assets/img/logo(facebook).png'
  import LogoGoogle from '../../assets/img/logo(google).png'
  import axios from 'axios';
@@ -20,8 +23,15 @@
  const api = new Api();
 
  export default function Login() {
-     const [email, setEmail] = useState('');
-     const [senha, setSenha] = useState('');
+     const [ email, setEmail ] = useState('');
+     const [ senha, setSenha ] = useState('');
+
+     const [ emailGoogle, setEmailGoogle ] = useState('');
+     const [ senhaGoogle, setSenhaGoogle ] = useState('');
+     const [ profilePic, setProfilePic ] = useState('');
+     const [ isLoggedIn, setIsLoggedIn ] = useState(false);
+
+     const [ ] = useState();
 
      const nav = useHistory();
 
@@ -34,6 +44,15 @@
              toast(r.data.mensagem);
          }
      }
+
+     const responseGoogle = (response) => {
+         console.log(response);
+     }
+
+     const responseFacebook = (response) => {
+        console.log(response);
+      }
+       
 
      return(
          <Container>
@@ -61,11 +80,26 @@
                  <div className="entrar-com">
                      <div className="txt">Ou entrar com:</div>
                      <div className="botoes-1">
-                         <BotaoL imagem={LogoFace} nome="Facebook" />
-                         <div className="bt-2"><BotaoL imagem={LogoGoogle} nome="Google" /></div>
+                        <FacebookLogin className="loginp"
+                           appId="1088597931155576"
+                           autoLoad={true}
+                           fields="name,email,picture"
+                           callback={responseFacebook}
+                           cssClass="loginp"
+                           icon="fa-facebook"
+                           textButton="Facebook"
+                        />
+                        <GoogleLogin 
+                            clientId="10900770164-ndiffugrup4d6au49c236mr6q7itf6j6.apps.googleusercontent.com"
+                            buttonText="Google"
+                            onSuccess={responseGoogle}
+                            onFailure={responseGoogle}
+                        />
                      </div>
                  </div>
              </Parte2>
          </Container>
      )
  }
+
+ //<div className="bt-2"><BotaoL imagem={LogoGoogle} nome="Google" /></div>

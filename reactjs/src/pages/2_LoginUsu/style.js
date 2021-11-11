@@ -28,6 +28,28 @@ const Parte2 = styled.div`
     justify-content: flex-start;
     margin-right: -9em;
 
+    .loginp {
+        display: flex;
+        flex-direction: row;
+        color: #fff;
+        background-color: transparent;
+        border: 3px solid #FF005C;
+        border-radius: 5px;
+        width: 10em;
+        height: 3em;
+        font-family: Montserrat;
+        padding: 0px 10px;
+        cursor: pointer;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .loginp:hover {
+        background-color: #FF005C;
+        color: #000;
+        font-weight: bold;
+    }
+
     .email {
         margin-bottom: 45px;
     }

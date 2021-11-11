@@ -18,19 +18,20 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import Api from '../../service/api';
+import axios from 'axios';
 const api = new Api();
 
 export default function Perfil(props) {
     const [ usu, setUsu ] = useState(props.location.state);
     const [ filme, setFil ] = useState([]);
+   // const [ filmeGeral, setFilmeGeral ] = useState();
+
 
 
     async function Listar() {
-      const r = api.ListarJP();
-      setFil(r);
-      
+      const resp = await axios.get('http://localhost:3030/filusu/ja/per');
+      setFil([...resp.data]);
     }
-    console.log(filme);
 
     useEffect(() => {
         Listar();
@@ -73,19 +74,19 @@ export default function Perfil(props) {
                 </div>
                     <div className="info-fil">
                         <div className="txt-fil">
-                            <div className="qtd-fil">0</div>
+                            <div className="qtd-fil"> {filme.length} </div>
                             <div className="categoria">Filmes Assitidos</div>
                         </div>
                         <div className="img-fil"><img src={SepFilmes} alt="" /></div>
 
                         <div className="txt-fil"> 
-                            <div className="qtd-fil"> 0 </div>
+                            <div className="qtd-fil"> {filme.length} </div>
                             <div className="categoria">Listas</div>
                         </div>
                         <div className="img-fil"><img src={SepFilmes} alt="" /></div>
 
                         <div className="txt-fil">
-                            <div className="qtd-fil">0</div>
+                            <div className="qtd-fil"> {filme.length}  </div>
                             <div className="categoria">Assitir <br></br>Mais tarde</div>
                         </div>
                         <div className="img-fil"><img src={SepFilmes} alt="" /></div>
@@ -105,16 +106,23 @@ export default function Perfil(props) {
                 <div className="p1">
                     <div className="titulo-p1">Filmes já assistidos</div>
 
-                    {filme.map(item => 
                       <div className="bloco-p1">
+                        {filme.map(item => 
                           <div className="sub-bloco">
-                            <Link to='meusfilmes'>
-                            <div className="capa-p1"><img src={item[0].img_menor} alt="" /></div>
-                            <div className="txt-p1">{item.nome}</div>
+                            <Link to={{ pathname: '/detfilmes', state: item}}>
+                              <div className="capa-p1"><img src={item.img_menor} alt="" /></div>
+                              <div className="txt-p1">{item.nome}</div>
                             </Link>
                         </div>
+                        )}
+                         <Link to='meusfilmes'>
+                            <div className="ver-mais">
+                              <div className="but-b2"><button><img src={Play} alt="" /></button></div>
+                              <div className="txt-b2">Ver mais</div>
+                            </div>
+                          </Link>
                       </div>
-                    )}
+                    
                   
 
                     <div className="sss">
@@ -176,20 +184,20 @@ export default function Perfil(props) {
 
                     <div className="titulo-p1"> Assistir mais tarde</div> 
                     <div className="bloco-p1-d">
-                      <div className="bloco-p2">
-                          <div className="img-b2"><img src={Capa} alt="" /></div>
-                          <div className="img-b2"><img src={Capa} alt="" /></div>
-                          <div className="img-b2"><img src={Capa} alt="" /></div>
-                          <div className="img-b2"><img src={Capa} alt="" /></div>
-                          <div className="img-b2"><img src={Capa} alt="" /></div>
-                          <div className="img-b2"><img src={Capa} alt="" /></div>
-                          <div className="img-b2"><img src={Capa} alt="" /></div>
-                          <div className="img-b2"><img src={Capa} alt="" /></div>
-                          <div className="ver-mais">
-                            <div className="but-b2"><button><img src={Play} alt="" /></button></div>
-                            <div className="txt-b2">Ver mais</div>
-                          </div>
-                      </div>
+                    {filme.map(item => 
+                          <div className="sub-bloco">
+                            <Link to={{ pathname: '/detfilmes', state: item}}>
+                              <div className="capa-p1"><img src={item.img_menor} alt="" /></div>
+                              <div className="txt-p1">{item.nome}</div>
+                            </Link>
+                        </div>
+                        )}
+                         <Link to='meusfilmes/comfA'>
+                            <div className="ver-mais">
+                              <div className="but-b2"><button><img src={Play} alt="" /></button></div>
+                              <div className="txt-b2">Ver mais</div>
+                            </div>
+                          </Link>
                     </div>
                   
                   <div className="sss">
