@@ -58,7 +58,7 @@ export default function App() {
 
       <MenuItem><Link to={{ pathname: '/perfil', state: usuario}}>Meu perfil</Link></MenuItem>
       <MenuItem><Link to={{ pathname: '/editperfil', state: usuario}}>Editar perfil</Link></MenuItem>
-      <MenuItem><Link to="/meusfilmes/comfP">Filmes por gosto</Link></MenuItem>
+      <MenuItem><Link to="/filmespopulares">Filmes populares</Link></MenuItem>
       <MenuItem><img src={Br} alt="" /></MenuItem>
       <MenuItem onClick={logoff}>Trocar de conta</MenuItem>
       <MenuItem onClick={logoff}>Sair</MenuItem>

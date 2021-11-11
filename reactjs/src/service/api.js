@@ -120,12 +120,12 @@ async ListarCarousel() {
 
 
     async ListarCU() {
-        let r = await api.get('/comentario/listaru');
+        let r = await api.get('/comentario/listarG');
         return r.data;
     }
 
     async ListarC() {
-        let r = await api.get('/comentario/listar');
+        let r = await api.get('/comentario/listarP');
         return r.data;
     }
 

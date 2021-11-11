@@ -40,6 +40,7 @@ export default function FilmesGostos(props) {
 
     async function Listar() {
         const resp = await axios.get('http://localhost:3030/filusu/ja/filmes?page=' + pagina);
+        console.log(resp);
         setFilme([...resp.data.itens]);
         setTotalPaginas(resp.data.totalPaginas);
     }
@@ -102,34 +103,19 @@ export default function FilmesGostos(props) {
 
             <div className="filmes">
                 {filme.map(item => 
-                        <BlocoC>
-                        <Modal options={exibirModal}>
-                            <div className="geral-m">
-                                <div className="p1-m">
-                                    <div className="img-m"><img src={item.img_menor} alt="" /></div>
-                                    <div className="nome-m" title={ item.nome != null && item.nome > 25? item.nome : null }>{ item.nome != null && item.nome >= 25 ? item.nome.substr(0, 25) + '..' : item.nome }</div>
-                                </div>
-                                <div className="sep"></div>
-                                <div className="p2">
-                                    <div className="sub-m"><b>Diretor:</b> {item.diretor}</div>
-                                    <div className="sub-m"><b>Descrição:</b> { item.descricao != null && item.descricao >= 105 ? item.descricao.substr(0, 105) + '...' : item.descricao }</div>
-                                    <div className="sub2-m"><b>Plataformas:</b> {item.plataforma}</div>
-                                    <div className="botao"><button>Ver mais</button></div>
-                                </div>
-                            </div>
-                        </Modal>
-                       
-                        <div className="filme">
-                            <div>
-
-                               <div className="remover" onClick={Remove}> <img src={Removerb} alt=""/> </div>
+                        {filme == 0
+                        ? <div>OI</div>
+                        : <BlocoC>
+                            <div className="filme">
+                                <div className="remover" onClick={Remove}> <img src={Removerb} alt=""/> </div>
                                 <Link to={{ pathname: '/detfilmes', state: item}}>
                                     <div className="img"><img src={item.img_menor} alt="" /></div> 
                                     <div className="nome" title={ item.nome != null && item.nome > 25? item.nome : null }>{ item.nome != null && item.nome >= 25 ? item.nome.substr(0, 25) + '...' : item.nome }</div>
                                 </Link>
                             </div>
-                        </div>
-                      </BlocoC>
+                        </BlocoC>
+
+                        }
                     )}
             </div>
 
