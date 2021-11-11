@@ -309,11 +309,4 @@ app.delete('/AssistirT/:id', async(req, resp) => {
 
 
 
-
-
-
-
-
-
-
 export default app
