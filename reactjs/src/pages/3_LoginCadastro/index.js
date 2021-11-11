@@ -18,7 +18,8 @@ export default function Cadastro() {
     const [sobrenome, setSobrenome] = useState('');
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
-    const [senha, setSenha] = useState('');
+    const [senha, setSenha] = useState(''); 
+    const [ConfirSenha, setConfirmSenha] = useState('');
     const [nascimento, setNascimento] = useState('');
 
 
@@ -86,12 +87,12 @@ export default function Cadastro() {
                     <div className="inputsss-d">
                         <div className="inp">
                             <div className="txt-comp">Senha:</div>  
-                            <input placeholder="Digite sua senha" value = {senha} onChange = {e => setSenha(e.target.value)}/>
+                            <input placeholder="Digite sua senha" type="password" value = {senha} onChange = {e => setSenha(e.target.value)}/>
                         </div>
 
                         <div className="inp">
                             <div className="txt-comp">Confirme sua senha:</div>  
-                            <input placeholder="Confirme sua senha"  value={senha} onChange={e => setSenha(e.target.value)}/>
+                            <input placeholder="Confirme sua senha" type="password" value={ConfirSenha} onChange = {e => setConfirmSenha(e.target.value)}/>
                         </div>
             
                     </div>
