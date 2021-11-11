@@ -23,11 +23,11 @@ const api = new Api();
 export default function Perfil(props) {
     const [ usu, setUsu ] = useState(props.location.state);
     const [ filme, setFil ] = useState([]);
-    const [ filmesJa, setFilmesJa] = useState([])
 
     async function Listar() {
       const r = api.ListarJP();
-      setFilmesJa(r);
+      console.log(r);
+      setFil(r);
     }
 
 
@@ -104,7 +104,7 @@ export default function Perfil(props) {
                 <div className="p1">
                     <div className="titulo-p1">Filmes já assistidos</div>
 
-                    {filmesJa.map(item => 
+                    {filme.map(item => 
                       <div className="bloco-p1">
                           <div className="sub-bloco">
                             <Link to='meusfilmes'>

@@ -49,7 +49,7 @@ async ListarCarousel() {
     }
 
     async RemoverF(id) {
-        let r = await api.delete('/filme/' + id);
+        let r = await api.delete(`/filme/${id}`);
         return r.data;
     }
 
