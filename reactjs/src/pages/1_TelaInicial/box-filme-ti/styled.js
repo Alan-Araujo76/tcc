@@ -8,12 +8,12 @@ const Conteiner = styled.div`
         margin: 0px auto 0px auto;
         padding: 1em 1em 1em 2em;
     
-        .filme-ti {
+        .filmes {
             display: flex;
             flex-wrap: wrap;
         }
 
-        .filme-ti img{
+        .filme img{
             align-self: center;
             margin: 1em 2em;
             width: 6em;
@@ -78,4 +78,8 @@ const Conteiner = styled.div`
             }
         }
 `
-export {Conteiner}
+
+const BlocoC = styled.div`
+
+`;
+export {Conteiner,BlocoC}

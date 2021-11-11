@@ -9,7 +9,7 @@ const Comentario = styled.div`
     }
     .box-comentario img{
         margin-right: 1em;
-        width: 10em;
+        width: 5em;
         height: 4em;
     }
     .nome-cl-ti{
@@ -34,6 +34,11 @@ const Comentario = styled.div`
         font: 15px Montserrat;
         margin-bottom: 2em;
         font-weight: 900;
+    }
+    .coracao-ti{
+        color: white;
+        display: flex;
+        flex-direction: row;
     }
     .coracao-ti img{
         width: 4em;

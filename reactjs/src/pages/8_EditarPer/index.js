@@ -3,11 +3,11 @@ import Rodape from '../../components/comum/Rodape-Geral';
 import LinhaSep from '../../assets/img/linha-sep.png';
 import Foto from '../../assets/img/foto.png';
 
-import Cookies from 'js-cookie';
-import { useHistory } from 'react-router';
+import { Link } from 'react-router-dom';
+
 
 import { Container } from './styled';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Api from '../../service/api';
 const api = new Api();
@@ -28,6 +28,9 @@ export default function EditarPerfil(props) {
 
 
 
+
+
+
     return(
         <Container>
             <Cabecalho />
@@ -42,11 +45,7 @@ export default function EditarPerfil(props) {
                     <div className="bloco-inp">
                         <div className="txt-bi">Endereço de email:</div>
                         <div className="inpd"><input value={usu.ds_email} readOnly={true}/></div>
-                    </div>
-
-                    <div className="bloco-inp" style={{margin: '4em 0em 2em'}}>
-                        <div className="txt-bi" >Senha:</div>
-                        <div className="inpd"><input type="password" value={usu.ds_senha} readOnly={true}/></div>
+                        <div><Link>Alterar senha</Link></div>
                     </div>
 
                     <div className="bloco-inpd">
@@ -126,7 +125,13 @@ export default function EditarPerfil(props) {
                 </div>
 
                 <div className="parte-trocarf">
-                    <div className="img-perfil"><img src={Foto} alt=""/></div>
+                <div className="fotoep">
+                    { usu.ds_foto == null
+                        ? <img src={Foto} alt="" />
+
+                        : <img src={usu.ds_foto} alt="" />
+                    }
+                </div>
                     <div className="bt-p"><button>Trocar foto </button></div>
 
                     <div className="bloco-inp">

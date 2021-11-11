@@ -17,10 +17,24 @@ import { useEffect, useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
+import Api from '../../service/api';
+const api = new Api();
 
 export default function Perfil(props) {
     const [ usu, setUsu ] = useState(props.location.state);
-    const [ filme, setFil ] = useState('');
+    const [ filme, setFil ] = useState([]);
+
+
+    async function Listar() {
+      const r = api.ListarJP();
+      setFil(r);
+      
+    }
+    console.log(filme);
+
+    useEffect(() => {
+        Listar();
+    });
 
     return(
       <C>       
@@ -81,7 +95,7 @@ export default function Perfil(props) {
 
                 <div className="bio">
                     <div className="titulo-b">Bio:</div>
-                    <div className="bloco-b"></div>
+                    <div className="bloco-b">{usu.ds_bio}</div>
                 </div>
             
                 <div className="linha-sep1"><img src={LinhaSep1} alt="" /></div>
@@ -91,52 +105,17 @@ export default function Perfil(props) {
                 <div className="p1">
                     <div className="titulo-p1">Filmes já assistidos</div>
 
-                    <div className="bloco-p1">
-                      <div className="sub-bloco">
-                        <div className="capa-p1"><img src={Capa} alt="" /></div>
-                        <div className="txt-p1">Velozes e Furiosos</div>
+                    {filme.map(item => 
+                      <div className="bloco-p1">
+                          <div className="sub-bloco">
+                            <Link to='meusfilmes'>
+                            <div className="capa-p1"><img src={item[0].img_menor} alt="" /></div>
+                            <div className="txt-p1">{item.nome}</div>
+                            </Link>
+                        </div>
                       </div>
-
-                      <div className="sub-bloco">
-                        <div className="capa-p1"><img src={Capa} alt="" /></div>
-                        <div className="txt-p1">Velozes e Furiosos</div>
-                      </div>
-
-                      <div className="sub-bloco">
-                        <div className="capa-p1"><img src={Capa} alt="" /></div>
-                        <div className="txt-p1">Velozes e Furiosos</div>
-                      </div>
-
-                      <div className="sub-bloco">
-                        <div className="capa-p1"><img src={Capa} alt="" /></div>
-                        <div className="txt-p1">Velozes e Furiosos</div>
-                      </div>
-
-                      <div className="sub-bloco">
-                        <div className="capa-p1"><img src={Capa} alt="" /></div>
-                        <div className="txt-p1">Velozes e Furiosos</div>
-                      </div>
-
-                      <div className="sub-bloco">
-                        <div className="capa-p1"><img src={Capa} alt="" /></div>
-                        <div className="txt-p1">Velozes e Furiosos</div>
-                      </div>
-
-                      <div className="sub-bloco">
-                        <div className="capa-p1"><img src={Capa} alt="" /></div>
-                        <div className="txt-p1">Velozes e Furiosos</div>
-                      </div>
-
-                      <div className="sub-bloco">
-                        <div className="capa-p1"><img src={Capa} alt="" /></div>
-                        <div className="txt-p1">Velozes e Furiosos</div>
-                      </div>
-
-                      <div className="sub-bloco">
-                        <div className="capa-p1"><img src={Capa} alt="" /></div>
-                        <div className="txt-p1">Velozes e Furiosos</div>
-                      </div>
-                    </div>
+                    )}
+                  
 
                     <div className="sss">
                     <div className="titulo-p1-m">Filmes favoritos</div>
