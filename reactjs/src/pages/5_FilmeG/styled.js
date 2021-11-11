@@ -401,6 +401,11 @@ const ContainerC = styled.div`
         position: relative;
     }
 
+    .sc-dQoVA {
+        position: absolute;
+        width: 85%;
+    }
+
     .sc-bqyKOL {
         position: absolute;
         width: 80%;
@@ -445,6 +450,9 @@ const ContainerC = styled.div`
         flex-direction: column;
         font-size: 30px; 
         margin-bottom: .3em;
+        width: 420px;
+        text-align: center;
+        margin: 2px 0px;
     }
 
     .diretor{

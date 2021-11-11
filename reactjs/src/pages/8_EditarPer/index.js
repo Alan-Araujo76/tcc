@@ -39,13 +39,13 @@ export default function EditarPerfil(props) {
 
             <div className="parte2-p">
                 <div className="parte-inputs">
-                    <div className="bloco-inp" style={{marginBottom: '2em'}}>
+                    <div className="bloco-inp">
                         <div className="txt-bi">Endereço de email:</div>
                         <div className="inpd"><input value={usu.ds_email} readOnly={true}/></div>
                     </div>
 
-                    <div className="bloco-inp">
-                        <div className="txt-bi">Senha:</div>
+                    <div className="bloco-inp" style={{margin: '4em 0em 2em'}}>
+                        <div className="txt-bi" >Senha:</div>
                         <div className="inpd"><input type="password" value={usu.ds_senha} readOnly={true}/></div>
                     </div>
 

@@ -74,8 +74,8 @@ async ListarCarousel() {
     }
 
 
-    async InserirU(nome, sobrenome, username, email, senha, genero, nascimento) {
-        let r = await api.post('/usuario/cadastrar', { nome, sobrenome, username, email, senha, genero, nascimento});
+    async InserirU(nome, sobrenome, username, email, senha, nascimento) {
+        let r = await api.post('/usuario/cadastrar', { nome, sobrenome, username, email, senha, nascimento});
         return r.data;
     }
 

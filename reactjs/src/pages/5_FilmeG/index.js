@@ -114,8 +114,6 @@ export default function DetalhesFilme(props) {
 
                     <div className="bloco-p2">
                         <Com />
-                        <Com />
-                        <Com />
                     </div>
                     <div className="verm-c"><button><Link to="comentario">Ver mais comentarios</Link></button></div>
                 </div>
