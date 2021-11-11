@@ -3,12 +3,14 @@ import capaFilme from '../../../assets/img/capa-filme.png';
 import perfil from '../../../assets/img/foto.png';
 import salvar from '../../../assets/img/salvar.png';
 
+import Api from '../../../service/api';
+const api = new Api();
+
 export default function ListaTi(){
     return(
         <Lista>
             <div className="box-lista-ti">
                 <div className="lista-filmes-ti">
-                    <img src={capaFilme} alt="" />
                     <img src={capaFilme} alt="" />
                     <img src={capaFilme} alt="" />
                     <img src={capaFilme} alt="" />
