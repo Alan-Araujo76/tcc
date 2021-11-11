@@ -33,6 +33,11 @@ async ListarCarousel() {
         return r.data;
     }
 
+    async ListarJP() {
+        let r = await api.get('/filusu/ja/per');
+        return r.data;
+    }
+
     async InserirF(nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor) {
         let r = await api.post('/filme', { nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor });
         return r.data;
@@ -44,7 +49,7 @@ async ListarCarousel() {
     }
 
     async RemoverF(id) {
-        let r = await api.delete('/filme/' + id);
+        let r = await api.delete(`/filme/${id}`);
         return r.data;
     }
 

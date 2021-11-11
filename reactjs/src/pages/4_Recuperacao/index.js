@@ -22,7 +22,7 @@ export default function Esqueci(props) {
  
         if (r.data.status === 'ok') {
           toast('Senha alterada!');
-          nav.push('/login');
+          nav.push('/');
         } else {
           toast(r.data.mensagem);
         }

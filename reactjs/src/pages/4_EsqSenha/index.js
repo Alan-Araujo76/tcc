@@ -21,15 +21,15 @@ export default function Esqueci(props) {
             setExibirModal({show: true});
             toast('O código foi enviado no seu email.')
         } else {
-            alert(r.data.status);
+            alert(r.data.mensagem);
         }
     }
 
     const nav = useHistory();
 
     async function validarCodigo() {
-        const r = await axios.post(`http://localhost:3030/login/validarCodigo`, { email: email, codigo: codigo  }); console.log(codigo);console.log(email);
-        if (r.data.status === 'Código validado.') {
+        const r = await axios.post(`http://localhost:3030/login/validarCodigo`, { email: email, codigo: codigo  }); console.log(r);console.log(email);
+        if (r.data.mensagem === 'Código validado.') {
           nav.push('/recuperacao', { email: email, codigo: codigo });
         } else {
           toast(r.data.mensagem);

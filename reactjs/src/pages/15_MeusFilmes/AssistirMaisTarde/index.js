@@ -48,17 +48,13 @@ export default function FilmesGostos(props) {
         setPagina(pagina);
     }
 
-    const remover = async (id) => {
-        const r = await api.RemoverF(id);
-        toast.dark('💕 Mensagem Removida!');
-        Listar();
-    }
+
 
     const Remove = async (id) => {
         const r = await api.RemoverF(id);
+
         toast.dark('🗑️ Filme Removido!');
-        
-        Listar();
+        await Listar();
     }
 
     useEffect(() => {

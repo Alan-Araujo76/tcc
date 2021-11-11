@@ -56,6 +56,11 @@ const Container = styled.div`
         margin-bottom: 10px;
     }
 
+    .fotoep img {
+        width: 300px;
+        height: 300px;
+    }
+
     .dif {
         display: flex;
         flex-direction: column;
