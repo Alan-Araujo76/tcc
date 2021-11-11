@@ -1,12 +1,13 @@
 import Cabecalho from '../../components/comum/Cabecalho-Geral';
 import Rodape from '../../components/comum/Rodape-Geral';
-import Conteudo from './conteudo';
+import Com from '../../components/comum/Conte-Comment';
 
 import { Container, PartePrin } from './styled';
 import { useState, useEffect } from "react";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 
 import Api from '../../service/api';
 const api = new Api();
@@ -47,12 +48,7 @@ export default function Comentarios(props) {
 
 
                 <div className="bloco2">
-                    {filme.map(item => 
-                        <Conteudo 
-                            key={item.id}
-                            filmes={item} 
-                        />   
-                    )}
+                   <Com />
                 </div>
 
             </PartePrin>

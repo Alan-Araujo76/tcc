@@ -13,6 +13,7 @@ export default function ComenC() {
 
     async function ListarU() {
         let r = await api.ListarC();
+        console.log(r);
         setFilme(r);
     }
 

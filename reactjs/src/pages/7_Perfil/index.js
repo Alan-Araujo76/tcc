@@ -15,9 +15,8 @@ import BotaoMais from '../../components/comum/botao-mais';
 import { C, Container, Parte1, Parte2 } from './styled'
 import { useEffect, useState } from 'react';
 
-import Api from '../../service/api';
 import { Link } from 'react-router-dom';
-const api = new Api();
+
 
 export default function Perfil(props) {
     const [ usu, setUsu ] = useState(props.location.state);

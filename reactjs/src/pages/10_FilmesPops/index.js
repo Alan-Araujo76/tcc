@@ -16,13 +16,27 @@ import { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom';
 
 import Api from '../../service/api';
+import axios from 'axios'
 const api = new Api();
 
 export default function FilmesGostos(props) {
     const [filme, setFilme] = useState([]);
     const [exibirModal, setExibirModal] = useState({show: false});
+    const [ pagina, setPagina ] = useState(1);
+    const [ totalPaginas, setTotalPaginas ] = useState(0);
 
     const navigation = useHistory();
+
+    async function Listar() {
+        const resp = await axios.get('http://localhost:3030/filusu/ja/filmesdif?page=' + pagina);
+        console.log(resp);
+        setFilme([...resp.data.itens]);
+        setTotalPaginas(resp.data.totalPaginas);
+    }
+
+    function irPara(pagina) {
+        setPagina(pagina);
+    }
 
     function Detalhes() {
         let ler = Cookies.get('detfilmes');
@@ -40,15 +54,10 @@ export default function FilmesGostos(props) {
         navigation.push('/detfilmes');
     }
 
-    async function Listar() {
-        let r = await api.ListarFP();
-        console.log(r);
-        setFilme(r);
-    }
 
     useEffect(() => {
         Listar();
-      }, []);
+      }, [pagina]);
 
     
 
@@ -64,7 +73,7 @@ export default function FilmesGostos(props) {
                     <Modal options={exibirModal}>
                         <div className="geral-m">
                             <div className="p1-m">
-                                <div className="img-m"><img src={item.imagem} alt="" /></div>
+                                <div className="img-m"><img src={item.img_menor} alt="" /></div>
                                 <div className="nome-m" title={ item.nome != null && item.nome.length > 25? item.nome : null }>{ item.nome != null && item.nome.length >= 25 ?item.nome.substr(0, 25) + '..' : item.nome }</div>
                             </div>
                             <div className="sep"></div>
@@ -80,7 +89,7 @@ export default function FilmesGostos(props) {
                     <div className="filme">
                         {Array.length !== 0
                             ? <div onClick={() => setExibirModal({show: true})}>
-                                <div className="img"><img src={item.imagem} alt="" /></div> 
+                                <div className="img"><img src={item.img_menor} alt="" /></div> 
                                 <div className="nome" title={ item.nome != null && item.nome.length > 25? item.nome : null }>{ item.nome != null && item.nome.length >= 25 ?item.nome.substr(0, 25) + '...' : item.nome }</div>
                             </div>
         
@@ -91,7 +100,13 @@ export default function FilmesGostos(props) {
                 )}
             </div>
 
-            <ProxPag/>
+            <div>
+                <ProxPag 
+                        totalPaginas={totalPaginas}
+                        pagina={pagina}
+                        onPageChange={irPara}
+                />
+            </div>
 
 
             <Rodape/>

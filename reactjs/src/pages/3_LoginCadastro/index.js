@@ -26,11 +26,11 @@ export default function Cadastro() {
 
     const logar = async () => {
         let r = await api.InserirU(nome, sobrenome, username, email, senha, nascimento);
-
+        console.log(r);
         if(r.erro) {
             toast.error(`${r.erro}`)
         } else {
-            navigation.push('/login');
+            navigation.push('/');
         }
     }
 
