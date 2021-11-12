@@ -1,4 +1,3 @@
-
 import express from 'express'
 import db from "../db.js";
 
@@ -6,7 +5,15 @@ const app = express.Router();
 
 app.get('/listar', async(req, resp) => {
     try {
-        let l = await db.infob_mw_lista.findAll({ order: [['id_lista', 'desc']] });
+        let l = await db.infob_mw_lista.findAll({
+            include:[
+                {
+                    model: db.infob_mw_lista_item,
+                    as:'infob_mw_lista_item',
+                    required : true
+                }
+            ]
+        });
         resp.send(l);
     } catch(e) {
         resp.send({ erro: e.toString() })
@@ -15,21 +22,13 @@ app.get('/listar', async(req, resp) => {
 
 app.post('/inserir', async(req, resp) => {
     try {
-        let { lista, descricao } = req.body;
-        let consulta = await db.infob_mw_lista.findOne({ where: {nm_lista: lista} })
-        
-        if(consulta != null){
-            resp.send({erro: 'essa lista já existe'})
-        } else 
-            if (lista == "" || descricao == ""){
-                resp.send({ erro: "todos os campos são obrigatórios" })
-            } else {
-                let l = await db.infob_mw_lista.create({
-                    nm_lista: lista,
-                    ds_descricao: descricao
-                })
-                resp.send('lista criada')
-            }
+        let { lista, descricao, usu} = req.body;       
+        let l = await db.infob_mw_lista.create({
+            id_usuario: usu,
+            nm_lista: lista,
+            ds_descricao: descricao
+        })
+            resp.send('lista criada')
     } catch(e) {
         resp.send({ erro: e.toString()})
     }
@@ -37,27 +36,18 @@ app.post('/inserir', async(req, resp) => {
 
 app.put('/alterar/:id', async(req, resp) => {
     try {
-        let { lista, descricao } = req.body;
+        let { lista, descricao, usu} = req.body;
         let { id } = req.params;
         let consulta = await db.infob_mw_lista.findOne({ where: {nm_lista: lista} })
-
-        db.infob
-
-        if(consulta != null){
-            resp.send({erro: 'essa lista já existe'})
-        } else 
-            if (lista == "" || descricao == ""){
-                resp.send({ erro: "todos os campos são obrigatórios" })
-            } else {
-                let l = await db.infob_mw_lista.update({
-                    nm_lista: lista,
-                    ds_descricao: descricao
-                },
-                {
-                    where: {id_lista: id}
-                })
-                resp.send('lista alterada');
-            }
+            let l = await db.infob_mw_lista.update({
+                id_usuario: usu,
+                nm_lista: nome,
+                ds_descricao: descricao
+            },
+            {
+                where: {id_lista: id}
+            })
+            resp.send('lista alterada');
     } catch(e) {
         resp.send({ erro: e.toString() })
     }

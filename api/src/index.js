@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 
+import Lista2 from './Controller/Lista2Controller.js'
 import Carou from './Controller/carouselController.js'
 import Fil from './Controller/FBox.Controller.js'
 import Usuario from './Controller/usuarioController.js';
@@ -15,6 +16,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use('/list', Lista2)
 app.use('/carousel', Carou)
 app.use('/f',Fil)
 app.use('/filme', Filme)

@@ -11,6 +11,7 @@ export default class infob_mw_lista_item extends Model {
       autoIncrement: true
     },
     id_lista: {
+      foreignKey: 'id_lista',
       type: DataTypes.INTEGER,
       allowNull: true
     },

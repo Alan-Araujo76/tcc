@@ -3,7 +3,7 @@ import db from "../db.js";
 
 const app = express.Router();
 
-app.get('/lista_item', async(req, resp) => {
+app.get('/item', async(req, resp) => {
     try {
         let x = await db.infob_mw_lista_item.findAll();
         resp.send(x);
@@ -18,9 +18,8 @@ app.post('/lista_item', async (req, resp) => {
         let {nome, descricao, lista } = req.body;
 
         let x = await db.infob_mw_lista_item.create({
-            id_lista_item: nome, 
             id_filme: descricao,
-            id_lista_item: lista
+            id_lista: lista
         })
          resp.send('filme adicionado!')  
     } catch(e) {
