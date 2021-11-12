@@ -1,6 +1,6 @@
 import perfilFoto from '../../../assets/img/mdm.jpg';
 import coracao from '../../../assets/img/coracao.png';
-import {Comentario} from './styled';
+import {Container} from './styled';
 
 
 import { useEffect, useState} from 'react';
@@ -21,7 +21,7 @@ export default function ComentariosTi(){
     },[])
 
     return(
-        <Comentario>
+        <Container>
             {comentario.map(item =>
             <div className="box-comentario">
                 <img src={perfilFoto} alt="" />
@@ -44,6 +44,6 @@ export default function ComentariosTi(){
                </div>
             </div> 
             )}
-        </Comentario>
+        </Container>
     )
 }

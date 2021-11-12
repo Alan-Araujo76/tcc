@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Comentario = styled.div`
+const Container = styled.div`
     .box-comentario{
         display: flex;
         flex-direction: row;
@@ -67,4 +67,4 @@ const Comentario = styled.div`
         }
     }
 `
-export {Comentario}
+export {Container}

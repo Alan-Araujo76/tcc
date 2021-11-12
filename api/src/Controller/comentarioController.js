@@ -61,10 +61,9 @@ app.get('/listarP', async(req, resp) => {
                 as: 'infob_mw_filmes',
                 required: true
             }],
-            limit: 3,
             order: [['ds_curtidas', 'desc']]
         });
-        c = c.map(item => {
+       {/* c = c.map(item => {
             return {
               id: item.id_cometario,
               id_filme: item.id_filme,
@@ -73,7 +72,7 @@ app.get('/listarP', async(req, resp) => {
               data: item.dt_comentario,
               curtidas: item.ds_curtidas
             }
-          })
+          })*/}
         resp.send(c);
     } catch(e) {
         resp.send({ erro: e.toString() })
