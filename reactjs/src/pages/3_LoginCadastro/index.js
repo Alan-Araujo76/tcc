@@ -65,7 +65,7 @@ export default function Cadastro() {
 
                             <div className="inp">
                                 <div className="txt-comp">Data de nascimento:</div>  
-                                <input nome="Data de nascimento:" placeholder="Digite sua data de nascimento"  value={nascimento} onChange={e => setNascimento(e.target.value)}/>
+                                <input nome="Data de nascimento:" placeholder="Digite sua data de nascimento" type="Date"  value={nascimento} onChange={e => setNascimento(e.target.value)}/>
                             </div>
                             
                         </div>

@@ -28,7 +28,7 @@ export default function Esqueci(props) {
     const nav = useHistory();
 
     async function validarCodigo() {
-        const r = await axios.post(`http://localhost:3030/login/validarCodigo`, { email: email, codigo: codigo  }); console.log(r);console.log(email);
+        const r = await axios.post(`https://mw-heroku.herokuapp.com/login/validarCodigo`, { email: email, codigo: codigo  }); console.log(r);console.log(email);
         if (r.data.mensagem === 'Código validado.') {
           nav.push('/recuperacao', { email: email, codigo: codigo });
         } else {
