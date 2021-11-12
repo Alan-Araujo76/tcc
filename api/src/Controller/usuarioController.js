@@ -30,7 +30,7 @@ app.post('/cadastrar', async(req, resp) => {
                 ds_email: email,
                 ds_senha: crypto.SHA256(senha).toString(crypto.enc.Base64),
                 ds_genero: genero,
-                dt_nascimento: nascimento,
+                dt_nascimento: String(nascimento),
                 ds_localização: localizacao,                                                                                                                                                                                                                                              
                 ds_redes_sociais: redes,
                 ds_foto: foto,
