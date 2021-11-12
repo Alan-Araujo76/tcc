@@ -13,7 +13,7 @@ app.get('/listar', async(req, resp) => {
     }
 })
 
-app.post('/lista', async(req, resp) => {
+app.post('/inserir', async(req, resp) => {
     try {
         let { lista, descricao } = req.body;
         let consulta = await db.infob_mw_lista.findOne({ where: {nm_lista: lista} })
@@ -35,7 +35,7 @@ app.post('/lista', async(req, resp) => {
     }
 })
 
-app.put('/lista/:id', async(req, resp) => {
+app.put('/alterar/:id', async(req, resp) => {
     try {
         let { lista, descricao } = req.body;
         let { id } = req.params;
@@ -63,7 +63,7 @@ app.put('/lista/:id', async(req, resp) => {
     }
 })
 
-app.delete('/lista/:id', async(req, resp) => {
+app.delete('/deletar/:id', async(req, resp) => {
     try {
         let { id } = req.params;
         let l = await db.infob_mw_lista.destroy({ where: { id_lista: id }})

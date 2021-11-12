@@ -39,7 +39,7 @@ import FacebookLogin from 'react-facebook-login'
          const r = await axios.post(`http://localhost:3030/login/login`, { email: email, senha: senha }); 
          if (r.data.status === 'ok') {
              Cookies.set('usuario-logado', JSON.stringify(r));
-             nav.push('/telaini');
+             nav.push('/');
          } else {
              toast(r.data.mensagem);
          }

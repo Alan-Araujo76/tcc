@@ -29,15 +29,4 @@ app.post('/lista_item', async (req, resp) => {
 })
 
 
-
-app.get('/lista_popular', async(req, resp) => {
-    try {
-        let c = await db.infob_mw_lista.findAll();
-        resp.send(c);
-    } catch(e) {
-        resp.send({ erro: e.toString() })
-    }
-})
-
-
 export default app
