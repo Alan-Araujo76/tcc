@@ -22,7 +22,7 @@ import { useHistory } from 'react-router';
 function lerUsuarioLogado(nav) {
   let logado = Cookies.get('usuario-logado');
   if(logado == null) {
-      nav.push('/login');
+      nav.push('/');
       return null;
   } 
 
@@ -38,7 +38,7 @@ export default function App() {
     
     const logoff = () => {
       Cookies.remove('usuario-logado');
-      nav.push('/login');
+      nav.push('/');
     }
 
   return (
