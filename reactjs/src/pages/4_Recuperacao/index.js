@@ -14,7 +14,7 @@ export default function Esqueci(props) {
     const nav = useHistory();
 
     async function alterarSenha() {
-        const r = await axios.put(`http://localhost:3030/login/resetarsenha`, { 
+        const r = await axios.put(`https://mw-heroku.herokuapp.com/login/resetarsenha`, { 
           email: props.location.state.email,
           codigo: props.location.state.codigo,
           novaSenha: novaSenha 

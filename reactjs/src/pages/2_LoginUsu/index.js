@@ -36,7 +36,7 @@ import FacebookLogin from 'react-facebook-login'
      const nav = useHistory();
 
      async function logar() {
-         const r = await axios.post(`http://localhost:3030/login/login`, { email: email, senha: senha }); 
+         const r = await axios.post(`https://mw-heroku.herokuapp.com/login/login`, { email: email, senha: senha }); 
          if (r.data.status === 'ok') {
              Cookies.set('usuario-logado', JSON.stringify(r));
              nav.push('/telaini');

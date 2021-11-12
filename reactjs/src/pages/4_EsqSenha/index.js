@@ -16,7 +16,7 @@ export default function Esqueci(props) {
 
 
     async function EnvEmail() {
-        const r = await axios.post(`http://localhost:3030/login/esqueci`, { email: email  }); 
+        const r = await axios.post(`https://mw-heroku.herokuapp.com/login/esqueci`, { email: email  }); 
         if (r.data.status === 'Código Enviado') { 
             setExibirModal({show: true});
             toast('O código foi enviado no seu email.')

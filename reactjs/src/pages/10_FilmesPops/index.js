@@ -28,7 +28,7 @@ export default function FilmesGostos(props) {
     const navigation = useHistory();
 
     async function Listar() {
-        const resp = await axios.get('http://localhost:3030/filusu/ja/filmesdif?page=' + pagina);
+        const resp = await axios.get('https://mw-heroku.herokuapp.com/filusu/ja/filmesdif?page=' + pagina);
         console.log(resp);
         setFilme([...resp.data.itens]);
         setTotalPaginas(resp.data.totalPaginas);
