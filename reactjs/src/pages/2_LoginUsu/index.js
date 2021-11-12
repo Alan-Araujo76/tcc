@@ -89,11 +89,15 @@ import FacebookLogin from 'react-facebook-login'
                            icon="fa-facebook"
                            textButton="Facebook"
                         />
-                        <GoogleLogin 
+                        <GoogleLogin
                             clientId="10900770164-ndiffugrup4d6au49c236mr6q7itf6j6.apps.googleusercontent.com"
+                            render={renderProps => (
+                                <button onClick={renderProps.onClick} disabled={renderProps.disabled} className="loginp" style={{marginLeft:"1.5em"}}><img src={LogoGoogle} alt=""/>Google</button>
+                            )}
                             buttonText="Google"
                             onSuccess={responseGoogle}
                             onFailure={responseGoogle}
+                            cookiePolicy={'single_host_origin'}
                         />
                      </div>
                  </div>
