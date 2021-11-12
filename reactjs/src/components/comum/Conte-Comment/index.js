@@ -30,10 +30,10 @@ export default function ComenC() {
                     <div className="ft-perfil">
                         <img src={UsuSemFoto} alt="" />
                     </div>
-                    <div className="nome">{item.id_usuario}</div>
+                    <div className="nome">{item.infob_mw_usuario}</div>
                 </div>
 
-                <div className="comentario-txt">{item.ds_mensagem}</div>
+                <div className="comentario-txt">{item.mensagem}</div>
 
                 <div className="pt3-b2">
                     <div className="tudo">
