@@ -4,6 +4,7 @@ import LinhaSep from '../../assets/img/linha-det-fil.png';
 import Coracao from '../../assets/img/coracao.png';
 import Relogio from '../../assets/img/relogio.png';
 import LinhaBox from '../../assets/img/linha-box.png';
+import Olho from '../../assets/img/image-removebg-preview.png';
 
 import Rodape from '../../components/comum/Rodape-Geral';
 import Com from '../../components/comum/Conte-Comment';
@@ -123,7 +124,7 @@ export default function DetalhesFilme(props) {
                     <div className="bloco">
                         <div className="parte1-p2">
                             <div className="p1-g">
-                                <div className="img-p2"></div>
+                                <div className="img-p2-d"><img src={Olho}/></div>
                                 <div className="txt-p2">ASSISTIDO</div>
                             </div>
 
