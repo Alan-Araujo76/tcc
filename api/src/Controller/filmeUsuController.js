@@ -27,6 +27,42 @@ const app = express.Router();
       }
   })
 
+
+  app.post('/filmesporgosto', async(req, resp) => {
+    try {
+      const { idU, idF } = req.body;
+
+      let u = await db.infob_mw_filme_usuario.findOne({
+        include: [{
+          model: db.infob_mw_usuario,
+          as: 'infob_mw_usuario',
+          required: true,
+          attributes: [['id_usuario', 'idU']]
+        }]
+      });
+
+      let f = await db.infob_mw_filme_usuario.findOne({
+        include: [{
+          model: db.infob_mw_filmes,
+          as: 'infob_mw_filmes',
+          required: true, 
+          attributes: [['id_filme', 'idF']]
+        }]
+      });
+
+      const filmesPorGostoCriado = await db.infob_mw_filme_usuario.create({
+          id_filme: idF = f,
+          id_usuario: idU = u,
+          nm_categoria: "Por gosto"
+      })
+
+
+      resp.send(filmesPorGostoCriado)
+    } catch {
+      resp.send({erro: e.toString()})
+    }
+  })
+
   app.post('/filmesgostoedsrtst', async(req, resp) => {
     try {
       let { id_filme, id_usuario } = req.body;
