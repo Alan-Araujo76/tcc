@@ -42,12 +42,6 @@ app.get('/listarG', async(req, resp) => {
 
 
 
-
-
-
-
-
-
 app.get('/listarP', async(req, resp) => {
     try {
         let c = await db.infob_mw_comentarios.findAll({
@@ -152,5 +146,7 @@ app.delete('/deletar/:id', async(req, resp) => {
         resp.send({erro: e.toString()});
     }
 })
+
+
 
 export default app
