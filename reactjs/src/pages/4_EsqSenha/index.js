@@ -41,13 +41,6 @@ export default function Esqueci(props) {
             <ToastContainer />
             <LogoeBarra />
 
-            <Modal options={exibirModal}>
-                <div className="geral-m">
-                    <div className="txt-m">Insira o código enviado em seu email</div>
-                    <div classNama="inp-modal"><input style={{width: '100%', height: '3.5em', padding: '10px'}} placeholder="Digite o código de recuperação" type={Number} value={codigo} onChange={e => setCodigo(e.target.value)}/><div className="r-m">Reenvie o código</div></div>
-                    <div className="bt-m"><button onClick={validarCodigo}><BotaoL nome="Confirmar"/></button></div>
-                </div>
-            </Modal>
 
             <Parte2>
                 <div className="texto">

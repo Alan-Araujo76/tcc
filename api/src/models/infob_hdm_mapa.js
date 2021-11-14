@@ -1,30 +1,26 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infob_mw_atores extends Model {
+export default class infob_hdm_mapa extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_ator: {
+    id_HDM_mapa: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_filme: {
-      type: DataTypes.INTEGER,
+    nm_HDM_endereco: {
+      type: DataTypes.STRING(500),
       allowNull: true
     },
-    nm_ator: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
-    ds_princ_atores: {
-      type: DataTypes.STRING(255),
+    nr_HDM_cep: {
+      type: DataTypes.DECIMAL(10,0),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infob_mw_atores',
+    tableName: 'infob_hdm_mapa',
     timestamps: false,
     indexes: [
       {
@@ -32,18 +28,11 @@ export default class infob_mw_atores extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_ator" },
-        ]
-      },
-      {
-        name: "id_filme",
-        using: "BTREE",
-        fields: [
-          { name: "id_filme" },
+          { name: "id_HDM_mapa" },
         ]
       },
     ]
   });
-  return infob_mw_atores;
+  return infob_hdm_mapa;
   }
 }

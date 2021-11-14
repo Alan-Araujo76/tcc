@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 
 import { Container } from './styled';
 import { useEffect, useState } from 'react';
+import Modal from '../../components/comum/Modal-Filmes'
 
 import Api from '../../service/api';
 const api = new Api();
@@ -18,8 +19,7 @@ export default function EditarPerfil(props) {
     const [ nome, setNome ] = useState('');
     const [ sobrenome, setSobrenome ] = useState('');
     const [ email, setEmail ] = useState('');
-    
-    
+    const [exibirModal, setExibirModal] = useState({show: false});
 
     async function Alterar() {
         const r = api.AlterarU( nome, sobrenome, email);
@@ -35,6 +35,14 @@ export default function EditarPerfil(props) {
         <Container>
             <Cabecalho />
 
+            <Modal options={exibirModal}>
+                <div className="geral-m">
+                    <div className="txt-m">Insira o código enviado em seu email</div>
+                    <div classNama="inp-modal"><input style={{width: '100%', height: '3.5em', padding: '10px'}} placeholder="Digite o código de recuperação" type={Number}/><div className="r-m">Reenvie o código</div></div>
+                    <div className="botao"><button>Alterar senha</button></div>
+                </div>
+            </Modal>
+
             <div className="titulo">
                 <div className="msg-t">Editar Perfil</div>
                 <div className="barra-t"><img src={LinhaSep} alt="" /></div>
@@ -45,7 +53,7 @@ export default function EditarPerfil(props) {
                     <div className="bloco-inp">
                         <div className="txt-bi">Endereço de email:</div>
                         <div className="inpd"><input value={usu.ds_email} readOnly={true}/></div>
-                        <div><Link>Alterar senha</Link></div>
+                        <div onClick={() => setExibirModal({show: true})}>Alterar senha</div>
                     </div>
 
                     <div className="bloco-inpd">
@@ -111,9 +119,10 @@ export default function EditarPerfil(props) {
                         <div className="txt-bi">Sexo:</div>
                         <div className="ordenar">
                             <select>
+                                <option value="Prefiro não dizer">Prefiro não dizer</option>
                                 <option value="Feminino">Feminino</option>
                                 <option value="Masculino">Masculino</option>
-                                <option value="LGBTQI+">outro</option>
+                                <option value="LGBTQI+">LGBTQI+</option>
                             </select>
                         </div>
                      </div>
