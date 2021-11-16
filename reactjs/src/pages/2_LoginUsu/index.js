@@ -26,10 +26,6 @@ import FacebookLogin from 'react-facebook-login'
      const [ email, setEmail ] = useState('');
      const [ senha, setSenha ] = useState('');
 
-     const [ emailGoogle, setEmailGoogle ] = useState('');
-     const [ senhaGoogle, setSenhaGoogle ] = useState('');
-     const [ profilePic, setProfilePic ] = useState('');
-     const [ isLoggedIn, setIsLoggedIn ] = useState(false);
 
      const [ ] = useState();
 
