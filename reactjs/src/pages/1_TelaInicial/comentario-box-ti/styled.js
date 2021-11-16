@@ -1,70 +1,89 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const Container = styled.div`
-    .box-comentario{
+const Geral = styled.div`
+    margin: 1em 1em 1em 10.7em;
+    width: 32.5em;
+
+    .usuario {
         display: flex;
         flex-direction: row;
-        padding: 1em 8.5em 1em 10.8em;
-        align-self: left;
+        align-items: center;
     }
-    .box-comentario img{
-        margin-right: 1em;
-        width: 5em;
-        height: 4em;
+
+    .nome {
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 15px;
     }
-    .nome-cl-ti{
-        color: #ffff;
-        font: 20px Montserrat;
-        margin-bottom: 1em;
-        font-weight: 900;
+
+    .ft-perfil img {
+        height: 55px;
+        width: 40px;
     }
-    .comentarioTXT-ti{
-        color: #ffff;
-        font: 15px Montserrat;
-        margin-bottom: 2em;
-        font-weight: 600;
+
+    .comentario-txt {
+        font-size: 15px;
+        margin-left: 55px;
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 18px;
+        width: 32.5em;
     }
-    .sobre-coracao-ti{
+
+    .pt3-b2 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 55px;
+        margin-top: 20px;
+    }
+
+    .dif {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .tudo {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        font-size: 14px;
     }
-    .sobre-ti{
-        color: #ffff;
-        font: 15px Montserrat;
-        margin-bottom: 2em;
-        font-weight: 900;
-    }
-    .coracao-ti{
-        color: white;
+
+    .sobre {
         display: flex;
         flex-direction: row;
+        text-align: center;
     }
-    .coracao-ti img{
-        width: 4em;
-        height: 3em;
+
+    .tit-s {
+        font-weight: bold;
+        margin-right: 10px; 
     }
-    @media(max-width: 1200px){
-        .box-comentario{
-            padding: 1% 20% 1% 20%;
-        }
-        .box-comentario img{
-            width: 10%;
-            height: 8%;
-        }
-        .nome-cl-ti{
-            font-size: 70%;
-        }
-        .comentarioTXT-ti{
-            font-size: 40%;
-        }
-        .sobre-ti{
-            font-size: 50%;
-        }
-        .coracao-ti img{
-            width: 45%;
-            height: 60%;
-        }
+
+    .data {
+        font-weight: bold;
+        margin-bottom: -15px;
     }
-`
-export {Container}
+
+    .like {
+        margin-left: 15px;
+    }
+
+    .like button {
+        background-color: transparent;
+        border: transparent;
+        cursor: pointer;
+    }
+    .like button:hover {
+        background-color: red;
+    }
+
+    .like img{
+        height: 30px;
+        width: 40px;
+        margin-top: -5px;
+    }
+`;
+
+
+export { Geral }

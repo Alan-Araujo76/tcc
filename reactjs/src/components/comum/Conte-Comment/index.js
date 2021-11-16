@@ -26,11 +26,9 @@ export default function ComenC() {
     console.log(filme)
 
     return(
-    
-        
+
         <Geral>  
-            {filme.map(item => 
-                <div>
+            <div>
                 <div className="usuario">
                     <div className="ft-perfil">
                         <img src={UsuSemFoto} alt="" />
@@ -38,7 +36,7 @@ export default function ComenC() {
                     <div className="nome">larisso</div>
                 </div>
 
-                <div className="comentario-txt">{item.mensagem}</div>
+                <div className="comentario-txt">sdfsdfsfsfgdfgdddddddddddddddddddddddddddddddddddddddddddddd</div>
 
                 <div className="pt3-b2">
                     <div className="tudo">
@@ -47,16 +45,13 @@ export default function ComenC() {
                             <div className="filme-c"></div>
                         </div>
                         <div className="dif">
-                            <div className="data">{item.dt_comentario}</div>
+                            <div className="data">sdfgsdfgsdfsdfg</div>
                             <div className="like"> <button><img src={Coracao} alt="" /></button> </div>
                         </div>
                     </div>
                 </div>
                 <div className="linha"><img src={LinhaSep} alt=""  /></div>  
-                </div>
-            )
-            }
+            </div>
         </Geral>
         
-    //)
-}
+    )}
