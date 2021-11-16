@@ -108,6 +108,7 @@ app.post('/inserir', async(req, resp) => {
             ds_mensagem: mensagem,
             dt_comentario: new Date,
             ds_curtidas: curtidas
+
         })
         resp.send("Comentario inserido!");
     } catch(e) {
@@ -126,6 +127,7 @@ app.put('/alterar/:id', async(req, resp) => {
             id_usuario: usuario,
             mensagem: mensagem,
             curtidas: curtidas
+
         },
         {
             where: {id_cometario: id}
@@ -135,6 +137,9 @@ app.put('/alterar/:id', async(req, resp) => {
         resp.send({erro: e.toString()})
     }
 })
+
+
+
 
 
 app.delete('/deletar/:id', async(req, resp) => {
@@ -147,6 +152,22 @@ app.delete('/deletar/:id', async(req, resp) => {
     }
 })
 
+
+app.put('/alterarCurti/:id', async(req, resp) => {
+    try {
+        let { id } = req.params;
+        let b = await db.infob_mw_tbcomentarios.findOne({where: {id_cometariio : id}})
+        let a = await db.infob_mw_tbcomentarios.update({
+            ds_curtidas: b.ds_curtidas + 1       
+        },
+        {
+            where: {id_cometariio: id}
+        })
+        resp.send("Você curtiu esse comentário");
+    } catch(e) {
+        resp.send({erro: e.toString()})
+    }
+})
 
 
 export default app

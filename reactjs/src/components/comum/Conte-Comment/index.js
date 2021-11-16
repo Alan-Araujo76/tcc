@@ -8,8 +8,10 @@ import { useEffect, useState } from "react";
 import Api from '../../../service/api';
 const api = new Api();
 
+
 export default function ComenC() {
     const [filme, setFilme] = useState([]);
+    
 
     async function ListarU() {
         let r = await api.ListarC();
@@ -21,8 +23,11 @@ export default function ComenC() {
         ListarU();
     }, []);
 
+    console.log(filme)
+
     return(
     
+        
         <Geral>  
             {filme.map(item => 
                 <div>
@@ -47,7 +52,7 @@ export default function ComenC() {
                         </div>
                     </div>
                 </div>
-                <div className="linha"><img src={LinhaSep} alt="" /></div>  
+                <div className="linha"><img src={LinhaSep} alt=""  /></div>  
                 </div>
             )
             }

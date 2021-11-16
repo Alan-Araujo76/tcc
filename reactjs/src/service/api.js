@@ -186,6 +186,10 @@ async ListarCarousel() {
         let r = await api.delete('/lista/' + id);
         return r.data;
     }
+
+    async Curti(id) {
+        let r = await api.put(`/alterarCurti/${id}`)
+    }
 }
 
 
