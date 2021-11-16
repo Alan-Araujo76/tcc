@@ -9,7 +9,7 @@ const app = express.Router();
   app.get('/filmesgosto', async(req, resp) => {
       try {
         //let { id_filme, id_usuario } = req.body;
-          let a = await db.infob_mw_filme_usuario.findAll({
+          let a = await db.infob_mw_tbfilmeusu.findAll({
             include: [{
               model: db.infob_mw_usuario,
               as: 'infob_mw_usuario',
@@ -32,7 +32,7 @@ const app = express.Router();
     try {
       const { idU, idF } = req.body;
 
-      let u = await db.infob_mw_filme_usuario.findOne({
+      let u = await db.infob_mw_tbfilmeusu.findOne({
         include: [{
           model: db.infob_mw_usuario,
           as: 'infob_mw_usuario',
@@ -41,7 +41,7 @@ const app = express.Router();
         }]
       });
 
-      let f = await db.infob_mw_filme_usuario.findOne({
+      let f = await db.infob_mw_tbfilmeusu.findOne({
         include: [{
           model: db.infob_mw_filmes,
           as: 'infob_mw_filmes',
@@ -50,7 +50,7 @@ const app = express.Router();
         }]
       });
 
-      const filmesPorGostoCriado = await db.infob_mw_filme_usuario.create({
+      const filmesPorGostoCriado = await db.infob_mw_tbfilmeusu.create({
           id_filme: idF = f,
           id_usuario: idU = u,
           nm_categoria: "Por gosto"
@@ -66,9 +66,9 @@ const app = express.Router();
   app.post('/filmesgostoedsrtst', async(req, resp) => {
     try {
       let { id_filme, id_usuario } = req.body;
-        let a = await db.infob_mw_filme_usuario.findAll({});
+        let a = await db.infob_mw_tbfilmeusu.findAll({});
 
-        let i = await db.infob_mw_filme_usuario.create({
+        let i = await db.infob_mw_tbfilmeusu.create({
             id_filme_usuario: id,
             id_usuario: id_usuario,
             id_filme: id_filme,
@@ -297,43 +297,6 @@ const app = express.Router();
           })
 
 /////////////////////////////////////////////////////////////////////////////////////
-
-
-app.get('/AssistirT', async(req, resp) => {
-  try {
-      let x = await db.infob_mw_lista_item.findAll();
-      resp.send(x);
-  } catch(e) {
-      resp.send({ erro: e.toString() })
-  }
-})
-
-
-app.post('/AssistirT', async (req, resp) => {
-  try{
-      let {filme, lista} = req.body;
-          let x = await db.infob_mw_lista_item.create({
-              id_filme: filme,
-              id_lista: lista
-          })
-          resp.send('Filme adicionado!')  
-  } catch(e) {
-       resp.send({erro: e.toString() })
-  }
-})
-
-app.delete('/AssistirT/:id', async(req, resp) => {
-  try {
-      let { id } = req.params;
-
-      let d = await db.infob_mw_lista_item.destroy({ where: {id_lista_item: id }})
-      resp.send('Filme removido!')
-  } catch(e) {
-      resp.send({erro: e.toString()})
-  }
-})
-
-
 
 
 

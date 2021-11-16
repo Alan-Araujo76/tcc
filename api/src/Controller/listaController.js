@@ -5,11 +5,11 @@ const app = express.Router();
 
 app.get('/listar', async(req, resp) => {
     try {
-        let l = await db.infob_mw_lista.findAll({
+        let l = await db.infob_mw_tblista.findAll({
             include:[
                 {
-                    model: db.infob_mw_lista_item,
-                    as:'infob_mw_lista_item',
+                    model: db.infob_mw_tblistaitem,
+                    as:'infob_mw_tblistaitem',
                     required : true
                 }
             ]
@@ -23,7 +23,7 @@ app.get('/listar', async(req, resp) => {
 app.post('/inserir', async(req, resp) => {
     try {
         let { lista, descricao, usu} = req.body;       
-        let l = await db.infob_mw_lista.create({
+        let l = await db.infob_mw_tblista.create({
             id_usuario: usu,
             nm_lista: lista,
             ds_descricao: descricao
@@ -38,8 +38,8 @@ app.put('/alterar/:id', async(req, resp) => {
     try {
         let { lista, descricao, usu} = req.body;
         let { id } = req.params;
-        let consulta = await db.infob_mw_lista.findOne({ where: {nm_lista: lista} })
-            let l = await db.infob_mw_lista.update({
+        let consulta = await db.infob_mw_tblista.findOne({ where: {nm_lista: lista} })
+            let l = await db.infob_mw_tblista.update({
                 id_usuario: usu,
                 nm_lista: nome,
                 ds_descricao: descricao
@@ -56,7 +56,7 @@ app.put('/alterar/:id', async(req, resp) => {
 app.delete('/deletar/:id', async(req, resp) => {
     try {
         let { id } = req.params;
-        let l = await db.infob_mw_lista.destroy({ where: { id_lista: id }})
+        let l = await db.infob_mw_tblista.destroy({ where: { id_lista: id }})
         resp.send('lista removida')
     } catch(e) {
         resp.send({erro: e.toString()})
