@@ -13,16 +13,43 @@ import Modal from '../../components/comum/Modal-Filmes'
 import Api from '../../service/api';
 const api = new Api();
 
-export default function EditarPerfil(props) {
-    const [ usu, setUsu ] = useState(props.location.state);
+export default function EditarPerfil() {
+    const [ usu, setUsu ] = useState([]);
     const [ alterarUsu, setAlterarUsu ] = useState('');
     const [ nome, setNome ] = useState('');
     const [ sobrenome, setSobrenome ] = useState('');
+    const [ username, setUsername ] = useState('');
     const [ email, setEmail ] = useState('');
-    const [exibirModal, setExibirModal] = useState({show: false});
+    const [ senha, setSenha ] = useState('');
+    const [ genero, setGenero ] = useState('');
+    const [ localizacao, setLocalizacao ] = useState('');
+    const [ redes, setRedes ] = useState('');
+    const [ foto, setFoto ] = useState('');
+    const [ exibirModal, setExibirModal ] = useState({show: false});
 
-    async function Alterar() {
-        const r = api.AlterarU( nome, sobrenome, email);
+    async function listar(){
+        let r = api.ListarU()
+        setUsu(r);
+    }
+
+    async function editar(item) {
+        setNome(item.nm_usuario);
+        setSobrenome(item.nm_sobrenome);
+        setUsername(item.nm_username);
+        setEmail(item.ds_email);
+        setRedes(item.ds_redes_sociais);
+        setFoto(item.ds_foto);
+        setAlterarUsu(item.id_usuario)
+    }
+
+    useEffect(()=>{
+        let r = listar();
+        let z = usu.map(item => () => editar(item))
+        console.log(z)
+    }, [])
+
+    async function alterar() {
+        let r = api.AlterarU( alterarUsu, nome, sobrenome, username, email, genero, localizacao, redes, foto );
         setAlterarUsu(r);
     }
 
@@ -52,29 +79,29 @@ export default function EditarPerfil(props) {
                 <div className="parte-inputs">
                     <div className="bloco-inp">
                         <div className="txt-bi">Endereço de email:</div>
-                        <div className="inpd"><input value={usu.ds_email} readOnly={true}/></div>
+                        <div className="inpd"><input value={email} onChange={e => setEmail(e.target.value)}/></div>
                         <div onClick={() => setExibirModal({show: true})}>Alterar senha</div>
                     </div>
 
                     <div className="bloco-inpd">
                      <div className="dif">
                         <div className="txt-bi">Nome:</div>
-                        <div className="inp"><input value={usu.nm_usuario} readOnly={true}/></div>
+                        <div className="inp"><input value={nome} onChange={e => setNome(e.target.value)}/></div>
                      </div>
                      <div className="dif">
                         <div className="txt-bi">Sobrenome:</div>
-                        <div className="inp"><input value={usu.nm_sobrenome} readOnly={true}/></div>
+                        <div className="inp"><input value={sobrenome} onChange={e => setSobrenome(e.target.value)}/></div>
                      </div>
                     </div>
 
                     <div className="bloco-inpd">
                      <div className="dif">
                         <div className="txt-bi">Username:</div>
-                        <div className="inp"><input value={usu.nm_username} readOnly={true}/></div>
+                        <div className="inp"><input value={username} onChange={e => setUsername(e.target.value)}/></div>
                      </div>
                      <div className="dif">
                         <div className="txt-bi">Redes sociais</div>
-                        <div className="inp"><input value={usu.ds_redes_sociais} readOnly={true}/></div>
+                        <div className="inp"><input value={redes} onChange={e => setRedes(e.target.value)}/></div>
                      </div>
                     </div>
     
@@ -129,7 +156,7 @@ export default function EditarPerfil(props) {
                     </div>
 
                     <div className="bloco-inp">
-                        <div className="botao"><button>Salvar alterações</button></div>
+                        <div className="botao"><button onClick={alterar}>Salvar alterações</button></div>
                     </div>
                 </div>
 
@@ -141,7 +168,7 @@ export default function EditarPerfil(props) {
                         : <img src={usu.ds_foto} alt="" />
                     }
                 </div>
-                    <div className="bt-p"><button>Trocar foto </button></div>
+                    <div className="bt-p"><button>Trocar foto</button></div>
 
                     <div className="bloco-inp">
                     <div className="txt-b">Bio: </div>
