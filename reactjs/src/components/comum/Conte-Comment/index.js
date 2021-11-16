@@ -21,37 +21,37 @@ export default function ComenC() {
         ListarU();
     }, []);
 
-    return(
+    //return(
     
-        <Geral>  
-            {filme.map(item => 
-                <div>
-                <div className="usuario">
-                    <div className="ft-perfil">
-                        <img src={UsuSemFoto} alt="" />
-                    </div>
-                    <div className="nome">larisso</div>
-                </div>
+        //<Geral>  
+            //{filme.map(item => 
+                //<div>
+                //<div className="usuario">
+                    //<div className="ft-perfil">
+                        //<img src={UsuSemFoto} alt="" />
+                    //</div>
+                    //<div className="nome">larisso</div>
+                //</div>
 
-                <div className="comentario-txt">{item.mensagem}</div>
+                //<div className="comentario-txt">{item.mensagem}</div>
 
-                <div className="pt3-b2">
-                    <div className="tudo">
-                        <div className="sobre">
-                            <div className="tit-s">Sobre: </div>
-                            <div className="filme-c"></div>
-                        </div>
-                        <div className="dif">
-                            <div className="data">{item.dt_comentario}</div>
-                            <div className="like"> <button><img src={Coracao} alt="" /></button> </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="linha"><img src={LinhaSep} alt="" /></div>  
-                </div>
-            )
-            }
-        </Geral>
+                //<div className="pt3-b2">
+                    //<div className="tudo">
+                        //<div className="sobre">
+                            //<div className="tit-s">Sobre: </div>
+                            //<div className="filme-c"></div>
+                        //</div>
+                        //<div className="dif">
+                            //<div className="data">{item.dt_comentario}</div>
+                            //<div className="like"> <button><img src={Coracao} alt="" /></button> </div>
+                        //</div>
+                    //</div>
+                //</div>
+                //<div className="linha"><img src={LinhaSep} alt="" /></div>  
+                //</div>
+            //)
+            
+        //</Geral>
         
-    )
+    //)
 }
