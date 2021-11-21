@@ -1,6 +1,6 @@
 import Axios from 'axios';
 const api = Axios.create({
-    baseURL: ('https://mw-heroku.herokuapp.com')
+    baseURL: ('http://localhost:3030')
 })
 
 
@@ -118,13 +118,7 @@ async ListarCarousel() {
     //////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////
 
-
-    async ListarCU() {
-        let r = await api.get('/comentario/listarG');
-        return r.data;
-    }
-
-    async ListarC() {
+    async ListarComentario() {
         let r = await api.get('/comentario/listarP');
         return r.data;
     }

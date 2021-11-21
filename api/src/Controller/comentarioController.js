@@ -8,103 +8,28 @@ const app = express.Router();
 import Sequelize from 'sequelize';
 const { Op } = Sequelize;
 
-app.get('/listarG', async(req, resp) => {
-    try {
-        let coment = await db.infob_mw_tbcomentario.findAll({
-            include: [{
-                model: db.infob_mw_usuario,
-                as: 'infob_mw_usuario',
-                required: true
-            }],
-            order: [
-                ['ds_curtidas', 'desc']
-            ]
-        })
-
-        resp.send(coment)
-    } catch(e) {
-        resp.send({e:erro.toString()})
-    }
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 app.get('/listarP', async(req, resp) => {
     try {
         let c = await db.infob_mw_tbcomentario.findAll({
-            include: [{
-                model: db.infob_mw_usuario,
-                as: 'infob_mw_usuario',
-                required: true
-            }],
-            include: [{
-                model: db.infob_mw_filmes,
-                as: 'infob_mw_filmes',
-                required: true
-            }],
-            order: [['ds_curtidas', 'desc']]
+            include: ['id_filme_infob_mw_filme','id_usuario_infob_mw_usuario'],
+            order:[
+                ['ds_curtidas' , 'desc']
+            ],
+            limit:4
         });
-       {/* c = c.map(item => {
-            return {
-              id: item.id_cometario,
-              id_filme: item.id_filme,
-              id_usuario: item.id_usuario,
-              mensagem: item.ds_mensagem,
-              data: item.dt_comentario,
-              curtidas: item.ds_curtidas
-            }
-          })*/}
         resp.send(c);
     } catch(e) {
         resp.send({ erro: e.toString() })
     }
 })
-
-app.get('/listarg', async(req, resp) => {
-    try {
-        let c = await db.infob_mw_tbcomentario.findAll({
-            order: [
-                ['ds_curtidas', 'desc']
-            ]
-        });
-        c = c.map(item => {
-            return {
-              id: item.id_cometario,
-              id_filme: item.id_filme,
-              id_usuario: item.id_usuario,
-              mensagem: item.ds_mensagem,
-              data: item.dt_comentario,
-              curtidas: item.ds_curtidas
-            }
-          })
-        resp.send(c);
-    } catch(e) {
-        resp.send({ erro: e.toString() })
-    }
-})
-
-
 
 app.post('/inserir', async(req, resp) => {
     try {
-        let { id_filme, id_usuario, mensagem, curtidas } = req.body;
+        let { filme, usuario, mensagem, curtidas } = req.body;
         
         let i = await db.infob_mw_tbcomentario.create({
-            id_filme: id_filme,
-            id_usuario: id_usuario,
+            id_filme: filme,
+            id_usuario: usuario,
             ds_mensagem: mensagem,
             dt_comentario: new Date,
             ds_curtidas: curtidas
@@ -142,9 +67,9 @@ app.put('/alterar/:id', async(req, resp) => {
 
 
 
-app.delete('/deletar/:id', async(req, resp) => {
+app.delete('/:id', async(req, resp) => {
     try {
-        let id = req.params;
+        let {id} = req.params;
         let c = db.infob_mw_tbcomentario.destroy({ where: {id_cometario: id}})
         resp.send("Comentario removido!");
     } catch(e) {
