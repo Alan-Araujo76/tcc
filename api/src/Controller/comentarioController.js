@@ -10,7 +10,7 @@ const { Op } = Sequelize;
 
 app.get('/listarG', async(req, resp) => {
     try {
-        let coment = await db.infob_mw_tbcomentarios.findAll({
+        let coment = await db.infob_mw_tbcomentario.findAll({
             include: [{
                 model: db.infob_mw_usuario,
                 as: 'infob_mw_usuario',
@@ -44,7 +44,7 @@ app.get('/listarG', async(req, resp) => {
 
 app.get('/listarP', async(req, resp) => {
     try {
-        let c = await db.infob_mw_tbcomentarios.findAll({
+        let c = await db.infob_mw_tbcomentario.findAll({
             include: [{
                 model: db.infob_mw_usuario,
                 as: 'infob_mw_usuario',
@@ -75,7 +75,7 @@ app.get('/listarP', async(req, resp) => {
 
 app.get('/listarg', async(req, resp) => {
     try {
-        let c = await db.infob_mw_tbcomentarios.findAll({
+        let c = await db.infob_mw_tbcomentario.findAll({
             order: [
                 ['ds_curtidas', 'desc']
             ]
@@ -102,7 +102,7 @@ app.post('/inserir', async(req, resp) => {
     try {
         let { id_filme, id_usuario, mensagem, curtidas } = req.body;
         
-        let i = await db.infob_mw_tbcomentarios.create({
+        let i = await db.infob_mw_tbcomentario.create({
             id_filme: id_filme,
             id_usuario: id_usuario,
             ds_mensagem: mensagem,
@@ -122,7 +122,7 @@ app.put('/alterar/:id', async(req, resp) => {
         let { filme, usuario, mensagem, curtidas } = req.body;
         let { id } = req.params;
 
-        let a = await db.infob_mw_tbcomentarios.update({
+        let a = await db.infob_mw_tbcomentario.update({
             id_filme: filme,
             id_usuario: usuario,
             mensagem: mensagem,
@@ -145,7 +145,7 @@ app.put('/alterar/:id', async(req, resp) => {
 app.delete('/deletar/:id', async(req, resp) => {
     try {
         let id = req.params;
-        let c = db.infob_mw_tbcomentarios.destroy({ where: {id_cometario: id}})
+        let c = db.infob_mw_tbcomentario.destroy({ where: {id_cometario: id}})
         resp.send("Comentario removido!");
     } catch(e) {
         resp.send({erro: e.toString()});
@@ -156,8 +156,8 @@ app.delete('/deletar/:id', async(req, resp) => {
 app.put('/alterarCurti/:id', async(req, resp) => {
     try {
         let { id } = req.params;
-        let b = await db.infob_mw_tbcomentarios.findOne({where: {id_cometariio : id}})
-        let a = await db.infob_mw_tbcomentarios.update({
+        let b = await db.infob_mw_tbcomentario.findOne({where: {id_cometariio : id}})
+        let a = await db.infob_mw_tbcomentario.update({
             ds_curtidas: b.ds_curtidas + 1       
         },
         {
