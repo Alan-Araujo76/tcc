@@ -40,13 +40,13 @@ export default function Carousel(){
     }
 
     async function Listar(){
-        let r = await api.ListarCarousel()
-        setFilme(r)
+        let r = await api.ListarCarousel();
+        setFilme(r);
     }
 
     useEffect(() =>{
         Listar()
-    },[])
+    },[]);
 
     return(
         <Container>

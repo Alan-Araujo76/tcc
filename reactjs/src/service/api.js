@@ -161,7 +161,7 @@ async ListarCarousel() {
 
 
     async ListarLis(){
-        let r = await api.get('/listar');
+        let r = await api.get('/lista/listar');
         return r.data;
     }
 

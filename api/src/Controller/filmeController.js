@@ -6,7 +6,13 @@ const app = express.Router();
 
 app.get('/listar', async(req, resp) => {
     try {
-        let a = await db.infob_mw_filmes.findAll();
+        let a = await db.infob_mw_filmes.findAll({
+            include:{
+                model: db.infob_mw_tbatores,
+                as: 'infob_mw_tbatores',
+                require: true
+            }
+        });
         console.log('Console: ' + a);
         resp.send(a);
     } catch(e) {

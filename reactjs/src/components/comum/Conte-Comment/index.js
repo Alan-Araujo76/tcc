@@ -14,12 +14,12 @@ export default function ComenC() {
 
     async function Listar(){
         let r = await api.ListarComentario()
-        setComentario(r)
-    }
+        setComentario(r);
+    };
 
     useEffect(() =>{
-        Listar()
-    },[])
+        Listar();
+    },[]);
 
     return(
         

@@ -3,9 +3,15 @@ import db from "../db.js";
 
 const app = express.Router();
 
-app.get('/item', async(req, resp) => {
+app.get('/', async(req, resp) => {
     try {
-        let x = await db.infob_mw_tblistaitem.findAll();
+        let x = await db.infob_mw_tblistaitem.findAll({
+            include:{
+                model: db.infob_mw_filmes,
+                as: 'id_filme_infob_mw_filme',
+                required: true
+            }
+        });
         resp.send(x);
     } catch(e) {
         resp.send({ erro: e.toString() })
@@ -13,12 +19,12 @@ app.get('/item', async(req, resp) => {
 })
 
 
-app.post('/lista_item', async (req, resp) => {
+app.post('/', async (req, resp) => {
     try{
-        let {nome, descricao, lista } = req.body;
+        let {filme, lista } = req.body;
 
         let x = await db.infob_mw_tblistaitem.create({
-            id_filme: descricao,
+            id_filme: filme,
             id_lista: lista
         })
          resp.send('filme adicionado!')  

@@ -26,7 +26,7 @@ export default function ComentariosTi(){
                 <div>
                     <div className="usuario">
                         <div className="ft-perfil">
-                            <img src={item.id_usuario_infob_mw_usuario.ds_foto} alt="" />
+                            <img src="" alt="" />
                         </div>
                         <div className="nome">{item.id_usuario_infob_mw_usuario.nm_username}</div>
                     </div>

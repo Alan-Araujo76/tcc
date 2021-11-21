@@ -6,14 +6,8 @@ const app = express.Router();
 app.get('/listar', async(req, resp) => {
     try {
         let l = await db.infob_mw_tblista.findAll({
-            include:[
-                {
-                    model: db.infob_mw_tblistaitem,
-                    as:'infob_mw_tblistaitem',
-                    required : true
-                }
-            ]
-        });
+            include: ['infob_mw_tblistaitems','id_usuario_infob_mw_usuario'],
+            });
         resp.send(l);
     } catch(e) {
         resp.send({ erro: e.toString() })
