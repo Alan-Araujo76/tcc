@@ -74,7 +74,7 @@ export default function DetalhesFilme(props) {
                         <div className="principais_atores">
                             <div classNameName="sep">
                                 <img src={ExpVin} alt="" />
-                                <div>guigh</div>
+                                <div>{filmes.infob_mw_tbatores}</div>
                             </div>
         
                         </div>

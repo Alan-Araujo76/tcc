@@ -7,17 +7,21 @@ import Rodape from '../../components/comum/Rodape-Geral';
 import { Link } from 'react-router-dom';
 
 import { Container } from './styled';
+import { useState } from 'react';
 
-export default function FilmeLista() {
+export default function FilmeLista(props) {
+    const [flista,setFlista] = useState(props.location.state);
+    console.log(flista);
+
     return(
     <div style={{display: "flex", flexDirection: "column", backgroundColor: "#000"}}>
-        <Cabecalho />
+        <Cabecalho/>
             <Container>
-            <b className="titulo">Melhores do ano:</b>
+            <b className="titulo">{flista.nm_lista}</b>
 
             <div className="parte1">
                 <div className="desc">DESCRIÇÃO:</div>
-                <div className="desc-desc">Os que eu mais gostei durante 2021</div>
+                <div className="desc-desc">{flista.ds_descricao}</div>
             </div>
 
             <div className="parte2">
@@ -29,8 +33,8 @@ export default function FilmeLista() {
                         </Link>
                     </div>
                     <div className="bloco">
-                        <div className="img-filme"><img src={Filme} alt=""/></div>
-                        <div className="nm-filme">Velozes e Furiosos 9</div>
+                        <div className="img-filme"><img src={flista.infob_mw_tblistaitems[0].id_filme_infob_mw_filme.img_capa_menor} alt=""/></div>
+                        <div className="nm-filme">{flista.infob_mw_tblistaitems[0].id_filme_infob_mw_filme.nm_filme}</div>
                     </div>
                     <div className="bloco">
                         <div className="img-filme"><img src={Filme} alt=""/></div>
