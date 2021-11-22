@@ -76,31 +76,8 @@ export default function DetalhesFilme(props) {
                                 <img src={ExpVin} alt="" />
                                 <div>Vin Diesel</div>
                             </div>
-                            <div classNameName="sep">
-                                <img src={ExpPaul} alt="" />
-                                <div>Paul Walker</div>
-                            </div>
-                            <div classNameName="sep">
-                                <img src={ExpMiche} alt="" />
-                                <div>Michelle Rodriguez</div>
-                            </div>
+        
                         </div>
-
-                        <div className="principais_atores">
-                            <div classNameName="sep">
-                                <img src={ExpVin} alt="" />
-                                <div>Vin Diesel</div>
-                            </div>
-                            <div classNameName="sep">
-                                <img src={ExpPaul} alt="" />
-                                <div>Paul Walker</div>
-                            </div>
-                            <div classNameName="sep">
-                                <img src={ExpMiche} alt="" />
-                                <div>Michelle Rodriguez</div>
-                            </div>
-                        </div>
-
                     </div>
                 </div> 
             </ContainerC>
@@ -155,9 +132,8 @@ export default function DetalhesFilme(props) {
                         <div className="barra-p2"><img src={LinhaBox} alt="" /></div>
 
                         <div className="parte4-p2">
-                            <div className="txt-p2-n">COMENTAR</div>
+                            <button className="txt-p2-n">COMENTAR</button>
                         </div>
-
                     </div>
                 </div>
             </div>

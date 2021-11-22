@@ -14,8 +14,7 @@ app.get('/listarP', async(req, resp) => {
             include: ['id_filme_infob_mw_filme','id_usuario_infob_mw_usuario'],
             order:[
                 ['ds_curtidas' , 'desc']
-            ],
-            limit:4
+            ]
         });
         resp.send(c);
     } catch(e) {

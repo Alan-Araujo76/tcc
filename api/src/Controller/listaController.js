@@ -6,8 +6,22 @@ const app = express.Router();
 app.get('/listar', async(req, resp) => {
     try {
         let l = await db.infob_mw_tblista.findAll({
-            include: ['infob_mw_tblistaitems','id_usuario_infob_mw_usuario'],
-            });
+            include:[{
+                model: db.infob_mw_tblistaitem,
+                as: 'infob_mw_tblistaitems',
+                required: true,
+                include:[{
+                    model: db.infob_mw_filmes,
+                    as: 'id_filme_infob_mw_filme',
+                    required: true
+                }]
+            },
+            {
+                model: db.infob_mw_usuario,
+                as: 'id_usuario_infob_mw_usuario',
+                required: true
+            }]
+        });
         resp.send(l);
     } catch(e) {
         resp.send({ erro: e.toString() })

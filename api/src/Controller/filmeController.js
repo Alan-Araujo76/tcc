@@ -23,22 +23,6 @@ app.get('/listar', async(req, resp) => {
 app.get('/box', async(req, resp) => {
     try {
         let a = await db.infob_mw_filmes.findAll({});
-
-        a = a.map(item => {
-            return {
-              id: item.id_filme,
-              nome: item.nm_filme,
-              genero: item.ds_genero,
-              lancamento: item.ano_lancamento,
-              diretor: item.nm_diretor, 
-              sinopse: item.ds_sinopse,
-              avaliacao: item.ds_avaliacao, 
-              descricao: item.ds_descricao, 
-              plataforma: item.ds_plataforma, 
-              img_maior: item.img_capa_maior, 
-              img_menor: item.img_capa_menor
-            }
-          })
         resp.send(a);
     } catch(e) {
         resp.send({erro: e.toString()})
@@ -47,12 +31,12 @@ app.get('/box', async(req, resp) => {
 
 app.post('/inserir', async(req, resp) => {
     try {
-        let { nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor } = req.body;
-    
+        let { nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor, likes, atores} = req.body;
+
         if(nome == "" && nome.length < 2 || genero == "" || genero <= 3 || lancamento == "" && lancamento.length < 2 || diretor == "" && diretor.length <= 0 || sinopse == "" && sinopse.length <= 0 || avaliacao == "" && avaliacao.length <= 0 || descricao == "" && descricao.length <= 0 || avaliacao.length <= 0 || descricao == "" && descricao.length <= 0 || plataforma == "" && plataforma.length <= 0 || img_menor == "" && img_menor.length <= 0 || img_maior == "" && img_maior.length <= 0) {
             resp.send({erro: '❌ Campos inválidos!'})
         } else {
-            let i = await db.infob_mw_filmes.create({
+            let film = await db.infob_mw_filmes.create({
                 nm_filme: nome,
                 ds_genero: genero,
                 ano_lancamento: lancamento,
@@ -63,7 +47,16 @@ app.post('/inserir', async(req, resp) => {
                 ds_plataforma: plataforma,
                 img_capa_maior: img_maior,
                 img_capa_menor: img_menor,
+                qtd_likes: likes,
             })
+            for (var ator of atores){
+                let {nmator, image} = ator
+                let ator_item = await db.infob_mw_tbatores.create({
+                    id_filme: film.id_filme,
+                    nm_ator: nmator,
+                    img_autor: image,
+                })
+            }
             resp.send("Filme inserido!");
         }
     } catch(e) {
@@ -72,9 +65,11 @@ app.post('/inserir', async(req, resp) => {
 })
 
 
-app.put('/alterar/:id', async(req, resp) => {
+
+
+app.put('/:id', async(req, resp) => {
     try {
-        let { nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor } = req.body;
+        let { nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor, likes } = req.body;
         let { id } = req.params;
 
         if(nome == "" && nome.length < 2 || genero == "" || genero <= 3 || lancamento == "" && lancamento.length < 2 || diretor == "" && diretor.length <= 0 || sinopse == "" && sinopse.length <= 0 || avaliacao == "" && avaliacao.length <= 0 || descricao == "" && descricao.length <= 0 || avaliacao.length <= 0 || descricao == "" && descricao.length <= 0 || plataforma == "" && plataforma.length <= 0 || img_menor == "" && img_menor.length <= 0 || img_maior == "" && img_maior.length <= 0) {
@@ -91,7 +86,8 @@ app.put('/alterar/:id', async(req, resp) => {
                 ds_descricao: descricao,
                 ds_plataforma: plataforma,
                 img_capa_maior: img_maior,
-                img_capa_menor: img_menor
+                img_capa_menor: img_menor,
+                qtd_likes: likes,
             },
             {
                 where: {id_filme: id}
@@ -103,6 +99,24 @@ app.put('/alterar/:id', async(req, resp) => {
     }
 })
 
+app.put('/:id' , async(req, resp) =>{
+    try{
+        let {nmator, image} = req.body;
+        let { id } = req.params;
+        let a = await db.infob_mw_tbatores.update(
+            {
+                id_filme: filme,
+                nm_ator: nmator,
+                img_autor: image,
+            },
+            {
+                where: {id_ator: id}
+            }
+        )
+    } catch(e){
+        resp.send({ erro: e.toString() })
+    }
+})
 
 app.delete('/:id', async(req, resp) => {
     try {

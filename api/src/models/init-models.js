@@ -40,7 +40,7 @@ export default function initModels(sequelize) {
 
 
   infob_mw_tblistaitem.belongsTo(infob_mw_filmes, { as: "id_filme_infob_mw_filme", foreignKey: "id_filme"});
-  infob_mw_filmes.hasMany(infob_mw_tblistaitem, { as: "infob_mw_tblistaitems", foreignKey: "id_filme"});
+  infob_mw_filmes.hasOne(infob_mw_tblistaitem, { as: "infob_mw_tblistaitems", foreignKey: "id_filme"});
   infob_mw_tblistaitem.belongsTo(infob_mw_tblista, { as: "id_lista_infob_mw_tblistum", foreignKey: "id_lista"});
   infob_mw_tblista.hasMany(infob_mw_tblistaitem, { as: "infob_mw_tblistaitems", foreignKey: "id_lista"});
   
