@@ -7,11 +7,11 @@ const app = express.Router();
 app.get('/listar', async(req, resp) => {
     try {
         let a = await db.infob_mw_filmes.findAll({
-            include:{
+            include:[{
                 model: db.infob_mw_tbatores,
                 as: 'infob_mw_tbatores',
                 require: true
-            }
+            }]
         });
         console.log('Console: ' + a);
         resp.send(a);
@@ -72,9 +72,6 @@ app.put('/:id', async(req, resp) => {
         let { nome, genero, lancamento, diretor, sinopse, avaliacao, descricao, plataforma, img_maior, img_menor, likes } = req.body;
         let { id } = req.params;
 
-        if(nome == "" && nome.length < 2 || genero == "" || genero <= 3 || lancamento == "" && lancamento.length < 2 || diretor == "" && diretor.length <= 0 || sinopse == "" && sinopse.length <= 0 || avaliacao == "" && avaliacao.length <= 0 || descricao == "" && descricao.length <= 0 || avaliacao.length <= 0 || descricao == "" && descricao.length <= 0 || plataforma == "" && plataforma.length <= 0 || img_menor == "" && img_menor.length <= 0 || img_maior == "" && img_maior.length <= 0) {
-            resp.send({erro: '❌ Campos inválidos!'})
-        } else {
             let a = await db.infob_mw_filmes.update(
             {
                 nm_filme: nome,
@@ -93,13 +90,12 @@ app.put('/:id', async(req, resp) => {
                 where: {id_filme: id}
             })
             resp.send("Filme alterado!");
-        }
     } catch(e) {
         resp.send({ erro: e.toString() })
     }
 })
 
-app.put('/:id' , async(req, resp) =>{
+app.put('alt/:id' , async(req, resp) =>{
     try{
         let {nmator, image} = req.body;
         let { id } = req.params;

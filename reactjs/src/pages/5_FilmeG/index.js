@@ -74,7 +74,7 @@ export default function DetalhesFilme(props) {
                         <div className="principais_atores">
                             <div classNameName="sep">
                                 <img src={ExpVin} alt="" />
-                                <div>Vin Diesel</div>
+                                <div>guigh</div>
                             </div>
         
                         </div>

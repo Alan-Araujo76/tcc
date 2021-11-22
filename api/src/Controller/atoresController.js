@@ -15,10 +15,10 @@ app.get('/', async(req, resp) => {
 
 app.post('/', async(req, resp) =>{
     try{
-        let { filme, nome, imagem} = req.body;
+        let { filme, nmator, imagem} = req.body;
         let i = await db.infob_mw_tbatores.create({
             id_filme: filme,
-            nm_ator: nome,
+            nm_ator: nmator,
             img_autor: imagem
         })
         resp.send("foi")
@@ -29,11 +29,11 @@ app.post('/', async(req, resp) =>{
 
 app.put('/:id', async(req, resp) =>{
     try{
-        let { filme, nome, imagem} = req.body;
+        let { filme, nmator, imagem} = req.body;
         let { id } = req.params;
         let i = await db.infob_mw_tbatores.update({
             id_filme: filme,
-            nm_ator: nome,
+            nm_ator: nmator,
             img_autor: imagem 
         },
         {

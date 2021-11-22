@@ -8,7 +8,7 @@ const api = new Api();
 
 export default function BoxFilme(){
     const [filmes, setFilmes] = useState([]);
-    
+
     async function Listar() {
         const r = await api.ListarBox();
         setFilmes(r);

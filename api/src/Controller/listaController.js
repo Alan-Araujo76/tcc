@@ -30,13 +30,21 @@ app.get('/listar', async(req, resp) => {
 
 app.post('/inserir', async(req, resp) => {
     try {
-        let { lista, descricao, usu} = req.body;       
-        let l = await db.infob_mw_tblista.create({
+        let { lista, descricao, usu, item} = req.body;
+
+        let list = await db.infob_mw_tblista.create({
             id_usuario: usu,
             nm_lista: lista,
-            ds_descricao: descricao
+            ds_descricao: descricao,
         })
-            resp.send('lista criada')
+        for(var it of item){
+            let {filme} = it;
+            let x = await db.infob_mw_tblistaitem.create({
+                id_filme: filme,
+                id_lista: list.id_lista,
+            })
+        }
+        resp.send('lista criada')
     } catch(e) {
         resp.send({ erro: e.toString()})
     }
@@ -46,16 +54,15 @@ app.put('/alterar/:id', async(req, resp) => {
     try {
         let { lista, descricao, usu} = req.body;
         let { id } = req.params;
-        let consulta = await db.infob_mw_tblista.findOne({ where: {nm_lista: lista} })
-            let l = await db.infob_mw_tblista.update({
-                id_usuario: usu,
-                nm_lista: nome,
-                ds_descricao: descricao
-            },
-            {
-                where: {id_lista: id}
-            })
-            resp.send('lista alterada');
+        let l = await db.infob_mw_tblista.update({
+            id_usuario: usu,
+            nm_lista: lista,
+            ds_descricao: descricao,
+        },
+        {
+            where: {id_lista: id}
+        })
+        resp.send('lista alterada');
     } catch(e) {
         resp.send({ erro: e.toString() })
     }

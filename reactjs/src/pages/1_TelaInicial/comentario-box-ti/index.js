@@ -1,7 +1,7 @@
 import coracao from '../../../assets/img/coracao.png';
 import {Geral} from './styled';
 import LinhaSep from '../../../assets/img/linha-comentario.png';
-
+import perfil from '../../../assets/img/usu-semfoto.png';
 import { useEffect, useState} from 'react';
 
 import Api from '../../../service/api';
@@ -26,7 +26,7 @@ export default function ComentariosTi(){
                 <div>
                     <div className="usuario">
                         <div className="ft-perfil">
-                            <img src="" alt="" />
+                            <img src={item.id_usuario_infob_mw_usuario.ds_foto === null ? perfil : item.id_usuario_infob_mw_usuario.ds_foto} alt="" />
                         </div>
                         <div className="nome">{item.id_usuario_infob_mw_usuario.nm_username}</div>
                     </div>

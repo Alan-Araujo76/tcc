@@ -8,6 +8,9 @@ const Lista = styled.div`
         display: flex;
         flex-direction: row;
     }
+    .lista-filmes-ti img{
+        width: 7em;
+    }
     .nome-lista-ti{
         display: flex;
         flex-direction: row;

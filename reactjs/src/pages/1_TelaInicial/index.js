@@ -4,13 +4,27 @@ import 'react-multi-carousel/lib/styles.css';
 
 import Cabecalho from '../../components/comum/Cabecalho-Geral';
 import Rodape from '../../components/comum/Rodape-Geral';
-
+import { useState, useEffect} from 'react';
 import Comentarios from './comentario-box-ti/index';
 import ListaTi from './listas-box-ti/index';
 import Carousel from './carousel-ti';
 
 
+import Api from '../../service/api';
+const api = new Api();
+
 export default function TelaInicial(){
+    const [lista, setLista] = useState([]);
+
+    async function Listar(){
+        let a = await api.ListarLista();
+        setLista(a)
+    }
+
+    useEffect(() => {
+        Listar();
+    });
+
     return(
         <Container>
             <Cabecalho/>
@@ -40,10 +54,6 @@ export default function TelaInicial(){
                         </div>
                         <hr/>
                         <div className="listas-box-ti">
-                            <ListaTi/>
-                            <hr/>
-                            <ListaTi/>
-                            <hr/>
                             <ListaTi/>
                             <button><div>ver todas as listas</div></button>
                         </div>
